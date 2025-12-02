@@ -128,12 +128,27 @@ CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_actuator_command_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/msg/_actuator_command_s.c -o CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_actuator_command_s.c.s
 
+CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o: CMakeFiles/mpc_car_control__python.dir/flags.make
+CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o: rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c
+CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o: CMakeFiles/mpc_car_control__python.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o -MF CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o.d -o CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o -c /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c
+
+CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c > CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.i
+
+CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c -o CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.s
+
 # Object files for target mpc_car_control__python
 mpc_car_control__python_OBJECTS = \
 "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.c.o" \
 "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_reference_trajectory_s.c.o" \
 "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_control_command_body_s.c.o" \
-"CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_actuator_command_s.c.o"
+"CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_actuator_command_s.c.o" \
+"CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o"
 
 # External object files for target mpc_car_control__python
 mpc_car_control__python_EXTERNAL_OBJECTS =
@@ -142,6 +157,7 @@ rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so: CMakeFiles/mp
 rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so: CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_reference_trajectory_s.c.o
 rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so: CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_control_command_body_s.c.o
 rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so: CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_actuator_command_s.c.o
+rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so: CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o
 rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so: CMakeFiles/mpc_car_control__python.dir/build.make
 rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so: libmpc_car_control__rosidl_generator_c.so
 rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so: /usr/lib/x86_64-linux-gnu/libpython3.8.so
@@ -172,7 +188,7 @@ rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so: /opt/ros/foxy
 rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so: /opt/ros/foxy/lib/librcpputils.so
 rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so: /opt/ros/foxy/lib/librcutils.so
 rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so: CMakeFiles/mpc_car_control__python.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mpc_car_control__python.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

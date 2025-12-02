@@ -12,8 +12,13 @@ CMakeFiles/vehicle_interface_node.dir/src/vehicle_interface_node.cpp.o
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_state__struct.hpp
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_state__traits.hpp
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_state__type_support.hpp
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__builder.hpp
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__struct.hpp
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__traits.hpp
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.hpp
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/rosidl_generator_cpp__visibility_control.hpp
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/wheel_ground_heights.hpp
  /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__builder.hpp
  /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__struct.hpp
  /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__traits.hpp

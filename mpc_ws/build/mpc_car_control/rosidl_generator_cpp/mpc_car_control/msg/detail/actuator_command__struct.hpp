@@ -45,11 +45,13 @@ struct ActuatorCommand_
       this->steering_angle = 0.0;
       this->throttle = 0.0;
       this->brake = 0.0;
+      std::fill<typename std::array<double, 4>::iterator, double>(this->active_suspension_force.begin(), this->active_suspension_force.end(), 0.0);
     }
   }
 
   explicit ActuatorCommand_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : header(_alloc, _init)
+  : header(_alloc, _init),
+    active_suspension_force(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -57,6 +59,7 @@ struct ActuatorCommand_
       this->steering_angle = 0.0;
       this->throttle = 0.0;
       this->brake = 0.0;
+      std::fill<typename std::array<double, 4>::iterator, double>(this->active_suspension_force.begin(), this->active_suspension_force.end(), 0.0);
     }
   }
 
@@ -73,6 +76,9 @@ struct ActuatorCommand_
   using _brake_type =
     double;
   _brake_type brake;
+  using _active_suspension_force_type =
+    std::array<double, 4>;
+  _active_suspension_force_type active_suspension_force;
 
   // setters for named parameter idiom
   Type & set__header(
@@ -97,6 +103,12 @@ struct ActuatorCommand_
     const double & _arg)
   {
     this->brake = _arg;
+    return *this;
+  }
+  Type & set__active_suspension_force(
+    const std::array<double, 4> & _arg)
+  {
+    this->active_suspension_force = _arg;
     return *this;
   }
 
@@ -152,6 +164,9 @@ struct ActuatorCommand_
       return false;
     }
     if (this->brake != other.brake) {
+      return false;
+    }
+    if (this->active_suspension_force != other.active_suspension_force) {
       return false;
     }
     return true;

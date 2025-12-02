@@ -1,0 +1,33 @@
+[0.028s] Invoking command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control -- -j12 -l12
+[0.057s] [  1%] Built target mpc_car_control__cpp
+[0.058s] [ 10%] Built target mpc_car_control__rosidl_generator_c
+[0.070s] [ 32%] Built target mpc_car_control__rosidl_typesupport_cpp
+[0.070s] [ 32%] Built target mpc_car_control__rosidl_typesupport_c
+[0.070s] [ 38%] Built target mpc_car_control__rosidl_typesupport_introspection_cpp
+[0.070s] [ 50%] Built target mpc_car_control__rosidl_typesupport_introspection_c
+[0.071s] [ 57%] Built target mpc_car_control__rosidl_typesupport_fastrtps_cpp
+[0.084s] [ 66%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c
+[0.094s] [ 66%] Built target mpc_car_control
+[0.106s] [ 68%] Built target mpc_car_control__py
+[0.108s] [ 70%] [32mBuilding CXX object CMakeFiles/scenario_generator_node.dir/src/scenario_generator_node.cpp.o[0m
+[0.108s] [ 72%] Built target mpc_controller_node
+[0.109s] [ 74%] Built target vehicle_interface_node
+[0.113s] [ 77%] Built target control_allocator_node
+[0.118s] [ 80%] Built target visualization_node
+[0.120s] [ 82%] Built target vehicle_model_node
+[0.124s] [ 90%] Built target mpc_car_control__python
+[0.136s] [ 98%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c__pyext
+[0.136s] [ 98%] Built target mpc_car_control__rosidl_typesupport_introspection_c__pyext
+[0.136s] [ 98%] Built target mpc_car_control__rosidl_typesupport_c__pyext
+[1.321s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/scenario_generator_node.cpp:[m[K In member function ‘[01m[Kvoid ScenarioGeneratorNode::timer_callback()[m[K’:
+[1.321s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/scenario_generator_node.cpp:206:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kbump_s[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.321s]   206 |       double [01;35m[Kbump_s[m[K = straight_1 + turn_radius * bump_angle;
+[1.322s]       |              [01;35m[K^~~~~~[m[K
+[5.657s] [100%] [32m[1mLinking CXX executable scenario_generator_node[0m
+[5.934s] /usr/bin/ld: CMakeFiles/scenario_generator_node.dir/src/scenario_generator_node.cpp.o: in function `rclcpp::Publisher<visualization_msgs::msg::MarkerArray_<std::allocator<void> >, std::allocator<void> >::Publisher(rclcpp::node_interfaces::NodeBaseInterface*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, rclcpp::QoS const&, rclcpp::PublisherOptionsWithAllocator<std::allocator<void> > const&)':
+[5.934s] scenario_generator_node.cpp:(.text._ZN6rclcpp9PublisherIN18visualization_msgs3msg12MarkerArray_ISaIvEEES4_EC2EPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSERKNS_29PublisherOptionsWithAllocatorIS4_EE[_ZN6rclcpp9PublisherIN18visualization_msgs3msg12MarkerArray_ISaIvEEES4_EC5EPNS_15node_interfaces17NodeBaseInterfaceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3QoSERKNS_29PublisherOptionsWithAllocatorIS4_EE]+0x6e): undefined reference to `rosidl_message_type_support_t const* rosidl_typesupport_cpp::get_message_type_support_handle<visualization_msgs::msg::MarkerArray_<std::allocator<void> > >()'
+[5.941s] collect2: error: ld returned 1 exit status
+[5.942s] make[2]: *** [CMakeFiles/scenario_generator_node.dir/build.make:153：scenario_generator_node] 错误 1
+[5.942s] make[1]: *** [CMakeFiles/Makefile2:689：CMakeFiles/scenario_generator_node.dir/all] 错误 2
+[5.942s] make: *** [Makefile:146：all] 错误 2
+[5.944s] Invoked command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control -- -j12 -l12

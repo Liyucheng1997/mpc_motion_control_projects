@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/reference_trajectory__functions.c.o.d"
   "CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.c.o"
   "CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.c.o.d"
+  "CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.o"
+  "CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.o.d"
   "libmpc_car_control__rosidl_generator_c.pdb"
   "libmpc_car_control__rosidl_generator_c.so"
   "rosidl_generator_c/mpc_car_control/msg/actuator_command.h"
@@ -27,8 +29,13 @@ file(REMOVE_RECURSE
   "rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.h"
   "rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__struct.h"
   "rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__type_support.h"
+  "rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c"
+  "rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.h"
+  "rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__struct.h"
+  "rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.h"
   "rosidl_generator_c/mpc_car_control/msg/reference_trajectory.h"
   "rosidl_generator_c/mpc_car_control/msg/vehicle_state.h"
+  "rosidl_generator_c/mpc_car_control/msg/wheel_ground_heights.h"
 )
 
 # Per-language clean rules from dependency scanning.

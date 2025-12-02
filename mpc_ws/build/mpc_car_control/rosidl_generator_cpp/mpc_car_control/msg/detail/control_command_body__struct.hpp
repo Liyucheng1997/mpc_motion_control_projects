@@ -45,6 +45,9 @@ struct ControlCommandBody_
       this->fx = 0.0;
       this->fy = 0.0;
       this->mz = 0.0;
+      this->fz = 0.0;
+      this->mx = 0.0;
+      this->my = 0.0;
     }
   }
 
@@ -57,6 +60,9 @@ struct ControlCommandBody_
       this->fx = 0.0;
       this->fy = 0.0;
       this->mz = 0.0;
+      this->fz = 0.0;
+      this->mx = 0.0;
+      this->my = 0.0;
     }
   }
 
@@ -73,6 +79,15 @@ struct ControlCommandBody_
   using _mz_type =
     double;
   _mz_type mz;
+  using _fz_type =
+    double;
+  _fz_type fz;
+  using _mx_type =
+    double;
+  _mx_type mx;
+  using _my_type =
+    double;
+  _my_type my;
 
   // setters for named parameter idiom
   Type & set__header(
@@ -97,6 +112,24 @@ struct ControlCommandBody_
     const double & _arg)
   {
     this->mz = _arg;
+    return *this;
+  }
+  Type & set__fz(
+    const double & _arg)
+  {
+    this->fz = _arg;
+    return *this;
+  }
+  Type & set__mx(
+    const double & _arg)
+  {
+    this->mx = _arg;
+    return *this;
+  }
+  Type & set__my(
+    const double & _arg)
+  {
+    this->my = _arg;
     return *this;
   }
 
@@ -152,6 +185,15 @@ struct ControlCommandBody_
       return false;
     }
     if (this->mz != other.mz) {
+      return false;
+    }
+    if (this->fz != other.fz) {
+      return false;
+    }
+    if (this->mx != other.mx) {
+      return false;
+    }
+    if (this->my != other.my) {
       return false;
     }
     return true;

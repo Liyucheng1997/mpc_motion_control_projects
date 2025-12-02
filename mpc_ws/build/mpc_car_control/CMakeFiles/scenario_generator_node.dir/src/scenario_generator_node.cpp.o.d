@@ -153,6 +153,44 @@ CMakeFiles/scenario_generator_node.dir/src/scenario_generator_node.cpp.o: \
  /usr/include/c++/9/backward/auto_ptr.h /usr/include/c++/9/vector \
  /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
+ /opt/ros/foxy/include/geometry_msgs/msg/point.hpp \
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/point__struct.hpp \
+ /opt/ros/foxy/include/rosidl_runtime_cpp/bounded_vector.hpp \
+ /usr/include/c++/9/algorithm /usr/include/c++/9/bits/stl_algo.h \
+ /usr/include/c++/9/bits/algorithmfwd.h \
+ /usr/include/c++/9/bits/stl_heap.h \
+ /usr/include/c++/9/bits/uniform_int_dist.h \
+ /opt/ros/foxy/include/rosidl_runtime_cpp/message_initialization.hpp \
+ /opt/ros/foxy/include/rosidl_runtime_c/message_initialization.h \
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/point__builder.hpp \
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/point__traits.hpp \
+ /opt/ros/foxy/include/rosidl_runtime_cpp/traits.hpp \
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/point__type_support.hpp \
+ /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h \
+ /opt/ros/foxy/include/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/foxy/include/rosidl_typesupport_cpp/message_type_support.hpp \
+ /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h \
+ /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/reference_trajectory.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/reference_trajectory__struct.hpp \
+ /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.hpp \
+ /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/reference_trajectory__builder.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/reference_trajectory__traits.hpp \
+ /opt/ros/foxy/include/std_msgs/msg/detail/header__traits.hpp \
+ /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__traits.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/reference_trajectory__type_support.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_state__struct.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_state__builder.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_state__traits.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_state__type_support.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/wheel_ground_heights.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__struct.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__builder.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__traits.hpp \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.hpp \
  /opt/ros/foxy/include/rclcpp/rclcpp.hpp /usr/include/c++/9/csignal \
  /usr/include/signal.h /usr/include/x86_64-linux-gnu/bits/signum.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
@@ -190,11 +228,7 @@ CMakeFiles/scenario_generator_node.dir/src/scenario_generator_node.cpp.o: \
  /usr/include/c++/9/bits/hashtable_policy.h \
  /usr/include/c++/9/bits/unordered_map.h \
  /opt/ros/foxy/include/rclcpp/detail/mutex_two_priorities.hpp \
- /opt/ros/foxy/include/rclcpp/executor.hpp /usr/include/c++/9/algorithm \
- /usr/include/c++/9/bits/stl_algo.h \
- /usr/include/c++/9/bits/algorithmfwd.h \
- /usr/include/c++/9/bits/stl_heap.h \
- /usr/include/c++/9/bits/uniform_int_dist.h /usr/include/c++/9/cassert \
+ /opt/ros/foxy/include/rclcpp/executor.hpp /usr/include/c++/9/cassert \
  /usr/include/assert.h /usr/include/c++/9/iostream \
  /usr/include/c++/9/ostream /usr/include/c++/9/ios \
  /usr/include/c++/9/bits/ios_base.h \
@@ -250,14 +284,11 @@ CMakeFiles/scenario_generator_node.dir/src/scenario_generator_node.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdalign.h \
  /opt/ros/foxy/include/rcl/wait.h /opt/ros/foxy/include/rcl/client.h \
  /opt/ros/foxy/include/rosidl_runtime_c/service_type_support_struct.h \
- /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h \
- /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h \
  /opt/ros/foxy/include/rcl/node.h \
  /opt/ros/foxy/include/rcl/node_options.h \
  /opt/ros/foxy/include/rcl/domain_id.h \
  /opt/ros/foxy/include/rcl/service.h \
  /opt/ros/foxy/include/rcl/subscription.h \
- /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h \
  /opt/ros/foxy/include/rmw/message_sequence.h \
  /opt/ros/foxy/include/rcl/timer.h /opt/ros/foxy/include/rcl/time.h \
  /opt/ros/foxy/include/rmw/rmw.h \
@@ -296,15 +327,10 @@ CMakeFiles/scenario_generator_node.dir/src/scenario_generator_node.cpp.o: \
  /opt/ros/foxy/include/rclcpp/duration.hpp \
  /opt/ros/foxy/include/builtin_interfaces/msg/duration.hpp \
  /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__struct.hpp \
- /opt/ros/foxy/include/rosidl_runtime_cpp/bounded_vector.hpp \
- /opt/ros/foxy/include/rosidl_runtime_cpp/message_initialization.hpp \
- /opt/ros/foxy/include/rosidl_runtime_c/message_initialization.h \
  /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__builder.hpp \
  /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__traits.hpp \
- /opt/ros/foxy/include/rosidl_runtime_cpp/traits.hpp \
  /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__type_support.hpp \
  /opt/ros/foxy/include/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
- /opt/ros/foxy/include/rosidl_typesupport_cpp/message_type_support.hpp \
  /opt/ros/foxy/include/rmw/incompatible_qos_events_statuses.h \
  /opt/ros/foxy/include/rclcpp/type_support_decl.hpp \
  /opt/ros/foxy/include/rosidl_runtime_cpp/message_type_support_decl.hpp \
@@ -345,9 +371,7 @@ CMakeFiles/scenario_generator_node.dir/src/scenario_generator_node.cpp.o: \
  /opt/ros/foxy/include/rclcpp/clock.hpp \
  /opt/ros/foxy/include/rclcpp/time.hpp \
  /opt/ros/foxy/include/builtin_interfaces/msg/time.hpp \
- /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.hpp \
  /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__builder.hpp \
- /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__traits.hpp \
  /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__type_support.hpp \
  /opt/ros/foxy/include/rclcpp/rate.hpp \
  /opt/ros/foxy/include/rclcpp/node_interfaces/node_base_interface.hpp \
@@ -506,17 +530,30 @@ CMakeFiles/scenario_generator_node.dir/src/scenario_generator_node.cpp.o: \
  /opt/ros/foxy/include/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
  /opt/ros/foxy/include/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
  /opt/ros/foxy/include/rclcpp/wait_set_template.hpp \
- /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/reference_trajectory.hpp \
- /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/reference_trajectory__struct.hpp \
- /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.hpp \
- /opt/ros/foxy/include/geometry_msgs/msg/detail/point__struct.hpp \
- /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/reference_trajectory__builder.hpp \
- /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/reference_trajectory__traits.hpp \
- /opt/ros/foxy/include/std_msgs/msg/detail/header__traits.hpp \
- /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/reference_trajectory__type_support.hpp \
- /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/rosidl_generator_cpp__visibility_control.hpp \
- /opt/ros/foxy/include/geometry_msgs/msg/point.hpp \
- /opt/ros/foxy/include/geometry_msgs/msg/detail/point__builder.hpp \
- /opt/ros/foxy/include/geometry_msgs/msg/detail/point__traits.hpp \
- /opt/ros/foxy/include/geometry_msgs/msg/detail/point__type_support.hpp \
- /opt/ros/foxy/include/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+ /opt/ros/foxy/include/tf2/LinearMath/Quaternion.h \
+ /opt/ros/foxy/include/tf2/LinearMath/Vector3.h \
+ /opt/ros/foxy/include/tf2/LinearMath/Scalar.h /usr/include/c++/9/math.h \
+ /usr/include/c++/9/cfloat \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
+ /opt/ros/foxy/include/tf2/LinearMath/MinMax.h \
+ /opt/ros/foxy/include/tf2/visibility_control.h \
+ /opt/ros/foxy/include/tf2/LinearMath/QuadWord.h \
+ /opt/ros/foxy/include/visualization_msgs/msg/marker.hpp \
+ /opt/ros/foxy/include/visualization_msgs/msg/detail/marker__struct.hpp \
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/pose__struct.hpp \
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__struct.hpp \
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/vector3__struct.hpp \
+ /opt/ros/foxy/include/std_msgs/msg/detail/color_rgba__struct.hpp \
+ /opt/ros/foxy/include/visualization_msgs/msg/detail/marker__builder.hpp \
+ /opt/ros/foxy/include/visualization_msgs/msg/detail/marker__traits.hpp \
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/pose__traits.hpp \
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__traits.hpp \
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/vector3__traits.hpp \
+ /opt/ros/foxy/include/std_msgs/msg/detail/color_rgba__traits.hpp \
+ /opt/ros/foxy/include/visualization_msgs/msg/detail/marker__type_support.hpp \
+ /opt/ros/foxy/include/visualization_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/foxy/include/visualization_msgs/msg/marker_array.hpp \
+ /opt/ros/foxy/include/visualization_msgs/msg/detail/marker_array__struct.hpp \
+ /opt/ros/foxy/include/visualization_msgs/msg/detail/marker_array__builder.hpp \
+ /opt/ros/foxy/include/visualization_msgs/msg/detail/marker_array__traits.hpp \
+ /opt/ros/foxy/include/visualization_msgs/msg/detail/marker_array__type_support.hpp

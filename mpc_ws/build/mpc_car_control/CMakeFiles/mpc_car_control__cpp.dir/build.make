@@ -86,6 +86,11 @@ CMakeFiles/mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail
 CMakeFiles/mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/actuator_command__struct.hpp
 CMakeFiles/mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/actuator_command__traits.hpp
 CMakeFiles/mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/actuator_command__type_support.hpp
+CMakeFiles/mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/wheel_ground_heights.hpp
+CMakeFiles/mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__builder.hpp
+CMakeFiles/mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__struct.hpp
+CMakeFiles/mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__traits.hpp
+CMakeFiles/mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.hpp
 CMakeFiles/mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp: /opt/ros/foxy/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -111,6 +116,7 @@ rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp: rosidl_adapter/mpc_c
 rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp: rosidl_adapter/mpc_car_control/msg/ReferenceTrajectory.idl
 rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp: rosidl_adapter/mpc_car_control/msg/ControlCommandBody.idl
 rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp: rosidl_adapter/mpc_car_control/msg/ActuatorCommand.idl
+rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp: rosidl_adapter/mpc_car_control/msg/WheelGroundHeights.idl
 rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp: /opt/ros/foxy/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp: /opt/ros/foxy/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp: /opt/ros/foxy/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -232,6 +238,21 @@ rosidl_generator_cpp/mpc_car_control/msg/detail/actuator_command__traits.hpp: ro
 rosidl_generator_cpp/mpc_car_control/msg/detail/actuator_command__type_support.hpp: rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/mpc_car_control/msg/detail/actuator_command__type_support.hpp
 
+rosidl_generator_cpp/mpc_car_control/msg/wheel_ground_heights.hpp: rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/mpc_car_control/msg/wheel_ground_heights.hpp
+
+rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__builder.hpp: rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__builder.hpp
+
+rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__struct.hpp: rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__struct.hpp
+
+rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__traits.hpp: rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__traits.hpp
+
+rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.hpp: rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.hpp
+
 CMakeFiles/mpc_car_control__cpp.dir/codegen:
 .PHONY : CMakeFiles/mpc_car_control__cpp.dir/codegen
 
@@ -254,8 +275,13 @@ mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_st
 mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_state__struct.hpp
 mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_state__traits.hpp
 mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_state__type_support.hpp
+mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__builder.hpp
+mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__struct.hpp
+mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__traits.hpp
+mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.hpp
 mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/reference_trajectory.hpp
 mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp
+mpc_car_control__cpp: rosidl_generator_cpp/mpc_car_control/msg/wheel_ground_heights.hpp
 mpc_car_control__cpp: CMakeFiles/mpc_car_control__cpp.dir/build.make
 .PHONY : mpc_car_control__cpp
 

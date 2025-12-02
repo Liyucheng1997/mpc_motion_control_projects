@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/msg/_reference_trajectory_s.c"
   "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/msg/_vehicle_state.py"
   "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.c"
+  "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights.py"
+  "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c"
   "CMakeFiles/mpc_car_control__py"
 )
 

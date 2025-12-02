@@ -6,3 +6,5 @@ msg/ReferenceTrajectory.idl
 msg/ReferenceTrajectory.msg
 msg/VehicleState.idl
 msg/VehicleState.msg
+msg/WheelGroundHeights.idl
+msg/WheelGroundHeights.msg

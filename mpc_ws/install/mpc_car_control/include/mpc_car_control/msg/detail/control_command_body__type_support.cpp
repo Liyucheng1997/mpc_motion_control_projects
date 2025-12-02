@@ -37,7 +37,7 @@ void ControlCommandBody_fini_function(void * message_memory)
   typed_message->~ControlCommandBody();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ControlCommandBody_message_member_array[4] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ControlCommandBody_message_member_array[7] = {
   {
     "header",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -97,13 +97,58 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ControlComman
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "fz",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(mpc_car_control::msg::ControlCommandBody, fz),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "mx",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(mpc_car_control::msg::ControlCommandBody, mx),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "my",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(mpc_car_control::msg::ControlCommandBody, my),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ControlCommandBody_message_members = {
   "mpc_car_control::msg",  // message namespace
   "ControlCommandBody",  // message name
-  4,  // number of fields
+  7,  // number of fields
   sizeof(mpc_car_control::msg::ControlCommandBody),
   ControlCommandBody_message_member_array,  // message members
   ControlCommandBody_init_function,  // function to initialize message memory (memory has to be allocated)

@@ -81,6 +81,7 @@ rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__ros
 rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h: rosidl_adapter/mpc_car_control/msg/ReferenceTrajectory.idl
 rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h: rosidl_adapter/mpc_car_control/msg/ControlCommandBody.idl
 rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h: rosidl_adapter/mpc_car_control/msg/ActuatorCommand.idl
+rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h: rosidl_adapter/mpc_car_control/msg/WheelGroundHeights.idl
 rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/geometry_msgs/msg/Accel.idl
 rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -154,6 +155,9 @@ rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/control_command_bo
 rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__rosidl_typesupport_introspection_c.h
 
+rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__type_support.c: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__type_support.c
 
@@ -165,6 +169,9 @@ rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/control_command_bo
 
 rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.c: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.c
+
+rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c
 
 CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/codegen:
 .PHONY : CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/codegen
@@ -225,12 +232,27 @@ CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesu
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.c -o CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.c.s
 
+CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.o: CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.o: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c
+CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.o: CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.o -MF CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.o.d -o CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.o -c /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c
+
+CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c > CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.i
+
+CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c -o CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.s
+
 # Object files for target mpc_car_control__rosidl_typesupport_introspection_c
 mpc_car_control__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__type_support.c.o" \
 "CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/reference_trajectory__type_support.c.o" \
 "CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/control_command_body__type_support.c.o" \
-"CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.c.o"
+"CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.c.o" \
+"CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.o"
 
 # External object files for target mpc_car_control__rosidl_typesupport_introspection_c
 mpc_car_control__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
@@ -239,6 +261,7 @@ libmpc_car_control__rosidl_typesupport_introspection_c.so: CMakeFiles/mpc_car_co
 libmpc_car_control__rosidl_typesupport_introspection_c.so: CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/reference_trajectory__type_support.c.o
 libmpc_car_control__rosidl_typesupport_introspection_c.so: CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/control_command_body__type_support.c.o
 libmpc_car_control__rosidl_typesupport_introspection_c.so: CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.c.o
+libmpc_car_control__rosidl_typesupport_introspection_c.so: CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.o
 libmpc_car_control__rosidl_typesupport_introspection_c.so: CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/build.make
 libmpc_car_control__rosidl_typesupport_introspection_c.so: libmpc_car_control__rosidl_generator_c.so
 libmpc_car_control__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libgeometry_msgs__rosidl_typesupport_c.so
@@ -264,7 +287,7 @@ libmpc_car_control__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/lib
 libmpc_car_control__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/librosidl_runtime_c.so
 libmpc_car_control__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/librcutils.so
 libmpc_car_control__rosidl_typesupport_introspection_c.so: CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libmpc_car_control__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library libmpc_car_control__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -283,6 +306,8 @@ CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/depend: rosid
 CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/reference_trajectory__type_support.c
 CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h
 CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__type_support.c
+CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__rosidl_typesupport_introspection_c.h
+CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c
 	cd /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control /home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/depend
 

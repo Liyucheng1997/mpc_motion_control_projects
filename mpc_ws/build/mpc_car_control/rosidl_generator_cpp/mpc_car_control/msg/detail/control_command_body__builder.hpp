@@ -20,16 +20,64 @@ namespace msg
 namespace builder
 {
 
+class Init_ControlCommandBody_my
+{
+public:
+  explicit Init_ControlCommandBody_my(::mpc_car_control::msg::ControlCommandBody & msg)
+  : msg_(msg)
+  {}
+  ::mpc_car_control::msg::ControlCommandBody my(::mpc_car_control::msg::ControlCommandBody::_my_type arg)
+  {
+    msg_.my = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::mpc_car_control::msg::ControlCommandBody msg_;
+};
+
+class Init_ControlCommandBody_mx
+{
+public:
+  explicit Init_ControlCommandBody_mx(::mpc_car_control::msg::ControlCommandBody & msg)
+  : msg_(msg)
+  {}
+  Init_ControlCommandBody_my mx(::mpc_car_control::msg::ControlCommandBody::_mx_type arg)
+  {
+    msg_.mx = std::move(arg);
+    return Init_ControlCommandBody_my(msg_);
+  }
+
+private:
+  ::mpc_car_control::msg::ControlCommandBody msg_;
+};
+
+class Init_ControlCommandBody_fz
+{
+public:
+  explicit Init_ControlCommandBody_fz(::mpc_car_control::msg::ControlCommandBody & msg)
+  : msg_(msg)
+  {}
+  Init_ControlCommandBody_mx fz(::mpc_car_control::msg::ControlCommandBody::_fz_type arg)
+  {
+    msg_.fz = std::move(arg);
+    return Init_ControlCommandBody_mx(msg_);
+  }
+
+private:
+  ::mpc_car_control::msg::ControlCommandBody msg_;
+};
+
 class Init_ControlCommandBody_mz
 {
 public:
   explicit Init_ControlCommandBody_mz(::mpc_car_control::msg::ControlCommandBody & msg)
   : msg_(msg)
   {}
-  ::mpc_car_control::msg::ControlCommandBody mz(::mpc_car_control::msg::ControlCommandBody::_mz_type arg)
+  Init_ControlCommandBody_fz mz(::mpc_car_control::msg::ControlCommandBody::_mz_type arg)
   {
     msg_.mz = std::move(arg);
-    return std::move(msg_);
+    return Init_ControlCommandBody_fz(msg_);
   }
 
 private:

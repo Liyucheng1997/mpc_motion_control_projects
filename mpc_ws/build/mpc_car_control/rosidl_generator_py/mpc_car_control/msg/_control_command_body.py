@@ -61,6 +61,9 @@ class ControlCommandBody(metaclass=Metaclass_ControlCommandBody):
         '_fx',
         '_fy',
         '_mz',
+        '_fz',
+        '_mx',
+        '_my',
     ]
 
     _fields_and_field_types = {
@@ -68,10 +71,16 @@ class ControlCommandBody(metaclass=Metaclass_ControlCommandBody):
         'fx': 'double',
         'fy': 'double',
         'mz': 'double',
+        'fz': 'double',
+        'mx': 'double',
+        'my': 'double',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['std_msgs', 'msg'], 'Header'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
@@ -86,6 +95,9 @@ class ControlCommandBody(metaclass=Metaclass_ControlCommandBody):
         self.fx = kwargs.get('fx', float())
         self.fy = kwargs.get('fy', float())
         self.mz = kwargs.get('mz', float())
+        self.fz = kwargs.get('fz', float())
+        self.mx = kwargs.get('mx', float())
+        self.my = kwargs.get('my', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -123,6 +135,12 @@ class ControlCommandBody(metaclass=Metaclass_ControlCommandBody):
         if self.fy != other.fy:
             return False
         if self.mz != other.mz:
+            return False
+        if self.fz != other.fz:
+            return False
+        if self.mx != other.mx:
+            return False
+        if self.my != other.my:
             return False
         return True
 
@@ -183,3 +201,42 @@ class ControlCommandBody(metaclass=Metaclass_ControlCommandBody):
                 isinstance(value, float), \
                 "The 'mz' field must be of type 'float'"
         self._mz = value
+
+    @property
+    def fz(self):
+        """Message field 'fz'."""
+        return self._fz
+
+    @fz.setter
+    def fz(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'fz' field must be of type 'float'"
+        self._fz = value
+
+    @property
+    def mx(self):
+        """Message field 'mx'."""
+        return self._mx
+
+    @mx.setter
+    def mx(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'mx' field must be of type 'float'"
+        self._mx = value
+
+    @property
+    def my(self):
+        """Message field 'my'."""
+        return self._my
+
+    @my.setter
+    def my(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'my' field must be of type 'float'"
+        self._my = value

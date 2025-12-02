@@ -186,4 +186,5 @@ CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_
  /opt/ros/foxy/include/rosidl_runtime_c/string.h \
  /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h \
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/detail/actuator_command__functions.h \
- /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/rosidl_generator_c__visibility_control.h
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/rosidl_generator_c__visibility_control.h \
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence_functions.h

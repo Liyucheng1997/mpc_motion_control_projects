@@ -5,6 +5,9 @@
 
 # Import statements for member types
 
+# Member 'active_suspension_force'
+import numpy  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -61,6 +64,7 @@ class ActuatorCommand(metaclass=Metaclass_ActuatorCommand):
         '_steering_angle',
         '_throttle',
         '_brake',
+        '_active_suspension_force',
     ]
 
     _fields_and_field_types = {
@@ -68,6 +72,7 @@ class ActuatorCommand(metaclass=Metaclass_ActuatorCommand):
         'steering_angle': 'double',
         'throttle': 'double',
         'brake': 'double',
+        'active_suspension_force': 'double[4]',
     }
 
     SLOT_TYPES = (
@@ -75,6 +80,7 @@ class ActuatorCommand(metaclass=Metaclass_ActuatorCommand):
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('double'), 4),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -86,6 +92,11 @@ class ActuatorCommand(metaclass=Metaclass_ActuatorCommand):
         self.steering_angle = kwargs.get('steering_angle', float())
         self.throttle = kwargs.get('throttle', float())
         self.brake = kwargs.get('brake', float())
+        if 'active_suspension_force' not in kwargs:
+            self.active_suspension_force = numpy.zeros(4, dtype=numpy.float64)
+        else:
+            self.active_suspension_force = numpy.array(kwargs.get('active_suspension_force'), dtype=numpy.float64)
+            assert self.active_suspension_force.shape == (4, )
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -123,6 +134,8 @@ class ActuatorCommand(metaclass=Metaclass_ActuatorCommand):
         if self.throttle != other.throttle:
             return False
         if self.brake != other.brake:
+            return False
+        if all(self.active_suspension_force != other.active_suspension_force):
             return False
         return True
 
@@ -183,3 +196,34 @@ class ActuatorCommand(metaclass=Metaclass_ActuatorCommand):
                 isinstance(value, float), \
                 "The 'brake' field must be of type 'float'"
         self._brake = value
+
+    @property
+    def active_suspension_force(self):
+        """Message field 'active_suspension_force'."""
+        return self._active_suspension_force
+
+    @active_suspension_force.setter
+    def active_suspension_force(self, value):
+        if isinstance(value, numpy.ndarray):
+            assert value.dtype == numpy.float64, \
+                "The 'active_suspension_force' numpy.ndarray() must have the dtype of 'numpy.float64'"
+            assert value.size == 4, \
+                "The 'active_suspension_force' numpy.ndarray() must have a size of 4"
+            self._active_suspension_force = value
+            return
+        if __debug__:
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 len(value) == 4 and
+                 all(isinstance(v, float) for v in value) and
+                 True), \
+                "The 'active_suspension_force' field must be a set or sequence with length 4 and each value of type 'float'"
+        self._active_suspension_force = numpy.array(value, dtype=numpy.float64)

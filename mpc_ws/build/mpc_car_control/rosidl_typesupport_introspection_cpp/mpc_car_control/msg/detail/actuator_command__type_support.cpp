@@ -37,7 +37,27 @@ void ActuatorCommand_fini_function(void * message_memory)
   typed_message->~ActuatorCommand();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ActuatorCommand_message_member_array[4] = {
+size_t size_function__ActuatorCommand__active_suspension_force(const void * untyped_member)
+{
+  (void)untyped_member;
+  return 4;
+}
+
+const void * get_const_function__ActuatorCommand__active_suspension_force(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::array<double, 4> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__ActuatorCommand__active_suspension_force(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::array<double, 4> *>(untyped_member);
+  return &member[index];
+}
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ActuatorCommand_message_member_array[5] = {
   {
     "header",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -97,13 +117,28 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ActuatorComma
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "active_suspension_force",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    4,  // array size
+    false,  // is upper bound
+    offsetof(mpc_car_control::msg::ActuatorCommand, active_suspension_force),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__ActuatorCommand__active_suspension_force,  // size() function pointer
+    get_const_function__ActuatorCommand__active_suspension_force,  // get_const(index) function pointer
+    get_function__ActuatorCommand__active_suspension_force,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ActuatorCommand_message_members = {
   "mpc_car_control::msg",  // message namespace
   "ActuatorCommand",  // message name
-  4,  // number of fields
+  5,  // number of fields
   sizeof(mpc_car_control::msg::ActuatorCommand),
   ActuatorCommand_message_member_array,  // message members
   ActuatorCommand_init_function,  // function to initialize message memory (memory has to be allocated)

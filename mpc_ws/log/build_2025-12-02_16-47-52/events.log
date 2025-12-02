@@ -1,0 +1,310 @@
+[0.000000] (-) TimerEvent: {}
+[0.000114] (mpc_car_control) JobQueued: {'identifier': 'mpc_car_control', 'dependencies': OrderedDict()}
+[0.002514] (mpc_car_control) JobStarted: {'identifier': 'mpc_car_control'}
+[0.022934] (mpc_car_control) JobProgress: {'identifier': 'mpc_car_control', 'progress': 'cmake'}
+[0.025105] (mpc_car_control) Command: {'cmd': ['/usr/local/bin/cmake', '/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control', '-DCMAKE_INSTALL_PREFIX=/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control'], 'cwd': '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('APPCODE_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/appcode.vmoptions'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GATEWAY_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/gateway.vmoptions'), ('LANGUAGE', 'zh_CN:en_AU:en'), ('USER', 'yucheng'), ('LC_TIME', 'zh_CN.UTF-8'), ('MESA_LOADER_DRIVER_OVERRIDE', 'i965'), ('WEBSTORM_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/webstorm.vmoptions'), ('WEBIDE_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/webide.vmoptions'), ('SSH_AGENT_PID', '1396'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/antigravity/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda-12.0/lib64:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-12.0/lib64'), ('QT4_IM_MODULE', 'fcitx'), ('ANTIGRAVITY_CLI_ALIAS', 'agy'), ('HOME', '/home/yucheng'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('OLDPWD', '/home/yucheng/mpc_motion_control_projects'), ('TERM_PROGRAM_VERSION', '1.104.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/antigravity/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/antigravity/antigravity'), ('MANAGERPID', '1285'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DATASPELL_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/dataspell.vmoptions'), ('BUNDLED_DEBUGPY_PATH', '/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DATAGRIP_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/datagrip.vmoptions'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IDEA_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/idea.vmoptions'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '45543'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('CLION_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/clion.vmoptions'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'yucheng'), ('JETBRAINSCLIENT_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/jetbrainsclient.vmoptions'), ('JOURNAL_STREAM', '8:34661'), ('_', '/home/yucheng/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('PHPSTORM_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/phpstorm.vmoptions'), ('USERNAME', 'yucheng'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/bin:/usr/local/cuda-12.0/bin:/home/yucheng/.local/bin:/opt/ros/foxy/bin:/usr/local/bin:/usr/local/cuda-12.0/bin:/home/yucheng/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/yucheng-Lenovo-Rescuer-Y7000:@/tmp/.ICE-unix/1442,unix/yucheng-Lenovo-Rescuer-Y7000:/tmp/.ICE-unix/1442'), ('INVOCATION_ID', 'd8ddece9dd03409c9300f96346ecf4dc'), ('PAPERSIZE', 'a4'), ('RIDER_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/rider.vmoptions'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-454ba53d4f1b844a.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/yucheng/.config/Antigravity/User/workspaceStorage/f219ac6eba8d8d99e64bba645ca9d94f/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('GOLAND_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/goland.vmoptions'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a95e87445e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('PYCHARM_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/pycharm.vmoptions'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('RUBYMINE_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/rubymine.vmoptions'), ('PWD', '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control'), ('JETBRAINS_CLIENT_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/jetbrains_client.vmoptions'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.031823] (mpc_car_control) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.032008] (mpc_car_control) StderrLine: {'line': b'  Compatibility with CMake < 3.10 will be removed from a future version of\n'}
+[0.032080] (mpc_car_control) StderrLine: {'line': b'  CMake.\n'}
+[0.032144] (mpc_car_control) StderrLine: {'line': b'\n'}
+[0.032205] (mpc_car_control) StderrLine: {'line': b'  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax\n'}
+[0.032264] (mpc_car_control) StderrLine: {'line': b'  to tell CMake that the project requires at least <min> but has been updated\n'}
+[0.032321] (mpc_car_control) StderrLine: {'line': b'  to work with policies introduced by <max> or earlier.\n'}
+[0.032378] (mpc_car_control) StderrLine: {'line': b'\n'}
+[0.032434] (mpc_car_control) StderrLine: {'line': b'\x1b[0m\n'}
+[0.043297] (mpc_car_control) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.044906] (mpc_car_control) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):\n'}
+[0.045116] (mpc_car_control) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[0.045232] (mpc_car_control) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[0.045336] (mpc_car_control) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[0.045435] (mpc_car_control) StderrLine: {'line': b'\n'}
+[0.045532] (mpc_car_control) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.045628] (mpc_car_control) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)\n'}
+[0.045726] (mpc_car_control) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)\n'}
+[0.045823] (mpc_car_control) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)\n'}
+[0.045920] (mpc_car_control) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)\n'}
+[0.046017] (mpc_car_control) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)\n'}
+[0.046113] (mpc_car_control) StderrLine: {'line': b'  CMakeLists.txt:19 (find_package)\n'}
+[0.046208] (mpc_car_control) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.046304] (mpc_car_control) StderrLine: {'line': b'\x1b[0m\n'}
+[0.063869] (mpc_car_control) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")\n'}
+[0.064041] (mpc_car_control) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.098845] (-) TimerEvent: {}
+[0.199185] (-) TimerEvent: {}
+[0.261565] (mpc_car_control) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.294193] (mpc_car_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.299303] (-) TimerEvent: {}
+[0.299474] (mpc_car_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.399430] (-) TimerEvent: {}
+[0.429476] (mpc_car_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.474552] (mpc_car_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.477456] (mpc_car_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.499485] (-) TimerEvent: {}
+[0.599740] (-) TimerEvent: {}
+[0.629002] (mpc_car_control) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[0.658593] (mpc_car_control) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[0.699818] (-) TimerEvent: {}
+[0.728256] (mpc_car_control) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.738186] (mpc_car_control) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:40 (find_package):\n'}
+[0.738377] (mpc_car_control) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[0.738482] (mpc_car_control) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[0.738580] (mpc_car_control) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[0.738675] (mpc_car_control) StderrLine: {'line': b'\n'}
+[0.738768] (mpc_car_control) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.738861] (mpc_car_control) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)\n'}
+[0.738954] (mpc_car_control) StderrLine: {'line': b'  CMakeLists.txt:37 (rosidl_generate_interfaces)\n'}
+[0.739048] (mpc_car_control) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.739140] (mpc_car_control) StderrLine: {'line': b'\x1b[0m\n'}
+[0.759368] (mpc_car_control) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10")\n'}
+[0.799904] (-) TimerEvent: {}
+[0.898437] (mpc_car_control) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[0.900014] (-) TimerEvent: {}
+[1.000317] (-) TimerEvent: {}
+[1.100605] (-) TimerEvent: {}
+[1.132141] (mpc_car_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.200738] (-) TimerEvent: {}
+[1.225846] (mpc_car_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.229738] (mpc_car_control) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):\n'}
+[1.229901] (mpc_car_control) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[1.229972] (mpc_car_control) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[1.230035] (mpc_car_control) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[1.230095] (mpc_car_control) StderrLine: {'line': b'\n'}
+[1.230152] (mpc_car_control) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.230209] (mpc_car_control) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[1.230266] (mpc_car_control) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[1.230322] (mpc_car_control) StderrLine: {'line': b'  CMakeLists.txt:37 (rosidl_generate_interfaces)\n'}
+[1.230378] (mpc_car_control) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.230435] (mpc_car_control) StderrLine: {'line': b'\x1b[0m\n'}
+[1.249680] (mpc_car_control) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5")\n'}
+[1.249965] (mpc_car_control) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[1.250330] (mpc_car_control) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/foxy/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:45 (find_package):\n'}
+[1.250426] (mpc_car_control) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[1.250498] (mpc_car_control) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[1.250560] (mpc_car_control) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[1.250620] (mpc_car_control) StderrLine: {'line': b'\n'}
+[1.250679] (mpc_car_control) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.250737] (mpc_car_control) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[1.250794] (mpc_car_control) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[1.250852] (mpc_car_control) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[1.250908] (mpc_car_control) StderrLine: {'line': b'  CMakeLists.txt:37 (rosidl_generate_interfaces)\n'}
+[1.250964] (mpc_car_control) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.251022] (mpc_car_control) StderrLine: {'line': b'\x1b[0m\n'}
+[1.271047] (mpc_car_control) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/foxy/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:133 (find_package):\n'}
+[1.271195] (mpc_car_control) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[1.271260] (mpc_car_control) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[1.271321] (mpc_car_control) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[1.271381] (mpc_car_control) StderrLine: {'line': b'\n'}
+[1.271449] (mpc_car_control) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.271509] (mpc_car_control) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[1.271568] (mpc_car_control) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[1.271626] (mpc_car_control) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[1.271695] (mpc_car_control) StderrLine: {'line': b'  CMakeLists.txt:37 (rosidl_generate_interfaces)\n'}
+[1.271753] (mpc_car_control) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.271811] (mpc_car_control) StderrLine: {'line': b'\x1b[0m\n'}
+[1.272800] (mpc_car_control) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.272899] (mpc_car_control) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[1.272966] (mpc_car_control) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[1.300863] (-) TimerEvent: {}
+[1.326986] (mpc_car_control) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.328443] (mpc_car_control) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.329497] (mpc_car_control) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.329652] (mpc_car_control) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.330761] (mpc_car_control) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.330905] (mpc_car_control) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.331191] (mpc_car_control) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.331663] (mpc_car_control) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.331993] (mpc_car_control) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[1.333075] (mpc_car_control) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.333167] (mpc_car_control) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.333452] (mpc_car_control) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.336688] (mpc_car_control) StdoutLine: {'line': b'-- Configuring done (1.3s)\n'}
+[1.400953] (-) TimerEvent: {}
+[1.428958] (mpc_car_control) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[1.429482] (mpc_car_control) StdoutLine: {'line': b'-- Build files have been written to: /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control\n'}
+[1.439078] (mpc_car_control) CommandEnded: {'returncode': 0}
+[1.439913] (mpc_car_control) JobProgress: {'identifier': 'mpc_car_control', 'progress': 'build'}
+[1.441076] (mpc_car_control) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control', '--', '-j12', '-l12'], 'cwd': '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('APPCODE_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/appcode.vmoptions'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GATEWAY_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/gateway.vmoptions'), ('LANGUAGE', 'zh_CN:en_AU:en'), ('USER', 'yucheng'), ('LC_TIME', 'zh_CN.UTF-8'), ('MESA_LOADER_DRIVER_OVERRIDE', 'i965'), ('WEBSTORM_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/webstorm.vmoptions'), ('WEBIDE_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/webide.vmoptions'), ('SSH_AGENT_PID', '1396'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/antigravity/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda-12.0/lib64:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-12.0/lib64'), ('QT4_IM_MODULE', 'fcitx'), ('ANTIGRAVITY_CLI_ALIAS', 'agy'), ('HOME', '/home/yucheng'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('OLDPWD', '/home/yucheng/mpc_motion_control_projects'), ('TERM_PROGRAM_VERSION', '1.104.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/antigravity/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/antigravity/antigravity'), ('MANAGERPID', '1285'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DATASPELL_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/dataspell.vmoptions'), ('BUNDLED_DEBUGPY_PATH', '/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DATAGRIP_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/datagrip.vmoptions'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IDEA_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/idea.vmoptions'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '45543'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('CLION_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/clion.vmoptions'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'yucheng'), ('JETBRAINSCLIENT_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/jetbrainsclient.vmoptions'), ('JOURNAL_STREAM', '8:34661'), ('_', '/home/yucheng/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('PHPSTORM_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/phpstorm.vmoptions'), ('USERNAME', 'yucheng'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/bin:/usr/local/cuda-12.0/bin:/home/yucheng/.local/bin:/opt/ros/foxy/bin:/usr/local/bin:/usr/local/cuda-12.0/bin:/home/yucheng/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/yucheng-Lenovo-Rescuer-Y7000:@/tmp/.ICE-unix/1442,unix/yucheng-Lenovo-Rescuer-Y7000:/tmp/.ICE-unix/1442'), ('INVOCATION_ID', 'd8ddece9dd03409c9300f96346ecf4dc'), ('PAPERSIZE', 'a4'), ('RIDER_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/rider.vmoptions'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-454ba53d4f1b844a.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/yucheng/.config/Antigravity/User/workspaceStorage/f219ac6eba8d8d99e64bba645ca9d94f/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('GOLAND_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/goland.vmoptions'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a95e87445e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('PYCHARM_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/pycharm.vmoptions'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('RUBYMINE_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/rubymine.vmoptions'), ('PWD', '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control'), ('JETBRAINS_CLIENT_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/jetbrains_client.vmoptions'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[1.465431] (mpc_car_control) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.471095] (mpc_car_control) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.501038] (-) TimerEvent: {}
+[1.601317] (-) TimerEvent: {}
+[1.701581] (-) TimerEvent: {}
+[1.801841] (-) TimerEvent: {}
+[1.837594] (mpc_car_control) StdoutLine: {'line': b'[  3%] Built target mpc_car_control__cpp\n'}
+[1.843718] (mpc_car_control) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.843998] (mpc_car_control) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.844137] (mpc_car_control) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.901927] (-) TimerEvent: {}
+[1.902993] (mpc_car_control) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.c.o\x1b[0m\n'}
+[1.903214] (mpc_car_control) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/reference_trajectory__functions.c.o\x1b[0m\n'}
+[1.904708] (mpc_car_control) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/control_command_body__functions.c.o\x1b[0m\n'}
+[1.904905] (mpc_car_control) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/actuator_command__functions.c.o\x1b[0m\n'}
+[1.971627] (mpc_car_control) StdoutLine: {'line': b'[ 15%] \x1b[32m\x1b[1mLinking C shared library libmpc_car_control__rosidl_generator_c.so\x1b[0m\n'}
+[2.002052] (-) TimerEvent: {}
+[2.004279] (mpc_car_control) StdoutLine: {'line': b'[ 15%] Built target mpc_car_control__rosidl_generator_c\n'}
+[2.010499] (mpc_car_control) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.010731] (mpc_car_control) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.102147] (-) TimerEvent: {}
+[2.177127] (mpc_car_control) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mpc_car_control/msg/control_command_body__type_support.cpp.o\x1b[0m\n'}
+[2.177400] (mpc_car_control) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mpc_car_control/msg/actuator_command__type_support.cpp.o\x1b[0m\n'}
+[2.181987] (mpc_car_control) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mpc_car_control/msg/vehicle_state__type_support.cpp.o\x1b[0m\n'}
+[2.182252] (mpc_car_control) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mpc_car_control/msg/reference_trajectory__type_support.cpp.o\x1b[0m\n'}
+[2.202237] (-) TimerEvent: {}
+[2.290876] (mpc_car_control) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/control_command_body__type_support.cpp.o\x1b[0m\n'}
+[2.291769] (mpc_car_control) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/vehicle_state__type_support.cpp.o\x1b[0m\n'}
+[2.293313] (mpc_car_control) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/reference_trajectory__type_support.cpp.o\x1b[0m\n'}
+[2.298243] (mpc_car_control) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/actuator_command__type_support.cpp.o\x1b[0m\n'}
+[2.302336] (-) TimerEvent: {}
+[2.402807] (-) TimerEvent: {}
+[2.469399] (mpc_car_control) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_car_control/msg/vehicle_state__type_support.cpp.o\x1b[0m\n'}
+[2.472463] (mpc_car_control) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/vehicle_state__type_support.cpp.o\x1b[0m\n'}
+[2.496732] (mpc_car_control) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_car_control/msg/reference_trajectory__type_support.cpp.o\x1b[0m\n'}
+[2.502907] (-) TimerEvent: {}
+[2.603246] (-) TimerEvent: {}
+[2.622735] (mpc_car_control) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_car_control/msg/control_command_body__type_support.cpp.o\x1b[0m\n'}
+[2.631864] (mpc_car_control) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/reference_trajectory__type_support.cpp.o\x1b[0m\n'}
+[2.701503] (mpc_car_control) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/control_command_body__type_support.cpp.o\x1b[0m\n'}
+[2.703345] (-) TimerEvent: {}
+[2.720608] (mpc_car_control) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_car_control/msg/actuator_command__type_support.cpp.o\x1b[0m\n'}
+[2.748778] (mpc_car_control) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__type_support.c.o\x1b[0m\n'}
+[2.749643] (mpc_car_control) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/actuator_command__type_support.cpp.o\x1b[0m\n'}
+[2.762012] (mpc_car_control) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding C object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/reference_trajectory__type_support.c.o\x1b[0m\n'}
+[2.774348] (mpc_car_control) StdoutLine: {'line': b'[ 49%] \x1b[32m\x1b[1mLinking CXX shared library libmpc_car_control__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[2.785394] (mpc_car_control) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library libmpc_car_control__rosidl_typesupport_c.so\x1b[0m\n'}
+[2.803465] (-) TimerEvent: {}
+[2.821644] (mpc_car_control) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding C object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.c.o\x1b[0m\n'}
+[2.852457] (mpc_car_control) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/control_command_body__type_support.c.o\x1b[0m\n'}
+[2.860985] (mpc_car_control) StdoutLine: {'line': b'[ 53%] Built target mpc_car_control__rosidl_typesupport_cpp\n'}
+[2.867200] (mpc_car_control) StdoutLine: {'line': b'[ 53%] Built target mpc_car_control__rosidl_typesupport_c\n'}
+[2.898226] (mpc_car_control) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking C shared library libmpc_car_control__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[2.903597] (-) TimerEvent: {}
+[2.927734] (mpc_car_control) StdoutLine: {'line': b'[ 55%] Built target mpc_car_control__rosidl_typesupport_introspection_c\n'}
+[2.982791] (mpc_car_control) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX shared library libmpc_car_control__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[3.003722] (-) TimerEvent: {}
+[3.066517] (mpc_car_control) StdoutLine: {'line': b'[ 57%] Built target mpc_car_control__rosidl_typesupport_introspection_cpp\n'}
+[3.103830] (-) TimerEvent: {}
+[3.204140] (-) TimerEvent: {}
+[3.304528] (-) TimerEvent: {}
+[3.375970] (mpc_car_control) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libmpc_car_control__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[3.404658] (-) TimerEvent: {}
+[3.469377] (mpc_car_control) StdoutLine: {'line': b'[ 58%] Built target mpc_car_control__rosidl_typesupport_fastrtps_cpp\n'}
+[3.474795] (mpc_car_control) StdoutLine: {'line': b'[ 60%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.504779] (-) TimerEvent: {}
+[3.605043] (-) TimerEvent: {}
+[3.705282] (-) TimerEvent: {}
+[3.808897] (-) TimerEvent: {}
+[3.826382] (mpc_car_control) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/vehicle_state__type_support_c.cpp.o\x1b[0m\n'}
+[3.840014] (mpc_car_control) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/reference_trajectory__type_support_c.cpp.o\x1b[0m\n'}
+[3.840297] (mpc_car_control) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/control_command_body__type_support_c.cpp.o\x1b[0m\n'}
+[3.861373] (mpc_car_control) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/actuator_command__type_support_c.cpp.o\x1b[0m\n'}
+[3.908994] (-) TimerEvent: {}
+[4.009408] (-) TimerEvent: {}
+[4.109684] (-) TimerEvent: {}
+[4.210004] (-) TimerEvent: {}
+[4.310375] (-) TimerEvent: {}
+[4.311818] (mpc_car_control) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library libmpc_car_control__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[4.402599] (mpc_car_control) StdoutLine: {'line': b'[ 68%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c\n'}
+[4.410465] (-) TimerEvent: {}
+[4.414141] (mpc_car_control) StdoutLine: {'line': b'[ 68%] Built target mpc_car_control\n'}
+[4.425521] (mpc_car_control) StdoutLine: {'line': b'[ 69%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[4.432981] (mpc_car_control) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o\x1b[0m\n'}
+[4.433219] (mpc_car_control) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/scenario_generator_node.dir/src/scenario_generator_node.cpp.o\x1b[0m\n'}
+[4.434109] (mpc_car_control) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/vehicle_interface_node.dir/src/vehicle_interface_node.cpp.o\x1b[0m\n'}
+[4.436016] (mpc_car_control) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/control_allocator_node.dir/src/control_allocator_node.cpp.o\x1b[0m\n'}
+[4.497023] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/scenario_generator_node.cpp:9:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kmpc_car_control/msg/wheel_ground_heights.hpp: \xe6\xb2\xa1\xe6\x9c\x89\xe9\x82\xa3\xe4\xb8\xaa\xe6\x96\x87\xe4\xbb\xb6\xe6\x88\x96\xe7\x9b\xae\xe5\xbd\x95\n'}
+[4.497265] (mpc_car_control) StderrLine: {'line': b'    9 | #include \x1b[01;31m\x1b[K"mpc_car_control/msg/wheel_ground_heights.hpp"\x1b[m\x1b[K\n'}
+[4.497396] (mpc_car_control) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.497517] (mpc_car_control) StderrLine: {'line': b'compilation terminated.\n'}
+[4.498656] (mpc_car_control) StderrLine: {'line': b'make[2]: *** [CMakeFiles/scenario_generator_node.dir/build.make:79\xef\xbc\x9aCMakeFiles/scenario_generator_node.dir/src/scenario_generator_node.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[4.498918] (mpc_car_control) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:683\xef\xbc\x9aCMakeFiles/scenario_generator_node.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[4.499116] (mpc_car_control) StderrLine: {'line': b'make[1]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[4.499669] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/vehicle_interface_node.cpp:7:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kmpc_car_control/msg/wheel_ground_heights.hpp: \xe6\xb2\xa1\xe6\x9c\x89\xe9\x82\xa3\xe4\xb8\xaa\xe6\x96\x87\xe4\xbb\xb6\xe6\x88\x96\xe7\x9b\xae\xe5\xbd\x95\n'}
+[4.499850] (mpc_car_control) StderrLine: {'line': b'    7 | #include \x1b[01;31m\x1b[K"mpc_car_control/msg/wheel_ground_heights.hpp"\x1b[m\x1b[K\n'}
+[4.499974] (mpc_car_control) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.500088] (mpc_car_control) StderrLine: {'line': b'compilation terminated.\n'}
+[4.501232] (mpc_car_control) StderrLine: {'line': b'make[2]: *** [CMakeFiles/vehicle_interface_node.dir/build.make:79\xef\xbc\x9aCMakeFiles/vehicle_interface_node.dir/src/vehicle_interface_node.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[4.501473] (mpc_car_control) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:782\xef\xbc\x9aCMakeFiles/vehicle_interface_node.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[4.510598] (-) TimerEvent: {}
+[4.610863] (-) TimerEvent: {}
+[4.711172] (-) TimerEvent: {}
+[4.811454] (-) TimerEvent: {}
+[4.912009] (-) TimerEvent: {}
+[5.012269] (-) TimerEvent: {}
+[5.112565] (-) TimerEvent: {}
+[5.212864] (-) TimerEvent: {}
+[5.244703] (mpc_car_control) StdoutLine: {'line': b'[ 76%] Built target mpc_car_control__py\n'}
+[5.312964] (-) TimerEvent: {}
+[5.413260] (-) TimerEvent: {}
+[5.513556] (-) TimerEvent: {}
+[5.613855] (-) TimerEvent: {}
+[5.714161] (-) TimerEvent: {}
+[5.814489] (-) TimerEvent: {}
+[5.914772] (-) TimerEvent: {}
+[6.015045] (-) TimerEvent: {}
+[6.115241] (-) TimerEvent: {}
+[6.216325] (-) TimerEvent: {}
+[6.316619] (-) TimerEvent: {}
+[6.416912] (-) TimerEvent: {}
+[6.517214] (-) TimerEvent: {}
+[6.617499] (-) TimerEvent: {}
+[6.717787] (-) TimerEvent: {}
+[6.818076] (-) TimerEvent: {}
+[6.918366] (-) TimerEvent: {}
+[7.018649] (-) TimerEvent: {}
+[7.118942] (-) TimerEvent: {}
+[7.219356] (-) TimerEvent: {}
+[7.319626] (-) TimerEvent: {}
+[7.419893] (-) TimerEvent: {}
+[7.520256] (-) TimerEvent: {}
+[7.620566] (-) TimerEvent: {}
+[7.720850] (-) TimerEvent: {}
+[7.821181] (-) TimerEvent: {}
+[7.921575] (-) TimerEvent: {}
+[8.022149] (-) TimerEvent: {}
+[8.122546] (-) TimerEvent: {}
+[8.223050] (-) TimerEvent: {}
+[8.323539] (-) TimerEvent: {}
+[8.423968] (-) TimerEvent: {}
+[8.524273] (-) TimerEvent: {}
+[8.624628] (-) TimerEvent: {}
+[8.724871] (-) TimerEvent: {}
+[8.825140] (-) TimerEvent: {}
+[8.925392] (-) TimerEvent: {}
+[9.025669] (-) TimerEvent: {}
+[9.125941] (-) TimerEvent: {}
+[9.226278] (-) TimerEvent: {}
+[9.326640] (-) TimerEvent: {}
+[9.426914] (-) TimerEvent: {}
+[9.527184] (-) TimerEvent: {}
+[9.628106] (-) TimerEvent: {}
+[9.728395] (-) TimerEvent: {}
+[9.734638] (mpc_car_control) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX executable control_allocator_node\x1b[0m\n'}
+[9.828487] (-) TimerEvent: {}
+[9.928756] (-) TimerEvent: {}
+[10.029105] (-) TimerEvent: {}
+[10.036492] (mpc_car_control) StdoutLine: {'line': b'[ 77%] Built target control_allocator_node\n'}
+[10.129252] (-) TimerEvent: {}
+[10.229607] (-) TimerEvent: {}
+[10.329897] (-) TimerEvent: {}
+[10.430187] (-) TimerEvent: {}
+[10.530481] (-) TimerEvent: {}
+[10.630801] (-) TimerEvent: {}
+[10.731077] (-) TimerEvent: {}
+[10.831374] (-) TimerEvent: {}
+[10.931632] (-) TimerEvent: {}
+[11.031921] (-) TimerEvent: {}
+[11.132234] (-) TimerEvent: {}
+[11.232552] (-) TimerEvent: {}
+[11.332873] (-) TimerEvent: {}
+[11.397475] (mpc_car_control) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX executable mpc_controller_node\x1b[0m\n'}
+[11.433006] (-) TimerEvent: {}
+[11.533295] (-) TimerEvent: {}
+[11.633576] (-) TimerEvent: {}
+[11.733874] (-) TimerEvent: {}
+[11.785086] (mpc_car_control) StdoutLine: {'line': b'[ 79%] Built target mpc_controller_node\n'}
+[11.785834] (mpc_car_control) StderrLine: {'line': b'make: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[11.787509] (mpc_car_control) CommandEnded: {'returncode': 2}
+[11.833992] (-) TimerEvent: {}
+[11.932525] (mpc_car_control) JobEnded: {'identifier': 'mpc_car_control', 'rc': 2}
+[11.934083] (-) TimerEvent: {}
+[11.943160] (-) EventReactorShutdown: {}

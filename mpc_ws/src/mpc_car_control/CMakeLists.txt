@@ -19,6 +19,10 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(visualization_msgs REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_ros REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
 if(BUILD_TESTING)
@@ -39,11 +43,12 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ReferenceTrajectory.msg"
   "msg/ControlCommandBody.msg"
   "msg/ActuatorCommand.msg"
+  "msg/WheelGroundHeights.msg"
   DEPENDENCIES geometry_msgs std_msgs
 )
 
 add_executable(scenario_generator_node src/scenario_generator_node.cpp)
-ament_target_dependencies(scenario_generator_node rclcpp std_msgs geometry_msgs)
+ament_target_dependencies(scenario_generator_node rclcpp std_msgs geometry_msgs visualization_msgs tf2 tf2_ros)
 rosidl_target_interfaces(scenario_generator_node
   ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
@@ -70,9 +75,28 @@ ament_target_dependencies(vehicle_interface_node rclcpp std_msgs geometry_msgs)
 rosidl_target_interfaces(vehicle_interface_node
   ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
+add_executable(visualization_node src/visualization_node.cpp)
+ament_target_dependencies(visualization_node
+  rclcpp
+  std_msgs
+  visualization_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
+)
+rosidl_target_interfaces(visualization_node
+  ${PROJECT_NAME} "rosidl_typesupport_cpp")
+
+add_executable(vehicle_model_node src/vehicle_model_node.cpp)
+ament_target_dependencies(vehicle_model_node rclcpp std_msgs)
+rosidl_target_interfaces(vehicle_model_node
+  ${PROJECT_NAME} "rosidl_typesupport_cpp")
+
 install(TARGETS
   control_allocator_node
   vehicle_interface_node
+  visualization_node
+  vehicle_model_node
   DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY launch

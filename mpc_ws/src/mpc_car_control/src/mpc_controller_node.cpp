@@ -102,6 +102,9 @@ private:
     double k_fx = 1000.0;
     double k_fy = 500.0;
     double k_mz = 2000.0;
+    double k_fz = 5000.0;  // Stiffness for height
+    double k_mx = 10000.0; // Roll stiffness
+    double k_my = 10000.0; // Pitch stiffness
 
     // Rotate error to body frame
     double c_yaw = std::cos(current_state_.yaw);
@@ -116,6 +119,17 @@ private:
         k_fx * ev + 100.0 * e_long; // Combine velocity and position error
     cmd_msg.fy = k_fy * e_lat;
     cmd_msg.mz = k_mz * eyaw;
+
+    // Vertical / Roll / Pitch Control (Simple P-Control)
+    // Target Z = 0, Roll = 0, Pitch = 0 (for now)
+    // Fz needs to support weight + correct error
+    double mass = 1412.0;
+    double g = 9.81;
+    double fz_gravity = mass * g;
+
+    cmd_msg.fz = fz_gravity + k_fz * (0.0 - current_state_.z);
+    cmd_msg.mx = k_mx * (0.0 - current_state_.roll);
+    cmd_msg.my = k_my * (0.0 - current_state_.pitch);
 
     publisher_->publish(cmd_msg);
   }

@@ -18,8 +18,13 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_state__struct.hpp"
   "rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_state__traits.hpp"
   "rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_state__type_support.hpp"
+  "rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__builder.hpp"
+  "rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__struct.hpp"
+  "rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__traits.hpp"
+  "rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.hpp"
   "rosidl_generator_cpp/mpc_car_control/msg/reference_trajectory.hpp"
   "rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp"
+  "rosidl_generator_cpp/mpc_car_control/msg/wheel_ground_heights.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -92,6 +92,33 @@ bool mpc_car_control__msg__control_command_body__convert_from_py(PyObject * _pym
     ros_message->mz = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // fz
+    PyObject * field = PyObject_GetAttrString(_pymsg, "fz");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->fz = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // mx
+    PyObject * field = PyObject_GetAttrString(_pymsg, "mx");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->mx = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // my
+    PyObject * field = PyObject_GetAttrString(_pymsg, "my");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->my = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -155,6 +182,39 @@ PyObject * mpc_car_control__msg__control_command_body__convert_to_py(void * raw_
     field = PyFloat_FromDouble(ros_message->mz);
     {
       int rc = PyObject_SetAttrString(_pymessage, "mz", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // fz
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->fz);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "fz", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // mx
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->mx);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "mx", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // my
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->my);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "my", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

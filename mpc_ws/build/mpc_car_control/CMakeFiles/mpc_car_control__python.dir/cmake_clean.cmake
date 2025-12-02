@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_reference_trajectory_s.c.o.d"
   "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.c.o"
   "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.c.o.d"
+  "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o"
+  "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o.d"
   "rosidl_generator_py/mpc_car_control/libmpc_car_control__python.pdb"
   "rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so"
 )

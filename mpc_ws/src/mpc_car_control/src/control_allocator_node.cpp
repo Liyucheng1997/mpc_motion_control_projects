@@ -55,6 +55,28 @@ private:
     cmd.steering_angle =
         std::min(std::max(cmd.steering_angle, -0.5), 0.5); // +/- 0.5 rad
 
+    // Suspension Force Allocation
+    // Simple logic:
+    // Fz -> Evenly distributed
+    // Mx (Roll) -> Left +, Right - (To roll right/lift left)
+    // My (Pitch) -> Front +, Rear - (To pitch up/lift front)
+
+    double fz_per_wheel = msg->fz / 4.0;
+    // Assuming generic track width and wheelbase scaling for moments
+    // For real car, divide by track_width and wheelbase
+    double roll_force = msg->mx / 2.0;
+    double pitch_force = msg->my / 2.0;
+
+    // Indices: 0:FL, 1:FR, 2:RL, 3:RR
+    cmd.active_suspension_force[0] =
+        fz_per_wheel + roll_force + pitch_force; // FL
+    cmd.active_suspension_force[1] =
+        fz_per_wheel - roll_force + pitch_force; // FR
+    cmd.active_suspension_force[2] =
+        fz_per_wheel + roll_force - pitch_force; // RL
+    cmd.active_suspension_force[3] =
+        fz_per_wheel - roll_force - pitch_force; // RR
+
     publisher_->publish(cmd);
   }
 

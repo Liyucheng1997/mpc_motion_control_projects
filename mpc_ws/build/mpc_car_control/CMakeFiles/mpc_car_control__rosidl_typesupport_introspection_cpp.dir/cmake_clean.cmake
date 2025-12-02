@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/reference_trajectory__type_support.cpp.o.d"
   "CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/vehicle_state__type_support.cpp.o"
   "CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/vehicle_state__type_support.cpp.o.d"
+  "CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.o"
+  "CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.o.d"
   "libmpc_car_control__rosidl_typesupport_introspection_cpp.pdb"
   "libmpc_car_control__rosidl_typesupport_introspection_cpp.so"
   "rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/actuator_command__rosidl_typesupport_introspection_cpp.hpp"
@@ -17,6 +19,8 @@ file(REMOVE_RECURSE
   "rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/reference_trajectory__type_support.cpp"
   "rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_cpp.hpp"
   "rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/vehicle_state__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/reference_trajectory__type_support_c.cpp.o.d"
   "CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/vehicle_state__type_support_c.cpp.o"
   "CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/vehicle_state__type_support_c.cpp.o.d"
+  "CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.o"
+  "CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.o.d"
   "libmpc_car_control__rosidl_typesupport_fastrtps_c.pdb"
   "libmpc_car_control__rosidl_typesupport_fastrtps_c.so"
   "rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/actuator_command__rosidl_typesupport_fastrtps_c.h"
@@ -17,6 +19,8 @@ file(REMOVE_RECURSE
   "rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/reference_trajectory__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/vehicle_state__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp"
 )
 
 # Per-language clean rules from dependency scanning.

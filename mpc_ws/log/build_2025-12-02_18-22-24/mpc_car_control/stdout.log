@@ -1,0 +1,22 @@
+[  1%] Built target mpc_car_control__cpp
+[ 10%] Built target mpc_car_control__rosidl_generator_c
+[ 20%] Built target mpc_car_control__rosidl_typesupport_c
+[ 38%] Built target mpc_car_control__rosidl_typesupport_cpp
+[ 38%] Built target mpc_car_control__rosidl_typesupport_introspection_c
+[ 49%] Built target mpc_car_control__rosidl_typesupport_fastrtps_cpp
+[ 57%] Built target mpc_car_control__rosidl_typesupport_introspection_cpp
+[ 66%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c
+[ 66%] Built target mpc_car_control
+[ 68%] Built target mpc_car_control__py
+[ 69%] [32mBuilding CXX object CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o[0m
+[ 72%] Built target scenario_generator_node
+[ 74%] Built target vehicle_interface_node
+[ 77%] Built target control_allocator_node
+[ 80%] Built target visualization_node
+[ 81%] [32mBuilding CXX object CMakeFiles/vehicle_model_node.dir/src/vehicle_model_node.cpp.o[0m
+[ 89%] Built target mpc_car_control__python
+[ 94%] Built target mpc_car_control__rosidl_typesupport_introspection_c__pyext
+[ 94%] Built target mpc_car_control__rosidl_typesupport_c__pyext
+[ 97%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c__pyext
+[ 98%] [32m[1mLinking CXX executable mpc_controller_node[0m
+[ 98%] Built target mpc_controller_node

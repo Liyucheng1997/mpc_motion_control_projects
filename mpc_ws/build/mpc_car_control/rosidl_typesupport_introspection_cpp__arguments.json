@@ -6,7 +6,8 @@
     "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_adapter/mpc_car_control:msg/VehicleState.idl",
     "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_adapter/mpc_car_control:msg/ReferenceTrajectory.idl",
     "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_adapter/mpc_car_control:msg/ControlCommandBody.idl",
-    "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_adapter/mpc_car_control:msg/ActuatorCommand.idl"
+    "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_adapter/mpc_car_control:msg/ActuatorCommand.idl",
+    "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_adapter/mpc_car_control:msg/WheelGroundHeights.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/foxy/share/geometry_msgs/msg/Accel.idl",
@@ -84,6 +85,7 @@
     "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_adapter/mpc_car_control/msg/ReferenceTrajectory.idl",
     "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_adapter/mpc_car_control/msg/ControlCommandBody.idl",
     "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_adapter/mpc_car_control/msg/ActuatorCommand.idl",
+    "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_adapter/mpc_car_control/msg/WheelGroundHeights.idl",
     "/opt/ros/foxy/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/foxy/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/foxy/share/geometry_msgs/msg/AccelWithCovariance.idl",

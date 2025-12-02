@@ -17,6 +17,8 @@
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/mpc_controller_node.dir
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/control_allocator_node.dir
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/vehicle_interface_node.dir
+/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/visualization_node.dir
+/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/vehicle_model_node.dir
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/test.dir
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/edit_cache.dir
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/rebuild_cache.dir

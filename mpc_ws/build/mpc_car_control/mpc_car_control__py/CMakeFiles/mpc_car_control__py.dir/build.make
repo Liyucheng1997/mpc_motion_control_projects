@@ -73,11 +73,13 @@ include /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/m
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/mpc_car_control__py/CMakeFiles/mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_reference_trajectory.py
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/mpc_car_control__py/CMakeFiles/mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_control_command_body.py
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/mpc_car_control__py/CMakeFiles/mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_actuator_command.py
+/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/mpc_car_control__py/CMakeFiles/mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights.py
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/mpc_car_control__py/CMakeFiles/mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/__init__.py
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/mpc_car_control__py/CMakeFiles/mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.c
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/mpc_car_control__py/CMakeFiles/mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_reference_trajectory_s.c
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/mpc_car_control__py/CMakeFiles/mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_control_command_body_s.c
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/mpc_car_control__py/CMakeFiles/mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_actuator_command_s.c
+/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/mpc_car_control__py/CMakeFiles/mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c
 
 rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_py/__init__.py
@@ -96,6 +98,7 @@ rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fas
 rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/mpc_car_control/msg/ReferenceTrajectory.idl
 rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/mpc_car_control/msg/ControlCommandBody.idl
 rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/mpc_car_control/msg/ActuatorCommand.idl
+rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/mpc_car_control/msg/WheelGroundHeights.idl
 rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/geometry_msgs/msg/Accel.idl
 rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/geometry_msgs/msg/AccelStamped.idl
 rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/geometry_msgs/msg/AccelWithCovariance.idl
@@ -178,6 +181,9 @@ rosidl_generator_py/mpc_car_control/msg/_control_command_body.py: rosidl_generat
 rosidl_generator_py/mpc_car_control/msg/_actuator_command.py: rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/mpc_car_control/msg/_actuator_command.py
 
+rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights.py: rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights.py
+
 rosidl_generator_py/mpc_car_control/msg/__init__.py: rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/mpc_car_control/msg/__init__.py
 
@@ -192,6 +198,9 @@ rosidl_generator_py/mpc_car_control/msg/_control_command_body_s.c: rosidl_genera
 
 rosidl_generator_py/mpc_car_control/msg/_actuator_command_s.c: rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/mpc_car_control/msg/_actuator_command_s.c
+
+rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c: rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c
 
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/mpc_car_control__py/CMakeFiles/mpc_car_control__py.dir/codegen:
 .PHONY : /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/mpc_car_control__py/CMakeFiles/mpc_car_control__py.dir/codegen
@@ -209,6 +218,8 @@ mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_reference_trajecto
 mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_reference_trajectory_s.c
 mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_vehicle_state.py
 mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.c
+mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights.py
+mpc_car_control__py: rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c
 mpc_car_control__py: /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/mpc_car_control__py/CMakeFiles/mpc_car_control__py.dir/build.make
 .PHONY : mpc_car_control__py
 

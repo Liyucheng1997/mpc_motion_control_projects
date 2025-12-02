@@ -28,6 +28,9 @@ typedef struct mpc_car_control__msg__ControlCommandBody
   double fx;
   double fy;
   double mz;
+  double fz;
+  double mx;
+  double my;
 } mpc_car_control__msg__ControlCommandBody;
 
 // Struct for a sequence of mpc_car_control__msg__ControlCommandBody.

@@ -419,6 +419,32 @@ vehicle_interface_node/fast:
 .PHONY : vehicle_interface_node/fast
 
 #=============================================================================
+# Target rules for targets named visualization_node
+
+# Build rule for target.
+visualization_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 visualization_node
+.PHONY : visualization_node
+
+# fast build rule for target.
+visualization_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visualization_node.dir/build.make CMakeFiles/visualization_node.dir/build
+.PHONY : visualization_node/fast
+
+#=============================================================================
+# Target rules for targets named vehicle_model_node
+
+# Build rule for target.
+vehicle_model_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vehicle_model_node
+.PHONY : vehicle_model_node
+
+# fast build rule for target.
+vehicle_model_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vehicle_model_node.dir/build.make CMakeFiles/vehicle_model_node.dir/build
+.PHONY : vehicle_model_node/fast
+
+#=============================================================================
 # Target rules for targets named mpc_car_control__py
 
 # Build rule for target.
@@ -526,6 +552,30 @@ rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.s: rosidl
 rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_generator_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.c.s
 .PHONY : rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.c.s
+
+rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.o: rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.o
+.PHONY : rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.o
+
+# target to build an object file
+rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_generator_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.o
+.PHONY : rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.o
+
+rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.i: rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.i
+.PHONY : rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_generator_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.i
+.PHONY : rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.i
+
+rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.s: rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.s
+.PHONY : rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_generator_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.s
+.PHONY : rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.s
 
 rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_c.o: rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_c.c.o
 .PHONY : rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_c.o
@@ -695,6 +745,30 @@ rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__python.dir/build.make CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.c.s
 .PHONY : rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.c.s
 
+rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.o: rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o
+.PHONY : rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.o
+
+# target to build an object file
+rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__python.dir/build.make CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o
+.PHONY : rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o
+
+rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.i: rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.i
+.PHONY : rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__python.dir/build.make CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.i
+.PHONY : rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.i
+
+rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.s: rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.s
+.PHONY : rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__python.dir/build.make CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.s
+.PHONY : rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.s
+
 rosidl_typesupport_c/mpc_car_control/msg/actuator_command__type_support.o: rosidl_typesupport_c/mpc_car_control/msg/actuator_command__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/mpc_car_control/msg/actuator_command__type_support.o
 
@@ -790,6 +864,30 @@ rosidl_typesupport_c/mpc_car_control/msg/vehicle_state__type_support.s: rosidl_t
 rosidl_typesupport_c/mpc_car_control/msg/vehicle_state__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_car_control/msg/vehicle_state__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/mpc_car_control/msg/vehicle_state__type_support.cpp.s
+
+rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.o: rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.o
+
+rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.i: rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.i
+
+rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.s: rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.s
 
 rosidl_typesupport_cpp/mpc_car_control/msg/actuator_command__type_support.o: rosidl_typesupport_cpp/mpc_car_control/msg/actuator_command__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/mpc_car_control/msg/actuator_command__type_support.o
@@ -887,6 +985,30 @@ rosidl_typesupport_cpp/mpc_car_control/msg/vehicle_state__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mpc_car_control/msg/vehicle_state__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/mpc_car_control/msg/vehicle_state__type_support.cpp.s
 
+rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.o: rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.o
+
+rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.i: rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.i
+
+rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.s: rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.s
+
 rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/actuator_command__type_support_c.o: rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/actuator_command__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/actuator_command__type_support_c.o
 
@@ -982,6 +1104,30 @@ rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/vehicle_state__type_sup
 rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/vehicle_state__type_support_c.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/vehicle_state__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/vehicle_state__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.o: rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.i: rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.s: rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.s
 
 rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/actuator_command__type_support.o: rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/actuator_command__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/actuator_command__type_support.o
@@ -1079,6 +1225,30 @@ rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/vehicle_
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/vehicle_state__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/vehicle_state__type_support.cpp.s
 
+rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.o: rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.i: rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.s: rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.cpp.s
+
 rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.o: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.o
 
@@ -1174,6 +1344,30 @@ rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__typ
 rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__type_support.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__type_support.c.s
+
+rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.o: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.o
+
+rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.i: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.i
+
+rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.s: rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.s
 
 rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/actuator_command__type_support.o: rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/actuator_command__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/actuator_command__type_support.o
@@ -1271,6 +1465,30 @@ rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/vehicle_state__t
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/vehicle_state__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/vehicle_state__type_support.cpp.s
 
+rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.o: rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.i: rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.s: rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.s
+
 src/control_allocator_node.o: src/control_allocator_node.cpp.o
 .PHONY : src/control_allocator_node.o
 
@@ -1367,6 +1585,54 @@ src/vehicle_interface_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vehicle_interface_node.dir/build.make CMakeFiles/vehicle_interface_node.dir/src/vehicle_interface_node.cpp.s
 .PHONY : src/vehicle_interface_node.cpp.s
 
+src/vehicle_model_node.o: src/vehicle_model_node.cpp.o
+.PHONY : src/vehicle_model_node.o
+
+# target to build an object file
+src/vehicle_model_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vehicle_model_node.dir/build.make CMakeFiles/vehicle_model_node.dir/src/vehicle_model_node.cpp.o
+.PHONY : src/vehicle_model_node.cpp.o
+
+src/vehicle_model_node.i: src/vehicle_model_node.cpp.i
+.PHONY : src/vehicle_model_node.i
+
+# target to preprocess a source file
+src/vehicle_model_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vehicle_model_node.dir/build.make CMakeFiles/vehicle_model_node.dir/src/vehicle_model_node.cpp.i
+.PHONY : src/vehicle_model_node.cpp.i
+
+src/vehicle_model_node.s: src/vehicle_model_node.cpp.s
+.PHONY : src/vehicle_model_node.s
+
+# target to generate assembly for a file
+src/vehicle_model_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vehicle_model_node.dir/build.make CMakeFiles/vehicle_model_node.dir/src/vehicle_model_node.cpp.s
+.PHONY : src/vehicle_model_node.cpp.s
+
+src/visualization_node.o: src/visualization_node.cpp.o
+.PHONY : src/visualization_node.o
+
+# target to build an object file
+src/visualization_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visualization_node.dir/build.make CMakeFiles/visualization_node.dir/src/visualization_node.cpp.o
+.PHONY : src/visualization_node.cpp.o
+
+src/visualization_node.i: src/visualization_node.cpp.i
+.PHONY : src/visualization_node.i
+
+# target to preprocess a source file
+src/visualization_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visualization_node.dir/build.make CMakeFiles/visualization_node.dir/src/visualization_node.cpp.i
+.PHONY : src/visualization_node.cpp.i
+
+src/visualization_node.s: src/visualization_node.cpp.s
+.PHONY : src/visualization_node.s
+
+# target to generate assembly for a file
+src/visualization_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/visualization_node.dir/build.make CMakeFiles/visualization_node.dir/src/visualization_node.cpp.s
+.PHONY : src/visualization_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1400,6 +1666,8 @@ help:
 	@echo "... mpc_controller_node"
 	@echo "... scenario_generator_node"
 	@echo "... vehicle_interface_node"
+	@echo "... vehicle_model_node"
+	@echo "... visualization_node"
 	@echo "... rosidl_generator_c/mpc_car_control/msg/detail/actuator_command__functions.o"
 	@echo "... rosidl_generator_c/mpc_car_control/msg/detail/actuator_command__functions.i"
 	@echo "... rosidl_generator_c/mpc_car_control/msg/detail/actuator_command__functions.s"
@@ -1412,6 +1680,9 @@ help:
 	@echo "... rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.o"
 	@echo "... rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.i"
 	@echo "... rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.s"
+	@echo "... rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.o"
+	@echo "... rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.i"
+	@echo "... rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.s"
 	@echo "... rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_c.o"
 	@echo "... rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_c.i"
 	@echo "... rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_c.s"
@@ -1433,6 +1704,9 @@ help:
 	@echo "... rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.o"
 	@echo "... rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.i"
 	@echo "... rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.s"
+	@echo "... rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.o"
+	@echo "... rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.i"
+	@echo "... rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.s"
 	@echo "... rosidl_typesupport_c/mpc_car_control/msg/actuator_command__type_support.o"
 	@echo "... rosidl_typesupport_c/mpc_car_control/msg/actuator_command__type_support.i"
 	@echo "... rosidl_typesupport_c/mpc_car_control/msg/actuator_command__type_support.s"
@@ -1445,6 +1719,9 @@ help:
 	@echo "... rosidl_typesupport_c/mpc_car_control/msg/vehicle_state__type_support.o"
 	@echo "... rosidl_typesupport_c/mpc_car_control/msg/vehicle_state__type_support.i"
 	@echo "... rosidl_typesupport_c/mpc_car_control/msg/vehicle_state__type_support.s"
+	@echo "... rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.o"
+	@echo "... rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.i"
+	@echo "... rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.s"
 	@echo "... rosidl_typesupport_cpp/mpc_car_control/msg/actuator_command__type_support.o"
 	@echo "... rosidl_typesupport_cpp/mpc_car_control/msg/actuator_command__type_support.i"
 	@echo "... rosidl_typesupport_cpp/mpc_car_control/msg/actuator_command__type_support.s"
@@ -1457,6 +1734,9 @@ help:
 	@echo "... rosidl_typesupport_cpp/mpc_car_control/msg/vehicle_state__type_support.o"
 	@echo "... rosidl_typesupport_cpp/mpc_car_control/msg/vehicle_state__type_support.i"
 	@echo "... rosidl_typesupport_cpp/mpc_car_control/msg/vehicle_state__type_support.s"
+	@echo "... rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.o"
+	@echo "... rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.i"
+	@echo "... rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/actuator_command__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/actuator_command__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/actuator_command__type_support_c.s"
@@ -1469,6 +1749,9 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/vehicle_state__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/vehicle_state__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/vehicle_state__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/actuator_command__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/actuator_command__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/actuator_command__type_support.s"
@@ -1481,6 +1764,9 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/vehicle_state__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/vehicle_state__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/vehicle_state__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.s"
@@ -1493,6 +1779,9 @@ help:
 	@echo "... rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/actuator_command__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/actuator_command__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/actuator_command__type_support.s"
@@ -1505,6 +1794,9 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/vehicle_state__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/vehicle_state__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/vehicle_state__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.s"
 	@echo "... src/control_allocator_node.o"
 	@echo "... src/control_allocator_node.i"
 	@echo "... src/control_allocator_node.s"
@@ -1517,6 +1809,12 @@ help:
 	@echo "... src/vehicle_interface_node.o"
 	@echo "... src/vehicle_interface_node.i"
 	@echo "... src/vehicle_interface_node.s"
+	@echo "... src/vehicle_model_node.o"
+	@echo "... src/vehicle_model_node.i"
+	@echo "... src/vehicle_model_node.s"
+	@echo "... src/visualization_node.o"
+	@echo "... src/visualization_node.i"
+	@echo "... src/visualization_node.s"
 .PHONY : help
 
 

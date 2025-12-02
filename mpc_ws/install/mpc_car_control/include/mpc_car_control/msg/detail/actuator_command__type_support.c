@@ -37,7 +37,7 @@ void ActuatorCommand__rosidl_typesupport_introspection_c__ActuatorCommand_fini_f
   mpc_car_control__msg__ActuatorCommand__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ActuatorCommand__rosidl_typesupport_introspection_c__ActuatorCommand_message_member_array[4] = {
+static rosidl_typesupport_introspection_c__MessageMember ActuatorCommand__rosidl_typesupport_introspection_c__ActuatorCommand_message_member_array[5] = {
   {
     "header",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -97,13 +97,28 @@ static rosidl_typesupport_introspection_c__MessageMember ActuatorCommand__rosidl
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "active_suspension_force",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    true,  // is array
+    4,  // array size
+    false,  // is upper bound
+    offsetof(mpc_car_control__msg__ActuatorCommand, active_suspension_force),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers ActuatorCommand__rosidl_typesupport_introspection_c__ActuatorCommand_message_members = {
   "mpc_car_control__msg",  // message namespace
   "ActuatorCommand",  // message name
-  4,  // number of fields
+  5,  // number of fields
   sizeof(mpc_car_control__msg__ActuatorCommand),
   ActuatorCommand__rosidl_typesupport_introspection_c__ActuatorCommand_message_member_array,  // message members
   ActuatorCommand__rosidl_typesupport_introspection_c__ActuatorCommand_init_function,  // function to initialize message memory (memory has to be allocated)

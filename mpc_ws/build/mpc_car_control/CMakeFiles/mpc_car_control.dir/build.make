@@ -70,6 +70,7 @@ CMakeFiles/mpc_car_control: /home/yucheng/mpc_motion_control_projects/mpc_ws/src
 CMakeFiles/mpc_car_control: /home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/msg/ReferenceTrajectory.msg
 CMakeFiles/mpc_car_control: /home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/msg/ControlCommandBody.msg
 CMakeFiles/mpc_car_control: /home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/msg/ActuatorCommand.msg
+CMakeFiles/mpc_car_control: /home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/msg/WheelGroundHeights.msg
 CMakeFiles/mpc_car_control: /opt/ros/foxy/share/geometry_msgs/msg/Accel.idl
 CMakeFiles/mpc_car_control: /opt/ros/foxy/share/geometry_msgs/msg/AccelStamped.idl
 CMakeFiles/mpc_car_control: /opt/ros/foxy/share/geometry_msgs/msg/AccelWithCovariance.idl

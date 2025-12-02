@@ -1,0 +1,402 @@
+[0.028s] Invoking command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/local/bin/cmake --build /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control -- -j12 -l12
+[0.041s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.041s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.041s]   CMake.
+[0.041s] 
+[0.041s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.041s]   to tell CMake that the project requires at least <min> but has been updated
+[0.041s]   to work with policies introduced by <max> or earlier.
+[0.041s] 
+[0.041s] [0m
+[0.051s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.053s] [33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.053s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.053s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.053s]   the cmake_policy command to set the policy and suppress this warning.
+[0.053s] 
+[0.053s] Call Stack (most recent call first):
+[0.053s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.053s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.054s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.054s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.054s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.054s]   CMakeLists.txt:19 (find_package)
+[0.054s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.054s] [0m
+[0.073s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")
+[0.073s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.323s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.359s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.362s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.487s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.541s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.542s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.671s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[0.699s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.763s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.774s] [33mCMake Warning (dev) at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:40 (find_package):
+[0.774s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.774s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.774s]   the cmake_policy command to set the policy and suppress this warning.
+[0.774s] 
+[0.774s] Call Stack (most recent call first):
+[0.774s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.774s]   CMakeLists.txt:37 (rosidl_generate_interfaces)
+[0.774s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.774s] [0m
+[0.794s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10")
+[0.943s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[1.180s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.322s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.325s] [33mCMake Warning (dev) at /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+[1.326s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.326s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.326s]   the cmake_policy command to set the policy and suppress this warning.
+[1.326s] 
+[1.326s] Call Stack (most recent call first):
+[1.326s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[1.326s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[1.326s]   CMakeLists.txt:37 (rosidl_generate_interfaces)
+[1.327s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.327s] [0m
+[1.347s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5")
+[1.347s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[1.348s] [33mCMake Warning (dev) at /opt/ros/foxy/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:45 (find_package):
+[1.348s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.348s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.348s]   the cmake_policy command to set the policy and suppress this warning.
+[1.348s] 
+[1.348s] Call Stack (most recent call first):
+[1.348s]   /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[1.348s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[1.348s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[1.348s]   CMakeLists.txt:37 (rosidl_generate_interfaces)
+[1.348s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.348s] [0m
+[1.371s] [33mCMake Warning (dev) at /opt/ros/foxy/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:133 (find_package):
+[1.371s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[1.371s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[1.371s]   the cmake_policy command to set the policy and suppress this warning.
+[1.371s] 
+[1.371s] Call Stack (most recent call first):
+[1.372s]   /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[1.372s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[1.372s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[1.372s]   CMakeLists.txt:37 (rosidl_generate_interfaces)
+[1.372s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.372s] [0m
+[1.373s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.373s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[1.373s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[1.426s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.428s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.429s] -- Configured cppcheck include dirs: 
+[1.429s] -- Configured cppcheck exclude dirs and/or files: 
+[1.430s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.430s] -- Configured cpplint exclude dirs and/or files: 
+[1.430s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.431s] -- Added test 'lint_cmake' to check CMake code style
+[1.431s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[1.433s] -- Added test 'uncrustify' to check C / C++ code style
+[1.433s] -- Configured uncrustify additional arguments: 
+[1.433s] -- Added test 'xmllint' to check XML markup files
+[1.437s] -- Configuring done (1.4s)
+[1.527s] -- Generating done (0.1s)
+[1.528s] -- Build files have been written to: /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control
+[1.554s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.560s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.032s] [  2%] Built target mpc_car_control__cpp
+[2.040s] [  7%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.040s] [  7%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.040s] [  7%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.087s] [ 11%] [32mBuilding C object CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.c.o[0m
+[2.087s] [ 11%] [32mBuilding C object CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/reference_trajectory__functions.c.o[0m
+[2.087s] [ 11%] [32mBuilding C object CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/control_command_body__functions.c.o[0m
+[2.087s] [ 12%] [32mBuilding C object CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/actuator_command__functions.c.o[0m
+[2.089s] [ 14%] [32mBuilding C object CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.c.o[0m
+[2.241s] [ 15%] [32m[1mLinking C shared library libmpc_car_control__rosidl_generator_c.so[0m
+[2.301s] [ 15%] Built target mpc_car_control__rosidl_generator_c
+[2.311s] [ 16%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.346s] [ 18%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.612s] [ 19%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mpc_car_control/msg/reference_trajectory__type_support.cpp.o[0m
+[2.612s] [ 21%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mpc_car_control/msg/control_command_body__type_support.cpp.o[0m
+[2.613s] [ 22%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mpc_car_control/msg/vehicle_state__type_support.cpp.o[0m
+[2.613s] [ 25%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.o[0m
+[2.613s] [ 25%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mpc_car_control/msg/actuator_command__type_support.cpp.o[0m
+[2.705s] [ 26%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/actuator_command__type_support.cpp.o[0m
+[2.711s] [ 28%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/vehicle_state__type_support.cpp.o[0m
+[2.718s] [ 29%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/control_command_body__type_support.cpp.o[0m
+[2.723s] [ 30%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/reference_trajectory__type_support.cpp.o[0m
+[2.879s] [ 32%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/vehicle_state__type_support.cpp.o[0m
+[3.049s] [ 33%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_car_control/msg/vehicle_state__type_support.cpp.o[0m
+[3.115s] [ 35%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/reference_trajectory__type_support.cpp.o[0m
+[3.146s] [ 36%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_car_control/msg/reference_trajectory__type_support.cpp.o[0m
+[3.149s] [ 38%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp.o[0m
+[3.165s] [ 39%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_car_control/msg/control_command_body__type_support.cpp.o[0m
+[3.211s] [ 40%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_car_control/msg/actuator_command__type_support.cpp.o[0m
+[3.218s] [ 42%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/control_command_body__type_support.cpp.o[0m
+[3.292s] [ 43%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_car_control/msg/wheel_ground_heights__type_support.cpp.o[0m
+[3.301s] [ 45%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/actuator_command__type_support.cpp.o[0m
+[3.331s] [ 46%] [32mBuilding C object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__type_support.c.o[0m
+[3.348s] [ 47%] [32mBuilding C object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/reference_trajectory__type_support.c.o[0m
+[3.355s] [ 49%] [32m[1mLinking CXX shared library libmpc_car_control__rosidl_typesupport_c.so[0m
+[3.389s] [ 50%] [32m[1mLinking CXX shared library libmpc_car_control__rosidl_typesupport_cpp.so[0m
+[3.417s] [ 52%] [32mBuilding C object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/control_command_body__type_support.c.o[0m
+[3.424s] [ 53%] [32mBuilding C object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/actuator_command__type_support.c.o[0m
+[3.430s] [ 54%] [32mBuilding C object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c.o[0m
+[3.456s] [ 56%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mpc_car_control/msg/detail/dds_fastrtps/wheel_ground_heights__type_support.cpp.o[0m
+[3.463s] [ 56%] Built target mpc_car_control__rosidl_typesupport_c
+[3.515s] [ 56%] Built target mpc_car_control__rosidl_typesupport_cpp
+[3.535s] [ 57%] [32m[1mLinking C shared library libmpc_car_control__rosidl_typesupport_introspection_c.so[0m
+[3.580s] [ 57%] Built target mpc_car_control__rosidl_typesupport_introspection_c
+[3.673s] [ 59%] [32m[1mLinking CXX shared library libmpc_car_control__rosidl_typesupport_introspection_cpp.so[0m
+[3.778s] [ 59%] Built target mpc_car_control__rosidl_typesupport_introspection_cpp
+[3.985s] [ 60%] [32m[1mLinking CXX shared library libmpc_car_control__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.088s] [ 60%] Built target mpc_car_control__rosidl_typesupport_fastrtps_cpp
+[4.094s] [ 61%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[4.491s] [ 64%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/vehicle_state__type_support_c.cpp.o[0m
+[4.492s] [ 64%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/reference_trajectory__type_support_c.cpp.o[0m
+[4.492s] [ 66%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/control_command_body__type_support_c.cpp.o[0m
+[4.492s] [ 67%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/actuator_command__type_support_c.cpp.o[0m
+[4.492s] [ 69%] [32mBuilding CXX object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support_c.cpp.o[0m
+[5.047s] [ 70%] [32m[1mLinking CXX shared library libmpc_car_control__rosidl_typesupport_fastrtps_c.so[0m
+[5.145s] [ 70%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c
+[5.157s] [ 70%] Built target mpc_car_control
+[5.171s] [ 71%] [34m[1mGenerating Python code for ROS interfaces[0m
+[5.179s] [ 73%] [32mBuilding CXX object CMakeFiles/control_allocator_node.dir/src/control_allocator_node.cpp.o[0m
+[5.179s] [ 74%] [32mBuilding CXX object CMakeFiles/vehicle_interface_node.dir/src/vehicle_interface_node.cpp.o[0m
+[5.179s] [ 76%] [32mBuilding CXX object CMakeFiles/scenario_generator_node.dir/src/scenario_generator_node.cpp.o[0m
+[5.181s] [ 77%] [32mBuilding CXX object CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o[0m
+[6.298s] [ 77%] Built target mpc_car_control__py
+[6.320s] [ 78%] [32mBuilding C object CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.c.o[0m
+[6.321s] [ 83%] [32mBuilding C object CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_wheel_ground_heights_s.c.o[0m
+[6.321s] [ 83%] [32mBuilding C object CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_control_command_body_s.c.o[0m
+[6.321s] [ 84%] [32mBuilding C object CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_actuator_command_s.c.o[0m
+[6.321s] [ 84%] [32mBuilding C object CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_reference_trajectory_s.c.o[0m
+[6.497s] [ 85%] [32m[1mLinking C shared library rosidl_generator_py/mpc_car_control/libmpc_car_control__python.so[0m
+[6.548s] [ 85%] Built target mpc_car_control__python
+[6.570s] [ 87%] [32mBuilding C object CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[6.571s] [ 90%] [32mBuilding C object CMakeFiles/mpc_car_control__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_c.c.o[0m
+[6.571s] [ 90%] [32mBuilding C object CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[6.730s] [ 91%] [32m[1mLinking C shared library rosidl_generator_py/mpc_car_control/mpc_car_control_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[6.770s] [ 92%] [32m[1mLinking CXX shared library rosidl_generator_py/mpc_car_control/mpc_car_control_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[6.810s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/mpc_car_control/mpc_car_control_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[6.829s] [ 94%] Built target mpc_car_control__rosidl_typesupport_c__pyext
+[6.925s] [ 94%] Built target mpc_car_control__rosidl_typesupport_introspection_c__pyext
+[6.985s] [ 94%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c__pyext
+[7.397s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/scenario_generator_node.cpp:[m[K In member function ‘[01m[Kdouble ScenarioGeneratorNode::get_bump_height(double, double)[m[K’:
+[7.397s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/scenario_generator_node.cpp:44:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ky[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[7.397s]    44 |   double get_bump_height(double x, [01;35m[Kdouble y[m[K) {
+[7.397s]       |                                    [01;35m[K~~~~~~~^[m[K
+[12.250s] [ 95%] [32m[1mLinking CXX executable control_allocator_node[0m
+[12.562s] [ 95%] Built target control_allocator_node
+[13.231s] [ 97%] [32m[1mLinking CXX executable scenario_generator_node[0m
+[13.606s] [ 97%] Built target scenario_generator_node
+[13.866s] [ 98%] [32m[1mLinking CXX executable mpc_controller_node[0m
+[13.965s] [100%] [32m[1mLinking CXX executable vehicle_interface_node[0m
+[14.242s] [100%] Built target mpc_controller_node
+[14.370s] [100%] Built target vehicle_interface_node
+[14.378s] Invoked command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/local/bin/cmake --build /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control -- -j12 -l12
+[14.546s] Invoking command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/local/bin/cmake --install /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control
+[14.551s] -- Install configuration: ""
+[14.551s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/ament_index/resource_index/rosidl_interfaces/mpc_car_control
+[14.551s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control
+[14.551s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg
+[14.551s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/rosidl_generator_c__visibility_control.h
+[14.551s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/wheel_ground_heights.h
+[14.551s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/control_command_body.h
+[14.552s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail
+[14.552s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/control_command_body__struct.h
+[14.552s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/control_command_body__type_support.h
+[14.552s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/actuator_command__struct.h
+[14.552s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/reference_trajectory__type_support.h
+[14.552s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/control_command_body__functions.h
+[14.552s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/wheel_ground_heights__functions.h
+[14.552s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/reference_trajectory__functions.h
+[14.552s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/vehicle_state__type_support.h
+[14.552s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/wheel_ground_heights__functions.c
+[14.552s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/actuator_command__functions.c
+[14.552s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/vehicle_state__functions.h
+[14.553s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/vehicle_state__functions.c
+[14.553s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/control_command_body__functions.c
+[14.553s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/reference_trajectory__struct.h
+[14.553s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/actuator_command__functions.h
+[14.553s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/vehicle_state__struct.h
+[14.553s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/reference_trajectory__functions.c
+[14.554s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/wheel_ground_heights__type_support.h
+[14.554s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/wheel_ground_heights__struct.h
+[14.554s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/actuator_command__type_support.h
+[14.554s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/reference_trajectory.h
+[14.554s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/vehicle_state.h
+[14.554s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/actuator_command.h
+[14.554s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/library_path.sh
+[14.554s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/library_path.dsv
+[14.555s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_generator_c.so
+[14.555s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_generator_c.so" to ""
+[14.555s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control
+[14.556s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg
+[14.556s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail
+[14.556s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/wheel_ground_heights__rosidl_typesupport_fastrtps_c.h
+[14.556s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/control_command_body__rosidl_typesupport_fastrtps_c.h
+[14.556s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_fastrtps_c.h
+[14.556s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/reference_trajectory__rosidl_typesupport_fastrtps_c.h
+[14.556s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/actuator_command__rosidl_typesupport_fastrtps_c.h
+[14.556s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[14.556s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_fastrtps_c.so
+[14.557s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_fastrtps_c.so" to ""
+[14.557s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control
+[14.557s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg
+[14.557s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail
+[14.557s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/dds_fastrtps
+[14.558s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/reference_trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[14.558s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_fastrtps_cpp.hpp
+[14.558s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/actuator_command__rosidl_typesupport_fastrtps_cpp.hpp
+[14.558s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/control_command_body__rosidl_typesupport_fastrtps_cpp.hpp
+[14.558s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/wheel_ground_heights__rosidl_typesupport_fastrtps_cpp.hpp
+[14.558s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[14.558s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_fastrtps_cpp.so
+[14.559s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_fastrtps_cpp.so" to ""
+[14.559s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control
+[14.559s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg
+[14.559s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[14.560s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail
+[14.560s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/reference_trajectory__type_support.c
+[14.560s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/reference_trajectory__rosidl_typesupport_introspection_c.h
+[14.560s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/vehicle_state__type_support.c
+[14.560s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/wheel_ground_heights__type_support.c
+[14.560s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h
+[14.560s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/actuator_command__type_support.c
+[14.561s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/control_command_body__rosidl_typesupport_introspection_c.h
+[14.561s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/wheel_ground_heights__rosidl_typesupport_introspection_c.h
+[14.561s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/control_command_body__type_support.c
+[14.561s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/actuator_command__rosidl_typesupport_introspection_c.h
+[14.561s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_introspection_c.so
+[14.562s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_introspection_c.so" to ""
+[14.562s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_c.so
+[14.563s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_c.so" to ""
+[14.563s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control
+[14.563s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg
+[14.563s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/wheel_ground_heights.hpp
+[14.564s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail
+[14.564s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/wheel_ground_heights__type_support.hpp
+[14.564s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/reference_trajectory__traits.hpp
+[14.564s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/reference_trajectory__builder.hpp
+[14.564s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/control_command_body__type_support.hpp
+[14.564s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/actuator_command__struct.hpp
+[14.565s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/wheel_ground_heights__builder.hpp
+[14.565s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/vehicle_state__type_support.hpp
+[14.565s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/vehicle_state__builder.hpp
+[14.565s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/actuator_command__traits.hpp
+[14.565s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/wheel_ground_heights__traits.hpp
+[14.565s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/actuator_command__type_support.hpp
+[14.565s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/control_command_body__struct.hpp
+[14.566s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/control_command_body__builder.hpp
+[14.566s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/wheel_ground_heights__struct.hpp
+[14.566s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/actuator_command__builder.hpp
+[14.566s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/reference_trajectory__struct.hpp
+[14.566s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/vehicle_state__traits.hpp
+[14.566s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/vehicle_state__struct.hpp
+[14.566s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/control_command_body__traits.hpp
+[14.566s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/reference_trajectory__type_support.hpp
+[14.567s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/vehicle_state.hpp
+[14.567s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/rosidl_generator_cpp__visibility_control.hpp
+[14.567s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/actuator_command.hpp
+[14.567s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/reference_trajectory.hpp
+[14.567s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/control_command_body.hpp
+[14.567s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control
+[14.567s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg
+[14.568s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail
+[14.568s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/reference_trajectory__type_support.cpp
+[14.568s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/actuator_command__rosidl_typesupport_introspection_cpp.hpp
+[14.568s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/wheel_ground_heights__type_support.cpp
+[14.568s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_cpp.hpp
+[14.568s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/control_command_body__type_support.cpp
+[14.568s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/wheel_ground_heights__rosidl_typesupport_introspection_cpp.hpp
+[14.568s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/vehicle_state__type_support.cpp
+[14.569s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/actuator_command__type_support.cpp
+[14.569s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/control_command_body__rosidl_typesupport_introspection_cpp.hpp
+[14.569s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/msg/detail/reference_trajectory__rosidl_typesupport_introspection_cpp.hpp
+[14.569s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_introspection_cpp.so
+[14.569s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_introspection_cpp.so" to ""
+[14.570s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_cpp.so
+[14.570s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_cpp.so" to ""
+[14.570s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/pythonpath.sh
+[14.570s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/pythonpath.dsv
+[14.571s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/__init__.py
+[14.618s] Compiling '/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/__init__.py'...
+[14.622s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/msg
+[14.622s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/msg/_reference_trajectory_s.c
+[14.623s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/msg/_actuator_command.py
+[14.623s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/msg/_vehicle_state.py
+[14.623s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/msg/__init__.py
+[14.623s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/msg/_wheel_ground_heights.py
+[14.623s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/msg/_control_command_body_s.c
+[14.623s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/msg/_wheel_ground_heights_s.c
+[14.623s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/msg/_actuator_command_s.c
+[14.623s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/msg/_control_command_body.py
+[14.623s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/msg/_vehicle_state_s.c
+[14.623s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/msg/_reference_trajectory.py
+[14.624s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/mpc_car_control_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[14.624s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/mpc_car_control_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+[14.625s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/mpc_car_control_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[14.625s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/mpc_car_control_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+[14.625s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/mpc_car_control_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[14.626s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control/mpc_car_control_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+[14.626s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__python.so
+[14.626s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__python.so" to ""
+[14.626s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/VehicleState.idl
+[14.627s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ReferenceTrajectory.idl
+[14.627s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ControlCommandBody.idl
+[14.627s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ActuatorCommand.idl
+[14.627s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/WheelGroundHeights.idl
+[14.627s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/VehicleState.msg
+[14.627s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ReferenceTrajectory.msg
+[14.627s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ControlCommandBody.msg
+[14.627s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ActuatorCommand.msg
+[14.627s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/WheelGroundHeights.msg
+[14.628s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/scenario_generator_node
+[14.631s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/scenario_generator_node" to ""
+[14.631s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/mpc_controller_node
+[14.636s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/mpc_controller_node" to ""
+[14.636s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/control_allocator_node
+[14.639s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/control_allocator_node" to ""
+[14.639s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/vehicle_interface_node
+[14.642s] -- Set non-toolchain portion of runtime path of "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/vehicle_interface_node" to ""
+[14.643s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/launch
+[14.643s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/launch/mpc_system.launch.py
+[14.643s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/launch/__pycache__
+[14.643s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/launch/__pycache__/mpc_system.launch.cpython-38.pyc
+[14.643s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/ament_index/resource_index/package_run_dependencies/mpc_car_control
+[14.643s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/ament_index/resource_index/parent_prefix_path/mpc_car_control
+[14.643s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/ament_prefix_path.sh
+[14.643s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/ament_prefix_path.dsv
+[14.643s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/path.sh
+[14.644s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/path.dsv
+[14.644s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/local_setup.bash
+[14.644s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/local_setup.sh
+[14.644s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/local_setup.zsh
+[14.644s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/local_setup.dsv
+[14.644s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/package.dsv
+[14.644s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/ament_index/resource_index/packages/mpc_car_control
+[14.644s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_generator_cExport.cmake
+[14.644s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_generator_cExport-noconfig.cmake
+[14.645s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_introspection_cExport.cmake
+[14.645s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[14.645s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_cExport.cmake
+[14.645s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_cExport-noconfig.cmake
+[14.645s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_generator_cppExport.cmake
+[14.645s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_introspection_cppExport.cmake
+[14.645s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[14.645s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_cppExport.cmake
+[14.645s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_cppExport-noconfig.cmake
+[14.646s] -- Installing: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/rosidl_cmake-extras.cmake
+[14.646s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/ament_cmake_export_dependencies-extras.cmake
+[14.646s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/ament_cmake_export_libraries-extras.cmake
+[14.646s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/ament_cmake_export_targets-extras.cmake
+[14.646s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/ament_cmake_export_include_directories-extras.cmake
+[14.646s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[14.646s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[14.647s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_controlConfig.cmake
+[14.647s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_controlConfig-version.cmake
+[14.650s] -- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/package.xml
+[14.651s] Invoked command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/local/bin/cmake --install /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control

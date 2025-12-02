@@ -65,6 +65,10 @@ cdr_serialize(
   cdr << ros_message.throttle;
   // Member: brake
   cdr << ros_message.brake;
+  // Member: active_suspension_force
+  {
+    cdr << ros_message.active_suspension_force;
+  }
   return true;
 }
 
@@ -86,6 +90,11 @@ cdr_deserialize(
 
   // Member: brake
   cdr >> ros_message.brake;
+
+  // Member: active_suspension_force
+  {
+    cdr >> ros_message.active_suspension_force;
+  }
 
   return true;
 }
@@ -124,6 +133,13 @@ get_serialized_size(
   {
     size_t item_size = sizeof(ros_message.brake);
     current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: active_suspension_force
+  {
+    size_t array_size = 4;
+    size_t item_size = sizeof(ros_message.active_suspension_force[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -176,6 +192,14 @@ max_serialized_size_ActuatorCommand(
   // Member: brake
   {
     size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: active_suspension_force
+  {
+    size_t array_size = 4;
 
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));

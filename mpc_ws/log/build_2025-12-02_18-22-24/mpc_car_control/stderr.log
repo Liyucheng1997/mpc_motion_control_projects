@@ -1,0 +1,8 @@
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/vehicle_model_node.cpp:[m[K In member function ‘[01m[Kvoid VehicleModelNode::sim_loop()[m[K’:
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/vehicle_model_node.cpp:211:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct VehicleParams[m[K’ has no member named ‘[01m[KC_alpha[m[K’
+  211 |         double F_ty = params_.[01;31m[KC_alpha[m[K * alpha;
+      |                               [01;31m[K^~~~~~~[m[K
+make[2]: *** [CMakeFiles/vehicle_model_node.dir/build.make:79：CMakeFiles/vehicle_model_node.dir/src/vehicle_model_node.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:854：CMakeFiles/vehicle_model_node.dir/all] 错误 2
+make[1]: *** 正在等待未完成的任务....
+make: *** [Makefile:146：all] 错误 2

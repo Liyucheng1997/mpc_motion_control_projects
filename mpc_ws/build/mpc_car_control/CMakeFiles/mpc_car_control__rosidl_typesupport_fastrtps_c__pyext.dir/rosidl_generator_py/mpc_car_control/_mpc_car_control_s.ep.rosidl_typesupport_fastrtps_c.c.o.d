@@ -191,4 +191,7 @@ CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_gene
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/detail/control_command_body__functions.h \
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/detail/actuator_command__type_support.h \
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/detail/actuator_command__struct.h \
- /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/detail/actuator_command__functions.h
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/detail/actuator_command__functions.h \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__type_support.h \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__struct.h \
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/detail/wheel_ground_heights__functions.h

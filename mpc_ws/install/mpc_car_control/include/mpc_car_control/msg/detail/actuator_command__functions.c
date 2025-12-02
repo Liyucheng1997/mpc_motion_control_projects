@@ -29,6 +29,7 @@ mpc_car_control__msg__ActuatorCommand__init(mpc_car_control__msg__ActuatorComman
   // steering_angle
   // throttle
   // brake
+  // active_suspension_force
   return true;
 }
 
@@ -43,6 +44,7 @@ mpc_car_control__msg__ActuatorCommand__fini(mpc_car_control__msg__ActuatorComman
   // steering_angle
   // throttle
   // brake
+  // active_suspension_force
 }
 
 bool
@@ -69,6 +71,12 @@ mpc_car_control__msg__ActuatorCommand__are_equal(const mpc_car_control__msg__Act
   if (lhs->brake != rhs->brake) {
     return false;
   }
+  // active_suspension_force
+  for (size_t i = 0; i < 4; ++i) {
+    if (lhs->active_suspension_force[i] != rhs->active_suspension_force[i]) {
+      return false;
+    }
+  }
   return true;
 }
 
@@ -92,6 +100,10 @@ mpc_car_control__msg__ActuatorCommand__copy(
   output->throttle = input->throttle;
   // brake
   output->brake = input->brake;
+  // active_suspension_force
+  for (size_t i = 0; i < 4; ++i) {
+    output->active_suspension_force[i] = input->active_suspension_force[i];
+  }
   return true;
 }
 

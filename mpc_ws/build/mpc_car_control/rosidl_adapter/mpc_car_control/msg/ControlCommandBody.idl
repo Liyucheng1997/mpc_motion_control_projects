@@ -14,6 +14,12 @@ module mpc_car_control {
       double fy;
 
       double mz;
+
+      double fz;
+
+      double mx;
+
+      double my;
     };
   };
 };

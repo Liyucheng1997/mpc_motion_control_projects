@@ -29,6 +29,9 @@ mpc_car_control__msg__ControlCommandBody__init(mpc_car_control__msg__ControlComm
   // fx
   // fy
   // mz
+  // fz
+  // mx
+  // my
   return true;
 }
 
@@ -43,6 +46,9 @@ mpc_car_control__msg__ControlCommandBody__fini(mpc_car_control__msg__ControlComm
   // fx
   // fy
   // mz
+  // fz
+  // mx
+  // my
 }
 
 bool
@@ -69,6 +75,18 @@ mpc_car_control__msg__ControlCommandBody__are_equal(const mpc_car_control__msg__
   if (lhs->mz != rhs->mz) {
     return false;
   }
+  // fz
+  if (lhs->fz != rhs->fz) {
+    return false;
+  }
+  // mx
+  if (lhs->mx != rhs->mx) {
+    return false;
+  }
+  // my
+  if (lhs->my != rhs->my) {
+    return false;
+  }
   return true;
 }
 
@@ -92,6 +110,12 @@ mpc_car_control__msg__ControlCommandBody__copy(
   output->fy = input->fy;
   // mz
   output->mz = input->mz;
+  // fz
+  output->fz = input->fz;
+  // mx
+  output->mx = input->mx;
+  // my
+  output->my = input->my;
   return true;
 }
 
