@@ -1,0 +1,8 @@
+msg/ActuatorCommand.idl
+msg/ActuatorCommand.msg
+msg/ControlCommandBody.idl
+msg/ControlCommandBody.msg
+msg/ReferenceTrajectory.idl
+msg/ReferenceTrajectory.msg
+msg/VehicleState.idl
+msg/VehicleState.msg

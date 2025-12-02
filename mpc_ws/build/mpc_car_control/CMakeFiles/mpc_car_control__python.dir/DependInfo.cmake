@@ -1,0 +1,26 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/msg/_actuator_command_s.c" "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_actuator_command_s.c.o" "gcc" "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_actuator_command_s.c.o.d"
+  "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/msg/_control_command_body_s.c" "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_control_command_body_s.c.o" "gcc" "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_control_command_body_s.c.o.d"
+  "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/msg/_reference_trajectory_s.c" "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_reference_trajectory_s.c.o" "gcc" "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_reference_trajectory_s.c.o.d"
+  "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.c" "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.c.o" "gcc" "CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_vehicle_state_s.c.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

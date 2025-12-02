@@ -1,0 +1,9 @@
+{
+  "package_name": "mpc_car_control",
+  "non_idl_tuples": [
+    "/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control:msg/VehicleState.msg",
+    "/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control:msg/ReferenceTrajectory.msg",
+    "/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control:msg/ControlCommandBody.msg",
+    "/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control:msg/ActuatorCommand.msg"
+  ]
+}

@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from mpc_car_control/msg/ActuatorCommand.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module mpc_car_control {
+  module msg {
+    struct ActuatorCommand {
+      std_msgs::msg::Header header;
+
+      double steering_angle;
+
+      double throttle;
+
+      double brake;
+    };
+  };
+};
