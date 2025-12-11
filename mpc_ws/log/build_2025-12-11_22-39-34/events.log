@@ -1,0 +1,301 @@
+[0.000000] (-) TimerEvent: {}
+[0.000347] (mpc_car_control) JobQueued: {'identifier': 'mpc_car_control', 'dependencies': OrderedDict()}
+[0.000393] (mpc_car_control) JobStarted: {'identifier': 'mpc_car_control'}
+[0.003927] (mpc_car_control) JobProgress: {'identifier': 'mpc_car_control', 'progress': 'cmake'}
+[0.004200] (mpc_car_control) JobProgress: {'identifier': 'mpc_car_control', 'progress': 'build'}
+[0.004500] (mpc_car_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control', '--', '-j24', '-l24'], 'cwd': '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'yucheng', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/antigravity/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'ANTIGRAVITY_CLI_ALIAS': 'agy', 'HOME': '/home/yucheng', 'CHROME_DESKTOP': 'antigravity.desktop', 'OLDPWD': '/home/yucheng/mpc_motion_control_projects', 'TERM_PROGRAM_VERSION': '1.104.0', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/antigravity.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SDL_IM_MODULE': 'fcitx', 'PAGER': 'cat', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/antigravity/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/antigravity/antigravity', 'MANAGERPID': '2265', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2627', 'BUNDLED_DEBUGPY_PATH': '/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'ANTIGRAVITY_AGENT': '1', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '10392', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'yucheng', 'JOURNAL_STREAM': '9:13674', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'yucheng', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/yucheng-Vector-16-HX-AI-A2XWIG:@/tmp/.ICE-unix/2597,unix/yucheng-Vector-16-HX-AI-A2XWIG:/tmp/.ICE-unix/2597', 'INVOCATION_ID': 'd4afd7c05a7c438eaa20708ab0a58fa2', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':1', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-454ba53d4f1b844a.txt', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'PYTHONSTARTUP': '/home/yucheng/.config/Antigravity/User/workspaceStorage/f7f98e31aab69360273be6cae61fe729/ms-python.python/pythonrc.py', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SBX_CHROME_API_RQ': '1', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-094d24dbc0.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CLUTTER_IM_MODULE': 'xim', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.038376] (mpc_car_control) StdoutLine: {'line': b'[  1%] Built target mpc_car_control__rosidl_generator_type_description\n'}
+[0.042155] (mpc_car_control) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_symlink_mpc_car_control\n'}
+[0.049804] (mpc_car_control) StdoutLine: {'line': b'[  2%] Built target mpc_car_control__cpp\n'}
+[0.052821] (mpc_car_control) StdoutLine: {'line': b'[ 21%] Built target mpc_car_control__rosidl_generator_c\n'}
+[0.066611] (mpc_car_control) StdoutLine: {'line': b'[ 69%] Built target mpc_car_control__rosidl_typesupport_introspection_cpp\n'}
+[0.066742] (mpc_car_control) StdoutLine: {'line': b'[ 69%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c\n'}
+[0.066782] (mpc_car_control) StdoutLine: {'line': b'[ 69%] Built target mpc_car_control__rosidl_typesupport_c\n'}
+[0.066817] (mpc_car_control) StdoutLine: {'line': b'[ 69%] Built target mpc_car_control__rosidl_typesupport_fastrtps_cpp\n'}
+[0.066849] (mpc_car_control) StdoutLine: {'line': b'[ 69%] Built target mpc_car_control__rosidl_typesupport_introspection_c\n'}
+[0.066882] (mpc_car_control) StdoutLine: {'line': b'[ 69%] Built target mpc_car_control__rosidl_typesupport_cpp\n'}
+[0.083215] (mpc_car_control) StdoutLine: {'line': b'[ 82%] Built target visualization_node\n'}
+[0.083355] (mpc_car_control) StdoutLine: {'line': b'[ 82%] Built target vehicle_interface_node\n'}
+[0.083398] (mpc_car_control) StdoutLine: {'line': b'[ 82%] Built target scenario_generator_node\n'}
+[0.083440] (mpc_car_control) StdoutLine: {'line': b'[ 82%] Built target pid_controller_node\n'}
+[0.083475] (mpc_car_control) StdoutLine: {'line': b'[ 82%] Built target vehicle_model_node\n'}
+[0.083509] (mpc_car_control) StdoutLine: {'line': b'[ 82%] Built target control_allocator_node\n'}
+[0.085267] (mpc_car_control) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o\x1b[0m\n'}
+[0.094278] (mpc_car_control) StdoutLine: {'line': b'[ 84%] Built target mpc_car_control\n'}
+[0.099847] (-) TimerEvent: {}
+[0.105030] (mpc_car_control) StdoutLine: {'line': b'[ 85%] Built target mpc_car_control__py\n'}
+[0.118829] (mpc_car_control) StdoutLine: {'line': b'[ 92%] Built target mpc_car_control__rosidl_generator_py\n'}
+[0.130824] (mpc_car_control) StdoutLine: {'line': b'[ 97%] Built target mpc_car_control_s__rosidl_typesupport_c\n'}
+[0.130946] (mpc_car_control) StdoutLine: {'line': b'[ 97%] Built target mpc_car_control_s__rosidl_typesupport_introspection_c\n'}
+[0.130987] (mpc_car_control) StdoutLine: {'line': b'[ 98%] Built target mpc_car_control_s__rosidl_typesupport_fastrtps_c\n'}
+[0.144461] (mpc_car_control) StdoutLine: {'line': b'running egg_info\n'}
+[0.151871] (mpc_car_control) StdoutLine: {'line': b'writing mpc_car_control.egg-info/PKG-INFO\n'}
+[0.151943] (mpc_car_control) StdoutLine: {'line': b'writing dependency_links to mpc_car_control.egg-info/dependency_links.txt\n'}
+[0.151983] (mpc_car_control) StdoutLine: {'line': b'writing top-level names to mpc_car_control.egg-info/top_level.txt\n'}
+[0.170699] (mpc_car_control) StdoutLine: {'line': b"reading manifest file 'mpc_car_control.egg-info/SOURCES.txt'\n"}
+[0.171086] (mpc_car_control) StdoutLine: {'line': b"writing manifest file 'mpc_car_control.egg-info/SOURCES.txt'\n"}
+[0.186016] (mpc_car_control) StdoutLine: {'line': b'[ 98%] Built target ament_cmake_python_build_mpc_car_control_egg\n'}
+[0.199917] (-) TimerEvent: {}
+[0.300194] (-) TimerEvent: {}
+[0.400536] (-) TimerEvent: {}
+[0.500858] (-) TimerEvent: {}
+[0.601174] (-) TimerEvent: {}
+[0.701509] (-) TimerEvent: {}
+[0.801861] (-) TimerEvent: {}
+[0.902175] (-) TimerEvent: {}
+[1.002547] (-) TimerEvent: {}
+[1.102784] (-) TimerEvent: {}
+[1.203092] (-) TimerEvent: {}
+[1.303423] (-) TimerEvent: {}
+[1.403786] (-) TimerEvent: {}
+[1.504136] (-) TimerEvent: {}
+[1.604397] (-) TimerEvent: {}
+[1.704641] (-) TimerEvent: {}
+[1.804885] (-) TimerEvent: {}
+[1.905156] (-) TimerEvent: {}
+[2.005419] (-) TimerEvent: {}
+[2.105770] (-) TimerEvent: {}
+[2.206226] (-) TimerEvent: {}
+[2.306515] (-) TimerEvent: {}
+[2.406756] (-) TimerEvent: {}
+[2.506997] (-) TimerEvent: {}
+[2.607315] (-) TimerEvent: {}
+[2.707563] (-) TimerEvent: {}
+[2.807805] (-) TimerEvent: {}
+[2.908061] (-) TimerEvent: {}
+[3.008389] (-) TimerEvent: {}
+[3.108724] (-) TimerEvent: {}
+[3.209039] (-) TimerEvent: {}
+[3.309407] (-) TimerEvent: {}
+[3.409654] (-) TimerEvent: {}
+[3.509909] (-) TimerEvent: {}
+[3.610244] (-) TimerEvent: {}
+[3.710614] (-) TimerEvent: {}
+[3.810931] (-) TimerEvent: {}
+[3.911293] (-) TimerEvent: {}
+[4.011631] (-) TimerEvent: {}
+[4.111962] (-) TimerEvent: {}
+[4.212391] (-) TimerEvent: {}
+[4.312722] (-) TimerEvent: {}
+[4.413063] (-) TimerEvent: {}
+[4.513410] (-) TimerEvent: {}
+[4.613687] (-) TimerEvent: {}
+[4.713949] (-) TimerEvent: {}
+[4.814282] (-) TimerEvent: {}
+[4.914529] (-) TimerEvent: {}
+[5.014896] (-) TimerEvent: {}
+[5.115262] (-) TimerEvent: {}
+[5.215609] (-) TimerEvent: {}
+[5.315977] (-) TimerEvent: {}
+[5.416305] (-) TimerEvent: {}
+[5.516661] (-) TimerEvent: {}
+[5.616979] (-) TimerEvent: {}
+[5.717319] (-) TimerEvent: {}
+[5.817641] (-) TimerEvent: {}
+[5.917992] (-) TimerEvent: {}
+[6.018349] (-) TimerEvent: {}
+[6.118681] (-) TimerEvent: {}
+[6.219011] (-) TimerEvent: {}
+[6.319321] (-) TimerEvent: {}
+[6.419669] (-) TimerEvent: {}
+[6.519962] (-) TimerEvent: {}
+[6.620302] (-) TimerEvent: {}
+[6.720580] (-) TimerEvent: {}
+[6.820935] (-) TimerEvent: {}
+[6.921259] (-) TimerEvent: {}
+[7.021631] (-) TimerEvent: {}
+[7.121859] (-) TimerEvent: {}
+[7.222132] (-) TimerEvent: {}
+[7.322479] (-) TimerEvent: {}
+[7.422806] (-) TimerEvent: {}
+[7.523108] (-) TimerEvent: {}
+[7.613970] (mpc_car_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable mpc_controller_node\x1b[0m\n'}
+[7.623285] (-) TimerEvent: {}
+[7.723679] (-) TimerEvent: {}
+[7.824000] (-) TimerEvent: {}
+[7.858988] (mpc_car_control) StdoutLine: {'line': b'[100%] Built target mpc_controller_node\n'}
+[7.866483] (mpc_car_control) CommandEnded: {'returncode': 0}
+[7.866744] (mpc_car_control) JobProgress: {'identifier': 'mpc_car_control', 'progress': 'install'}
+[7.872194] (mpc_car_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control'], 'cwd': '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'yucheng', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/antigravity/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'ANTIGRAVITY_CLI_ALIAS': 'agy', 'HOME': '/home/yucheng', 'CHROME_DESKTOP': 'antigravity.desktop', 'OLDPWD': '/home/yucheng/mpc_motion_control_projects', 'TERM_PROGRAM_VERSION': '1.104.0', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/antigravity.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SDL_IM_MODULE': 'fcitx', 'PAGER': 'cat', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/antigravity/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/antigravity/antigravity', 'MANAGERPID': '2265', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2627', 'BUNDLED_DEBUGPY_PATH': '/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'ANTIGRAVITY_AGENT': '1', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '10392', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'yucheng', 'JOURNAL_STREAM': '9:13674', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'yucheng', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/scripts/noConfigScripts', 'SESSION_MANAGER': 'local/yucheng-Vector-16-HX-AI-A2XWIG:@/tmp/.ICE-unix/2597,unix/yucheng-Vector-16-HX-AI-A2XWIG:/tmp/.ICE-unix/2597', 'INVOCATION_ID': 'd4afd7c05a7c438eaa20708ab0a58fa2', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':1', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-454ba53d4f1b844a.txt', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'PYTHONSTARTUP': '/home/yucheng/.config/Antigravity/User/workspaceStorage/f7f98e31aab69360273be6cae61fe729/ms-python.python/pythonrc.py', 'XMODIFIERS': '@im=fcitx', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SBX_CHROME_API_RQ': '1', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-094d24dbc0.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CLUTTER_IM_MODULE': 'xim', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'QTWEBENGINE_DICTIONARIES_PATH': '/usr/share/hunspell-bdic/', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[7.876658] (mpc_car_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.876986] (mpc_car_control) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[7.877060] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/ament_index/resource_index/rosidl_interfaces/mpc_car_control\n'}
+[7.877106] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/VehicleState.json\n'}
+[7.877140] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ReferenceTrajectory.json\n'}
+[7.877191] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ControlCommandBody.json\n'}
+[7.877236] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ActuatorCommand.json\n'}
+[7.877286] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/WheelGroundHeights.json\n'}
+[7.877611] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/actuator_command.h\n'}
+[7.877664] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/control_command_body.h\n'}
+[7.877721] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/actuator_command__functions.h\n'}
+[7.877774] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/actuator_command__struct.h\n'}
+[7.877826] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/actuator_command__type_support.h\n'}
+[7.877876] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/control_command_body__functions.h\n'}
+[7.877926] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/control_command_body__struct.h\n'}
+[7.877977] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/control_command_body__type_support.h\n'}
+[7.878028] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/reference_trajectory__functions.h\n'}
+[7.878078] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/reference_trajectory__struct.h\n'}
+[7.878126] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/reference_trajectory__type_support.h\n'}
+[7.878178] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/vehicle_state__functions.h\n'}
+[7.878228] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/vehicle_state__struct.h\n'}
+[7.878279] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/vehicle_state__type_support.h\n'}
+[7.878328] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/wheel_ground_heights__functions.h\n'}
+[7.878383] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/wheel_ground_heights__struct.h\n'}
+[7.878433] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/wheel_ground_heights__type_support.h\n'}
+[7.878482] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/reference_trajectory.h\n'}
+[7.878530] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/rosidl_generator_c__visibility_control.h\n'}
+[7.878583] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/vehicle_state.h\n'}
+[7.878632] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/wheel_ground_heights.h\n'}
+[7.878714] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/library_path.sh\n'}
+[7.878793] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/library_path.dsv\n'}
+[7.879050] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/actuator_command__rosidl_typesupport_fastrtps_c.h\n'}
+[7.879102] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/control_command_body__rosidl_typesupport_fastrtps_c.h\n'}
+[7.879154] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/reference_trajectory__rosidl_typesupport_fastrtps_c.h\n'}
+[7.879205] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_fastrtps_c.h\n'}
+[7.879254] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/wheel_ground_heights__rosidl_typesupport_fastrtps_c.h\n'}
+[7.879305] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[7.879562] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/actuator_command.hpp\n'}
+[7.879612] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/control_command_body.hpp\n'}
+[7.879663] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/actuator_command__builder.hpp\n'}
+[7.879713] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/actuator_command__struct.hpp\n'}
+[7.879764] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/actuator_command__traits.hpp\n'}
+[7.879814] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/actuator_command__type_support.hpp\n'}
+[7.879864] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/control_command_body__builder.hpp\n'}
+[7.879914] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/control_command_body__struct.hpp\n'}
+[7.879964] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/control_command_body__traits.hpp\n'}
+[7.880014] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/control_command_body__type_support.hpp\n'}
+[7.880063] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/reference_trajectory__builder.hpp\n'}
+[7.880114] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/reference_trajectory__struct.hpp\n'}
+[7.880163] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/reference_trajectory__traits.hpp\n'}
+[7.880213] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/reference_trajectory__type_support.hpp\n'}
+[7.880264] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/vehicle_state__builder.hpp\n'}
+[7.880313] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/vehicle_state__struct.hpp\n'}
+[7.880367] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/vehicle_state__traits.hpp\n'}
+[7.880416] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/vehicle_state__type_support.hpp\n'}
+[7.880466] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/wheel_ground_heights__builder.hpp\n'}
+[7.880518] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/wheel_ground_heights__struct.hpp\n'}
+[7.880568] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/wheel_ground_heights__traits.hpp\n'}
+[7.880618] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/wheel_ground_heights__type_support.hpp\n'}
+[7.880667] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/reference_trajectory.hpp\n'}
+[7.880715] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[7.880765] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/vehicle_state.hpp\n'}
+[7.880813] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/wheel_ground_heights.hpp\n'}
+[7.881070] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/actuator_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.881122] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/control_command_body__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.881173] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/reference_trajectory__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.881223] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.881273] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/wheel_ground_heights__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.881322] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[7.881503] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/actuator_command__rosidl_typesupport_introspection_c.h\n'}
+[7.881553] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/control_command_body__rosidl_typesupport_introspection_c.h\n'}
+[7.881617] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/reference_trajectory__rosidl_typesupport_introspection_c.h\n'}
+[7.881667] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h\n'}
+[7.881889] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/wheel_ground_heights__rosidl_typesupport_introspection_c.h\n'}
+[7.881922] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[7.882112] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/actuator_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.882145] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/control_command_body__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.882177] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/reference_trajectory__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.882208] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.882295] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/include/mpc_car_control/mpc_car_control/msg/detail/wheel_ground_heights__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.882329] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/pythonpath.sh\n'}
+[7.882364] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/pythonpath.dsv\n'}
+[7.882513] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[7.882563] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[7.882614] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[7.882664] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[7.882962] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/__init__.py\n'}
+[7.883014] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_c.c\n'}
+[7.883064] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[7.883113] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/_mpc_car_control_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[7.883162] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/mpc_car_control_s__rosidl_typesupport_c.so\n'}
+[7.883210] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/mpc_car_control_s__rosidl_typesupport_fastrtps_c.so\n'}
+[7.883259] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/mpc_car_control_s__rosidl_typesupport_introspection_c.so\n'}
+[7.883310] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/msg/__init__.py\n'}
+[7.883363] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/msg/_actuator_command.py\n'}
+[7.883416] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/msg/_actuator_command_s.c\n'}
+[7.883466] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/msg/_control_command_body.py\n'}
+[7.883515] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/msg/_control_command_body_s.c\n'}
+[7.883566] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/msg/_reference_trajectory.py\n'}
+[7.883615] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/msg/_reference_trajectory_s.c\n'}
+[7.883665] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/msg/_vehicle_state.py\n'}
+[7.883715] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/msg/_vehicle_state_s.c\n'}
+[7.883765] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/msg/_wheel_ground_heights.py\n'}
+[7.883816] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/msg/_wheel_ground_heights_s.c\n'}
+[7.883954] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/mpc_car_control_s__rosidl_typesupport_fastrtps_c.so\n'}
+[7.884066] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/mpc_car_control_s__rosidl_typesupport_introspection_c.so\n'}
+[7.884180] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/mpc_car_control_s__rosidl_typesupport_c.so\n'}
+[7.884262] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/VehicleState.idl\n'}
+[7.884341] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ReferenceTrajectory.idl\n'}
+[7.884416] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ControlCommandBody.idl\n'}
+[7.884485] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ActuatorCommand.idl\n'}
+[7.884556] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/WheelGroundHeights.idl\n'}
+[7.884625] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/VehicleState.msg\n'}
+[7.884694] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ReferenceTrajectory.msg\n'}
+[7.884761] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ControlCommandBody.msg\n'}
+[7.884828] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/ActuatorCommand.msg\n'}
+[7.884895] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/msg/WheelGroundHeights.msg\n'}
+[7.885005] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/scenario_generator_node\n'}
+[7.885113] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/mpc_controller_node\n'}
+[7.885233] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/control_allocator_node\n'}
+[7.885302] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/pid_controller_node\n'}
+[7.885374] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/vehicle_interface_node\n'}
+[7.885441] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/visualization_node\n'}
+[7.885509] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/vehicle_model_node\n'}
+[7.885656] (mpc_car_control) StdoutLine: {'line': b'-- Symlinking: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/launch/__pycache__/mpc_system.launch.cpython-312.pyc\n'}
+[7.890394] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/launch/__pycache__/mpc_system.launch.cpython-38.pyc\n'}
+[7.890469] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/launch/default.rviz\n'}
+[7.890521] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/launch/mpc_system.launch.py\n'}
+[7.890604] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/mpc_car_control/az_plotter.py\n'}
+[7.890669] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/ament_index/resource_index/package_run_dependencies/mpc_car_control\n'}
+[7.890767] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/ament_index/resource_index/parent_prefix_path/mpc_car_control\n'}
+[7.890832] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/ament_prefix_path.sh\n'}
+[7.890910] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/ament_prefix_path.dsv\n'}
+[7.890978] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/path.sh\n'}
+[7.891174] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/environment/path.dsv\n'}
+[7.891241] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/local_setup.bash\n'}
+[7.891282] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/local_setup.sh\n'}
+[7.891319] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/local_setup.zsh\n'}
+[7.891372] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/local_setup.dsv\n'}
+[7.891407] (mpc_car_control) StdoutLine: {'line': b'-- Symlinking: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/package.dsv\n'}
+[7.895868] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/ament_index/resource_index/packages/mpc_car_control\n'}
+[7.895949] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/rosidl_cmake-extras.cmake\n'}
+[7.895986] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[7.896043] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[7.896077] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[7.896112] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[7.896181] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[7.896215] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[7.896267] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_controlConfig.cmake\n'}
+[7.896313] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_controlConfig-version.cmake\n'}
+[7.896365] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date symlink: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/package.xml\n'}
+[7.896490] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_generator_c.so\n'}
+[7.896616] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_fastrtps_c.so\n'}
+[7.896738] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_fastrtps_cpp.so\n'}
+[7.896852] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_introspection_c.so\n'}
+[7.896959] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_c.so\n'}
+[7.897069] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_introspection_cpp.so\n'}
+[7.897182] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_typesupport_cpp.so\n'}
+[7.917439] (mpc_car_control) StdoutLine: {'line': b"Listing '/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control'...\n"}
+[7.917562] (mpc_car_control) StdoutLine: {'line': b"Listing '/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control/msg'...\n"}
+[7.920601] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/libmpc_car_control__rosidl_generator_py.so\n'}
+[7.920903] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/export_mpc_car_control__rosidl_generator_cExport.cmake\n'}
+[7.920980] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/export_mpc_car_control__rosidl_generator_cExport-noconfig.cmake\n'}
+[7.921019] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/export_mpc_car_control__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[7.921054] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/export_mpc_car_control__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[7.921088] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/export_mpc_car_control__rosidl_generator_cppExport.cmake\n'}
+[7.921121] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/export_mpc_car_control__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[7.921154] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/export_mpc_car_control__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[7.921186] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_introspection_cExport.cmake\n'}
+[7.921219] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[7.921283] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_cExport.cmake\n'}
+[7.921318] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[7.921354] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[7.921384] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[7.921415] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_cppExport.cmake\n'}
+[7.921447] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/mpc_car_control__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[7.921478] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/export_mpc_car_control__rosidl_generator_pyExport.cmake\n'}
+[7.921509] (mpc_car_control) StdoutLine: {'line': b'-- Up-to-date: /home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/share/mpc_car_control/cmake/export_mpc_car_control__rosidl_generator_pyExport-noconfig.cmake\n'}
+[7.922639] (mpc_car_control) CommandEnded: {'returncode': 0}
+[7.924050] (-) TimerEvent: {}
+[7.933824] (mpc_car_control) JobEnded: {'identifier': 'mpc_car_control', 'rc': 0}
+[7.934283] (-) EventReactorShutdown: {}

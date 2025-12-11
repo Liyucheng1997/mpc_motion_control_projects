@@ -70,7 +70,7 @@ private:
     visualization_msgs::msg::MarkerArray marker_array;
 
     double step = 0.5;
-    double target_velocity = 8.0;
+    double target_velocity = 5.0; // Reduced from 8.0 for stability testing
 
     // --- Scenario Logic ---
     if (scenario_id == 1) {
@@ -112,7 +112,7 @@ private:
       double car_x = current_state_.x;
       if (car_x > bump_x - 1.0 && car_x < bump_x + 1.0) {
         double h =
-            0.1 * std::cos((car_x - bump_x) * M_PI / 2.0); // Simple cosine bump
+            0.3 * std::cos((car_x - bump_x) * M_PI / 2.0); // Massive 0.5m Bump
         wheels_msg.wheel_ground_heights = {h, h, h, h};
       }
 
@@ -126,10 +126,10 @@ private:
       bump_marker.action = visualization_msgs::msg::Marker::ADD;
       bump_marker.pose.position.x = bump_x;
       bump_marker.pose.position.y = 0.0;
-      bump_marker.pose.position.z = 0.05;
+      bump_marker.pose.position.z = 0.25; // Center at half height
       bump_marker.scale.x = 2.0;
       bump_marker.scale.y = 4.0;
-      bump_marker.scale.z = 0.1;
+      bump_marker.scale.z = 0.5; // Height
       bump_marker.color.r = 1.0;
       bump_marker.color.a = 0.8;
       marker_array.markers.push_back(bump_marker);

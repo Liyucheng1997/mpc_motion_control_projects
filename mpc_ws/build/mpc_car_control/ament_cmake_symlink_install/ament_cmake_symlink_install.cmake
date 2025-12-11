@@ -415,6 +415,9 @@ include("/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/
 # install(DIRECTORY "launch" "DESTINATION" "share/mpc_car_control")
 ament_cmake_symlink_install_directory("/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control" DIRECTORY "launch" "DESTINATION" "share/mpc_car_control")
 
+# install(PROGRAMS "viz/az_plotter.py" "DESTINATION" "lib/mpc_car_control")
+ament_cmake_symlink_install_programs("/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control" PROGRAMS "viz/az_plotter.py" "DESTINATION" "lib/mpc_car_control")
+
 # install(FILES "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/mpc_car_control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control" FILES "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/mpc_car_control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 

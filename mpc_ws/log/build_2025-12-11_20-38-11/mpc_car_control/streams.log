@@ -1,0 +1,39 @@
+[0.005s] Invoking command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control -- -j24 -l24
+[0.038s] [  1%] Built target mpc_car_control__rosidl_generator_type_description
+[0.041s] [  1%] Built target ament_cmake_python_symlink_mpc_car_control
+[0.048s] [  2%] Built target mpc_car_control__cpp
+[0.053s] [ 21%] Built target mpc_car_control__rosidl_generator_c
+[0.066s] [ 37%] Built target mpc_car_control__rosidl_typesupport_c
+[0.066s] [ 37%] Built target mpc_car_control__rosidl_typesupport_introspection_c
+[0.066s] [ 45%] Built target mpc_car_control__rosidl_typesupport_cpp
+[0.067s] [ 53%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c
+[0.067s] [ 61%] Built target mpc_car_control__rosidl_typesupport_introspection_cpp
+[0.068s] [ 69%] Built target mpc_car_control__rosidl_typesupport_fastrtps_cpp
+[0.078s] [ 69%] Built target mpc_car_control
+[0.089s] [ 70%] Built target mpc_car_control__py
+[0.095s] [ 72%] Built target scenario_generator_node
+[0.095s] [ 78%] Built target pid_controller_node
+[0.095s] [ 79%] Built target control_allocator_node
+[0.095s] [ 79%] Built target vehicle_interface_node
+[0.096s] [ 82%] [32mBuilding CXX object CMakeFiles/vehicle_model_node.dir/src/vehicle_model_node.cpp.o[0m
+[0.096s] [ 82%] Built target mpc_controller_node
+[0.096s] [ 85%] Built target visualization_node
+[0.104s] [ 92%] Built target mpc_car_control__rosidl_generator_py
+[0.117s] [ 98%] Built target mpc_car_control_s__rosidl_typesupport_fastrtps_c
+[0.117s] [ 98%] Built target mpc_car_control_s__rosidl_typesupport_introspection_c
+[0.117s] [ 98%] Built target mpc_car_control_s__rosidl_typesupport_c
+[0.142s] running egg_info
+[0.148s] writing mpc_car_control.egg-info/PKG-INFO
+[0.148s] writing dependency_links to mpc_car_control.egg-info/dependency_links.txt
+[0.149s] writing top-level names to mpc_car_control.egg-info/top_level.txt
+[0.168s] reading manifest file 'mpc_car_control.egg-info/SOURCES.txt'
+[0.168s] writing manifest file 'mpc_car_control.egg-info/SOURCES.txt'
+[0.183s] [ 98%] Built target ament_cmake_python_build_mpc_car_control_egg
+[1.068s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/vehicle_model_node.cpp:[m[K In member function ‘[01m[Kvoid VehicleModelNode::[01;32m[Ksim_loop[m[K()[m[K’:
+[1.068s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/vehicle_model_node.cpp:280:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktotal_direct_torque[m[K’ was not declared in this scope
+[1.068s]   280 |         if ([01;31m[Ktotal_direct_torque[m[K > 1e-3) {
+[1.068s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.657s] gmake[2]: *** [CMakeFiles/vehicle_model_node.dir/build.make:76：CMakeFiles/vehicle_model_node.dir/src/vehicle_model_node.cpp.o] 错误 1
+[2.657s] gmake[1]: *** [CMakeFiles/Makefile2:812：CMakeFiles/vehicle_model_node.dir/all] 错误 2
+[2.657s] gmake: *** [Makefile:146：all] 错误 2
+[2.659s] Invoked command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control -- -j24 -l24

@@ -1,2 +1,0 @@
-Invoking command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control -- -j12 -l12
-Invoked command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control -- -j12 -l12

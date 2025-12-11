@@ -52,8 +52,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 
 add_executable(scenario_generator_node src/scenario_generator_node.cpp)
 ament_target_dependencies(scenario_generator_node rclcpp std_msgs geometry_msgs visualization_msgs tf2 tf2_ros)
-rosidl_target_interfaces(scenario_generator_node
-  ${PROJECT_NAME} "rosidl_typesupport_cpp")
+rosidl_get_typesupport_target(cpp_typesupport_target "${PROJECT_NAME}" "rosidl_typesupport_cpp")
+target_link_libraries(scenario_generator_node "${cpp_typesupport_target}")
 
 install(TARGETS
   scenario_generator_node
@@ -61,8 +61,7 @@ install(TARGETS
 
 add_executable(mpc_controller_node src/mpc_controller_node.cpp)
 ament_target_dependencies(mpc_controller_node rclcpp std_msgs geometry_msgs)
-rosidl_target_interfaces(mpc_controller_node
-  ${PROJECT_NAME} "rosidl_typesupport_cpp")
+target_link_libraries(mpc_controller_node "${cpp_typesupport_target}")
 
 install(TARGETS
   mpc_controller_node
@@ -70,18 +69,15 @@ install(TARGETS
 
 add_executable(control_allocator_node src/control_allocator_node.cpp)
 ament_target_dependencies(control_allocator_node rclcpp std_msgs geometry_msgs)
-rosidl_target_interfaces(control_allocator_node
-  ${PROJECT_NAME} "rosidl_typesupport_cpp")
+target_link_libraries(control_allocator_node "${cpp_typesupport_target}")
 
 add_executable(pid_controller_node src/pid_controller_node.cpp)
 ament_target_dependencies(pid_controller_node rclcpp std_msgs geometry_msgs)
-rosidl_target_interfaces(pid_controller_node
-  ${PROJECT_NAME} "rosidl_typesupport_cpp")
+target_link_libraries(pid_controller_node "${cpp_typesupport_target}")
 
 add_executable(vehicle_interface_node src/vehicle_interface_node.cpp)
 ament_target_dependencies(vehicle_interface_node rclcpp std_msgs geometry_msgs)
-rosidl_target_interfaces(vehicle_interface_node
-  ${PROJECT_NAME} "rosidl_typesupport_cpp")
+target_link_libraries(vehicle_interface_node "${cpp_typesupport_target}")
 
 add_executable(visualization_node src/visualization_node.cpp)
 ament_target_dependencies(visualization_node
@@ -92,13 +88,11 @@ ament_target_dependencies(visualization_node
   tf2_ros
   tf2_geometry_msgs
 )
-rosidl_target_interfaces(visualization_node
-  ${PROJECT_NAME} "rosidl_typesupport_cpp")
+target_link_libraries(visualization_node "${cpp_typesupport_target}")
 
 add_executable(vehicle_model_node src/vehicle_model_node.cpp)
 ament_target_dependencies(vehicle_model_node rclcpp std_msgs)
-rosidl_target_interfaces(vehicle_model_node
-  ${PROJECT_NAME} "rosidl_typesupport_cpp")
+target_link_libraries(vehicle_model_node "${cpp_typesupport_target}")
 
 install(TARGETS
   control_allocator_node
@@ -110,5 +104,10 @@ install(TARGETS
 
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME})
+
+install(PROGRAMS
+  viz/az_plotter.py
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 ament_package()

@@ -1,0 +1,16 @@
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:[m[K In member function ‘[01m[Kvoid MPCControllerNode::[01;32m[Kcontrol_loop[m[K()[m[K’:
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:336:21:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[KEigen::VectorXd R_diag[m[K’
+  336 |     Eigen::VectorXd [01;31m[KR_diag[m[K(nu_);
+      |                     [01;31m[K^~~~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:323:21:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::VectorXd R_diag[m[K’ previously declared here
+  323 |     Eigen::VectorXd [01;36m[KR_diag[m[K(nu_);
+      |                     [01;36m[K^~~~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:337:21:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[KEigen::VectorXd R_rate_diag[m[K’
+  337 |     Eigen::VectorXd [01;31m[KR_rate_diag[m[K(nu_);
+      |                     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:324:21:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::VectorXd R_rate_diag[m[K’ previously declared here
+  324 |     Eigen::VectorXd [01;36m[KR_rate_diag[m[K(nu_);
+      |                     [01;36m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/mpc_controller_node.dir/build.make:76：CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:665：CMakeFiles/mpc_controller_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

@@ -25,9 +25,23 @@ def generate_launch_description():
         description='Controller Type (mpc, pid)'
     )
 
+    active_susp_arg = DeclareLaunchArgument(
+        'active_suspension_enabled',
+        default_value='true',
+        description='Enable Active Suspension (true/false)'
+    )
+
     return LaunchDescription([
         scenario_id_arg,
         controller_type_arg,
+        active_susp_arg,
+        # Visualization Plotter
+        Node(
+            package='mpc_car_control',
+            executable='az_plotter.py',
+            name='az_plotter',
+            output='screen'
+        ),
         Node(
             package='mpc_car_control',
             executable='scenario_generator_node',
@@ -35,7 +49,7 @@ def generate_launch_description():
             output='screen',
             parameters=[{'scenario_id': LaunchConfiguration('scenario_id')}]
         ),
-        # MPC Nodes
+        # MPC Nodes (Run Layout: MPC + PID + Allocator)
         Node(
             package='mpc_car_control',
             executable='mpc_controller_node',
@@ -48,15 +62,19 @@ def generate_launch_description():
             executable='control_allocator_node',
             name='control_allocator_node',
             output='screen',
-            condition=LaunchConfigurationEquals('controller_type', 'mpc')
+            # Allocator always runs
+            parameters=[{'active_suspension_enabled': LaunchConfiguration('active_suspension_enabled')}]
         ),
-        # PID Node
+        # PID Node (Run if 'pid' OR 'mpc' because MPC needs PID for steering)
         Node(
             package='mpc_car_control',
             executable='pid_controller_node',
             name='pid_controller_node',
-            output='screen',
-            condition=LaunchConfigurationEquals('controller_type', 'pid')
+            output='screen'
+            # Always run PID? Or create a complex condition?
+            # Simpler: Just run it. If 'controller_type' is 'pid', it works alone.
+            # If 'mpc', it works in parallel.
+            # Note: Condition removed to always run PID.
         ),
         Node(
             package='mpc_car_control',

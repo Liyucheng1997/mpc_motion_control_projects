@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "mpc_car_control/msg/detail/vehicle_state__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "mpc_car_control/msg/detail/vehicle_state__functions.h"
+#include "mpc_car_control/msg/detail/vehicle_state__struct.h"
 #include "mpc_car_control/msg/detail/vehicle_state__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -1,4 +1,0 @@
-[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/scenario_generator_node.cpp:[m[K In member function ‘[01m[Kdouble ScenarioGeneratorNode::get_bump_height(double, double)[m[K’:
-[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/scenario_generator_node.cpp:44:43:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ky[m[K’ [[01;35m[K-Wunused-parameter[m[K]
-   44 |   double get_bump_height(double x, [01;35m[Kdouble y[m[K) {
-      |                                    [01;35m[K~~~~~~~^[m[K

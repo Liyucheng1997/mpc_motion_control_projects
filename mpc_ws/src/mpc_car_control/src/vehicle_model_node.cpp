@@ -211,7 +211,10 @@ private:
         double tire_compression = z_ground - (state_.zu[i] - params_.Rw);
         double F_tire_z = 0.0;
         if (tire_compression > 0) {
-          F_tire_z = params_.kt * tire_compression;
+          // Spring + Damping for Tire (Stabilizes Simulation)
+          double tire_damping = 500.0 * state_.zu_dot[i];
+          F_tire_z = params_.kt * tire_compression - tire_damping;
+          F_tire_z = std::max(0.0, F_tire_z);
         } else {
           F_tire_z = 0.0;
         }
@@ -275,35 +278,33 @@ private:
 
         // Wheel Rotation Dynamics
         double T_net_applied = 0.0;
-        
+
         // Check if direct torque control is active (from Allocator DYC)
-        bool use_direct_torque = false;
         double total_direct_torque = 0.0;
-        for(double t : last_cmd_.wheel_torque) total_direct_torque += std::abs(t);
-        
+        for (double t : last_cmd_.wheel_torque)
+          total_direct_torque += std::abs(t);
+
         if (total_direct_torque > 1e-3) {
-             use_direct_torque = true;
-             T_net_applied = last_cmd_.wheel_torque[i]; 
-             // Positive T increases omega (Engine/Motor)
-             // Negative T decreases omega (Brake/Regen)
-             // Note: Brakes always oppose motion, but here we model generic torque source.
-             // If we want braking behavior (opposing sign of omega), the controller sends negative torque.
+          T_net_applied = last_cmd_.wheel_torque[i];
+          // Positive T increases omega (Engine/Motor)
+          // Negative T decreases omega (Brake/Regen)
         } else {
-            // Legacy Logic
-            double T_drive = 0.0;
-            double T_brake = 0.0;
-            if (throttle > 0) {
-              // AWD
-              T_drive = (throttle * 500.0) / 4.0;
-            }
-            if (brake > 0) {
-              T_brake = (brake * 1000.0) / 4.0;
-              if (state_.omega[i] > 0)
-                T_brake *= 1.0;
-              else if (state_.omega[i] < 0)
-                T_brake *= -1.0; // Oppose motion
-            }
-            T_net_applied = T_drive - T_brake;
+          // Powertrain Model (Logic for Throttle->Torque)
+          // Allows using simple 'Throttle' commands (e.g. from PID)
+          double T_drive = 0.0;
+          double T_brake = 0.0;
+          if (throttle > 0) {
+            // AWD Map
+            T_drive = (throttle * 500.0) / 4.0;
+          }
+          if (brake > 0) {
+            T_brake = (brake * 1000.0) / 4.0;
+            if (state_.omega[i] > 0)
+              T_brake *= 1.0;
+            else if (state_.omega[i] < 0)
+              T_brake *= -1.0; // Oppose motion
+          }
+          T_net_applied = T_drive - T_brake;
         }
 
         double omega_dot = (T_net_applied - F_tx * params_.Rw) / params_.Iw;
@@ -373,6 +374,12 @@ private:
       state_.phi += phi_dot * dt;
       state_.theta += theta_dot * dt;
       state_.psi += psi_dot * dt;
+
+      // Prevent Gimbal Lock Singularity
+      if (state_.theta > 1.4)
+        state_.theta = 1.4;
+      if (state_.theta < -1.4)
+        state_.theta = -1.4;
     }
 
     // Safety check for NaNs

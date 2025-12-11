@@ -30,9 +30,9 @@ public:
             "/vehicle_state", 10,
             std::bind(&MPCControllerNode::state_callback, this, _1));
 
-    // 100Hz MPC loop
-    timer_ = this->create_wall_timer(
-        10ms, std::bind(&MPCControllerNode::control_loop, this));
+    // 100Hz MPC loop - TIMER REMOVED (Use Callback for Sync)
+    // timer_ = this->create_wall_timer(
+    //    10ms, std::bind(&MPCControllerNode::control_loop, this));
 
     u_prev_ = Eigen::VectorXd::Zero(nu_);
 
@@ -40,9 +40,8 @@ public:
     Ad_ = Eigen::MatrixXd::Identity(nx_, nx_);
     Bd_ = Eigen::MatrixXd::Zero(nx_, nu_);
 
-    RCLCPP_INFO(
-        this->get_logger(),
-        "Multi-Rate MPC Controller Started (100Hz Control, 2Hz Model).");
+    RCLCPP_INFO(this->get_logger(),
+                "Hybrid Controller Started (Callback Driven for Sync).");
   }
 
 private:
@@ -56,6 +55,8 @@ private:
   const double Caf_ = 60000.0;
   const double Car_ = 50000.0;
   const double g_ = 9.81;
+
+  // PID Parameters REMOVED (Parallel Architecture)
 
   // MPC Parameters
   const int N_ = 50;       // Prediction Horizon (1.0s at dt=0.02)
@@ -71,6 +72,9 @@ private:
   void state_callback(const mpc_car_control::msg::VehicleState::SharedPtr msg) {
     current_state_ = *msg;
     state_received_ = true;
+
+    // Trigger Control Loop Synchronously
+    control_loop();
   }
 
   // Get Linearized System Matrices (Jacobian) for Dynamic Bicycle Model +
@@ -116,21 +120,51 @@ private:
     // 5. vy_dot = (Fyf + Fyr)/m - vx*wz + g*sin(phi)*cos(theta)
     // Linearized around phi=0: +g*phi
     // Fyr = Car * (-(vy - lr*wz)/vx)
+    // Fyf = Caf * (delta - (vy + lf*wz)/vx)  <-- NEW INPUT: delta
 
     double dFyr_dvy = -Car_ / vx;
     double dFyr_dwz = Car_ * lr_ / vx;
 
+    // Dynamics from Rear Wheel (Fyr)
     A(4, 3) = -wz;                // dvy/dvx
     A(4, 4) = dFyr_dvy / m_;      // dvy/dvy
     A(4, 5) = dFyr_dwz / m_ - vx; // dvy/dwz
-    A(4, 7) = -g_;         // dvy/dphi (Gravity: Roll right -> Pull right (-Y))
-    B(4, 1) = 1000.0 / m_; // dvy/dFyf_kN
+    A(4, 7) = -g_; // dvy/dphi (Gravity: Roll right -> Pull right (-Y))
+
+    // Dynamics from Front Wheel (Fyf) - Control Input: delta
+    // Fyf approx = Caf * delta - Caf/vx * vy - Caf*lf/vx * wz
+    // We add the STATE terms from Front Wheel to A matrix
+    double dFyf_dvy = -Caf_ / vx;
+    double dFyf_dwz = -Caf_ * lf_ / vx;
+
+    A(4, 4) += dFyf_dvy / m_;
+    A(4, 5) += dFyf_dwz / m_;
+
+    // Input B(4,1): dvy/ddelta = Caf / m
+    B(4, 1) = Caf_ / m_;
 
     // 6. wz_dot = (lf*Fyf - lr*Fyr + Mz)/Iz
-    A(5, 4) = -lr_ * dFyr_dvy / Iz_; // dwz/dvy
-    A(5, 5) = -lr_ * dFyr_dwz / Iz_; // dwz/dwz
-    B(5, 1) = (lf_ * 1000.0) / Iz_;  // dwz/dFyf_kN
-    B(5, 5) = 1000.0 / Iz_;          // dwz/dMz_kNm (Direct Yaw Moment)
+    // Rear wheel terms (already accounted for Fyr, but we need to verify...
+    // The original code calculated dFyr/dState and put it in A.
+    // Now we must also include dFyf/dState in A because Fyf is no longer 'u',
+    // 'delta' is 'u'.
+
+    A(5, 4) = (lf_ * dFyf_dvy - lr_ * dFyr_dvy) / Iz_; // dwz/dvy
+    A(5, 5) = (lf_ * dFyf_dwz - lr_ * dFyr_dwz) / Iz_; // dwz/dwz
+
+    // Input B(5,1): dwz/ddelta = lf * Caf / Iz
+    B(5, 1) = (lf_ * Caf_) / Iz_;
+    B(5, 5) = 1000.0 / Iz_; // dwz/dMz_kNm (Direct Yaw Moment)
+
+    // 7. z_dot = vz
+    A(6, 9) = 1.0;
+    // ... (Lines 138-152 match existing structure usually, but I need to be
+    // careful with range) I will just return the modified function block to be
+    // safe. Wait, replace_file_content works on chunks. I need to make sure I
+    // cover the range correctly. The B matrix changes are the critical part.
+
+    // Let's look at weights too. I should update weights in `control_loop`
+    // (separate call or same?) I'll do B matrix first.
 
     // 7. z_dot = vz
     A(6, 9) = 1.0;
@@ -279,18 +313,25 @@ private:
 
     // 6. Weights
     Eigen::VectorXd Q_diag(nx_);
-    // [x, y, psi, vx, vy, wz, z, phi, theta, vz, p, q]
-    Q_diag << 100.0, 100.0, 50.0, 10.0, 10.0, 10.0, // Planar
-        50.0, 100.0, 100.0, 10.0, 10.0, 10.0;       // Vertical/Rotational
-
     Eigen::VectorXd R_diag(nu_);
-    // [accel, Fyf_kN, dFz_kN, Mx_kNm, My_kNm, Mz_kNm]
-    // Stabilized weights
-    R_diag << 10.0, 10.0, 10.0, 10.0, 10.0, 10.0; 
-
     Eigen::VectorXd R_rate_diag(nu_);
-    // [d_accel, d_Fyf_kN, d_dFz, d_Mx, d_My, d_Mz]
-    R_rate_diag << 1.0, 1.0, 1.0, 1.0, 1.0, 1.0;
+
+    // Weights (Optimized for Active Suspension)
+    // [x, y, psi, vx, vy, wz, z, phi, theta, vz, p, q]
+    // High penalties for Position and Yaw error to force tracking
+    // Optimized for "Active Suspension" -> High penalty on Roll (phi) and Pitch
+    // (theta)
+    // COMPLIANT TUNING: Relaxed z (50->1), Reduced vz (200->50).
+    Q_diag << 1000.0, 1000.0, 2000.0, 10.0, 10.0, 10.0, 1.0, 500.0, 500.0, 50.0,
+        50.0, 50.0;
+
+    // Weights (Optimized for Active Suspension)
+    // [accel, delta_rad, dFz_kN, Mx_kNm, My_kNm, Mz_kNm]
+    R_diag << 1.0, 1.0, 0.1, 0.1, 0.1, 10000.0;
+
+    // Rate Costs (Damping & Smoothing)
+    // COMPLIANT TUNING: Faster reaction (100->10) to catch bump impact.
+    R_rate_diag << 1.0, 1.0, 10.0, 10.0, 10.0, 1000.0;
 
     Eigen::MatrixXd Q_bar = Eigen::MatrixXd::Zero(nx_ * N, nx_ * N);
     Eigen::MatrixXd R_bar = Eigen::MatrixXd::Zero(nu_ * N, nu_ * N);
@@ -344,31 +385,42 @@ private:
     cmd_msg.header.stamp = this->now();
 
     Eigen::VectorXd u0 = U.head(nu_);
-    
+
     // SAFETY CHECK: NaNs
     if (std::isnan(u0.sum())) {
-        RCLCPP_ERROR(this->get_logger(), "MPC SOLVER FAILED (NaN). Emergency Stop.");
-        u0.setZero();
-        u0(0) = -1.0; // Brake
+      RCLCPP_ERROR(this->get_logger(),
+                   "MPC SOLVER FAILED (NaN). Emergency Stop.");
+      u0.setZero();
+      u0(0) = -1.0; // Brake
     }
+
+    // HYBRID OVERRIDE REMOVED - MPC solves for everything, but Allocator only
+    // uses Suspension.
 
     // Store previous input
     u_prev_ = u0;
 
     // Saturation Limits
-    double fx_lim = 5000.0; // 5kN ~ 0.35g
-    double fy_lim = 8000.0; // 8kN ~ 0.55g (approx tire limit)
-    double mz_lim = 2000.0; // 2kNm
-    
+    double fx_lim = 5000.0; // 5kN
+    double delta_lim = 0.5; // 0.5 rad (~28 deg)
+    double mz_lim = 0.0;    // 0kNm (DISABLE DYC)
+    double mx_lim = 6.0;    // 6kNm (Approx physical limit of 3000N/wheel)
+    double my_lim = 6.0;    // 6kNm
+
     cmd_msg.fx = std::min(std::max(u0(0) * m_, -fx_lim), fx_lim);
-    cmd_msg.fy = std::min(std::max(u0(1) * 1000.0, -fy_lim), fy_lim);
-    
+
+    // NEW: Pass Steering Angle directly in the 'fy' field
+    // This is a protocol change between MPC and Allocator
+    cmd_msg.fy = std::min(std::max(u0(1), -delta_lim), delta_lim);
+
     // Fz
     double fz_val = m_ * g_ + u0(2) * 1000.0;
     cmd_msg.fz = std::max(0.0, fz_val); // No negative downforce (flying)
 
-    cmd_msg.mx = u0(3) * 1000.0; // kNm -> Nm
-    cmd_msg.my = u0(4) * 1000.0; // kNm -> Nm
+    cmd_msg.mx = std::min(std::max(u0(3), -mx_lim), mx_lim) *
+                 1000.0; // kNm -> Limited kNm -> Nm
+    cmd_msg.my = std::min(std::max(u0(4), -my_lim), my_lim) *
+                 1000.0; // kNm -> Limited kNm -> Nm
     cmd_msg.mz = std::min(std::max(u0(5) * 1000.0, -mz_lim), mz_lim);
 
     publisher_->publish(cmd_msg);
@@ -385,8 +437,8 @@ private:
       yaw_err += 2 * M_PI;
 
     RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 500,
-                         "CTE: %.3f m, YawErr: %.3f rad, Fy: %.1f N, Mz: %.1f Nm",
-                         cte, yaw_err, cmd_msg.fy, cmd_msg.mz);
+                         "MPC[dFz:%.0f Mx:%.0f My:%.0f] Err[CTE:%.2f Yaw:%.2f]",
+                         u0(2), u0(3), u0(4), cte, yaw_err);
   }
 
   rclcpp::Publisher<mpc_car_control::msg::ControlCommandBody>::SharedPtr
@@ -395,7 +447,7 @@ private:
       subscription_traj_;
   rclcpp::Subscription<mpc_car_control::msg::VehicleState>::SharedPtr
       subscription_state_;
-  rclcpp::TimerBase::SharedPtr timer_;
+  // rclcpp::TimerBase::SharedPtr timer_; // REMOVED
 
   mpc_car_control::msg::ReferenceTrajectory current_trajectory_;
   mpc_car_control::msg::VehicleState current_state_;

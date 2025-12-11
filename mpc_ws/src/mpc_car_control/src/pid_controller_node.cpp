@@ -14,7 +14,7 @@ public:
   PIDControllerNode() : Node("pid_controller_node") {
     // Publishers
     publisher_ = this->create_publisher<mpc_car_control::msg::ActuatorCommand>(
-        "/actuator_command", 10);
+        "/actuator_command_pid", 10);
 
     // Subscriptions
     sub_state_ = this->create_subscription<mpc_car_control::msg::VehicleState>(

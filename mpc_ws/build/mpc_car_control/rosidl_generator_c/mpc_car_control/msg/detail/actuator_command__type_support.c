@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "mpc_car_control/msg/detail/actuator_command__struct.h"
+#include "mpc_car_control/msg/detail/actuator_command__type_support.h"
 #include "mpc_car_control/msg/detail/actuator_command__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "mpc_car_control/msg/detail/actuator_command__type_support.h"
-#include "mpc_car_control/msg/detail/actuator_command__struct.h"
 
 #ifdef __cplusplus
 extern "C"
