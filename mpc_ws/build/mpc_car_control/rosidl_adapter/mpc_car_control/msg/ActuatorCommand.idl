@@ -17,6 +17,8 @@ module mpc_car_control {
       double brake;
 
       double__4 active_suspension_force;
+
+      double__4 wheel_torque;
     };
   };
 };

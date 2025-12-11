@@ -17,6 +17,7 @@ import builtins  # noqa: E402, I100
 import math  # noqa: E402, I100
 
 # Member 'active_suspension_force'
+# Member 'wheel_torque'
 import numpy  # noqa: E402, I100
 
 import rosidl_parser.definition  # noqa: E402, I100
@@ -76,6 +77,7 @@ class ActuatorCommand(metaclass=Metaclass_ActuatorCommand):
         '_throttle',
         '_brake',
         '_active_suspension_force',
+        '_wheel_torque',
         '_check_fields',
     ]
 
@@ -85,6 +87,7 @@ class ActuatorCommand(metaclass=Metaclass_ActuatorCommand):
         'throttle': 'double',
         'brake': 'double',
         'active_suspension_force': 'double[4]',
+        'wheel_torque': 'double[4]',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -94,6 +97,7 @@ class ActuatorCommand(metaclass=Metaclass_ActuatorCommand):
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('double'), 4),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('double'), 4),  # noqa: E501
     )
 
@@ -115,6 +119,10 @@ class ActuatorCommand(metaclass=Metaclass_ActuatorCommand):
             self.active_suspension_force = numpy.zeros(4, dtype=numpy.float64)
         else:
             self.active_suspension_force = kwargs.get('active_suspension_force')
+        if 'wheel_torque' not in kwargs:
+            self.wheel_torque = numpy.zeros(4, dtype=numpy.float64)
+        else:
+            self.wheel_torque = kwargs.get('wheel_torque')
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -155,6 +163,8 @@ class ActuatorCommand(metaclass=Metaclass_ActuatorCommand):
         if self.brake != other.brake:
             return False
         if any(self.active_suspension_force != other.active_suspension_force):
+            return False
+        if any(self.wheel_torque != other.wheel_torque):
             return False
         return True
 
@@ -252,3 +262,34 @@ class ActuatorCommand(metaclass=Metaclass_ActuatorCommand):
                  all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
                 "The 'active_suspension_force' field must be a set or sequence with length 4 and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
         self._active_suspension_force = numpy.array(value, dtype=numpy.float64)
+
+    @builtins.property
+    def wheel_torque(self):
+        """Message field 'wheel_torque'."""
+        return self._wheel_torque
+
+    @wheel_torque.setter
+    def wheel_torque(self, value):
+        if self._check_fields:
+            if isinstance(value, numpy.ndarray):
+                assert value.dtype == numpy.float64, \
+                    "The 'wheel_torque' numpy.ndarray() must have the dtype of 'numpy.float64'"
+                assert value.size == 4, \
+                    "The 'wheel_torque' numpy.ndarray() must have a size of 4"
+                self._wheel_torque = value
+                return
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 len(value) == 4 and
+                 all(isinstance(v, float) for v in value) and
+                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
+                "The 'wheel_torque' field must be a set or sequence with length 4 and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
+        self._wheel_torque = numpy.array(value, dtype=numpy.float64)

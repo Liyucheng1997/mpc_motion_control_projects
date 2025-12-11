@@ -90,6 +90,11 @@ cdr_serialize(
     cdr << ros_message.active_suspension_force;
   }
 
+  // Member: wheel_torque
+  {
+    cdr << ros_message.wheel_torque;
+  }
+
   return true;
 }
 
@@ -115,6 +120,11 @@ cdr_deserialize(
   // Member: active_suspension_force
   {
     cdr >> ros_message.active_suspension_force;
+  }
+
+  // Member: wheel_torque
+  {
+    cdr >> ros_message.wheel_torque;
   }
 
   return true;
@@ -164,6 +174,14 @@ get_serialized_size(
   {
     size_t array_size = 4;
     size_t item_size = sizeof(ros_message.active_suspension_force[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: wheel_torque
+  {
+    size_t array_size = 4;
+    size_t item_size = sizeof(ros_message.wheel_torque[0]);
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -235,6 +253,13 @@ max_serialized_size_ActuatorCommand(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
+  // Member: wheel_torque
+  {
+    size_t array_size = 4;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -244,7 +269,7 @@ max_serialized_size_ActuatorCommand(
     using DataType = mpc_car_control::msg::ActuatorCommand;
     is_plain =
       (
-      offsetof(DataType, active_suspension_force) +
+      offsetof(DataType, wheel_torque) +
       last_member_size
       ) == ret_val;
   }
@@ -275,6 +300,11 @@ cdr_serialize_key(
   // Member: active_suspension_force
   {
     cdr << ros_message.active_suspension_force;
+  }
+
+  // Member: wheel_torque
+  {
+    cdr << ros_message.wheel_torque;
   }
 
   return true;
@@ -323,6 +353,14 @@ get_serialized_size_key(
   {
     size_t array_size = 4;
     size_t item_size = sizeof(ros_message.active_suspension_force[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: wheel_torque
+  {
+    size_t array_size = 4;
+    size_t item_size = sizeof(ros_message.wheel_torque[0]);
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -398,6 +436,14 @@ max_serialized_size_key_ActuatorCommand(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
+  // Member: wheel_torque
+  {
+    size_t array_size = 4;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -406,7 +452,7 @@ max_serialized_size_key_ActuatorCommand(
     using DataType = mpc_car_control::msg::ActuatorCommand;
     is_plain =
       (
-      offsetof(DataType, active_suspension_force) +
+      offsetof(DataType, wheel_torque) +
       last_member_size
       ) == ret_val;
   }

@@ -82,7 +82,52 @@ void mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__
   *item = *value;
 }
 
-static rosidl_typesupport_introspection_c__MessageMember mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__ActuatorCommand_message_member_array[5] = {
+size_t mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__size_function__ActuatorCommand__wheel_torque(
+  const void * untyped_member)
+{
+  (void)untyped_member;
+  return 4;
+}
+
+const void * mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__get_const_function__ActuatorCommand__wheel_torque(
+  const void * untyped_member, size_t index)
+{
+  const double * member =
+    (const double *)(untyped_member);
+  return &member[index];
+}
+
+void * mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__get_function__ActuatorCommand__wheel_torque(
+  void * untyped_member, size_t index)
+{
+  double * member =
+    (double *)(untyped_member);
+  return &member[index];
+}
+
+void mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__fetch_function__ActuatorCommand__wheel_torque(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const double * item =
+    ((const double *)
+    mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__get_const_function__ActuatorCommand__wheel_torque(untyped_member, index));
+  double * value =
+    (double *)(untyped_value);
+  *value = *item;
+}
+
+void mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__assign_function__ActuatorCommand__wheel_torque(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  double * item =
+    ((double *)
+    mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__get_function__ActuatorCommand__wheel_torque(untyped_member, index));
+  const double * value =
+    (const double *)(untyped_value);
+  *item = *value;
+}
+
+static rosidl_typesupport_introspection_c__MessageMember mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__ActuatorCommand_message_member_array[6] = {
   {
     "header",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -172,13 +217,31 @@ static rosidl_typesupport_introspection_c__MessageMember mpc_car_control__msg__A
     mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__fetch_function__ActuatorCommand__active_suspension_force,  // fetch(index, &value) function pointer
     mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__assign_function__ActuatorCommand__active_suspension_force,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "wheel_torque",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    true,  // is array
+    4,  // array size
+    false,  // is upper bound
+    offsetof(mpc_car_control__msg__ActuatorCommand, wheel_torque),  // bytes offset in struct
+    NULL,  // default value
+    mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__size_function__ActuatorCommand__wheel_torque,  // size() function pointer
+    mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__get_const_function__ActuatorCommand__wheel_torque,  // get_const(index) function pointer
+    mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__get_function__ActuatorCommand__wheel_torque,  // get(index) function pointer
+    mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__fetch_function__ActuatorCommand__wheel_torque,  // fetch(index, &value) function pointer
+    mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__assign_function__ActuatorCommand__wheel_torque,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__ActuatorCommand_message_members = {
   "mpc_car_control__msg",  // message namespace
   "ActuatorCommand",  // message name
-  5,  // number of fields
+  6,  // number of fields
   sizeof(mpc_car_control__msg__ActuatorCommand),
   false,  // has_any_key_member_
   mpc_car_control__msg__ActuatorCommand__rosidl_typesupport_introspection_c__ActuatorCommand_message_member_array,  // message members

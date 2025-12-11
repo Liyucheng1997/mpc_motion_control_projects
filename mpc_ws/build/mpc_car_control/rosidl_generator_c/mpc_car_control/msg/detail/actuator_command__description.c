@@ -11,10 +11,10 @@ mpc_car_control__msg__ActuatorCommand__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xb0, 0x56, 0xee, 0xbb, 0xdd, 0xb4, 0x82, 0xde,
-      0x51, 0xc8, 0xad, 0x21, 0x11, 0xac, 0xfe, 0x86,
-      0x20, 0xfd, 0x65, 0x3b, 0xb7, 0xc1, 0xdc, 0x7a,
-      0x96, 0x7d, 0x94, 0x5f, 0x3b, 0x06, 0xcf, 0xe1,
+      0x54, 0x1b, 0xc7, 0x00, 0x98, 0x06, 0x56, 0xa0,
+      0xf7, 0x10, 0x73, 0x6f, 0x89, 0xff, 0x90, 0xe0,
+      0x28, 0xf7, 0xfe, 0xf4, 0xcb, 0x98, 0x4a, 0x73,
+      0x5e, 0x83, 0xbc, 0x1b, 0x32, 0x1f, 0xa9, 0x9d,
     }};
   return &hash;
 }
@@ -52,6 +52,7 @@ static char mpc_car_control__msg__ActuatorCommand__FIELD_NAME__steering_angle[] 
 static char mpc_car_control__msg__ActuatorCommand__FIELD_NAME__throttle[] = "throttle";
 static char mpc_car_control__msg__ActuatorCommand__FIELD_NAME__brake[] = "brake";
 static char mpc_car_control__msg__ActuatorCommand__FIELD_NAME__active_suspension_force[] = "active_suspension_force";
+static char mpc_car_control__msg__ActuatorCommand__FIELD_NAME__wheel_torque[] = "wheel_torque";
 
 static rosidl_runtime_c__type_description__Field mpc_car_control__msg__ActuatorCommand__FIELDS[] = {
   {
@@ -104,6 +105,16 @@ static rosidl_runtime_c__type_description__Field mpc_car_control__msg__ActuatorC
     },
     {NULL, 0, 0},
   },
+  {
+    {mpc_car_control__msg__ActuatorCommand__FIELD_NAME__wheel_torque, 12, 12},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE_ARRAY,
+      4,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
 };
 
 static rosidl_runtime_c__type_description__IndividualTypeDescription mpc_car_control__msg__ActuatorCommand__REFERENCED_TYPE_DESCRIPTIONS[] = {
@@ -126,7 +137,7 @@ mpc_car_control__msg__ActuatorCommand__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {mpc_car_control__msg__ActuatorCommand__TYPE_NAME, 35, 35},
-      {mpc_car_control__msg__ActuatorCommand__FIELDS, 5, 5},
+      {mpc_car_control__msg__ActuatorCommand__FIELDS, 6, 6},
     },
     {mpc_car_control__msg__ActuatorCommand__REFERENCED_TYPE_DESCRIPTIONS, 2, 2},
   };
@@ -145,7 +156,8 @@ static char toplevel_type_raw_source[] =
   "float64 steering_angle\n"
   "float64 throttle\n"
   "float64 brake\n"
-  "float64[4] active_suspension_force";
+  "float64[4] active_suspension_force\n"
+  "float64[4] wheel_torque";
 
 static char msg_encoding[] = "msg";
 
@@ -159,7 +171,7 @@ mpc_car_control__msg__ActuatorCommand__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {mpc_car_control__msg__ActuatorCommand__TYPE_NAME, 35, 35},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 112, 112},
+    {toplevel_type_raw_source, 136, 136},
   };
   return &source;
 }

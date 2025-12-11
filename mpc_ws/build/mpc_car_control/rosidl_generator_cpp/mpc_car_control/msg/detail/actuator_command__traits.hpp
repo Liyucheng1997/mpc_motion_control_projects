@@ -75,6 +75,24 @@ inline void to_flow_style_yaml(
       }
       out << "]";
     }
+    out << ", ";
+  }
+
+  // member: wheel_torque
+  {
+    if (msg.wheel_torque.size() == 0) {
+      out << "wheel_torque: []";
+    } else {
+      out << "wheel_torque: [";
+      size_t pending_items = msg.wheel_torque.size();
+      for (auto item : msg.wheel_torque) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -132,6 +150,26 @@ inline void to_block_style_yaml(
     } else {
       out << "active_suspension_force:\n";
       for (auto item : msg.active_suspension_force) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
+  }
+
+  // member: wheel_torque
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.wheel_torque.size() == 0) {
+      out << "wheel_torque: []\n";
+    } else {
+      out << "wheel_torque:\n";
+      for (auto item : msg.wheel_torque) {
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }

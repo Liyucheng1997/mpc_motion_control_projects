@@ -58,10 +58,10 @@ private:
   const double g_ = 9.81;
 
   // MPC Parameters
-  const int N_ = 50;       // Prediction Horizon (0.5s at 100Hz)
-  const double dt_ = 0.01; // Time step (100Hz)
+  const int N_ = 50;       // Prediction Horizon (1.0s at dt=0.02)
+  const double dt_ = 0.02; // Time step (Stable discretization)
   const int nx_ = 12;      // [x, y, psi, vx, vy, wz, z, phi, theta, vz, p, q]
-  const int nu_ = 5;       // [accel, Fyf_kN, dFz_kN, Mx_kNm, My_kNm]
+  const int nu_ = 6;       // [accel, Fyf_kN, dFz_kN, Mx_kNm, My_kNm, Mz_kNm]
 
   void traj_callback(
       const mpc_car_control::msg::ReferenceTrajectory::SharedPtr msg) {
@@ -75,7 +75,7 @@ private:
 
   // Get Linearized System Matrices (Jacobian) for Dynamic Bicycle Model +
   // Vertical State: x = [x, y, psi, vx, vy, wz, z, phi, theta, vz, p, q]
-  // Control: u = [a, Fyf_kN, dFz_kN, Mx_kNm, My_kNm]
+  // Control: u = [a, Fyf_kN, dFz_kN, Mx_kNm, My_kNm, Mz_kNm]
   void get_linearized_matrices(const Eigen::VectorXd &x_ref, Eigen::MatrixXd &A,
                                Eigen::MatrixXd &B) {
     A = Eigen::MatrixXd::Zero(nx_, nx_);
@@ -126,10 +126,11 @@ private:
     A(4, 7) = -g_;         // dvy/dphi (Gravity: Roll right -> Pull right (-Y))
     B(4, 1) = 1000.0 / m_; // dvy/dFyf_kN
 
-    // 6. wz_dot = (lf*Fyf - lr*Fyr)/Iz
+    // 6. wz_dot = (lf*Fyf - lr*Fyr + Mz)/Iz
     A(5, 4) = -lr_ * dFyr_dvy / Iz_; // dwz/dvy
     A(5, 5) = -lr_ * dFyr_dwz / Iz_; // dwz/dwz
     B(5, 1) = (lf_ * 1000.0) / Iz_;  // dwz/dFyf_kN
+    B(5, 5) = 1000.0 / Iz_;          // dwz/dMz_kNm (Direct Yaw Moment)
 
     // 7. z_dot = vz
     A(6, 9) = 1.0;
@@ -283,13 +284,13 @@ private:
         50.0, 100.0, 100.0, 10.0, 10.0, 10.0;       // Vertical/Rotational
 
     Eigen::VectorXd R_diag(nu_);
-    // [accel, Fyf_kN, dFz_kN, Mx_kNm, My_kNm]
-    // Increase R for suspension to prevent massive inputs
-    R_diag << 1.0, 1.0, 10.0, 10.0, 10.0;
+    // [accel, Fyf_kN, dFz_kN, Mx_kNm, My_kNm, Mz_kNm]
+    // Stabilized weights
+    R_diag << 10.0, 10.0, 10.0, 10.0, 10.0, 10.0; 
 
     Eigen::VectorXd R_rate_diag(nu_);
-    // [d_accel, d_Fyf_kN, d_dFz, d_Mx, d_My]
-    R_rate_diag << 1.0, 0.1, 1.0, 1.0, 1.0;
+    // [d_accel, d_Fyf_kN, d_dFz, d_Mx, d_My, d_Mz]
+    R_rate_diag << 1.0, 1.0, 1.0, 1.0, 1.0, 1.0;
 
     Eigen::MatrixXd Q_bar = Eigen::MatrixXd::Zero(nx_ * N, nx_ * N);
     Eigen::MatrixXd R_bar = Eigen::MatrixXd::Zero(nu_ * N, nu_ * N);
@@ -337,28 +338,38 @@ private:
     H += Eigen::MatrixXd::Identity(nu_ * N, nu_ * N) * 1e-3;
 
     Eigen::VectorXd U = H.ldlt().solve(F);
+
+    // 8. Publish & Saturate
+    auto cmd_msg = mpc_car_control::msg::ControlCommandBody();
+    cmd_msg.header.stamp = this->now();
+
     Eigen::VectorXd u0 = U.head(nu_);
+    
+    // SAFETY CHECK: NaNs
+    if (std::isnan(u0.sum())) {
+        RCLCPP_ERROR(this->get_logger(), "MPC SOLVER FAILED (NaN). Emergency Stop.");
+        u0.setZero();
+        u0(0) = -1.0; // Brake
+    }
 
     // Store previous input
     u_prev_ = u0;
 
-    // 8. Publish
-    auto cmd_msg = mpc_car_control::msg::ControlCommandBody();
-    cmd_msg.header.stamp = this->now();
-    cmd_msg.fx = u0(0) * m_;     // Accel -> Force
-    cmd_msg.fy = u0(1) * 1000.0; // kN -> N
-    cmd_msg.fz =
-        u0(2) * 1000.0; // dFz -> N (Gravity comp handled in allocator?)
-                        // Actually, let's output TOTAL Fz?
-                        // Allocator expects Fz per wheel?
-                        // Let's output dFz and let allocator add gravity?
-                        // No, allocator takes Fz total.
-                        // So cmd_msg.fz = m*g + u0(2)*1000.0
-    cmd_msg.fz = m_ * g_ + u0(2) * 1000.0;
+    // Saturation Limits
+    double fx_lim = 5000.0; // 5kN ~ 0.35g
+    double fy_lim = 8000.0; // 8kN ~ 0.55g (approx tire limit)
+    double mz_lim = 2000.0; // 2kNm
+    
+    cmd_msg.fx = std::min(std::max(u0(0) * m_, -fx_lim), fx_lim);
+    cmd_msg.fy = std::min(std::max(u0(1) * 1000.0, -fy_lim), fy_lim);
+    
+    // Fz
+    double fz_val = m_ * g_ + u0(2) * 1000.0;
+    cmd_msg.fz = std::max(0.0, fz_val); // No negative downforce (flying)
 
     cmd_msg.mx = u0(3) * 1000.0; // kNm -> Nm
     cmd_msg.my = u0(4) * 1000.0; // kNm -> Nm
-    cmd_msg.mz = 0.0;
+    cmd_msg.mz = std::min(std::max(u0(5) * 1000.0, -mz_lim), mz_lim);
 
     publisher_->publish(cmd_msg);
 
@@ -374,8 +385,8 @@ private:
       yaw_err += 2 * M_PI;
 
     RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 500,
-                         "CTE: %.3f m, YawErr: %.3f rad, Fy: %.1f N, Acc: %.2f",
-                         cte, yaw_err, cmd_msg.fy, u0(0));
+                         "CTE: %.3f m, YawErr: %.3f rad, Fy: %.1f N, Mz: %.1f Nm",
+                         cte, yaw_err, cmd_msg.fy, cmd_msg.mz);
   }
 
   rclcpp::Publisher<mpc_car_control::msg::ControlCommandBody>::SharedPtr

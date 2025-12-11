@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "mpc_car_control/msg/detail/reference_trajectory__type_support.h"
+#include "mpc_car_control/msg/detail/reference_trajectory__functions.h"
 #include "mpc_car_control/msg/detail/reference_trajectory__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "mpc_car_control/msg/detail/reference_trajectory__functions.h"
+#include "mpc_car_control/msg/detail/reference_trajectory__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -31,6 +31,7 @@ typedef struct mpc_car_control__msg__ActuatorCommand
   double throttle;
   double brake;
   double active_suspension_force[4];
+  double wheel_torque[4];
 } mpc_car_control__msg__ActuatorCommand;
 
 // Struct for a sequence of mpc_car_control__msg__ActuatorCommand.

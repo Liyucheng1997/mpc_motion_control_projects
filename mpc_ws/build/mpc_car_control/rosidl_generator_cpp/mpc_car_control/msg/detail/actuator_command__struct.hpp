@@ -50,12 +50,14 @@ struct ActuatorCommand_
       this->throttle = 0.0;
       this->brake = 0.0;
       std::fill<typename std::array<double, 4>::iterator, double>(this->active_suspension_force.begin(), this->active_suspension_force.end(), 0.0);
+      std::fill<typename std::array<double, 4>::iterator, double>(this->wheel_torque.begin(), this->wheel_torque.end(), 0.0);
     }
   }
 
   explicit ActuatorCommand_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : header(_alloc, _init),
-    active_suspension_force(_alloc)
+    active_suspension_force(_alloc),
+    wheel_torque(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -64,6 +66,7 @@ struct ActuatorCommand_
       this->throttle = 0.0;
       this->brake = 0.0;
       std::fill<typename std::array<double, 4>::iterator, double>(this->active_suspension_force.begin(), this->active_suspension_force.end(), 0.0);
+      std::fill<typename std::array<double, 4>::iterator, double>(this->wheel_torque.begin(), this->wheel_torque.end(), 0.0);
     }
   }
 
@@ -83,6 +86,9 @@ struct ActuatorCommand_
   using _active_suspension_force_type =
     std::array<double, 4>;
   _active_suspension_force_type active_suspension_force;
+  using _wheel_torque_type =
+    std::array<double, 4>;
+  _wheel_torque_type wheel_torque;
 
   // setters for named parameter idiom
   Type & set__header(
@@ -113,6 +119,12 @@ struct ActuatorCommand_
     const std::array<double, 4> & _arg)
   {
     this->active_suspension_force = _arg;
+    return *this;
+  }
+  Type & set__wheel_torque(
+    const std::array<double, 4> & _arg)
+  {
+    this->wheel_torque = _arg;
     return *this;
   }
 
@@ -171,6 +183,9 @@ struct ActuatorCommand_
       return false;
     }
     if (this->active_suspension_force != other.active_suspension_force) {
+      return false;
+    }
+    if (this->wheel_torque != other.wheel_torque) {
       return false;
     }
     return true;

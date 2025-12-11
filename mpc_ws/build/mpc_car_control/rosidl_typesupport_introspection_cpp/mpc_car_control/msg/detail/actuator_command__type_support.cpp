@@ -76,7 +76,45 @@ void assign_function__ActuatorCommand__active_suspension_force(
   item = value;
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ActuatorCommand_message_member_array[5] = {
+size_t size_function__ActuatorCommand__wheel_torque(const void * untyped_member)
+{
+  (void)untyped_member;
+  return 4;
+}
+
+const void * get_const_function__ActuatorCommand__wheel_torque(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::array<double, 4> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__ActuatorCommand__wheel_torque(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::array<double, 4> *>(untyped_member);
+  return &member[index];
+}
+
+void fetch_function__ActuatorCommand__wheel_torque(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const double *>(
+    get_const_function__ActuatorCommand__wheel_torque(untyped_member, index));
+  auto & value = *reinterpret_cast<double *>(untyped_value);
+  value = item;
+}
+
+void assign_function__ActuatorCommand__wheel_torque(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<double *>(
+    get_function__ActuatorCommand__wheel_torque(untyped_member, index));
+  const auto & value = *reinterpret_cast<const double *>(untyped_value);
+  item = value;
+}
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ActuatorCommand_message_member_array[6] = {
   {
     "header",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -166,13 +204,31 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ActuatorComma
     fetch_function__ActuatorCommand__active_suspension_force,  // fetch(index, &value) function pointer
     assign_function__ActuatorCommand__active_suspension_force,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "wheel_torque",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is key
+    true,  // is array
+    4,  // array size
+    false,  // is upper bound
+    offsetof(mpc_car_control::msg::ActuatorCommand, wheel_torque),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__ActuatorCommand__wheel_torque,  // size() function pointer
+    get_const_function__ActuatorCommand__wheel_torque,  // get_const(index) function pointer
+    get_function__ActuatorCommand__wheel_torque,  // get(index) function pointer
+    fetch_function__ActuatorCommand__wheel_torque,  // fetch(index, &value) function pointer
+    assign_function__ActuatorCommand__wheel_torque,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ActuatorCommand_message_members = {
   "mpc_car_control::msg",  // message namespace
   "ActuatorCommand",  // message name
-  5,  // number of fields
+  6,  // number of fields
   sizeof(mpc_car_control::msg::ActuatorCommand),
   false,  // has_any_key_member_
   ActuatorCommand_message_member_array,  // message members

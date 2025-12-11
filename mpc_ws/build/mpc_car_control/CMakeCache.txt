@@ -56,15 +56,15 @@ CMAKE_BUILD_TYPE:STRING=
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:STRING=/usr/bin/c++
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-9
+CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-13
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-9
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-13
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -82,15 +82,15 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:STRING=/usr/bin/cc
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-9
+CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-13
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-9
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-13
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -125,8 +125,8 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//No help, variable specified on the command line.
-CMAKE_EXPORT_COMPILE_COMMANDS:UNINITIALIZED=ON
+//Enable/Disable output of compile commands during generation.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/pkgRedirects
@@ -138,7 +138,7 @@ CMAKE_INSTALL_PREFIX:PATH=/home/yucheng/mpc_motion_control_projects/mpc_ws/insta
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
 
 //Path to a program.
-CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
+CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/gmake
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -250,16 +250,16 @@ Eigen3_DIR:PATH=/usr/share/eigen3/cmake
 FastCDR_LIBRARY_DEBUG:FILEPATH=FastCDR_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
-FastCDR_LIBRARY_RELEASE:FILEPATH=/opt/ros/foxy/lib/libfastcdr.so
+FastCDR_LIBRARY_RELEASE:FILEPATH=/opt/ros/jazzy/lib/libfastcdr.so
 
 //Path to a file.
-FastRTPS_INCLUDE_DIR:PATH=/opt/ros/foxy/include
+FastRTPS_INCLUDE_DIR:PATH=/opt/ros/jazzy/include
 
 //Path to a library.
 FastRTPS_LIBRARY_DEBUG:FILEPATH=FastRTPS_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
-FastRTPS_LIBRARY_RELEASE:FILEPATH=/opt/ros/foxy/lib/libfastrtps.so
+FastRTPS_LIBRARY_RELEASE:FILEPATH=/opt/ros/jazzy/lib/libfastrtps.so
 
 //Path to a library.
 OPENSSL_CRYPTO_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
@@ -276,32 +276,14 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
-//Path to a program.
-PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
-
-//Path to a file.
-PYTHON_INCLUDE_DIR:PATH=/usr/include/python3.8
-
-//Path to a library.
-PYTHON_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython3.8.so
-
-//Path to a library.
-PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
-
-//Specify specific Python version to use ('major.minor' or 'major')
-PYTHON_VERSION:STRING=
-
 //Name of the computer/site where compile is being run
-SITE:STRING=yucheng-Lenovo-Rescuer-Y7000
+SITE:STRING=yucheng-Vector-16-HX-AI-A2XWIG
 
 //The directory containing a CMake configuration file for TinyXML2.
 TinyXML2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/tinyxml2
 
 //Path to a library.
 _lib:FILEPATH=/opt/ros/jazzy/lib/libtf2_msgs__rosidl_typesupport_fastrtps_cpp.so
-
-//Path to a file.
-_numpy_h:FILEPATH=/usr/include/python3.8/numpy/numpyconfig.h
 
 //The directory containing a CMake configuration file for action_msgs.
 action_msgs_DIR:PATH=/opt/ros/jazzy/share/action_msgs/cmake
@@ -391,16 +373,16 @@ ament_cmake_version_DIR:PATH=/opt/ros/jazzy/share/ament_cmake_version/cmake
 ament_cmake_xmllint_DIR:PATH=/opt/ros/jazzy/share/ament_cmake_xmllint/cmake
 
 //Path to a program.
-ament_copyright_BIN:FILEPATH=/opt/ros/foxy/bin/ament_copyright
+ament_copyright_BIN:FILEPATH=/opt/ros/jazzy/bin/ament_copyright
 
 //Path to a program.
-ament_cppcheck_BIN:FILEPATH=/opt/ros/foxy/bin/ament_cppcheck
+ament_cppcheck_BIN:FILEPATH=/opt/ros/jazzy/bin/ament_cppcheck
 
 //Path to a program.
-ament_cpplint_BIN:FILEPATH=/opt/ros/foxy/bin/ament_cpplint
+ament_cpplint_BIN:FILEPATH=/opt/ros/jazzy/bin/ament_cpplint
 
 //Path to a program.
-ament_flake8_BIN:FILEPATH=/opt/ros/foxy/bin/ament_flake8
+ament_flake8_BIN:FILEPATH=/opt/ros/jazzy/bin/ament_flake8
 
 //The directory containing a CMake configuration file for ament_index_cpp.
 ament_index_cpp_DIR:PATH=/opt/ros/jazzy/share/ament_index_cpp/cmake
@@ -409,19 +391,19 @@ ament_index_cpp_DIR:PATH=/opt/ros/jazzy/share/ament_index_cpp/cmake
 ament_lint_auto_DIR:PATH=/opt/ros/jazzy/share/ament_lint_auto/cmake
 
 //Path to a program.
-ament_lint_cmake_BIN:FILEPATH=/opt/ros/foxy/bin/ament_lint_cmake
+ament_lint_cmake_BIN:FILEPATH=/opt/ros/jazzy/bin/ament_lint_cmake
 
 //The directory containing a CMake configuration file for ament_lint_common.
 ament_lint_common_DIR:PATH=/opt/ros/jazzy/share/ament_lint_common/cmake
 
 //Path to a program.
-ament_pep257_BIN:FILEPATH=/opt/ros/foxy/bin/ament_pep257
+ament_pep257_BIN:FILEPATH=/opt/ros/jazzy/bin/ament_pep257
 
 //Path to a program.
-ament_uncrustify_BIN:FILEPATH=/opt/ros/foxy/bin/ament_uncrustify
+ament_uncrustify_BIN:FILEPATH=/opt/ros/jazzy/bin/ament_uncrustify
 
 //Path to a program.
-ament_xmllint_BIN:FILEPATH=/opt/ros/foxy/bin/ament_xmllint
+ament_xmllint_BIN:FILEPATH=/opt/ros/jazzy/bin/ament_xmllint
 
 //The directory containing a CMake configuration file for builtin_interfaces.
 builtin_interfaces_DIR:PATH=/opt/ros/jazzy/share/builtin_interfaces/cmake
@@ -456,9 +438,6 @@ geometry_msgs_DIR:PATH=/opt/ros/jazzy/share/geometry_msgs/cmake
 //The directory containing a CMake configuration file for libstatistics_collector.
 libstatistics_collector_DIR:PATH=/opt/ros/jazzy/share/libstatistics_collector/cmake
 
-//The directory containing a CMake configuration file for libyaml_vendor.
-libyaml_vendor_DIR:PATH=/opt/ros/foxy/share/libyaml_vendor/cmake
-
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/jazzy/share/message_filters/cmake
 
@@ -472,19 +451,7 @@ mpc_car_control_IS_TOP_LEVEL:STATIC=ON
 mpc_car_control_SOURCE_DIR:STATIC=/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control
 
 //Dependencies for the target
-mpc_car_control__python_LIB_DEPENDS:STATIC=general;mpc_car_control__rosidl_generator_c;general;/usr/lib/x86_64-linux-gnu/libpython3.8.so;general;mpc_car_control__rosidl_typesupport_c;general;/opt/ros/foxy/share/geometry_msgs/cmake/../../../lib/libgeometry_msgs__python.so;general;/opt/ros/foxy/share/std_msgs/cmake/../../../lib/libstd_msgs__python.so;general;/opt/ros/foxy/share/builtin_interfaces/cmake/../../../lib/libbuiltin_interfaces__python.so;
-
-//Dependencies for the target
 mpc_car_control__rosidl_generator_py_LIB_DEPENDS:STATIC=general;mpc_car_control__rosidl_generator_c;general;Python3::Python;general;mpc_car_control__rosidl_typesupport_c;general;geometry_msgs::geometry_msgs__rosidl_generator_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_fastrtps_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_introspection_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_fastrtps_cpp;general;geometry_msgs::geometry_msgs__rosidl_typesupport_introspection_cpp;general;geometry_msgs::geometry_msgs__rosidl_typesupport_cpp;general;geometry_msgs::geometry_msgs__rosidl_generator_py;general;geometry_msgs::geometry_msgs__rosidl_generator_py;general;std_msgs::std_msgs__rosidl_generator_c;general;std_msgs::std_msgs__rosidl_typesupport_fastrtps_c;general;std_msgs::std_msgs__rosidl_typesupport_fastrtps_cpp;general;std_msgs::std_msgs__rosidl_typesupport_introspection_c;general;std_msgs::std_msgs__rosidl_typesupport_c;general;std_msgs::std_msgs__rosidl_typesupport_introspection_cpp;general;std_msgs::std_msgs__rosidl_typesupport_cpp;general;std_msgs::std_msgs__rosidl_generator_py;general;std_msgs::std_msgs__rosidl_generator_py;general;builtin_interfaces::builtin_interfaces__rosidl_generator_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_fastrtps_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_introspection_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_fastrtps_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_introspection_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_generator_py;general;builtin_interfaces::builtin_interfaces__rosidl_generator_py;
-
-//Dependencies for the target
-mpc_car_control__rosidl_typesupport_c__pyext_LIB_DEPENDS:STATIC=general;mpc_car_control__python;general;/usr/lib/x86_64-linux-gnu/libpython3.8.so;general;mpc_car_control__rosidl_typesupport_c;general;mpc_car_control__rosidl_typesupport_c;general;rosidl_runtime_c::rosidl_runtime_c;general;rosidl_typesupport_c::rosidl_typesupport_c;general;geometry_msgs::geometry_msgs__rosidl_generator_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_introspection_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_introspection_cpp;general;geometry_msgs::geometry_msgs__rosidl_typesupport_cpp;general;std_msgs::std_msgs__rosidl_generator_c;general;std_msgs::std_msgs__rosidl_typesupport_introspection_c;general;std_msgs::std_msgs__rosidl_typesupport_c;general;std_msgs::std_msgs__rosidl_typesupport_introspection_cpp;general;std_msgs::std_msgs__rosidl_typesupport_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_generator_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_introspection_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_introspection_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_cpp;general;rosidl_runtime_c::rosidl_runtime_c;general;/opt/ros/foxy/lib/librmw.so;general;rosidl_runtime_c::rosidl_runtime_c;general;/opt/ros/foxy/lib/librosidl_runtime_c.so;general;rcutils::rcutils;
-
-//Dependencies for the target
-mpc_car_control__rosidl_typesupport_fastrtps_c__pyext_LIB_DEPENDS:STATIC=general;mpc_car_control__python;general;/usr/lib/x86_64-linux-gnu/libpython3.8.so;general;mpc_car_control__rosidl_typesupport_fastrtps_c;general;mpc_car_control__rosidl_typesupport_c;general;rosidl_runtime_c::rosidl_runtime_c;general;rosidl_typesupport_c::rosidl_typesupport_c;general;geometry_msgs::geometry_msgs__rosidl_generator_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_introspection_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_introspection_cpp;general;geometry_msgs::geometry_msgs__rosidl_typesupport_cpp;general;std_msgs::std_msgs__rosidl_generator_c;general;std_msgs::std_msgs__rosidl_typesupport_introspection_c;general;std_msgs::std_msgs__rosidl_typesupport_c;general;std_msgs::std_msgs__rosidl_typesupport_introspection_cpp;general;std_msgs::std_msgs__rosidl_typesupport_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_generator_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_introspection_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_introspection_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_cpp;general;rosidl_runtime_c::rosidl_runtime_c;general;/opt/ros/foxy/lib/librmw.so;general;rosidl_runtime_c::rosidl_runtime_c;general;/opt/ros/foxy/lib/librosidl_runtime_c.so;general;rcutils::rcutils;
-
-//Dependencies for the target
-mpc_car_control__rosidl_typesupport_introspection_c__pyext_LIB_DEPENDS:STATIC=general;mpc_car_control__python;general;/usr/lib/x86_64-linux-gnu/libpython3.8.so;general;mpc_car_control__rosidl_typesupport_introspection_c;general;mpc_car_control__rosidl_typesupport_c;general;rosidl_runtime_c::rosidl_runtime_c;general;rosidl_typesupport_c::rosidl_typesupport_c;general;geometry_msgs::geometry_msgs__rosidl_generator_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_introspection_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_c;general;geometry_msgs::geometry_msgs__rosidl_typesupport_introspection_cpp;general;geometry_msgs::geometry_msgs__rosidl_typesupport_cpp;general;std_msgs::std_msgs__rosidl_generator_c;general;std_msgs::std_msgs__rosidl_typesupport_introspection_c;general;std_msgs::std_msgs__rosidl_typesupport_c;general;std_msgs::std_msgs__rosidl_typesupport_introspection_cpp;general;std_msgs::std_msgs__rosidl_typesupport_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_generator_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_introspection_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_c;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_introspection_cpp;general;builtin_interfaces::builtin_interfaces__rosidl_typesupport_cpp;general;rosidl_runtime_c::rosidl_runtime_c;general;/opt/ros/foxy/lib/librmw.so;general;rosidl_runtime_c::rosidl_runtime_c;general;/opt/ros/foxy/lib/librosidl_runtime_c.so;general;rcutils::rcutils;
 
 //Dependencies for the target
 mpc_car_control_s__rosidl_typesupport_c_LIB_DEPENDS:STATIC=general;mpc_car_control__rosidl_generator_py;general;mpc_car_control__rosidl_typesupport_c;general;mpc_car_control__rosidl_typesupport_c;general;rosidl_runtime_c::rosidl_runtime_c;general;rosidl_typesupport_c::rosidl_typesupport_c;general;/opt/ros/jazzy/lib/librmw.so;general;rcutils::rcutils;general;rosidl_dynamic_typesupport::rosidl_dynamic_typesupport;general;rosidl_runtime_c::rosidl_runtime_c;
@@ -524,9 +491,6 @@ rcl_interfaces_DIR:PATH=/opt/ros/jazzy/share/rcl_interfaces/cmake
 
 //The directory containing a CMake configuration file for rcl_logging_interface.
 rcl_logging_interface_DIR:PATH=/opt/ros/jazzy/share/rcl_logging_interface/cmake
-
-//The directory containing a CMake configuration file for rcl_logging_spdlog.
-rcl_logging_spdlog_DIR:PATH=/opt/ros/foxy/share/rcl_logging_spdlog/cmake
 
 //The directory containing a CMake configuration file for rcl_yaml_param_parser.
 rcl_yaml_param_parser_DIR:PATH=/opt/ros/jazzy/share/rcl_yaml_param_parser/cmake
@@ -633,12 +597,6 @@ sensor_msgs_DIR:PATH=/opt/ros/jazzy/share/sensor_msgs/cmake
 //The directory containing a CMake configuration file for service_msgs.
 service_msgs_DIR:PATH=/opt/ros/jazzy/share/service_msgs/cmake
 
-//The directory containing a CMake configuration file for spdlog.
-spdlog_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/spdlog
-
-//The directory containing a CMake configuration file for spdlog_vendor.
-spdlog_vendor_DIR:PATH=/opt/ros/foxy/share/spdlog_vendor/cmake
-
 //The directory containing a CMake configuration file for statistics_msgs.
 statistics_msgs_DIR:PATH=/opt/ros/jazzy/share/statistics_msgs/cmake
 
@@ -671,9 +629,6 @@ visualization_msgs_DIR:PATH=/opt/ros/jazzy/share/visualization_msgs/cmake
 
 //Path to a program.
 xmllint_BIN:FILEPATH=/usr/bin/xmllint
-
-//The directory containing a CMake configuration file for yaml.
-yaml_DIR:PATH=/opt/ros/foxy/cmake
 
 
 ########################
@@ -760,12 +715,6 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
-//Test CMAKE_HAVE_LIBC_PTHREAD
-CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=
-//Have library pthreads
-CMAKE_HAVE_PTHREADS_CREATE:INTERNAL=
-//Have library pthread
-CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control
@@ -836,19 +785,13 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Eigen3
 FIND_PACKAGE_MESSAGE_DETAILS_Eigen3:INTERNAL=[1][v3.4.0()]
 //Details about finding FastRTPS
-FIND_PACKAGE_MESSAGE_DETAILS_FastRTPS:INTERNAL=[/opt/ros/foxy/include][/opt/ros/foxy/lib/libfastrtps.so;/opt/ros/foxy/lib/libfastcdr.so][v(2.13)]
+FIND_PACKAGE_MESSAGE_DETAILS_FastRTPS:INTERNAL=[/opt/ros/jazzy/include][/opt/ros/jazzy/lib/libfastrtps.so;/opt/ros/jazzy/lib/libfastcdr.so][v(2.13)]
 //Details about finding OpenSSL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcrypto.so][/usr/include][c ][v3.0.13()]
 //Details about finding Python3
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3][/usr/include/python3.12][/usr/lib/x86_64-linux-gnu/libpython3.12.so][/usr/lib/python3/dist-packages/numpy/core/include][cfound components: Interpreter Development NumPy Development.Module Development.Embed ][v3.12.3()]
 //Details about finding PythonExtra
 FIND_PACKAGE_MESSAGE_DETAILS_PythonExtra:INTERNAL=[/usr/bin/python3][/usr/bin/python3][v()]
-//Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3][v3.8.10(3.5)]
-//Details about finding PythonLibs
-FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/x86_64-linux-gnu/libpython3.8.so][/usr/include/python3.8][v3.8.10(3.5)]
-//Details about finding Threads
-FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
 OPENSSL_CRYPTO_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENSSL_INCLUDE_DIR
@@ -859,26 +802,9 @@ OPENSSL_SSL_LIBRARY-ADVANCED:INTERNAL=1
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PYTHON_EXECUTABLE
-PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PYTHON_INCLUDE_DIR
-PYTHON_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //The directory for Python library installation. This needs to
 // be in PYTHONPATH when 'setup.py install' is called.
-PYTHON_INSTALL_DIR:INTERNAL=lib/python3.8/site-packages
-//ADVANCED property for variable: PYTHON_LIBRARY
-PYTHON_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
-PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//The SOABI suffix for Python native extensions. See PEP-3149:
-// https://www.python.org/dev/peps/pep-3149/.
-PYTHON_SOABI:INTERNAL=cpython-38-x86_64-linux-gnu
-//The full suffix for Python native extensions. See PEP-3149: https://www.python.org/dev/peps/pep-3149/.
-PythonExtra_EXTENSION_SUFFIX:INTERNAL=.cpython-38-x86_64-linux-gnu
-//linker supports push/pop state
-_CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
-//linker supports push/pop state
-_CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+PYTHON_INSTALL_DIR:INTERNAL=lib/python3.12/site-packages
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 _OPENSSL_CFLAGS:INTERNAL=-I/usr/include
@@ -902,16 +828,16 @@ _OPENSSL_STATIC_CFLAGS:INTERNAL=-I/usr/include
 _OPENSSL_STATIC_CFLAGS_I:INTERNAL=
 _OPENSSL_STATIC_CFLAGS_OTHER:INTERNAL=
 _OPENSSL_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include
-_OPENSSL_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lssl;-lcrypto;-ldl;-pthread
-_OPENSSL_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+_OPENSSL_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lssl;-L/usr/lib/x86_64-linux-gnu;-ldl;-pthread;-lcrypto;-ldl;-pthread
+_OPENSSL_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread
 _OPENSSL_STATIC_LIBDIR:INTERNAL=
-_OPENSSL_STATIC_LIBRARIES:INTERNAL=ssl;crypto;dl
-_OPENSSL_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+_OPENSSL_STATIC_LIBRARIES:INTERNAL=ssl;dl;crypto;dl
+_OPENSSL_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu;/usr/lib/x86_64-linux-gnu
 _OPENSSL_STATIC_LIBS:INTERNAL=
 _OPENSSL_STATIC_LIBS_L:INTERNAL=
 _OPENSSL_STATIC_LIBS_OTHER:INTERNAL=
 _OPENSSL_STATIC_LIBS_PATHS:INTERNAL=
-_OPENSSL_VERSION:INTERNAL=1.1.1f
+_OPENSSL_VERSION:INTERNAL=3.0.13
 _OPENSSL_openssl_INCLUDEDIR:INTERNAL=
 _OPENSSL_openssl_LIBDIR:INTERNAL=
 _OPENSSL_openssl_PREFIX:INTERNAL=

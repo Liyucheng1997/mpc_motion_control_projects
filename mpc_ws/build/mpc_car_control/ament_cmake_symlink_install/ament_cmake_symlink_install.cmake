@@ -358,19 +358,19 @@ ament_cmake_symlink_install_files("/home/yucheng/mpc_motion_control_projects/mpc
 # install(FILES "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/mpc_car_control/environment")
 ament_cmake_symlink_install_files("/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control" FILES "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/mpc_car_control/environment")
 
-# install(DIRECTORY "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/ament_cmake_python/mpc_car_control/mpc_car_control.egg-info/" "DESTINATION" "lib/python3.8/site-packages/mpc_car_control-0.0.0-py3.12.egg-info")
-ament_cmake_symlink_install_directory("/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control" DIRECTORY "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/ament_cmake_python/mpc_car_control/mpc_car_control.egg-info/" "DESTINATION" "lib/python3.8/site-packages/mpc_car_control-0.0.0-py3.12.egg-info")
+# install(DIRECTORY "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/ament_cmake_python/mpc_car_control/mpc_car_control.egg-info/" "DESTINATION" "lib/python3.12/site-packages/mpc_car_control-0.0.0-py3.12.egg-info")
+ament_cmake_symlink_install_directory("/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control" DIRECTORY "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/ament_cmake_python/mpc_car_control/mpc_car_control.egg-info/" "DESTINATION" "lib/python3.12/site-packages/mpc_car_control-0.0.0-py3.12.egg-info")
 
-# install(DIRECTORY "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/" "DESTINATION" "lib/python3.8/site-packages/mpc_car_control" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
-ament_cmake_symlink_install_directory("/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control" DIRECTORY "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/" "DESTINATION" "lib/python3.8/site-packages/mpc_car_control" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+# install(DIRECTORY "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/" "DESTINATION" "lib/python3.12/site-packages/mpc_car_control" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control" DIRECTORY "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/" "DESTINATION" "lib/python3.12/site-packages/mpc_car_control" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
-# install("TARGETS" "mpc_car_control_s__rosidl_typesupport_fastrtps_c" "DESTINATION" "lib/python3.8/site-packages/mpc_car_control")
+# install("TARGETS" "mpc_car_control_s__rosidl_typesupport_fastrtps_c" "DESTINATION" "lib/python3.12/site-packages/mpc_car_control")
 include("/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install("TARGETS" "mpc_car_control_s__rosidl_typesupport_introspection_c" "DESTINATION" "lib/python3.8/site-packages/mpc_car_control")
+# install("TARGETS" "mpc_car_control_s__rosidl_typesupport_introspection_c" "DESTINATION" "lib/python3.12/site-packages/mpc_car_control")
 include("/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install("TARGETS" "mpc_car_control_s__rosidl_typesupport_c" "DESTINATION" "lib/python3.8/site-packages/mpc_car_control")
+# install("TARGETS" "mpc_car_control_s__rosidl_typesupport_c" "DESTINATION" "lib/python3.12/site-packages/mpc_car_control")
 include("/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_adapter/mpc_car_control/msg/VehicleState.idl" "DESTINATION" "share/mpc_car_control/msg")

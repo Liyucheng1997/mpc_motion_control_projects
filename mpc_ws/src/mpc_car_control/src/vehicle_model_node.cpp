@@ -274,22 +274,39 @@ private:
         state_.zu[i] += state_.zu_dot[i] * dt;
 
         // Wheel Rotation Dynamics
-        // I_w * omega_dot = T_drive - T_brake - F_tx * Rw
-        double T_drive = 0.0;
-        double T_brake = 0.0;
-        if (throttle > 0) {
-          // AWD
-          T_drive = (throttle * 500.0) / 4.0;
-        }
-        if (brake > 0) {
-          T_brake = (brake * 1000.0) / 4.0;
-          if (state_.omega[i] > 0)
-            T_brake *= 1.0;
-          else if (state_.omega[i] < 0)
-            T_brake *= -1.0; // Oppose motion
+        double T_net_applied = 0.0;
+        
+        // Check if direct torque control is active (from Allocator DYC)
+        bool use_direct_torque = false;
+        double total_direct_torque = 0.0;
+        for(double t : last_cmd_.wheel_torque) total_direct_torque += std::abs(t);
+        
+        if (total_direct_torque > 1e-3) {
+             use_direct_torque = true;
+             T_net_applied = last_cmd_.wheel_torque[i]; 
+             // Positive T increases omega (Engine/Motor)
+             // Negative T decreases omega (Brake/Regen)
+             // Note: Brakes always oppose motion, but here we model generic torque source.
+             // If we want braking behavior (opposing sign of omega), the controller sends negative torque.
+        } else {
+            // Legacy Logic
+            double T_drive = 0.0;
+            double T_brake = 0.0;
+            if (throttle > 0) {
+              // AWD
+              T_drive = (throttle * 500.0) / 4.0;
+            }
+            if (brake > 0) {
+              T_brake = (brake * 1000.0) / 4.0;
+              if (state_.omega[i] > 0)
+                T_brake *= 1.0;
+              else if (state_.omega[i] < 0)
+                T_brake *= -1.0; // Oppose motion
+            }
+            T_net_applied = T_drive - T_brake;
         }
 
-        double omega_dot = (T_drive - T_brake - F_tx * params_.Rw) / params_.Iw;
+        double omega_dot = (T_net_applied - F_tx * params_.Rw) / params_.Iw;
         state_.omega[i] += omega_dot * dt;
       }
 

@@ -211,7 +211,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   execute_process(
         COMMAND
         "/usr/bin/python3" "-m" "compileall"
-        "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages/mpc_car_control"
+        "/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.12/site-packages/mpc_car_control"
       )
 endif()
 

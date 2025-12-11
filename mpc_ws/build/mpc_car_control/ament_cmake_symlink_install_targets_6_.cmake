@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/scenario_generator_node" "TARGETS" "scenario_generator_node" "DESTINATION" "lib/mpc_car_control")

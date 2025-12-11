@@ -24,16 +24,32 @@ namespace msg
 namespace builder
 {
 
+class Init_ActuatorCommand_wheel_torque
+{
+public:
+  explicit Init_ActuatorCommand_wheel_torque(::mpc_car_control::msg::ActuatorCommand & msg)
+  : msg_(msg)
+  {}
+  ::mpc_car_control::msg::ActuatorCommand wheel_torque(::mpc_car_control::msg::ActuatorCommand::_wheel_torque_type arg)
+  {
+    msg_.wheel_torque = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::mpc_car_control::msg::ActuatorCommand msg_;
+};
+
 class Init_ActuatorCommand_active_suspension_force
 {
 public:
   explicit Init_ActuatorCommand_active_suspension_force(::mpc_car_control::msg::ActuatorCommand & msg)
   : msg_(msg)
   {}
-  ::mpc_car_control::msg::ActuatorCommand active_suspension_force(::mpc_car_control::msg::ActuatorCommand::_active_suspension_force_type arg)
+  Init_ActuatorCommand_wheel_torque active_suspension_force(::mpc_car_control::msg::ActuatorCommand::_active_suspension_force_type arg)
   {
     msg_.active_suspension_force = std::move(arg);
-    return std::move(msg_);
+    return Init_ActuatorCommand_wheel_torque(msg_);
   }
 
 private:

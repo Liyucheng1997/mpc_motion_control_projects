@@ -118,6 +118,13 @@ bool cdr_serialize_mpc_car_control__msg__ActuatorCommand(
     cdr.serialize_array(array_ptr, size);
   }
 
+  // Field name: wheel_torque
+  {
+    size_t size = 4;
+    auto array_ptr = ros_message->wheel_torque;
+    cdr.serialize_array(array_ptr, size);
+  }
+
   return true;
 }
 
@@ -150,6 +157,13 @@ bool cdr_deserialize_mpc_car_control__msg__ActuatorCommand(
   {
     size_t size = 4;
     auto array_ptr = ros_message->active_suspension_force;
+    cdr.deserialize_array(array_ptr, size);
+  }
+
+  // Field name: wheel_torque
+  {
+    size_t size = 4;
+    auto array_ptr = ros_message->wheel_torque;
     cdr.deserialize_array(array_ptr, size);
   }
 
@@ -200,6 +214,16 @@ size_t get_serialized_size_mpc_car_control__msg__ActuatorCommand(
   {
     size_t array_size = 4;
     auto array_ptr = ros_message->active_suspension_force;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: wheel_torque
+  {
+    size_t array_size = 4;
+    auto array_ptr = ros_message->wheel_torque;
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
     current_alignment += array_size * item_size +
@@ -278,6 +302,14 @@ size_t max_serialized_size_mpc_car_control__msg__ActuatorCommand(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
+  // Field name: wheel_torque
+  {
+    size_t array_size = 4;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -287,7 +319,7 @@ size_t max_serialized_size_mpc_car_control__msg__ActuatorCommand(
     using DataType = mpc_car_control__msg__ActuatorCommand;
     is_plain =
       (
-      offsetof(DataType, active_suspension_force) +
+      offsetof(DataType, wheel_torque) +
       last_member_size
       ) == ret_val;
   }
@@ -324,6 +356,13 @@ bool cdr_serialize_key_mpc_car_control__msg__ActuatorCommand(
   {
     size_t size = 4;
     auto array_ptr = ros_message->active_suspension_force;
+    cdr.serialize_array(array_ptr, size);
+  }
+
+  // Field name: wheel_torque
+  {
+    size_t size = 4;
+    auto array_ptr = ros_message->wheel_torque;
     cdr.serialize_array(array_ptr, size);
   }
 
@@ -374,6 +413,16 @@ size_t get_serialized_size_key_mpc_car_control__msg__ActuatorCommand(
   {
     size_t array_size = 4;
     auto array_ptr = ros_message->active_suspension_force;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: wheel_torque
+  {
+    size_t array_size = 4;
+    auto array_ptr = ros_message->wheel_torque;
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
     current_alignment += array_size * item_size +
@@ -450,6 +499,14 @@ size_t max_serialized_size_key_mpc_car_control__msg__ActuatorCommand(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
+  // Field name: wheel_torque
+  {
+    size_t array_size = 4;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -458,7 +515,7 @@ size_t max_serialized_size_key_mpc_car_control__msg__ActuatorCommand(
     using DataType = mpc_car_control__msg__ActuatorCommand;
     is_plain =
       (
-      offsetof(DataType, active_suspension_force) +
+      offsetof(DataType, wheel_torque) +
       last_member_size
       ) == ret_val;
   }

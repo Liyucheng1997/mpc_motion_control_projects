@@ -52,6 +52,16 @@
             "nested_type_name": ""
           },
           "default_value": ""
+        },
+        {
+          "name": "wheel_torque",
+          "type": {
+            "type_id": 59,
+            "capacity": 4,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
         }
       ]
     },
@@ -111,7 +121,7 @@
   "type_hashes": [
     {
       "type_name": "mpc_car_control/msg/ActuatorCommand",
-      "hash_string": "RIHS01_b056eebbddb482de51c8ad2111acfe8620fd653bb7c1dc7a967d945f3b06cfe1"
+      "hash_string": "RIHS01_541bc700980656a0f710736f89ff90e028f7fef4cb984a735e83bc1b321fa99d"
     },
     {
       "type_name": "builtin_interfaces/msg/Time",

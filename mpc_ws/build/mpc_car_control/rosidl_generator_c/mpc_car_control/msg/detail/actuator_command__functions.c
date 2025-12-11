@@ -30,6 +30,7 @@ mpc_car_control__msg__ActuatorCommand__init(mpc_car_control__msg__ActuatorComman
   // throttle
   // brake
   // active_suspension_force
+  // wheel_torque
   return true;
 }
 
@@ -45,6 +46,7 @@ mpc_car_control__msg__ActuatorCommand__fini(mpc_car_control__msg__ActuatorComman
   // throttle
   // brake
   // active_suspension_force
+  // wheel_torque
 }
 
 bool
@@ -77,6 +79,12 @@ mpc_car_control__msg__ActuatorCommand__are_equal(const mpc_car_control__msg__Act
       return false;
     }
   }
+  // wheel_torque
+  for (size_t i = 0; i < 4; ++i) {
+    if (lhs->wheel_torque[i] != rhs->wheel_torque[i]) {
+      return false;
+    }
+  }
   return true;
 }
 
@@ -103,6 +111,10 @@ mpc_car_control__msg__ActuatorCommand__copy(
   // active_suspension_force
   for (size_t i = 0; i < 4; ++i) {
     output->active_suspension_force[i] = input->active_suspension_force[i];
+  }
+  // wheel_torque
+  for (size_t i = 0; i < 4; ++i) {
+    output->wheel_torque[i] = input->wheel_torque[i];
   }
   return true;
 }

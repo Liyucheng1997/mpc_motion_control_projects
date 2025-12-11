@@ -8,7 +8,7 @@
 #include "rclcpp/rclcpp.hpp"
 
 using std::placeholders::_1;
-// 在测试以下同步功能
+
 class PIDControllerNode : public rclcpp::Node {
 public:
   PIDControllerNode() : Node("pid_controller_node") {

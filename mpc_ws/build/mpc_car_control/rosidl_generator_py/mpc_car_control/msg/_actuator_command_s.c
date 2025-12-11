@@ -119,6 +119,30 @@ bool mpc_car_control__msg__actuator_command__convert_from_py(PyObject * _pymsg, 
     }
     Py_DECREF(field);
   }
+  {  // wheel_torque
+    PyObject * field = PyObject_GetAttrString(_pymsg, "wheel_torque");
+    if (!field) {
+      return false;
+    }
+    {
+      // TODO(dirk-thomas) use a better way to check the type before casting
+      assert(field->ob_type != NULL);
+      assert(field->ob_type->tp_name != NULL);
+      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+      PyArrayObject * seq_field = (PyArrayObject *)field;
+      Py_INCREF(seq_field);
+      assert(PyArray_NDIM(seq_field) == 1);
+      assert(PyArray_TYPE(seq_field) == NPY_FLOAT64);
+      Py_ssize_t size = 4;
+      double * dest = ros_message->wheel_torque;
+      for (Py_ssize_t i = 0; i < size; ++i) {
+        double tmp = *(npy_float64 *)PyArray_GETPTR1(seq_field, i);
+        memcpy(&dest[i], &tmp, sizeof(double));
+      }
+      Py_DECREF(seq_field);
+    }
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -203,6 +227,24 @@ PyObject * mpc_car_control__msg__actuator_command__convert_to_py(void * raw_ros_
     assert(sizeof(npy_float64) == sizeof(double));
     npy_float64 * dst = (npy_float64 *)PyArray_GETPTR1(seq_field, 0);
     double * src = &(ros_message->active_suspension_force[0]);
+    memcpy(dst, src, 4 * sizeof(double));
+    Py_DECREF(field);
+  }
+  {  // wheel_torque
+    PyObject * field = NULL;
+    field = PyObject_GetAttrString(_pymessage, "wheel_torque");
+    if (!field) {
+      return NULL;
+    }
+    assert(field->ob_type != NULL);
+    assert(field->ob_type->tp_name != NULL);
+    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+    PyArrayObject * seq_field = (PyArrayObject *)field;
+    assert(PyArray_NDIM(seq_field) == 1);
+    assert(PyArray_TYPE(seq_field) == NPY_FLOAT64);
+    assert(sizeof(npy_float64) == sizeof(double));
+    npy_float64 * dst = (npy_float64 *)PyArray_GETPTR1(seq_field, 0);
+    double * src = &(ros_message->wheel_torque[0]);
     memcpy(dst, src, 4 * sizeof(double));
     Py_DECREF(field);
   }
