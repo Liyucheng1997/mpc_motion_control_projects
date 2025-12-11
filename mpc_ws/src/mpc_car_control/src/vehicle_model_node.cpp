@@ -376,7 +376,7 @@ private:
 
   void publish_state() {
     auto msg = mpc_car_control::msg::VehicleState();
-    msg.header.stamp = sim_time_;
+    msg.header.stamp = this->now();
     msg.header.frame_id = "map";
     msg.x = state_.x;
     msg.y = state_.y;
