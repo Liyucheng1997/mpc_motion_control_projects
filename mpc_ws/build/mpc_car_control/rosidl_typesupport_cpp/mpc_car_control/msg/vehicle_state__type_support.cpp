@@ -4,6 +4,7 @@
 
 #include "cstddef"
 #include "rosidl_runtime_c/message_type_support_struct.h"
+#include "mpc_car_control/msg/detail/vehicle_state__functions.h"
 #include "mpc_car_control/msg/detail/vehicle_state__struct.hpp"
 #include "rosidl_typesupport_cpp/identifier.hpp"
 #include "rosidl_typesupport_cpp/message_type_support.hpp"
@@ -72,6 +73,9 @@ static const rosidl_message_type_support_t VehicleState_message_type_support_han
   ::rosidl_typesupport_cpp::typesupport_identifier,
   reinterpret_cast<const type_support_map_t *>(&_VehicleState_message_typesupport_map),
   ::rosidl_typesupport_cpp::get_message_typesupport_handle_function,
+  &mpc_car_control__msg__VehicleState__get_type_hash,
+  &mpc_car_control__msg__VehicleState__get_type_description,
+  &mpc_car_control__msg__VehicleState__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_cpp

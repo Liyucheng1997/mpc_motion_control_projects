@@ -4,8 +4,9 @@
 
 #include "cstddef"
 #include "rosidl_runtime_c/message_type_support_struct.h"
-#include "mpc_car_control/msg/rosidl_typesupport_c__visibility_control.h"
 #include "mpc_car_control/msg/detail/actuator_command__struct.h"
+#include "mpc_car_control/msg/detail/actuator_command__type_support.h"
+#include "mpc_car_control/msg/detail/actuator_command__functions.h"
 #include "rosidl_typesupport_c/identifier.h"
 #include "rosidl_typesupport_c/message_type_support_dispatch.h"
 #include "rosidl_typesupport_c/type_support_map.h"
@@ -72,6 +73,9 @@ static const rosidl_message_type_support_t ActuatorCommand_message_type_support_
   rosidl_typesupport_c__typesupport_identifier,
   reinterpret_cast<const type_support_map_t *>(&_ActuatorCommand_message_typesupport_map),
   rosidl_typesupport_c__get_message_typesupport_handle_function,
+  &mpc_car_control__msg__ActuatorCommand__get_type_hash,
+  &mpc_car_control__msg__ActuatorCommand__get_type_description,
+  &mpc_car_control__msg__ActuatorCommand__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_c
@@ -85,7 +89,6 @@ extern "C"
 {
 #endif
 
-ROSIDL_TYPESUPPORT_C_EXPORT_mpc_car_control
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_c, mpc_car_control, msg, ActuatorCommand)() {
   return &::mpc_car_control::msg::rosidl_typesupport_c::ActuatorCommand_message_type_support_handle;

@@ -30,7 +30,7 @@ extern "C"
 {
 #endif
 
-void ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_init_function(
+void mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -39,12 +39,12 @@ void ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajector
   mpc_car_control__msg__ReferenceTrajectory__init(message_memory);
 }
 
-void ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_fini_function(void * message_memory)
+void mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_fini_function(void * message_memory)
 {
   mpc_car_control__msg__ReferenceTrajectory__fini(message_memory);
 }
 
-size_t ReferenceTrajectory__rosidl_typesupport_introspection_c__size_function__Point__points(
+size_t mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__size_function__ReferenceTrajectory__points(
   const void * untyped_member)
 {
   const geometry_msgs__msg__Point__Sequence * member =
@@ -52,7 +52,7 @@ size_t ReferenceTrajectory__rosidl_typesupport_introspection_c__size_function__P
   return member->size;
 }
 
-const void * ReferenceTrajectory__rosidl_typesupport_introspection_c__get_const_function__Point__points(
+const void * mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_const_function__ReferenceTrajectory__points(
   const void * untyped_member, size_t index)
 {
   const geometry_msgs__msg__Point__Sequence * member =
@@ -60,7 +60,7 @@ const void * ReferenceTrajectory__rosidl_typesupport_introspection_c__get_const_
   return &member->data[index];
 }
 
-void * ReferenceTrajectory__rosidl_typesupport_introspection_c__get_function__Point__points(
+void * mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_function__ReferenceTrajectory__points(
   void * untyped_member, size_t index)
 {
   geometry_msgs__msg__Point__Sequence * member =
@@ -68,7 +68,29 @@ void * ReferenceTrajectory__rosidl_typesupport_introspection_c__get_function__Po
   return &member->data[index];
 }
 
-bool ReferenceTrajectory__rosidl_typesupport_introspection_c__resize_function__Point__points(
+void mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__fetch_function__ReferenceTrajectory__points(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const geometry_msgs__msg__Point * item =
+    ((const geometry_msgs__msg__Point *)
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_const_function__ReferenceTrajectory__points(untyped_member, index));
+  geometry_msgs__msg__Point * value =
+    (geometry_msgs__msg__Point *)(untyped_value);
+  *value = *item;
+}
+
+void mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__assign_function__ReferenceTrajectory__points(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  geometry_msgs__msg__Point * item =
+    ((geometry_msgs__msg__Point *)
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_function__ReferenceTrajectory__points(untyped_member, index));
+  const geometry_msgs__msg__Point * value =
+    (const geometry_msgs__msg__Point *)(untyped_value);
+  *item = *value;
+}
+
+bool mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__resize_function__ReferenceTrajectory__points(
   void * untyped_member, size_t size)
 {
   geometry_msgs__msg__Point__Sequence * member =
@@ -77,12 +99,123 @@ bool ReferenceTrajectory__rosidl_typesupport_introspection_c__resize_function__P
   return geometry_msgs__msg__Point__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_member_array[4] = {
+size_t mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__size_function__ReferenceTrajectory__velocity_profile(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__double__Sequence * member =
+    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_const_function__ReferenceTrajectory__velocity_profile(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__double__Sequence * member =
+    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_function__ReferenceTrajectory__velocity_profile(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__double__Sequence * member =
+    (rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__fetch_function__ReferenceTrajectory__velocity_profile(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const double * item =
+    ((const double *)
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_const_function__ReferenceTrajectory__velocity_profile(untyped_member, index));
+  double * value =
+    (double *)(untyped_value);
+  *value = *item;
+}
+
+void mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__assign_function__ReferenceTrajectory__velocity_profile(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  double * item =
+    ((double *)
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_function__ReferenceTrajectory__velocity_profile(untyped_member, index));
+  const double * value =
+    (const double *)(untyped_value);
+  *item = *value;
+}
+
+bool mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__resize_function__ReferenceTrajectory__velocity_profile(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__double__Sequence * member =
+    (rosidl_runtime_c__double__Sequence *)(untyped_member);
+  rosidl_runtime_c__double__Sequence__fini(member);
+  return rosidl_runtime_c__double__Sequence__init(member, size);
+}
+
+size_t mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__size_function__ReferenceTrajectory__yaw_profile(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__double__Sequence * member =
+    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_const_function__ReferenceTrajectory__yaw_profile(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__double__Sequence * member =
+    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_function__ReferenceTrajectory__yaw_profile(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__double__Sequence * member =
+    (rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__fetch_function__ReferenceTrajectory__yaw_profile(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const double * item =
+    ((const double *)
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_const_function__ReferenceTrajectory__yaw_profile(untyped_member, index));
+  double * value =
+    (double *)(untyped_value);
+  *value = *item;
+}
+
+void mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__assign_function__ReferenceTrajectory__yaw_profile(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  double * item =
+    ((double *)
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_function__ReferenceTrajectory__yaw_profile(untyped_member, index));
+  const double * value =
+    (const double *)(untyped_value);
+  *item = *value;
+}
+
+bool mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__resize_function__ReferenceTrajectory__yaw_profile(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__double__Sequence * member =
+    (rosidl_runtime_c__double__Sequence *)(untyped_member);
+  rosidl_runtime_c__double__Sequence__fini(member);
+  return rosidl_runtime_c__double__Sequence__init(member, size);
+}
+
+static rosidl_typesupport_introspection_c__MessageMember mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_member_array[4] = {
   {
     "header",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -91,6 +224,8 @@ static rosidl_typesupport_introspection_c__MessageMember ReferenceTrajectory__ro
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -98,78 +233,91 @@ static rosidl_typesupport_introspection_c__MessageMember ReferenceTrajectory__ro
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
+    false,  // is key
     true,  // is array
     0,  // array size
     false,  // is upper bound
     offsetof(mpc_car_control__msg__ReferenceTrajectory, points),  // bytes offset in struct
     NULL,  // default value
-    ReferenceTrajectory__rosidl_typesupport_introspection_c__size_function__Point__points,  // size() function pointer
-    ReferenceTrajectory__rosidl_typesupport_introspection_c__get_const_function__Point__points,  // get_const(index) function pointer
-    ReferenceTrajectory__rosidl_typesupport_introspection_c__get_function__Point__points,  // get(index) function pointer
-    ReferenceTrajectory__rosidl_typesupport_introspection_c__resize_function__Point__points  // resize(index) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__size_function__ReferenceTrajectory__points,  // size() function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_const_function__ReferenceTrajectory__points,  // get_const(index) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_function__ReferenceTrajectory__points,  // get(index) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__fetch_function__ReferenceTrajectory__points,  // fetch(index, &value) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__assign_function__ReferenceTrajectory__points,  // assign(index, value) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__resize_function__ReferenceTrajectory__points  // resize(index) function pointer
   },
   {
     "velocity_profile",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     true,  // is array
     0,  // array size
     false,  // is upper bound
     offsetof(mpc_car_control__msg__ReferenceTrajectory, velocity_profile),  // bytes offset in struct
     NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL  // resize(index) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__size_function__ReferenceTrajectory__velocity_profile,  // size() function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_const_function__ReferenceTrajectory__velocity_profile,  // get_const(index) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_function__ReferenceTrajectory__velocity_profile,  // get(index) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__fetch_function__ReferenceTrajectory__velocity_profile,  // fetch(index, &value) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__assign_function__ReferenceTrajectory__velocity_profile,  // assign(index, value) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__resize_function__ReferenceTrajectory__velocity_profile  // resize(index) function pointer
   },
   {
     "yaw_profile",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     true,  // is array
     0,  // array size
     false,  // is upper bound
     offsetof(mpc_car_control__msg__ReferenceTrajectory, yaw_profile),  // bytes offset in struct
     NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL  // resize(index) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__size_function__ReferenceTrajectory__yaw_profile,  // size() function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_const_function__ReferenceTrajectory__yaw_profile,  // get_const(index) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__get_function__ReferenceTrajectory__yaw_profile,  // get(index) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__fetch_function__ReferenceTrajectory__yaw_profile,  // fetch(index, &value) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__assign_function__ReferenceTrajectory__yaw_profile,  // assign(index, value) function pointer
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__resize_function__ReferenceTrajectory__yaw_profile  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_members = {
   "mpc_car_control__msg",  // message namespace
   "ReferenceTrajectory",  // message name
   4,  // number of fields
   sizeof(mpc_car_control__msg__ReferenceTrajectory),
-  ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_member_array,  // message members
-  ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_init_function,  // function to initialize message memory (memory has to be allocated)
-  ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_fini_function  // function to terminate message instance (will not free memory)
+  false,  // has_any_key_member_
+  mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_member_array,  // message members
+  mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_init_function,  // function to initialize message memory (memory has to be allocated)
+  mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_type_support_handle = {
+static rosidl_message_type_support_t mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_type_support_handle = {
   0,
-  &ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_members,
+  &mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_members,
   get_message_typesupport_handle_function,
+  &mpc_car_control__msg__ReferenceTrajectory__get_type_hash,
+  &mpc_car_control__msg__ReferenceTrajectory__get_type_description,
+  &mpc_car_control__msg__ReferenceTrajectory__get_type_description_sources,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_mpc_car_control
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, mpc_car_control, msg, ReferenceTrajectory)() {
-  ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_member_array[0].members_ =
+  mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_member_array[0].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, std_msgs, msg, Header)();
-  ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_member_array[1].members_ =
+  mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_member_array[1].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, geometry_msgs, msg, Point)();
-  if (!ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_type_support_handle.typesupport_identifier) {
-    ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_type_support_handle.typesupport_identifier =
+  if (!mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_type_support_handle.typesupport_identifier) {
+    mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_type_support_handle;
+  return &mpc_car_control__msg__ReferenceTrajectory__rosidl_typesupport_introspection_c__ReferenceTrajectory_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

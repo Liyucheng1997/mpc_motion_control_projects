@@ -2,6 +2,9 @@
 // with input from mpc_car_control:msg/ReferenceTrajectory.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "mpc_car_control/msg/reference_trajectory.h"
+
+
 #ifndef MPC_CAR_CONTROL__MSG__DETAIL__REFERENCE_TRAJECTORY__STRUCT_H_
 #define MPC_CAR_CONTROL__MSG__DETAIL__REFERENCE_TRAJECTORY__STRUCT_H_
 
@@ -14,7 +17,6 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
-
 // Constants defined in the message
 
 // Include directives for member types
@@ -26,7 +28,7 @@ extern "C"
 // Member 'yaw_profile'
 #include "rosidl_runtime_c/primitives_sequence.h"
 
-// Struct defined in msg/ReferenceTrajectory in the package mpc_car_control.
+/// Struct defined in msg/ReferenceTrajectory in the package mpc_car_control.
 typedef struct mpc_car_control__msg__ReferenceTrajectory
 {
   std_msgs__msg__Header header;

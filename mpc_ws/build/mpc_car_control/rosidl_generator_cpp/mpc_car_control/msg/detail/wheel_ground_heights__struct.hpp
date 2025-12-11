@@ -2,16 +2,20 @@
 // with input from mpc_car_control:msg/WheelGroundHeights.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "mpc_car_control/msg/wheel_ground_heights.hpp"
+
+
 #ifndef MPC_CAR_CONTROL__MSG__DETAIL__WHEEL_GROUND_HEIGHTS__STRUCT_HPP_
 #define MPC_CAR_CONTROL__MSG__DETAIL__WHEEL_GROUND_HEIGHTS__STRUCT_HPP_
 
-#include <rosidl_runtime_cpp/bounded_vector.hpp>
-#include <rosidl_runtime_cpp/message_initialization.hpp>
 #include <algorithm>
 #include <array>
 #include <memory>
 #include <string>
 #include <vector>
+
+#include "rosidl_runtime_cpp/bounded_vector.hpp"
+#include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
 // Include directives for member types

@@ -1,0 +1,1 @@
+/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/detail/actuator_command__type_support.h

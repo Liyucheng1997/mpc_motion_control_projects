@@ -2,13 +2,17 @@
 // with input from mpc_car_control:msg/ControlCommandBody.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "mpc_car_control/msg/control_command_body.hpp"
+
+
 #ifndef MPC_CAR_CONTROL__MSG__DETAIL__CONTROL_COMMAND_BODY__BUILDER_HPP_
 #define MPC_CAR_CONTROL__MSG__DETAIL__CONTROL_COMMAND_BODY__BUILDER_HPP_
 
-#include "mpc_car_control/msg/detail/control_command_body__struct.hpp"
-#include <rosidl_runtime_cpp/message_initialization.hpp>
 #include <algorithm>
 #include <utility>
+
+#include "mpc_car_control/msg/detail/control_command_body__struct.hpp"
+#include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
 namespace mpc_car_control

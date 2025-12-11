@@ -1,1 +1,1 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_py/mpc_car_control/mpc_car_control_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" "TARGETS" "mpc_car_control__rosidl_typesupport_c__pyext" "DESTINATION" "lib/python3.8/site-packages/mpc_car_control")
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/mpc_controller_node" "TARGETS" "mpc_controller_node" "DESTINATION" "lib/mpc_car_control")

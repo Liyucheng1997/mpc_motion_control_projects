@@ -35,6 +35,7 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__traits.hpp" "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp"
   "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.hpp" "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp"
   "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/reference_trajectory.hpp" "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp"
+  "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/rosidl_generator_cpp__visibility_control.hpp" "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp"
   "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/wheel_ground_heights.hpp" "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp"
   )
 

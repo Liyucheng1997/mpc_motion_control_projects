@@ -23,7 +23,7 @@ extern "C"
 {
 #endif
 
-void VehicleState__rosidl_typesupport_introspection_c__VehicleState_init_function(
+void mpc_car_control__msg__VehicleState__rosidl_typesupport_introspection_c__VehicleState_init_function(
   void * message_memory, enum rosidl_runtime_c__message_initialization _init)
 {
   // TODO(karsten1987): initializers are not yet implemented for typesupport c
@@ -32,17 +32,18 @@ void VehicleState__rosidl_typesupport_introspection_c__VehicleState_init_functio
   mpc_car_control__msg__VehicleState__init(message_memory);
 }
 
-void VehicleState__rosidl_typesupport_introspection_c__VehicleState_fini_function(void * message_memory)
+void mpc_car_control__msg__VehicleState__rosidl_typesupport_introspection_c__VehicleState_fini_function(void * message_memory)
 {
   mpc_car_control__msg__VehicleState__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_member_array[14] = {
+static rosidl_typesupport_introspection_c__MessageMember mpc_car_control__msg__VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_member_array[14] = {
   {
     "header",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -51,6 +52,8 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -58,6 +61,7 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -66,6 +70,8 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -73,6 +79,7 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -81,6 +88,8 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -88,6 +97,7 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -96,6 +106,8 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -103,6 +115,7 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -111,6 +124,8 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -118,6 +133,7 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -126,6 +142,8 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -133,6 +151,7 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -141,6 +160,8 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -148,6 +169,7 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -156,6 +178,8 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -163,6 +187,7 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -171,6 +196,8 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -178,6 +205,7 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -186,6 +214,8 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -193,6 +223,7 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -201,6 +232,8 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -208,6 +241,7 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -216,6 +250,8 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -223,6 +259,7 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -231,6 +268,8 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   },
   {
@@ -238,6 +277,7 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -246,38 +286,44 @@ static rosidl_typesupport_introspection_c__MessageMember VehicleState__rosidl_ty
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
   }
 };
 
-static const rosidl_typesupport_introspection_c__MessageMembers VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_members = {
+static const rosidl_typesupport_introspection_c__MessageMembers mpc_car_control__msg__VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_members = {
   "mpc_car_control__msg",  // message namespace
   "VehicleState",  // message name
   14,  // number of fields
   sizeof(mpc_car_control__msg__VehicleState),
-  VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_member_array,  // message members
-  VehicleState__rosidl_typesupport_introspection_c__VehicleState_init_function,  // function to initialize message memory (memory has to be allocated)
-  VehicleState__rosidl_typesupport_introspection_c__VehicleState_fini_function  // function to terminate message instance (will not free memory)
+  false,  // has_any_key_member_
+  mpc_car_control__msg__VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_member_array,  // message members
+  mpc_car_control__msg__VehicleState__rosidl_typesupport_introspection_c__VehicleState_init_function,  // function to initialize message memory (memory has to be allocated)
+  mpc_car_control__msg__VehicleState__rosidl_typesupport_introspection_c__VehicleState_fini_function  // function to terminate message instance (will not free memory)
 };
 
 // this is not const since it must be initialized on first access
 // since C does not allow non-integral compile-time constants
-static rosidl_message_type_support_t VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_type_support_handle = {
+static rosidl_message_type_support_t mpc_car_control__msg__VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_type_support_handle = {
   0,
-  &VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_members,
+  &mpc_car_control__msg__VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_members,
   get_message_typesupport_handle_function,
+  &mpc_car_control__msg__VehicleState__get_type_hash,
+  &mpc_car_control__msg__VehicleState__get_type_description,
+  &mpc_car_control__msg__VehicleState__get_type_description_sources,
 };
 
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_mpc_car_control
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, mpc_car_control, msg, VehicleState)() {
-  VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_member_array[0].members_ =
+  mpc_car_control__msg__VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_member_array[0].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, std_msgs, msg, Header)();
-  if (!VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_type_support_handle.typesupport_identifier) {
-    VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_type_support_handle.typesupport_identifier =
+  if (!mpc_car_control__msg__VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_type_support_handle.typesupport_identifier) {
+    mpc_car_control__msg__VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
   }
-  return &VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_type_support_handle;
+  return &mpc_car_control__msg__VehicleState__rosidl_typesupport_introspection_c__VehicleState_message_type_support_handle;
 }
 #ifdef __cplusplus
 }

@@ -134,7 +134,7 @@ mpc_car_control__msg__ReferenceTrajectory__copy(
 }
 
 mpc_car_control__msg__ReferenceTrajectory *
-mpc_car_control__msg__ReferenceTrajectory__create()
+mpc_car_control__msg__ReferenceTrajectory__create(void)
 {
   rcutils_allocator_t allocator = rcutils_get_default_allocator();
   mpc_car_control__msg__ReferenceTrajectory * msg = (mpc_car_control__msg__ReferenceTrajectory *)allocator.allocate(sizeof(mpc_car_control__msg__ReferenceTrajectory), allocator.state);
@@ -278,22 +278,27 @@ mpc_car_control__msg__ReferenceTrajectory__Sequence__copy(
   if (output->capacity < input->size) {
     const size_t allocation_size =
       input->size * sizeof(mpc_car_control__msg__ReferenceTrajectory);
+    rcutils_allocator_t allocator = rcutils_get_default_allocator();
     mpc_car_control__msg__ReferenceTrajectory * data =
-      (mpc_car_control__msg__ReferenceTrajectory *)realloc(output->data, allocation_size);
+      (mpc_car_control__msg__ReferenceTrajectory *)allocator.reallocate(
+      output->data, allocation_size, allocator.state);
     if (!data) {
       return false;
     }
+    // If reallocation succeeded, memory may or may not have been moved
+    // to fulfill the allocation request, invalidating output->data.
+    output->data = data;
     for (size_t i = output->capacity; i < input->size; ++i) {
-      if (!mpc_car_control__msg__ReferenceTrajectory__init(&data[i])) {
-        /* free currently allocated and return false */
+      if (!mpc_car_control__msg__ReferenceTrajectory__init(&output->data[i])) {
+        // If initialization of any new item fails, roll back
+        // all previously initialized items. Existing items
+        // in output are to be left unmodified.
         for (; i-- > output->capacity; ) {
-          mpc_car_control__msg__ReferenceTrajectory__fini(&data[i]);
+          mpc_car_control__msg__ReferenceTrajectory__fini(&output->data[i]);
         }
-        free(data);
         return false;
       }
     }
-    output->data = data;
     output->capacity = input->size;
   }
   output->size = input->size;

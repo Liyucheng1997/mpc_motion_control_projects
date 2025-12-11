@@ -9,6 +9,7 @@
 #include "rosidl_runtime_c/message_type_support_struct.h"
 #include "rosidl_typesupport_cpp/message_type_support.hpp"
 #include "rosidl_typesupport_interface/macros.h"
+#include "mpc_car_control/msg/detail/wheel_ground_heights__functions.h"
 #include "mpc_car_control/msg/detail/wheel_ground_heights__struct.hpp"
 #include "rosidl_typesupport_introspection_cpp/field_types.hpp"
 #include "rosidl_typesupport_introspection_cpp/identifier.hpp"
@@ -57,12 +58,31 @@ void * get_function__WheelGroundHeights__wheel_ground_heights(void * untyped_mem
   return &member[index];
 }
 
+void fetch_function__WheelGroundHeights__wheel_ground_heights(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const double *>(
+    get_const_function__WheelGroundHeights__wheel_ground_heights(untyped_member, index));
+  auto & value = *reinterpret_cast<double *>(untyped_value);
+  value = item;
+}
+
+void assign_function__WheelGroundHeights__wheel_ground_heights(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<double *>(
+    get_function__WheelGroundHeights__wheel_ground_heights(untyped_member, index));
+  const auto & value = *reinterpret_cast<const double *>(untyped_value);
+  item = value;
+}
+
 static const ::rosidl_typesupport_introspection_cpp::MessageMember WheelGroundHeights_message_member_array[2] = {
   {
     "header",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<std_msgs::msg::Header>(),  // members of sub message
+    false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -71,6 +91,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember WheelGroundHe
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   },
   {
@@ -78,6 +100,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember WheelGroundHe
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
+    false,  // is key
     true,  // is array
     4,  // array size
     false,  // is upper bound
@@ -86,6 +109,8 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember WheelGroundHe
     size_function__WheelGroundHeights__wheel_ground_heights,  // size() function pointer
     get_const_function__WheelGroundHeights__wheel_ground_heights,  // get_const(index) function pointer
     get_function__WheelGroundHeights__wheel_ground_heights,  // get(index) function pointer
+    fetch_function__WheelGroundHeights__wheel_ground_heights,  // fetch(index, &value) function pointer
+    assign_function__WheelGroundHeights__wheel_ground_heights,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
   }
 };
@@ -95,6 +120,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMembers WheelGroundH
   "WheelGroundHeights",  // message name
   2,  // number of fields
   sizeof(mpc_car_control::msg::WheelGroundHeights),
+  false,  // has_any_key_member_
   WheelGroundHeights_message_member_array,  // message members
   WheelGroundHeights_init_function,  // function to initialize message memory (memory has to be allocated)
   WheelGroundHeights_fini_function  // function to terminate message instance (will not free memory)
@@ -104,6 +130,9 @@ static const rosidl_message_type_support_t WheelGroundHeights_message_type_suppo
   ::rosidl_typesupport_introspection_cpp::typesupport_identifier,
   &WheelGroundHeights_message_members,
   get_message_typesupport_handle_function,
+  &mpc_car_control__msg__WheelGroundHeights__get_type_hash,
+  &mpc_car_control__msg__WheelGroundHeights__get_type_description,
+  &mpc_car_control__msg__WheelGroundHeights__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_introspection_cpp

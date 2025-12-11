@@ -2,8 +2,19 @@
 # with input from mpc_car_control:msg/ControlCommandBody.idl
 # generated code does not contain a copyright notice
 
+# This is being done at the module level and not on the instance level to avoid looking
+# for the same variable multiple times on each instance. This variable is not supposed to
+# change during runtime so it makes sense to only look for it once.
+from os import getenv
+
+ros_python_check_fields = getenv('ROS_PYTHON_CHECK_FIELDS', default='')
+
 
 # Import statements for member types
+
+import builtins  # noqa: E402, I100
+
+import math  # noqa: E402, I100
 
 import rosidl_parser.definition  # noqa: E402, I100
 
@@ -64,6 +75,7 @@ class ControlCommandBody(metaclass=Metaclass_ControlCommandBody):
         '_fz',
         '_mx',
         '_my',
+        '_check_fields',
     ]
 
     _fields_and_field_types = {
@@ -76,6 +88,8 @@ class ControlCommandBody(metaclass=Metaclass_ControlCommandBody):
         'my': 'double',
     }
 
+    # This attribute is used to store an rosidl_parser.definition variable
+    # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['std_msgs', 'msg'], 'Header'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
@@ -87,9 +101,14 @@ class ControlCommandBody(metaclass=Metaclass_ControlCommandBody):
     )
 
     def __init__(self, **kwargs):
-        assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
-            'Invalid arguments passed to constructor: %s' % \
-            ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        if 'check_fields' in kwargs:
+            self._check_fields = kwargs['check_fields']
+        else:
+            self._check_fields = ros_python_check_fields == '1'
+        if self._check_fields:
+            assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
+                'Invalid arguments passed to constructor: %s' % \
+                ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         from std_msgs.msg import Header
         self.header = kwargs.get('header', Header())
         self.fx = kwargs.get('fx', float())
@@ -104,7 +123,7 @@ class ControlCommandBody(metaclass=Metaclass_ControlCommandBody):
         typename.pop()
         typename.append(self.__class__.__name__)
         args = []
-        for s, t in zip(self.__slots__, self.SLOT_TYPES):
+        for s, t in zip(self.get_fields_and_field_types().keys(), self.SLOT_TYPES):
             field = getattr(self, s)
             fieldstr = repr(field)
             # We use Python array type for fields that can be directly stored
@@ -118,11 +137,12 @@ class ControlCommandBody(metaclass=Metaclass_ControlCommandBody):
                 if len(field) == 0:
                     fieldstr = '[]'
                 else:
-                    assert fieldstr.startswith('array(')
+                    if self._check_fields:
+                        assert fieldstr.startswith('array(')
                     prefix = "array('X', "
                     suffix = ')'
                     fieldstr = fieldstr[len(prefix):-len(suffix)]
-            args.append(s[1:] + '=' + fieldstr)
+            args.append(s + '=' + fieldstr)
         return '%s(%s)' % ('.'.join(typename), ', '.join(args))
 
     def __eq__(self, other):
@@ -149,94 +169,106 @@ class ControlCommandBody(metaclass=Metaclass_ControlCommandBody):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def header(self):
         """Message field 'header'."""
         return self._header
 
     @header.setter
     def header(self, value):
-        if __debug__:
+        if self._check_fields:
             from std_msgs.msg import Header
             assert \
                 isinstance(value, Header), \
                 "The 'header' field must be a sub message of type 'Header'"
         self._header = value
 
-    @property
+    @builtins.property
     def fx(self):
         """Message field 'fx'."""
         return self._fx
 
     @fx.setter
     def fx(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'fx' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'fx' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._fx = value
 
-    @property
+    @builtins.property
     def fy(self):
         """Message field 'fy'."""
         return self._fy
 
     @fy.setter
     def fy(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'fy' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'fy' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._fy = value
 
-    @property
+    @builtins.property
     def mz(self):
         """Message field 'mz'."""
         return self._mz
 
     @mz.setter
     def mz(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'mz' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'mz' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._mz = value
 
-    @property
+    @builtins.property
     def fz(self):
         """Message field 'fz'."""
         return self._fz
 
     @fz.setter
     def fz(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'fz' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'fz' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._fz = value
 
-    @property
+    @builtins.property
     def mx(self):
         """Message field 'mx'."""
         return self._mx
 
     @mx.setter
     def mx(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'mx' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'mx' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._mx = value
 
-    @property
+    @builtins.property
     def my(self):
         """Message field 'my'."""
         return self._my
 
     @my.setter
     def my(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'my' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'my' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._my = value

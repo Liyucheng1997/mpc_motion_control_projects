@@ -1,0 +1,1 @@
+/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/reference_trajectory__rosidl_typesupport_fastrtps_c.h

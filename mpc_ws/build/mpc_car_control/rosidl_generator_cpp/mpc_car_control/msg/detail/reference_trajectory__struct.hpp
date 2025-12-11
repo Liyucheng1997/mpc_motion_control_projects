@@ -2,16 +2,20 @@
 // with input from mpc_car_control:msg/ReferenceTrajectory.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "mpc_car_control/msg/reference_trajectory.hpp"
+
+
 #ifndef MPC_CAR_CONTROL__MSG__DETAIL__REFERENCE_TRAJECTORY__STRUCT_HPP_
 #define MPC_CAR_CONTROL__MSG__DETAIL__REFERENCE_TRAJECTORY__STRUCT_HPP_
 
-#include <rosidl_runtime_cpp/bounded_vector.hpp>
-#include <rosidl_runtime_cpp/message_initialization.hpp>
 #include <algorithm>
 #include <array>
 #include <memory>
 #include <string>
 #include <vector>
+
+#include "rosidl_runtime_cpp/bounded_vector.hpp"
+#include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
 // Include directives for member types
@@ -55,13 +59,13 @@ struct ReferenceTrajectory_
     std_msgs::msg::Header_<ContainerAllocator>;
   _header_type header;
   using _points_type =
-    std::vector<geometry_msgs::msg::Point_<ContainerAllocator>, typename ContainerAllocator::template rebind<geometry_msgs::msg::Point_<ContainerAllocator>>::other>;
+    std::vector<geometry_msgs::msg::Point_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<geometry_msgs::msg::Point_<ContainerAllocator>>>;
   _points_type points;
   using _velocity_profile_type =
-    std::vector<double, typename ContainerAllocator::template rebind<double>::other>;
+    std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
   _velocity_profile_type velocity_profile;
   using _yaw_profile_type =
-    std::vector<double, typename ContainerAllocator::template rebind<double>::other>;
+    std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
   _yaw_profile_type yaw_profile;
 
   // setters for named parameter idiom
@@ -72,19 +76,19 @@ struct ReferenceTrajectory_
     return *this;
   }
   Type & set__points(
-    const std::vector<geometry_msgs::msg::Point_<ContainerAllocator>, typename ContainerAllocator::template rebind<geometry_msgs::msg::Point_<ContainerAllocator>>::other> & _arg)
+    const std::vector<geometry_msgs::msg::Point_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<geometry_msgs::msg::Point_<ContainerAllocator>>> & _arg)
   {
     this->points = _arg;
     return *this;
   }
   Type & set__velocity_profile(
-    const std::vector<double, typename ContainerAllocator::template rebind<double>::other> & _arg)
+    const std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> & _arg)
   {
     this->velocity_profile = _arg;
     return *this;
   }
   Type & set__yaw_profile(
-    const std::vector<double, typename ContainerAllocator::template rebind<double>::other> & _arg)
+    const std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> & _arg)
   {
     this->yaw_profile = _arg;
     return *this;

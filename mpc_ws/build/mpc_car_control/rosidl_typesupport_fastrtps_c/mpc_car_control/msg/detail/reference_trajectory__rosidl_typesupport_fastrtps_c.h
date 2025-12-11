@@ -9,11 +9,23 @@
 #include "rosidl_runtime_c/message_type_support_struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "mpc_car_control/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+#include "mpc_car_control/msg/detail/reference_trajectory__struct.h"
+#include "fastcdr/Cdr.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
+bool cdr_serialize_mpc_car_control__msg__ReferenceTrajectory(
+  const mpc_car_control__msg__ReferenceTrajectory * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
+bool cdr_deserialize_mpc_car_control__msg__ReferenceTrajectory(
+  eprosima::fastcdr::Cdr &,
+  mpc_car_control__msg__ReferenceTrajectory * ros_message);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
 size_t get_serialized_size_mpc_car_control__msg__ReferenceTrajectory(
@@ -23,6 +35,23 @@ size_t get_serialized_size_mpc_car_control__msg__ReferenceTrajectory(
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
 size_t max_serialized_size_mpc_car_control__msg__ReferenceTrajectory(
   bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
+bool cdr_serialize_key_mpc_car_control__msg__ReferenceTrajectory(
+  const mpc_car_control__msg__ReferenceTrajectory * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
+size_t get_serialized_size_key_mpc_car_control__msg__ReferenceTrajectory(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
+size_t max_serialized_size_key_mpc_car_control__msg__ReferenceTrajectory(
+  bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control

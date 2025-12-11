@@ -5,6 +5,7 @@
 #ifndef MPC_CAR_CONTROL__MSG__DETAIL__WHEEL_GROUND_HEIGHTS__ROSIDL_TYPESUPPORT_FASTRTPS_CPP_HPP_
 #define MPC_CAR_CONTROL__MSG__DETAIL__WHEEL_GROUND_HEIGHTS__ROSIDL_TYPESUPPORT_FASTRTPS_CPP_HPP_
 
+#include <cstddef>
 #include "rosidl_runtime_c/message_type_support_struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "mpc_car_control/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h"
@@ -55,6 +56,26 @@ size_t
 ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_mpc_car_control
 max_serialized_size_WheelGroundHeights(
   bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+bool
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_mpc_car_control
+cdr_serialize_key(
+  const mpc_car_control::msg::WheelGroundHeights & ros_message,
+  eprosima::fastcdr::Cdr &);
+
+size_t
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_mpc_car_control
+get_serialized_size_key(
+  const mpc_car_control::msg::WheelGroundHeights & ros_message,
+  size_t current_alignment);
+
+size_t
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_mpc_car_control
+max_serialized_size_key_WheelGroundHeights(
+  bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 }  // namespace typesupport_fastrtps_cpp

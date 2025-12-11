@@ -2,6 +2,9 @@
 // with input from mpc_car_control:msg/VehicleState.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "mpc_car_control/msg/vehicle_state.h"
+
+
 #ifndef MPC_CAR_CONTROL__MSG__DETAIL__VEHICLE_STATE__TYPE_SUPPORT_H_
 #define MPC_CAR_CONTROL__MSG__DETAIL__VEHICLE_STATE__TYPE_SUPPORT_H_
 
@@ -24,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   mpc_car_control,
   msg,
   VehicleState
-)();
+)(void);
 
 #ifdef __cplusplus
 }

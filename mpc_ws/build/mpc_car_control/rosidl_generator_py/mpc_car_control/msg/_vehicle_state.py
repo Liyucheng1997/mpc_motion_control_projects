@@ -2,8 +2,19 @@
 # with input from mpc_car_control:msg/VehicleState.idl
 # generated code does not contain a copyright notice
 
+# This is being done at the module level and not on the instance level to avoid looking
+# for the same variable multiple times on each instance. This variable is not supposed to
+# change during runtime so it makes sense to only look for it once.
+from os import getenv
+
+ros_python_check_fields = getenv('ROS_PYTHON_CHECK_FIELDS', default='')
+
 
 # Import statements for member types
+
+import builtins  # noqa: E402, I100
+
+import math  # noqa: E402, I100
 
 import rosidl_parser.definition  # noqa: E402, I100
 
@@ -71,6 +82,7 @@ class VehicleState(metaclass=Metaclass_VehicleState):
         '_pitch_rate',
         '_yaw_rate',
         '_az',
+        '_check_fields',
     ]
 
     _fields_and_field_types = {
@@ -90,6 +102,8 @@ class VehicleState(metaclass=Metaclass_VehicleState):
         'az': 'double',
     }
 
+    # This attribute is used to store an rosidl_parser.definition variable
+    # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['std_msgs', 'msg'], 'Header'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
@@ -108,9 +122,14 @@ class VehicleState(metaclass=Metaclass_VehicleState):
     )
 
     def __init__(self, **kwargs):
-        assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
-            'Invalid arguments passed to constructor: %s' % \
-            ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        if 'check_fields' in kwargs:
+            self._check_fields = kwargs['check_fields']
+        else:
+            self._check_fields = ros_python_check_fields == '1'
+        if self._check_fields:
+            assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
+                'Invalid arguments passed to constructor: %s' % \
+                ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         from std_msgs.msg import Header
         self.header = kwargs.get('header', Header())
         self.x = kwargs.get('x', float())
@@ -132,7 +151,7 @@ class VehicleState(metaclass=Metaclass_VehicleState):
         typename.pop()
         typename.append(self.__class__.__name__)
         args = []
-        for s, t in zip(self.__slots__, self.SLOT_TYPES):
+        for s, t in zip(self.get_fields_and_field_types().keys(), self.SLOT_TYPES):
             field = getattr(self, s)
             fieldstr = repr(field)
             # We use Python array type for fields that can be directly stored
@@ -146,11 +165,12 @@ class VehicleState(metaclass=Metaclass_VehicleState):
                 if len(field) == 0:
                     fieldstr = '[]'
                 else:
-                    assert fieldstr.startswith('array(')
+                    if self._check_fields:
+                        assert fieldstr.startswith('array(')
                     prefix = "array('X', "
                     suffix = ')'
                     fieldstr = fieldstr[len(prefix):-len(suffix)]
-            args.append(s[1:] + '=' + fieldstr)
+            args.append(s + '=' + fieldstr)
         return '%s(%s)' % ('.'.join(typename), ', '.join(args))
 
     def __eq__(self, other):
@@ -191,185 +211,211 @@ class VehicleState(metaclass=Metaclass_VehicleState):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def header(self):
         """Message field 'header'."""
         return self._header
 
     @header.setter
     def header(self, value):
-        if __debug__:
+        if self._check_fields:
             from std_msgs.msg import Header
             assert \
                 isinstance(value, Header), \
                 "The 'header' field must be a sub message of type 'Header'"
         self._header = value
 
-    @property
+    @builtins.property
     def x(self):
         """Message field 'x'."""
         return self._x
 
     @x.setter
     def x(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'x' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'x' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._x = value
 
-    @property
+    @builtins.property
     def y(self):
         """Message field 'y'."""
         return self._y
 
     @y.setter
     def y(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'y' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'y' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._y = value
 
-    @property
+    @builtins.property
     def z(self):
         """Message field 'z'."""
         return self._z
 
     @z.setter
     def z(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'z' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'z' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._z = value
 
-    @property
+    @builtins.property
     def roll(self):
         """Message field 'roll'."""
         return self._roll
 
     @roll.setter
     def roll(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'roll' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'roll' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._roll = value
 
-    @property
+    @builtins.property
     def pitch(self):
         """Message field 'pitch'."""
         return self._pitch
 
     @pitch.setter
     def pitch(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'pitch' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'pitch' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._pitch = value
 
-    @property
+    @builtins.property
     def yaw(self):
         """Message field 'yaw'."""
         return self._yaw
 
     @yaw.setter
     def yaw(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'yaw' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'yaw' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._yaw = value
 
-    @property
+    @builtins.property
     def vx(self):
         """Message field 'vx'."""
         return self._vx
 
     @vx.setter
     def vx(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'vx' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'vx' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._vx = value
 
-    @property
+    @builtins.property
     def vy(self):
         """Message field 'vy'."""
         return self._vy
 
     @vy.setter
     def vy(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'vy' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'vy' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._vy = value
 
-    @property
+    @builtins.property
     def vz(self):
         """Message field 'vz'."""
         return self._vz
 
     @vz.setter
     def vz(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'vz' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'vz' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._vz = value
 
-    @property
+    @builtins.property
     def roll_rate(self):
         """Message field 'roll_rate'."""
         return self._roll_rate
 
     @roll_rate.setter
     def roll_rate(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'roll_rate' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'roll_rate' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._roll_rate = value
 
-    @property
+    @builtins.property
     def pitch_rate(self):
         """Message field 'pitch_rate'."""
         return self._pitch_rate
 
     @pitch_rate.setter
     def pitch_rate(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'pitch_rate' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'pitch_rate' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._pitch_rate = value
 
-    @property
+    @builtins.property
     def yaw_rate(self):
         """Message field 'yaw_rate'."""
         return self._yaw_rate
 
     @yaw_rate.setter
     def yaw_rate(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'yaw_rate' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'yaw_rate' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._yaw_rate = value
 
-    @property
+    @builtins.property
     def az(self):
         """Message field 'az'."""
         return self._az
 
     @az.setter
     def az(self, value):
-        if __debug__:
+        if self._check_fields:
             assert \
                 isinstance(value, float), \
                 "The 'az' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'az' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._az = value

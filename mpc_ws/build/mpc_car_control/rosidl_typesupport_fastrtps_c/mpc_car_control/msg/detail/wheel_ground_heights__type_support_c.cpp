@@ -5,9 +5,11 @@
 
 
 #include <cassert>
+#include <cstddef>
 #include <limits>
 #include <string>
 #include "rosidl_typesupport_fastrtps_c/identifier.h"
+#include "rosidl_typesupport_fastrtps_c/serialization_helpers.hpp"
 #include "rosidl_typesupport_fastrtps_c/wstring_conversion.hpp"
 #include "rosidl_typesupport_fastrtps_cpp/message_type_support.h"
 #include "mpc_car_control/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
@@ -37,6 +39,17 @@ extern "C"
 #include "std_msgs/msg/detail/header__functions.h"  // header
 
 // forward declare type support functions
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_mpc_car_control
+bool cdr_serialize_std_msgs__msg__Header(
+  const std_msgs__msg__Header * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_mpc_car_control
+bool cdr_deserialize_std_msgs__msg__Header(
+  eprosima::fastcdr::Cdr & cdr,
+  std_msgs__msg__Header * ros_message);
+
 ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_mpc_car_control
 size_t get_serialized_size_std_msgs__msg__Header(
   const void * untyped_ros_message,
@@ -45,6 +58,23 @@ size_t get_serialized_size_std_msgs__msg__Header(
 ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_mpc_car_control
 size_t max_serialized_size_std_msgs__msg__Header(
   bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_mpc_car_control
+bool cdr_serialize_key_std_msgs__msg__Header(
+  const std_msgs__msg__Header * ros_message,
+  eprosima::fastcdr::Cdr & cdr);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_mpc_car_control
+size_t get_serialized_size_key_std_msgs__msg__Header(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_mpc_car_control
+size_t max_serialized_size_key_std_msgs__msg__Header(
+  bool & full_bounded,
+  bool & is_plain,
   size_t current_alignment);
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_mpc_car_control
@@ -54,71 +84,48 @@ const rosidl_message_type_support_t *
 
 using _WheelGroundHeights__ros_msg_type = mpc_car_control__msg__WheelGroundHeights;
 
-static bool _WheelGroundHeights__cdr_serialize(
-  const void * untyped_ros_message,
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
+bool cdr_serialize_mpc_car_control__msg__WheelGroundHeights(
+  const mpc_car_control__msg__WheelGroundHeights * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  if (!untyped_ros_message) {
-    fprintf(stderr, "ros message handle is null\n");
-    return false;
-  }
-  const _WheelGroundHeights__ros_msg_type * ros_message = static_cast<const _WheelGroundHeights__ros_msg_type *>(untyped_ros_message);
   // Field name: header
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, std_msgs, msg, Header
-      )()->data);
-    if (!callbacks->cdr_serialize(
-        &ros_message->header, cdr))
-    {
-      return false;
-    }
+    cdr_serialize_std_msgs__msg__Header(
+      &ros_message->header, cdr);
   }
 
   // Field name: wheel_ground_heights
   {
     size_t size = 4;
     auto array_ptr = ros_message->wheel_ground_heights;
-    cdr.serializeArray(array_ptr, size);
+    cdr.serialize_array(array_ptr, size);
   }
 
   return true;
 }
 
-static bool _WheelGroundHeights__cdr_deserialize(
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
+bool cdr_deserialize_mpc_car_control__msg__WheelGroundHeights(
   eprosima::fastcdr::Cdr & cdr,
-  void * untyped_ros_message)
+  mpc_car_control__msg__WheelGroundHeights * ros_message)
 {
-  if (!untyped_ros_message) {
-    fprintf(stderr, "ros message handle is null\n");
-    return false;
-  }
-  _WheelGroundHeights__ros_msg_type * ros_message = static_cast<_WheelGroundHeights__ros_msg_type *>(untyped_ros_message);
   // Field name: header
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, std_msgs, msg, Header
-      )()->data);
-    if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->header))
-    {
-      return false;
-    }
+    cdr_deserialize_std_msgs__msg__Header(cdr, &ros_message->header);
   }
 
   // Field name: wheel_ground_heights
   {
     size_t size = 4;
     auto array_ptr = ros_message->wheel_ground_heights;
-    cdr.deserializeArray(array_ptr, size);
+    cdr.deserialize_array(array_ptr, size);
   }
 
   return true;
-}
+}  // NOLINT(readability/fn_size)
+
 
 ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
 size_t get_serialized_size_mpc_car_control__msg__WheelGroundHeights(
@@ -134,11 +141,11 @@ size_t get_serialized_size_mpc_car_control__msg__WheelGroundHeights(
   (void)padding;
   (void)wchar_size;
 
-  // field.name header
-
+  // Field name: header
   current_alignment += get_serialized_size_std_msgs__msg__Header(
     &(ros_message->header), current_alignment);
-  // field.name wheel_ground_heights
+
+  // Field name: wheel_ground_heights
   {
     size_t array_size = 4;
     auto array_ptr = ros_message->wheel_ground_heights;
@@ -151,6 +158,205 @@ size_t get_serialized_size_mpc_car_control__msg__WheelGroundHeights(
   return current_alignment - initial_alignment;
 }
 
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
+size_t max_serialized_size_mpc_car_control__msg__WheelGroundHeights(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment)
+{
+  size_t initial_alignment = current_alignment;
+
+  const size_t padding = 4;
+  const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
+  (void)padding;
+  (void)wchar_size;
+
+  full_bounded = true;
+  is_plain = true;
+
+  // Field name: header
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_std_msgs__msg__Header(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Field name: wheel_ground_heights
+  {
+    size_t array_size = 4;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = mpc_car_control__msg__WheelGroundHeights;
+    is_plain =
+      (
+      offsetof(DataType, wheel_ground_heights) +
+      last_member_size
+      ) == ret_val;
+  }
+  return ret_val;
+}
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
+bool cdr_serialize_key_mpc_car_control__msg__WheelGroundHeights(
+  const mpc_car_control__msg__WheelGroundHeights * ros_message,
+  eprosima::fastcdr::Cdr & cdr)
+{
+  // Field name: header
+  {
+    cdr_serialize_key_std_msgs__msg__Header(
+      &ros_message->header, cdr);
+  }
+
+  // Field name: wheel_ground_heights
+  {
+    size_t size = 4;
+    auto array_ptr = ros_message->wheel_ground_heights;
+    cdr.serialize_array(array_ptr, size);
+  }
+
+  return true;
+}
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
+size_t get_serialized_size_key_mpc_car_control__msg__WheelGroundHeights(
+  const void * untyped_ros_message,
+  size_t current_alignment)
+{
+  const _WheelGroundHeights__ros_msg_type * ros_message = static_cast<const _WheelGroundHeights__ros_msg_type *>(untyped_ros_message);
+  (void)ros_message;
+
+  size_t initial_alignment = current_alignment;
+
+  const size_t padding = 4;
+  const size_t wchar_size = 4;
+  (void)padding;
+  (void)wchar_size;
+
+  // Field name: header
+  current_alignment += get_serialized_size_key_std_msgs__msg__Header(
+    &(ros_message->header), current_alignment);
+
+  // Field name: wheel_ground_heights
+  {
+    size_t array_size = 4;
+    auto array_ptr = ros_message->wheel_ground_heights;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  return current_alignment - initial_alignment;
+}
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
+size_t max_serialized_size_key_mpc_car_control__msg__WheelGroundHeights(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment)
+{
+  size_t initial_alignment = current_alignment;
+
+  const size_t padding = 4;
+  const size_t wchar_size = 4;
+  size_t last_member_size = 0;
+  (void)last_member_size;
+  (void)padding;
+  (void)wchar_size;
+
+  full_bounded = true;
+  is_plain = true;
+  // Field name: header
+  {
+    size_t array_size = 1;
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_key_std_msgs__msg__Header(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Field name: wheel_ground_heights
+  {
+    size_t array_size = 4;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  size_t ret_val = current_alignment - initial_alignment;
+  if (is_plain) {
+    // All members are plain, and type is not empty.
+    // We still need to check that the in-memory alignment
+    // is the same as the CDR mandated alignment.
+    using DataType = mpc_car_control__msg__WheelGroundHeights;
+    is_plain =
+      (
+      offsetof(DataType, wheel_ground_heights) +
+      last_member_size
+      ) == ret_val;
+  }
+  return ret_val;
+}
+
+
+static bool _WheelGroundHeights__cdr_serialize(
+  const void * untyped_ros_message,
+  eprosima::fastcdr::Cdr & cdr)
+{
+  if (!untyped_ros_message) {
+    fprintf(stderr, "ros message handle is null\n");
+    return false;
+  }
+  const mpc_car_control__msg__WheelGroundHeights * ros_message = static_cast<const mpc_car_control__msg__WheelGroundHeights *>(untyped_ros_message);
+  (void)ros_message;
+  return cdr_serialize_mpc_car_control__msg__WheelGroundHeights(ros_message, cdr);
+}
+
+static bool _WheelGroundHeights__cdr_deserialize(
+  eprosima::fastcdr::Cdr & cdr,
+  void * untyped_ros_message)
+{
+  if (!untyped_ros_message) {
+    fprintf(stderr, "ros message handle is null\n");
+    return false;
+  }
+  mpc_car_control__msg__WheelGroundHeights * ros_message = static_cast<mpc_car_control__msg__WheelGroundHeights *>(untyped_ros_message);
+  (void)ros_message;
+  return cdr_deserialize_mpc_car_control__msg__WheelGroundHeights(cdr, ros_message);
+}
+
 static uint32_t _WheelGroundHeights__get_serialized_size(const void * untyped_ros_message)
 {
   return static_cast<uint32_t>(
@@ -158,45 +364,19 @@ static uint32_t _WheelGroundHeights__get_serialized_size(const void * untyped_ro
       untyped_ros_message, 0));
 }
 
-ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_mpc_car_control
-size_t max_serialized_size_mpc_car_control__msg__WheelGroundHeights(
-  bool & full_bounded,
-  size_t current_alignment)
+static size_t _WheelGroundHeights__max_serialized_size(char & bounds_info)
 {
-  size_t initial_alignment = current_alignment;
+  bool full_bounded;
+  bool is_plain;
+  size_t ret_val;
 
-  const size_t padding = 4;
-  const size_t wchar_size = 4;
-  (void)padding;
-  (void)wchar_size;
-  (void)full_bounded;
+  ret_val = max_serialized_size_mpc_car_control__msg__WheelGroundHeights(
+    full_bounded, is_plain, 0);
 
-  // member: header
-  {
-    size_t array_size = 1;
-
-
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
-        max_serialized_size_std_msgs__msg__Header(
-        full_bounded, current_alignment);
-    }
-  }
-  // member: wheel_ground_heights
-  {
-    size_t array_size = 4;
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-
-  return current_alignment - initial_alignment;
-}
-
-static size_t _WheelGroundHeights__max_serialized_size(bool & full_bounded)
-{
-  return max_serialized_size_mpc_car_control__msg__WheelGroundHeights(
-    full_bounded, 0);
+  bounds_info =
+    is_plain ? ROSIDL_TYPESUPPORT_FASTRTPS_PLAIN_TYPE :
+    full_bounded ? ROSIDL_TYPESUPPORT_FASTRTPS_BOUNDED_TYPE : ROSIDL_TYPESUPPORT_FASTRTPS_UNBOUNDED_TYPE;
+  return ret_val;
 }
 
 
@@ -206,13 +386,17 @@ static message_type_support_callbacks_t __callbacks_WheelGroundHeights = {
   _WheelGroundHeights__cdr_serialize,
   _WheelGroundHeights__cdr_deserialize,
   _WheelGroundHeights__get_serialized_size,
-  _WheelGroundHeights__max_serialized_size
+  _WheelGroundHeights__max_serialized_size,
+  nullptr
 };
 
 static rosidl_message_type_support_t _WheelGroundHeights__type_support = {
   rosidl_typesupport_fastrtps_c__identifier,
   &__callbacks_WheelGroundHeights,
   get_message_typesupport_handle_function,
+  &mpc_car_control__msg__WheelGroundHeights__get_type_hash,
+  &mpc_car_control__msg__WheelGroundHeights__get_type_description,
+  &mpc_car_control__msg__WheelGroundHeights__get_type_description_sources,
 };
 
 const rosidl_message_type_support_t *

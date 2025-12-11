@@ -4,9 +4,6 @@ source;share/mpc_car_control/hook/cmake_prefix_path.sh
 source;share/mpc_car_control/hook/ld_library_path_lib.ps1
 source;share/mpc_car_control/hook/ld_library_path_lib.dsv
 source;share/mpc_car_control/hook/ld_library_path_lib.sh
-source;share/mpc_car_control/hook/pythonpath.ps1
-source;share/mpc_car_control/hook/pythonpath.dsv
-source;share/mpc_car_control/hook/pythonpath.sh
 source;share/mpc_car_control/local_setup.bash
 source;share/mpc_car_control/local_setup.dsv
 source;share/mpc_car_control/local_setup.ps1

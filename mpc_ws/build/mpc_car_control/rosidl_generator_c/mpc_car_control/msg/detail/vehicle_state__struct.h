@@ -2,6 +2,9 @@
 // with input from mpc_car_control:msg/VehicleState.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "mpc_car_control/msg/vehicle_state.h"
+
+
 #ifndef MPC_CAR_CONTROL__MSG__DETAIL__VEHICLE_STATE__STRUCT_H_
 #define MPC_CAR_CONTROL__MSG__DETAIL__VEHICLE_STATE__STRUCT_H_
 
@@ -14,14 +17,13 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
-
 // Constants defined in the message
 
 // Include directives for member types
 // Member 'header'
 #include "std_msgs/msg/detail/header__struct.h"
 
-// Struct defined in msg/VehicleState in the package mpc_car_control.
+/// Struct defined in msg/VehicleState in the package mpc_car_control.
 typedef struct mpc_car_control__msg__VehicleState
 {
   std_msgs__msg__Header header;

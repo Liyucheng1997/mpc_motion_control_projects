@@ -2,6 +2,9 @@
 // with input from mpc_car_control:msg/ControlCommandBody.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "mpc_car_control/msg/control_command_body.h"
+
+
 #ifndef MPC_CAR_CONTROL__MSG__DETAIL__CONTROL_COMMAND_BODY__STRUCT_H_
 #define MPC_CAR_CONTROL__MSG__DETAIL__CONTROL_COMMAND_BODY__STRUCT_H_
 
@@ -14,14 +17,13 @@ extern "C"
 #include <stddef.h>
 #include <stdint.h>
 
-
 // Constants defined in the message
 
 // Include directives for member types
 // Member 'header'
 #include "std_msgs/msg/detail/header__struct.h"
 
-// Struct defined in msg/ControlCommandBody in the package mpc_car_control.
+/// Struct defined in msg/ControlCommandBody in the package mpc_car_control.
 typedef struct mpc_car_control__msg__ControlCommandBody
 {
   std_msgs__msg__Header header;

@@ -2,6 +2,9 @@
 // with input from mpc_car_control:msg/ControlCommandBody.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "mpc_car_control/msg/control_command_body.h"
+
+
 #ifndef MPC_CAR_CONTROL__MSG__DETAIL__CONTROL_COMMAND_BODY__TYPE_SUPPORT_H_
 #define MPC_CAR_CONTROL__MSG__DETAIL__CONTROL_COMMAND_BODY__TYPE_SUPPORT_H_
 
@@ -24,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   mpc_car_control,
   msg,
   ControlCommandBody
-)();
+)(void);
 
 #ifdef __cplusplus
 }

@@ -2,6 +2,9 @@
 // with input from mpc_car_control:msg/WheelGroundHeights.idl
 // generated code does not contain a copyright notice
 
+// IWYU pragma: private, include "mpc_car_control/msg/wheel_ground_heights.h"
+
+
 #ifndef MPC_CAR_CONTROL__MSG__DETAIL__WHEEL_GROUND_HEIGHTS__TYPE_SUPPORT_H_
 #define MPC_CAR_CONTROL__MSG__DETAIL__WHEEL_GROUND_HEIGHTS__TYPE_SUPPORT_H_
 
@@ -24,7 +27,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
   mpc_car_control,
   msg,
   WheelGroundHeights
-)();
+)(void);
 
 #ifdef __cplusplus
 }

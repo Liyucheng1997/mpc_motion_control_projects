@@ -2,8 +2,19 @@
 # with input from mpc_car_control:msg/WheelGroundHeights.idl
 # generated code does not contain a copyright notice
 
+# This is being done at the module level and not on the instance level to avoid looking
+# for the same variable multiple times on each instance. This variable is not supposed to
+# change during runtime so it makes sense to only look for it once.
+from os import getenv
+
+ros_python_check_fields = getenv('ROS_PYTHON_CHECK_FIELDS', default='')
+
 
 # Import statements for member types
+
+import builtins  # noqa: E402, I100
+
+import math  # noqa: E402, I100
 
 # Member 'wheel_ground_heights'
 import numpy  # noqa: E402, I100
@@ -62,6 +73,7 @@ class WheelGroundHeights(metaclass=Metaclass_WheelGroundHeights):
     __slots__ = [
         '_header',
         '_wheel_ground_heights',
+        '_check_fields',
     ]
 
     _fields_and_field_types = {
@@ -69,29 +81,35 @@ class WheelGroundHeights(metaclass=Metaclass_WheelGroundHeights):
         'wheel_ground_heights': 'double[4]',
     }
 
+    # This attribute is used to store an rosidl_parser.definition variable
+    # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['std_msgs', 'msg'], 'Header'),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('double'), 4),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
-        assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
-            'Invalid arguments passed to constructor: %s' % \
-            ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        if 'check_fields' in kwargs:
+            self._check_fields = kwargs['check_fields']
+        else:
+            self._check_fields = ros_python_check_fields == '1'
+        if self._check_fields:
+            assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
+                'Invalid arguments passed to constructor: %s' % \
+                ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         from std_msgs.msg import Header
         self.header = kwargs.get('header', Header())
         if 'wheel_ground_heights' not in kwargs:
             self.wheel_ground_heights = numpy.zeros(4, dtype=numpy.float64)
         else:
-            self.wheel_ground_heights = numpy.array(kwargs.get('wheel_ground_heights'), dtype=numpy.float64)
-            assert self.wheel_ground_heights.shape == (4, )
+            self.wheel_ground_heights = kwargs.get('wheel_ground_heights')
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
         typename.pop()
         typename.append(self.__class__.__name__)
         args = []
-        for s, t in zip(self.__slots__, self.SLOT_TYPES):
+        for s, t in zip(self.get_fields_and_field_types().keys(), self.SLOT_TYPES):
             field = getattr(self, s)
             fieldstr = repr(field)
             # We use Python array type for fields that can be directly stored
@@ -105,11 +123,12 @@ class WheelGroundHeights(metaclass=Metaclass_WheelGroundHeights):
                 if len(field) == 0:
                     fieldstr = '[]'
                 else:
-                    assert fieldstr.startswith('array(')
+                    if self._check_fields:
+                        assert fieldstr.startswith('array(')
                     prefix = "array('X', "
                     suffix = ')'
                     fieldstr = fieldstr[len(prefix):-len(suffix)]
-            args.append(s[1:] + '=' + fieldstr)
+            args.append(s + '=' + fieldstr)
         return '%s(%s)' % ('.'.join(typename), ', '.join(args))
 
     def __eq__(self, other):
@@ -117,7 +136,7 @@ class WheelGroundHeights(metaclass=Metaclass_WheelGroundHeights):
             return False
         if self.header != other.header:
             return False
-        if all(self.wheel_ground_heights != other.wheel_ground_heights):
+        if any(self.wheel_ground_heights != other.wheel_ground_heights):
             return False
         return True
 
@@ -126,35 +145,35 @@ class WheelGroundHeights(metaclass=Metaclass_WheelGroundHeights):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @property
+    @builtins.property
     def header(self):
         """Message field 'header'."""
         return self._header
 
     @header.setter
     def header(self, value):
-        if __debug__:
+        if self._check_fields:
             from std_msgs.msg import Header
             assert \
                 isinstance(value, Header), \
                 "The 'header' field must be a sub message of type 'Header'"
         self._header = value
 
-    @property
+    @builtins.property
     def wheel_ground_heights(self):
         """Message field 'wheel_ground_heights'."""
         return self._wheel_ground_heights
 
     @wheel_ground_heights.setter
     def wheel_ground_heights(self, value):
-        if isinstance(value, numpy.ndarray):
-            assert value.dtype == numpy.float64, \
-                "The 'wheel_ground_heights' numpy.ndarray() must have the dtype of 'numpy.float64'"
-            assert value.size == 4, \
-                "The 'wheel_ground_heights' numpy.ndarray() must have a size of 4"
-            self._wheel_ground_heights = value
-            return
-        if __debug__:
+        if self._check_fields:
+            if isinstance(value, numpy.ndarray):
+                assert value.dtype == numpy.float64, \
+                    "The 'wheel_ground_heights' numpy.ndarray() must have the dtype of 'numpy.float64'"
+                assert value.size == 4, \
+                    "The 'wheel_ground_heights' numpy.ndarray() must have a size of 4"
+                self._wheel_ground_heights = value
+                return
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -167,6 +186,6 @@ class WheelGroundHeights(metaclass=Metaclass_WheelGroundHeights):
                  not isinstance(value, UserString) and
                  len(value) == 4 and
                  all(isinstance(v, float) for v in value) and
-                 True), \
-                "The 'wheel_ground_heights' field must be a set or sequence with length 4 and each value of type 'float'"
+                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
+                "The 'wheel_ground_heights' field must be a set or sequence with length 4 and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
         self._wheel_ground_heights = numpy.array(value, dtype=numpy.float64)

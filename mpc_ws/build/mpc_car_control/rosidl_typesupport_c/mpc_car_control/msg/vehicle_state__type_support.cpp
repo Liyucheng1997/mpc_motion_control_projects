@@ -4,8 +4,9 @@
 
 #include "cstddef"
 #include "rosidl_runtime_c/message_type_support_struct.h"
-#include "mpc_car_control/msg/rosidl_typesupport_c__visibility_control.h"
 #include "mpc_car_control/msg/detail/vehicle_state__struct.h"
+#include "mpc_car_control/msg/detail/vehicle_state__type_support.h"
+#include "mpc_car_control/msg/detail/vehicle_state__functions.h"
 #include "rosidl_typesupport_c/identifier.h"
 #include "rosidl_typesupport_c/message_type_support_dispatch.h"
 #include "rosidl_typesupport_c/type_support_map.h"
@@ -72,6 +73,9 @@ static const rosidl_message_type_support_t VehicleState_message_type_support_han
   rosidl_typesupport_c__typesupport_identifier,
   reinterpret_cast<const type_support_map_t *>(&_VehicleState_message_typesupport_map),
   rosidl_typesupport_c__get_message_typesupport_handle_function,
+  &mpc_car_control__msg__VehicleState__get_type_hash,
+  &mpc_car_control__msg__VehicleState__get_type_description,
+  &mpc_car_control__msg__VehicleState__get_type_description_sources,
 };
 
 }  // namespace rosidl_typesupport_c
@@ -85,7 +89,6 @@ extern "C"
 {
 #endif
 
-ROSIDL_TYPESUPPORT_C_EXPORT_mpc_car_control
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_c, mpc_car_control, msg, VehicleState)() {
   return &::mpc_car_control::msg::rosidl_typesupport_c::VehicleState_message_type_support_handle;

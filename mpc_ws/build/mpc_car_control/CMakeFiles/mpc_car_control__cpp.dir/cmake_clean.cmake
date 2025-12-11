@@ -23,6 +23,7 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__traits.hpp"
   "rosidl_generator_cpp/mpc_car_control/msg/detail/wheel_ground_heights__type_support.hpp"
   "rosidl_generator_cpp/mpc_car_control/msg/reference_trajectory.hpp"
+  "rosidl_generator_cpp/mpc_car_control/msg/rosidl_generator_cpp__visibility_control.hpp"
   "rosidl_generator_cpp/mpc_car_control/msg/vehicle_state.hpp"
   "rosidl_generator_cpp/mpc_car_control/msg/wheel_ground_heights.hpp"
 )
