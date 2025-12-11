@@ -231,14 +231,24 @@ CMakeFiles/mpc_car_control__rosidl_typesupport_introspection_c.dir/rosidl_typesu
   rosidl_generator_c/mpc_car_control/msg/rosidl_generator_c__visibility_control.h \
   rosidl_typesupport_introspection_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_introspection_c.h \
   rosidl_typesupport_introspection_c/mpc_car_control/msg/rosidl_typesupport_introspection_c__visibility_control.h \
+  /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/foxy/include/rosidl_runtime_c/message_initialization.h \
   /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h \
+  /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/foxy/include/rosidl_runtime_c/string.h \
   /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h \
   /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h \
   /opt/ros/foxy/include/rosidl_typesupport_introspection_c/field_types.h \
   /opt/ros/foxy/include/rosidl_typesupport_introspection_c/identifier.h \
   /opt/ros/foxy/include/rosidl_typesupport_introspection_c/message_introspection.h \
   /opt/ros/foxy/include/rosidl_typesupport_introspection_c/visibility_control.h \
+  /opt/ros/foxy/include/std_msgs/msg/detail/header__functions.h \
+  /opt/ros/foxy/include/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h \
+  /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.h \
+  /opt/ros/foxy/include/std_msgs/msg/detail/header__type_support.h \
+  /opt/ros/foxy/include/std_msgs/msg/header.h \
+  /opt/ros/foxy/include/std_msgs/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/foxy/include/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
   /usr/include/alloca.h \
   /usr/include/endian.h \
   /usr/include/features.h \

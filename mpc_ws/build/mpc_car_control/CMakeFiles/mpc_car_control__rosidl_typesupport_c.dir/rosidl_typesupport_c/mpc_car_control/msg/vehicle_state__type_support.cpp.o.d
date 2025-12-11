@@ -25,6 +25,10 @@ CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_ca
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.h \
+ /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.h \
+ /opt/ros/foxy/include/rosidl_runtime_c/string.h \
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h \
  /opt/ros/foxy/include/rosidl_typesupport_c/identifier.h \
  /opt/ros/foxy/include/rosidl_typesupport_c/visibility_control.h \
  /opt/ros/foxy/include/rosidl_typesupport_c/message_type_support_dispatch.h \

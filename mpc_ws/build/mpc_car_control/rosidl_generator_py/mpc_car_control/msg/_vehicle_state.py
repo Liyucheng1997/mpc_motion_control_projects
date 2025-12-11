@@ -40,6 +40,10 @@ class Metaclass_VehicleState(type):
             cls._TYPE_SUPPORT = module.type_support_msg__msg__vehicle_state
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__msg__vehicle_state
 
+            from std_msgs.msg import Header
+            if Header.__class__._TYPE_SUPPORT is None:
+                Header.__class__.__import_type_support__()
+
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
         # list constant names here so that they appear in the help text of
@@ -53,6 +57,7 @@ class VehicleState(metaclass=Metaclass_VehicleState):
     """Message class 'VehicleState'."""
 
     __slots__ = [
+        '_header',
         '_x',
         '_y',
         '_z',
@@ -65,9 +70,11 @@ class VehicleState(metaclass=Metaclass_VehicleState):
         '_roll_rate',
         '_pitch_rate',
         '_yaw_rate',
+        '_az',
     ]
 
     _fields_and_field_types = {
+        'header': 'std_msgs/Header',
         'x': 'double',
         'y': 'double',
         'z': 'double',
@@ -80,9 +87,12 @@ class VehicleState(metaclass=Metaclass_VehicleState):
         'roll_rate': 'double',
         'pitch_rate': 'double',
         'yaw_rate': 'double',
+        'az': 'double',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.NamespacedType(['std_msgs', 'msg'], 'Header'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
@@ -101,6 +111,8 @@ class VehicleState(metaclass=Metaclass_VehicleState):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        from std_msgs.msg import Header
+        self.header = kwargs.get('header', Header())
         self.x = kwargs.get('x', float())
         self.y = kwargs.get('y', float())
         self.z = kwargs.get('z', float())
@@ -113,6 +125,7 @@ class VehicleState(metaclass=Metaclass_VehicleState):
         self.roll_rate = kwargs.get('roll_rate', float())
         self.pitch_rate = kwargs.get('pitch_rate', float())
         self.yaw_rate = kwargs.get('yaw_rate', float())
+        self.az = kwargs.get('az', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -143,6 +156,8 @@ class VehicleState(metaclass=Metaclass_VehicleState):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.header != other.header:
+            return False
         if self.x != other.x:
             return False
         if self.y != other.y:
@@ -167,12 +182,28 @@ class VehicleState(metaclass=Metaclass_VehicleState):
             return False
         if self.yaw_rate != other.yaw_rate:
             return False
+        if self.az != other.az:
+            return False
         return True
 
     @classmethod
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @property
+    def header(self):
+        """Message field 'header'."""
+        return self._header
+
+    @header.setter
+    def header(self, value):
+        if __debug__:
+            from std_msgs.msg import Header
+            assert \
+                isinstance(value, Header), \
+                "The 'header' field must be a sub message of type 'Header'"
+        self._header = value
 
     @property
     def x(self):
@@ -329,3 +360,16 @@ class VehicleState(metaclass=Metaclass_VehicleState):
                 isinstance(value, float), \
                 "The 'yaw_rate' field must be of type 'float'"
         self._yaw_rate = value
+
+    @property
+    def az(self):
+        """Message field 'az'."""
+        return self._az
+
+    @az.setter
+    def az(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'az' field must be of type 'float'"
+        self._az = value

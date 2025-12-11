@@ -1,0 +1,138 @@
+[0.000000] (-) TimerEvent: {}
+[0.000157] (mpc_car_control) JobQueued: {'identifier': 'mpc_car_control', 'dependencies': OrderedDict()}
+[0.000216] (mpc_car_control) JobStarted: {'identifier': 'mpc_car_control'}
+[0.027880] (mpc_car_control) JobProgress: {'identifier': 'mpc_car_control', 'progress': 'cmake'}
+[0.028856] (mpc_car_control) JobProgress: {'identifier': 'mpc_car_control', 'progress': 'build'}
+[0.029957] (mpc_car_control) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control', '--', '-j12', '-l12'], 'cwd': '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('APPCODE_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/appcode.vmoptions'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GATEWAY_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/gateway.vmoptions'), ('LANGUAGE', 'zh_CN:en_AU:en'), ('USER', 'yucheng'), ('LC_TIME', 'zh_CN.UTF-8'), ('MESA_LOADER_DRIVER_OVERRIDE', 'i965'), ('WEBSTORM_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/webstorm.vmoptions'), ('WEBIDE_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/webide.vmoptions'), ('SSH_AGENT_PID', '1396'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/antigravity/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda-12.0/lib64:/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-12.0/lib64'), ('QT4_IM_MODULE', 'fcitx'), ('ANTIGRAVITY_CLI_ALIAS', 'agy'), ('HOME', '/home/yucheng'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('OLDPWD', '/home/yucheng/mpc_motion_control_projects'), ('TERM_PROGRAM_VERSION', '1.104.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/antigravity/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/antigravity/antigravity'), ('MANAGERPID', '1285'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DATASPELL_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/dataspell.vmoptions'), ('BUNDLED_DEBUGPY_PATH', '/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DATAGRIP_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/datagrip.vmoptions'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IDEA_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/idea.vmoptions'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '136545'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/yucheng/mpc_motion_control_projects/mpc_ws/install'), ('CLION_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/clion.vmoptions'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'yucheng'), ('JETBRAINSCLIENT_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/jetbrainsclient.vmoptions'), ('JOURNAL_STREAM', '8:34661'), ('_', '/home/yucheng/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('PHPSTORM_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/phpstorm.vmoptions'), ('USERNAME', 'yucheng'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/bin:/usr/local/cuda-12.0/bin:/home/yucheng/.local/bin:/opt/ros/foxy/bin:/usr/local/bin:/usr/local/cuda-12.0/bin:/home/yucheng/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/yucheng-Lenovo-Rescuer-Y7000:@/tmp/.ICE-unix/1442,unix/yucheng-Lenovo-Rescuer-Y7000:/tmp/.ICE-unix/1442'), ('INVOCATION_ID', 'd8ddece9dd03409c9300f96346ecf4dc'), ('PAPERSIZE', 'a4'), ('RIDER_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/rider.vmoptions'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-454ba53d4f1b844a.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/yucheng/.config/Antigravity/User/workspaceStorage/f219ac6eba8d8d99e64bba645ca9d94f/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('GOLAND_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/goland.vmoptions'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a95e87445e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('PYCHARM_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/pycharm.vmoptions'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('RUBYMINE_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/rubymine.vmoptions'), ('PWD', '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control'), ('JETBRAINS_CLIENT_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/jetbrains_client.vmoptions'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control:/opt/ros/foxy')]), 'shell': False}
+[0.063620] (mpc_car_control) StdoutLine: {'line': b'[  1%] Built target mpc_car_control__cpp\n'}
+[0.065794] (mpc_car_control) StdoutLine: {'line': b'[ 10%] Built target mpc_car_control__rosidl_generator_c\n'}
+[0.077492] (mpc_car_control) StdoutLine: {'line': b'[ 28%] Built target mpc_car_control__rosidl_typesupport_introspection_cpp\n'}
+[0.077771] (mpc_car_control) StdoutLine: {'line': b'[ 28%] Built target mpc_car_control__rosidl_typesupport_cpp\n'}
+[0.077874] (mpc_car_control) StdoutLine: {'line': b'[ 37%] Built target mpc_car_control__rosidl_typesupport_c\n'}
+[0.078164] (mpc_car_control) StdoutLine: {'line': b'[ 48%] Built target mpc_car_control__rosidl_typesupport_introspection_c\n'}
+[0.078328] (mpc_car_control) StdoutLine: {'line': b'[ 55%] Built target mpc_car_control__rosidl_typesupport_fastrtps_cpp\n'}
+[0.092543] (mpc_car_control) StdoutLine: {'line': b'[ 64%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c\n'}
+[0.097070] (-) TimerEvent: {}
+[0.102377] (mpc_car_control) StdoutLine: {'line': b'[ 64%] Built target mpc_car_control\n'}
+[0.116505] (mpc_car_control) StdoutLine: {'line': b'[ 66%] Built target mpc_car_control__py\n'}
+[0.121905] (mpc_car_control) StdoutLine: {'line': b'[ 70%] Built target pid_controller_node\n'}
+[0.122126] (mpc_car_control) StdoutLine: {'line': b'[ 71%] Built target control_allocator_node\n'}
+[0.122390] (mpc_car_control) StdoutLine: {'line': b'[ 75%] Built target scenario_generator_node\n'}
+[0.122551] (mpc_car_control) StdoutLine: {'line': b'[ 76%] Built target visualization_node\n'}
+[0.122700] (mpc_car_control) StdoutLine: {'line': b'[ 81%] Built target vehicle_interface_node\n'}
+[0.122802] (mpc_car_control) StdoutLine: {'line': b'[ 81%] Built target vehicle_model_node\n'}
+[0.128598] (mpc_car_control) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o\x1b[0m\n'}
+[0.132905] (mpc_car_control) StdoutLine: {'line': b'[ 90%] Built target mpc_car_control__python\n'}
+[0.144945] (mpc_car_control) StdoutLine: {'line': b'[ 98%] Built target mpc_car_control__rosidl_typesupport_introspection_c__pyext\n'}
+[0.145163] (mpc_car_control) StdoutLine: {'line': b'[ 98%] Built target mpc_car_control__rosidl_typesupport_c__pyext\n'}
+[0.145288] (mpc_car_control) StdoutLine: {'line': b'[ 98%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.197170] (-) TimerEvent: {}
+[0.297446] (-) TimerEvent: {}
+[0.397712] (-) TimerEvent: {}
+[0.498025] (-) TimerEvent: {}
+[0.598315] (-) TimerEvent: {}
+[0.698590] (-) TimerEvent: {}
+[0.798887] (-) TimerEvent: {}
+[0.899154] (-) TimerEvent: {}
+[0.999485] (-) TimerEvent: {}
+[1.099757] (-) TimerEvent: {}
+[1.200026] (-) TimerEvent: {}
+[1.300346] (-) TimerEvent: {}
+[1.400672] (-) TimerEvent: {}
+[1.500962] (-) TimerEvent: {}
+[1.601241] (-) TimerEvent: {}
+[1.701648] (-) TimerEvent: {}
+[1.783278] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:65:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredeclaration of \xe2\x80\x98\x1b[01m\x1b[Kconst double MPCControllerNode::m_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.783581] (mpc_car_control) StderrLine: {'line': b'   65 |   const double m_ = \x1b[01;31m\x1b[K1412.0\x1b[m\x1b[K;\n'}
+[1.783674] (mpc_car_control) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.783740] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:50:16:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kprevious declaration \xe2\x80\x98\x1b[01m\x1b[Kconst double MPCControllerNode::m_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.783822] (mpc_car_control) StderrLine: {'line': b'   50 |   const double \x1b[01;36m\x1b[Km_\x1b[m\x1b[K = 1412.0;\n'}
+[1.783884] (mpc_car_control) StderrLine: {'line': b'      |                \x1b[01;36m\x1b[K^~\x1b[m\x1b[K\n'}
+[1.783958] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:66:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredeclaration of \xe2\x80\x98\x1b[01m\x1b[Kconst double MPCControllerNode::Iz_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.784021] (mpc_car_control) StderrLine: {'line': b'   66 |   const double Iz_ = \x1b[01;31m\x1b[K1536.7\x1b[m\x1b[K;\n'}
+[1.784079] (mpc_car_control) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.784136] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:51:16:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kprevious declaration \xe2\x80\x98\x1b[01m\x1b[Kconst double MPCControllerNode::Iz_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.784195] (mpc_car_control) StderrLine: {'line': b'   51 |   const double \x1b[01;36m\x1b[KIz_\x1b[m\x1b[K = 1536.7;\n'}
+[1.784253] (mpc_car_control) StderrLine: {'line': b'      |                \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[1.784310] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:69:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredeclaration of \xe2\x80\x98\x1b[01m\x1b[Kconst double MPCControllerNode::lf_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.784369] (mpc_car_control) StderrLine: {'line': b'   69 |   const double lf_ = \x1b[01;31m\x1b[K1.015\x1b[m\x1b[K;\n'}
+[1.784426] (mpc_car_control) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.784483] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:52:16:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kprevious declaration \xe2\x80\x98\x1b[01m\x1b[Kconst double MPCControllerNode::lf_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.784542] (mpc_car_control) StderrLine: {'line': b'   52 |   const double \x1b[01;36m\x1b[Klf_\x1b[m\x1b[K = 1.015;\n'}
+[1.784599] (mpc_car_control) StderrLine: {'line': b'      |                \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[1.784674] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:70:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredeclaration of \xe2\x80\x98\x1b[01m\x1b[Kconst double MPCControllerNode::lr_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.784736] (mpc_car_control) StderrLine: {'line': b'   70 |   const double lr_ = \x1b[01;31m\x1b[K1.9\x1b[m\x1b[K;\n'}
+[1.784795] (mpc_car_control) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[1.784908] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:53:16:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kprevious declaration \xe2\x80\x98\x1b[01m\x1b[Kconst double MPCControllerNode::lr_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.785017] (mpc_car_control) StderrLine: {'line': b'   53 |   const double \x1b[01;36m\x1b[Klr_\x1b[m\x1b[K = 1.9;\n'}
+[1.785082] (mpc_car_control) StderrLine: {'line': b'      |                \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[1.785148] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:71:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredeclaration of \xe2\x80\x98\x1b[01m\x1b[Kconst double MPCControllerNode::Caf_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.785210] (mpc_car_control) StderrLine: {'line': b'   71 |   const double Caf_ = \x1b[01;31m\x1b[K60000.0\x1b[m\x1b[K;\n'}
+[1.785278] (mpc_car_control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.785338] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:54:16:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kprevious declaration \xe2\x80\x98\x1b[01m\x1b[Kconst double MPCControllerNode::Caf_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.785409] (mpc_car_control) StderrLine: {'line': b'   54 |   const double \x1b[01;36m\x1b[KCaf_\x1b[m\x1b[K = 60000.0;\n'}
+[1.785470] (mpc_car_control) StderrLine: {'line': b'      |                \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.785538] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:72:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredeclaration of \xe2\x80\x98\x1b[01m\x1b[Kconst double MPCControllerNode::Car_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.785598] (mpc_car_control) StderrLine: {'line': b'   72 |   const double Car_ = \x1b[01;31m\x1b[K50000.0\x1b[m\x1b[K;\n'}
+[1.785656] (mpc_car_control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.785714] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:55:16:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kprevious declaration \xe2\x80\x98\x1b[01m\x1b[Kconst double MPCControllerNode::Car_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.785773] (mpc_car_control) StderrLine: {'line': b'   55 |   const double \x1b[01;36m\x1b[KCar_\x1b[m\x1b[K = 50000.0;\n'}
+[1.785830] (mpc_car_control) StderrLine: {'line': b'      |                \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.785888] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:73:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredeclaration of \xe2\x80\x98\x1b[01m\x1b[Kconst double MPCControllerNode::g_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.785946] (mpc_car_control) StderrLine: {'line': b'   73 |   const double g_ = \x1b[01;31m\x1b[K9.81\x1b[m\x1b[K;\n'}
+[1.786002] (mpc_car_control) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.786073] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:56:16:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kprevious declaration \xe2\x80\x98\x1b[01m\x1b[Kconst double MPCControllerNode::g_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.786153] (mpc_car_control) StderrLine: {'line': b'   56 |   const double \x1b[01;36m\x1b[Kg_\x1b[m\x1b[K = 9.81;\n'}
+[1.786213] (mpc_car_control) StderrLine: {'line': b'      |                \x1b[01;36m\x1b[K^~\x1b[m\x1b[K\n'}
+[1.801756] (-) TimerEvent: {}
+[1.902070] (-) TimerEvent: {}
+[2.002367] (-) TimerEvent: {}
+[2.035409] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MPCControllerNode::get_linearized_matrices(const VectorXd&, Eigen::MatrixXd&, Eigen::MatrixXd&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.035611] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:97:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Ktheta\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.035679] (mpc_car_control) StderrLine: {'line': b'   97 |     double \x1b[01;35m\x1b[Ktheta\x1b[m\x1b[K = x_ref(8);\n'}
+[2.035739] (mpc_car_control) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.035804] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:98:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kphi\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[2.035914] (mpc_car_control) StderrLine: {'line': b'   98 |     double \x1b[01;35m\x1b[Kphi\x1b[m\x1b[K = x_ref(7);\n'}
+[2.035970] (mpc_car_control) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.102499] (-) TimerEvent: {}
+[2.202787] (-) TimerEvent: {}
+[2.303058] (-) TimerEvent: {}
+[2.403349] (-) TimerEvent: {}
+[2.503662] (-) TimerEvent: {}
+[2.603967] (-) TimerEvent: {}
+[2.704261] (-) TimerEvent: {}
+[2.804545] (-) TimerEvent: {}
+[2.904827] (-) TimerEvent: {}
+[3.005104] (-) TimerEvent: {}
+[3.105381] (-) TimerEvent: {}
+[3.205654] (-) TimerEvent: {}
+[3.305999] (-) TimerEvent: {}
+[3.406432] (-) TimerEvent: {}
+[3.506822] (-) TimerEvent: {}
+[3.607099] (-) TimerEvent: {}
+[3.707386] (-) TimerEvent: {}
+[3.807673] (-) TimerEvent: {}
+[3.907929] (-) TimerEvent: {}
+[4.008197] (-) TimerEvent: {}
+[4.108480] (-) TimerEvent: {}
+[4.208729] (-) TimerEvent: {}
+[4.309012] (-) TimerEvent: {}
+[4.409384] (-) TimerEvent: {}
+[4.509670] (-) TimerEvent: {}
+[4.609944] (-) TimerEvent: {}
+[4.710205] (-) TimerEvent: {}
+[4.810470] (-) TimerEvent: {}
+[4.910741] (-) TimerEvent: {}
+[5.011010] (-) TimerEvent: {}
+[5.111276] (-) TimerEvent: {}
+[5.211561] (-) TimerEvent: {}
+[5.311857] (-) TimerEvent: {}
+[5.412118] (-) TimerEvent: {}
+[5.434742] (mpc_car_control) StderrLine: {'line': b'make[2]: *** [CMakeFiles/mpc_controller_node.dir/build.make:79\xef\xbc\x9aCMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[5.434956] (mpc_car_control) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:725\xef\xbc\x9aCMakeFiles/mpc_controller_node.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[5.435247] (mpc_car_control) StderrLine: {'line': b'make: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[5.436731] (mpc_car_control) CommandEnded: {'returncode': 2}
+[5.512274] (-) TimerEvent: {}
+[5.603317] (mpc_car_control) JobEnded: {'identifier': 'mpc_car_control', 'rc': 2}
+[5.612363] (-) TimerEvent: {}
+[5.613863] (-) EventReactorShutdown: {}

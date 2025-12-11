@@ -596,6 +596,7 @@ CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mp
 CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mpc_car_control/msg/vehicle_state__type_support.cpp.o
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_typesupport_cpp/mpc_car_control/msg/vehicle_state__type_support.cpp
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp/mpc_car_control/msg/detail/vehicle_state__struct.hpp
+ /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.hpp
  /opt/ros/foxy/include/rosidl_runtime_c/message_initialization.h
  /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
  /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
@@ -607,6 +608,7 @@ CMakeFiles/mpc_car_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mp
  /opt/ros/foxy/include/rosidl_typesupport_cpp/message_type_support_dispatch.hpp
  /opt/ros/foxy/include/rosidl_typesupport_cpp/visibility_control.h
  /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h
+ /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.hpp
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h

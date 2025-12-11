@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/libmpc_car_control__rosidl_typesupport_fastrtps_c.so" "TARGETS" "mpc_car_control__rosidl_typesupport_fastrtps_c" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

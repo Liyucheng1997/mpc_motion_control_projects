@@ -60,7 +60,7 @@ private:
   void state_callback(const mpc_car_control::msg::VehicleState::SharedPtr msg) {
     // 1. Broadcast TF (map -> base_link)
     geometry_msgs::msg::TransformStamped t;
-    t.header.stamp = this->now();
+    t.header.stamp = msg->header.stamp;
     t.header.frame_id = "map";
     t.child_frame_id = "base_link";
 
@@ -106,14 +106,14 @@ private:
     visualization_msgs::msg::MarkerArray marker_array;
 
     // Actual Path Marker
-    actual_path_marker_.header.stamp = this->now();
+    actual_path_marker_.header.stamp = msg->header.stamp;
     marker_array.markers.push_back(actual_path_marker_);
 
     // --- Composite Car Model ---
     // Common Header
     std_msgs::msg::Header car_header;
     car_header.frame_id = "base_link";
-    car_header.stamp = this->now();
+    car_header.stamp = msg->header.stamp;
 
     // 1. Chassis (Lower Body)
     visualization_msgs::msg::Marker chassis;
@@ -124,7 +124,7 @@ private:
     chassis.action = visualization_msgs::msg::Marker::ADD;
     chassis.pose.position.x = 0.0;
     chassis.pose.position.y = 0.0;
-    chassis.pose.position.z = 0.3;
+    chassis.pose.position.z = -0.58; // Lowered by 0.88m
     chassis.pose.orientation.w = 1.0;
     chassis.scale.x = 4.5;
     chassis.scale.y = 1.8;
@@ -145,7 +145,7 @@ private:
     cabin.action = visualization_msgs::msg::Marker::ADD;
     cabin.pose.position.x = -0.2;
     cabin.pose.position.y = 0.0;
-    cabin.pose.position.z = 0.8;
+    cabin.pose.position.z = -0.08; // Lowered by 0.88m
     cabin.pose.orientation.w = 1.0;
     cabin.scale.x = 2.5;
     cabin.scale.y = 1.6;
@@ -160,8 +160,8 @@ private:
     // 3. Wheels
     double wheel_x = 1.4;
     double wheel_y = 0.9;
-    double wheel_z = 0.3;
-    double wheel_radius = 0.35;
+    double wheel_z = -0.58;    // Lowered by 0.88m
+    double wheel_radius = 0.3; // Corrected radius
     double wheel_width = 0.3;
 
     for (int i = 0; i < 4; ++i) {
@@ -227,42 +227,47 @@ private:
     pub_error_->publish(error_msg);
 
     // 6. Error Graph Marker
-    if (error_graph_marker_.points.empty()) {
-      error_graph_marker_.header.frame_id = "map";
-      error_graph_marker_.ns = "error_graph";
-      error_graph_marker_.id = 7;
-      error_graph_marker_.type = visualization_msgs::msg::Marker::LINE_STRIP;
-      error_graph_marker_.action = visualization_msgs::msg::Marker::ADD;
-      error_graph_marker_.scale.x = 0.1;
-      error_graph_marker_.color.r = 1.0f;
-      error_graph_marker_.color.g = 0.0f;
-      error_graph_marker_.color.b = 1.0f;
-      error_graph_marker_.color.a = 1.0f;
-      error_graph_marker_.pose.orientation.w = 1.0;
-    }
+    if (true) {
+      if (error_graph_marker_.points.empty()) {
+        error_graph_marker_.header.frame_id = "map";
+        error_graph_marker_.ns = "error_graph";
+        error_graph_marker_.id = 7;
+        error_graph_marker_.type = visualization_msgs::msg::Marker::LINE_STRIP;
+        error_graph_marker_.action = visualization_msgs::msg::Marker::ADD;
+        error_graph_marker_.scale.x = 0.1;
+        error_graph_marker_.color.r = 1.0f; // Red
+        error_graph_marker_.color.g = 0.0f;
+        error_graph_marker_.color.b = 1.0f; // Purple/Magenta
+        error_graph_marker_.color.a = 1.0f;
+        error_graph_marker_.pose.orientation.w = 1.0;
+      }
 
-    if (has_ref) {
-      geometry_msgs::msg::Point p_err;
-      p_err.x = msg->x;
-      p_err.y = msg->y;
-      p_err.z = msg->z + error * 5.0;
-      error_graph_marker_.points.push_back(p_err);
-      if (error_graph_marker_.points.size() > 5000)
-        error_graph_marker_.points.erase(error_graph_marker_.points.begin());
+      if (has_ref) {
+        geometry_msgs::msg::Point p_err;
+        p_err.x = msg->x;
+        p_err.y = msg->y;
+        // Visualize error magnitude as height above the car
+        // Scale factor 5.0 makes 10cm error look like 0.5m height
+        p_err.z = msg->z + error * 5.0;
 
-      error_graph_marker_.header.stamp = this->now();
-      marker_array.markers.push_back(error_graph_marker_);
+        error_graph_marker_.points.push_back(p_err);
+        if (error_graph_marker_.points.size() > 5000)
+          error_graph_marker_.points.erase(error_graph_marker_.points.begin());
+
+        error_graph_marker_.header.stamp = msg->header.stamp;
+        marker_array.markers.push_back(error_graph_marker_);
+      }
     }
 
     // 7. Text Overlay
     visualization_msgs::msg::Marker text_marker;
     text_marker.header.frame_id = "base_link";
-    text_marker.header.stamp = this->now();
+    text_marker.header.stamp = msg->header.stamp;
     text_marker.ns = "info_text";
     text_marker.id = 1;
     text_marker.type = visualization_msgs::msg::Marker::TEXT_VIEW_FACING;
     text_marker.action = visualization_msgs::msg::Marker::ADD;
-    text_marker.pose.position.z = 1.5;
+    text_marker.pose.position.z = 0.62; // Lowered by 0.88m
     text_marker.scale.z = 0.5;
     text_marker.color.r = 1.0f;
     text_marker.color.g = 1.0f;
@@ -279,10 +284,10 @@ private:
     marker_array.markers.push_back(text_marker);
 
     // 8. Error Vector
-    if (has_ref) {
+    if (false) {
       visualization_msgs::msg::Marker error_vector;
       error_vector.header.frame_id = "map";
-      error_vector.header.stamp = this->now();
+      error_vector.header.stamp = msg->header.stamp;
       error_vector.ns = "error_vector";
       error_vector.id = 8;
       error_vector.type = visualization_msgs::msg::Marker::LINE_LIST;

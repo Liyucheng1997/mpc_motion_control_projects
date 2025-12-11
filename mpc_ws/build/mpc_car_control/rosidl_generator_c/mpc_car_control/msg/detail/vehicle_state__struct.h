@@ -17,9 +17,14 @@ extern "C"
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'header'
+#include "std_msgs/msg/detail/header__struct.h"
+
 // Struct defined in msg/VehicleState in the package mpc_car_control.
 typedef struct mpc_car_control__msg__VehicleState
 {
+  std_msgs__msg__Header header;
   double x;
   double y;
   double z;
@@ -32,6 +37,7 @@ typedef struct mpc_car_control__msg__VehicleState
   double roll_rate;
   double pitch_rate;
   double yaw_rate;
+  double az;
 } mpc_car_control__msg__VehicleState;
 
 // Struct for a sequence of mpc_car_control__msg__VehicleState.

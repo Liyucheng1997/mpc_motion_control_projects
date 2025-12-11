@@ -20,16 +20,32 @@ namespace msg
 namespace builder
 {
 
+class Init_VehicleState_az
+{
+public:
+  explicit Init_VehicleState_az(::mpc_car_control::msg::VehicleState & msg)
+  : msg_(msg)
+  {}
+  ::mpc_car_control::msg::VehicleState az(::mpc_car_control::msg::VehicleState::_az_type arg)
+  {
+    msg_.az = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::mpc_car_control::msg::VehicleState msg_;
+};
+
 class Init_VehicleState_yaw_rate
 {
 public:
   explicit Init_VehicleState_yaw_rate(::mpc_car_control::msg::VehicleState & msg)
   : msg_(msg)
   {}
-  ::mpc_car_control::msg::VehicleState yaw_rate(::mpc_car_control::msg::VehicleState::_yaw_rate_type arg)
+  Init_VehicleState_az yaw_rate(::mpc_car_control::msg::VehicleState::_yaw_rate_type arg)
   {
     msg_.yaw_rate = std::move(arg);
-    return std::move(msg_);
+    return Init_VehicleState_az(msg_);
   }
 
 private:
@@ -199,13 +215,29 @@ private:
 class Init_VehicleState_x
 {
 public:
-  Init_VehicleState_x()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  explicit Init_VehicleState_x(::mpc_car_control::msg::VehicleState & msg)
+  : msg_(msg)
   {}
   Init_VehicleState_y x(::mpc_car_control::msg::VehicleState::_x_type arg)
   {
     msg_.x = std::move(arg);
     return Init_VehicleState_y(msg_);
+  }
+
+private:
+  ::mpc_car_control::msg::VehicleState msg_;
+};
+
+class Init_VehicleState_header
+{
+public:
+  Init_VehicleState_header()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  Init_VehicleState_x header(::mpc_car_control::msg::VehicleState::_header_type arg)
+  {
+    msg_.header = std::move(arg);
+    return Init_VehicleState_x(msg_);
   }
 
 private:
@@ -223,7 +255,7 @@ template<>
 inline
 auto build<::mpc_car_control::msg::VehicleState>()
 {
-  return mpc_car_control::msg::builder::Init_VehicleState_x();
+  return mpc_car_control::msg::builder::Init_VehicleState_header();
 }
 
 }  // namespace mpc_car_control

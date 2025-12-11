@@ -1,0 +1,340 @@
+[0.000000] (-) TimerEvent: {}
+[0.000553] (mpc_car_control) JobQueued: {'identifier': 'mpc_car_control', 'dependencies': OrderedDict()}
+[0.001076] (mpc_car_control) JobStarted: {'identifier': 'mpc_car_control'}
+[0.041513] (mpc_car_control) JobProgress: {'identifier': 'mpc_car_control', 'progress': 'cmake'}
+[0.042804] (mpc_car_control) JobProgress: {'identifier': 'mpc_car_control', 'progress': 'build'}
+[0.044221] (mpc_car_control) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control', '--', '-j12', '-l12'], 'cwd': '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('APPCODE_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/appcode.vmoptions'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GATEWAY_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/gateway.vmoptions'), ('LANGUAGE', 'zh_CN:en_AU:en'), ('USER', 'yucheng'), ('LC_TIME', 'zh_CN.UTF-8'), ('MESA_LOADER_DRIVER_OVERRIDE', 'i965'), ('WEBSTORM_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/webstorm.vmoptions'), ('WEBIDE_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/webide.vmoptions'), ('SSH_AGENT_PID', '1396'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/antigravity/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda-12.0/lib64:/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-12.0/lib64'), ('QT4_IM_MODULE', 'fcitx'), ('ANTIGRAVITY_CLI_ALIAS', 'agy'), ('HOME', '/home/yucheng'), ('CHROME_DESKTOP', 'antigravity.desktop'), ('OLDPWD', '/home/yucheng/mpc_motion_control_projects'), ('TERM_PROGRAM_VERSION', '1.104.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/antigravity.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/antigravity/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/antigravity/antigravity'), ('MANAGERPID', '1285'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DATASPELL_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/dataspell.vmoptions'), ('BUNDLED_DEBUGPY_PATH', '/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DATAGRIP_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/datagrip.vmoptions'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IDEA_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/idea.vmoptions'), ('ANTIGRAVITY_AGENT', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '136545'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/yucheng/mpc_motion_control_projects/mpc_ws/install'), ('CLION_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/clion.vmoptions'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'yucheng'), ('JETBRAINSCLIENT_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/jetbrainsclient.vmoptions'), ('JOURNAL_STREAM', '8:34661'), ('_', '/home/yucheng/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('PHPSTORM_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/phpstorm.vmoptions'), ('USERNAME', 'yucheng'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/bin:/usr/local/cuda-12.0/bin:/home/yucheng/.local/bin:/opt/ros/foxy/bin:/usr/local/bin:/usr/local/cuda-12.0/bin:/home/yucheng/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/yucheng-Lenovo-Rescuer-Y7000:@/tmp/.ICE-unix/1442,unix/yucheng-Lenovo-Rescuer-Y7000:/tmp/.ICE-unix/1442'), ('INVOCATION_ID', 'd8ddece9dd03409c9300f96346ecf4dc'), ('PAPERSIZE', 'a4'), ('RIDER_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/rider.vmoptions'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/yucheng/.antigravity/extensions/ms-python.debugpy-2025.14.1-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-454ba53d4f1b844a.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/yucheng/.config/Antigravity/User/workspaceStorage/f219ac6eba8d8d99e64bba645ca9d94f/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('GOLAND_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/goland.vmoptions'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-a95e87445e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('PYCHARM_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/pycharm.vmoptions'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('RUBYMINE_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/rubymine.vmoptions'), ('PWD', '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control'), ('JETBRAINS_CLIENT_VM_OPTIONS', '/home/yucheng/Downloads/linux/2022/_content/vmoptions/jetbrains_client.vmoptions'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control:/opt/ros/foxy')]), 'shell': False}
+[0.078245] (mpc_car_control) StdoutLine: {'line': b'[  1%] Built target mpc_car_control__cpp\n'}
+[0.079574] (mpc_car_control) StdoutLine: {'line': b'[ 10%] Built target mpc_car_control__rosidl_generator_c\n'}
+[0.091879] (mpc_car_control) StdoutLine: {'line': b'[ 19%] Built target mpc_car_control__rosidl_typesupport_cpp\n'}
+[0.092186] (mpc_car_control) StdoutLine: {'line': b'[ 28%] Built target mpc_car_control__rosidl_typesupport_introspection_cpp\n'}
+[0.092548] (mpc_car_control) StdoutLine: {'line': b'[ 37%] Built target mpc_car_control__rosidl_typesupport_c\n'}
+[0.093390] (mpc_car_control) StdoutLine: {'line': b'[ 46%] Built target mpc_car_control__rosidl_typesupport_fastrtps_cpp\n'}
+[0.094425] (mpc_car_control) StdoutLine: {'line': b'[ 55%] Built target mpc_car_control__rosidl_typesupport_introspection_c\n'}
+[0.099588] (-) TimerEvent: {}
+[0.107673] (mpc_car_control) StdoutLine: {'line': b'[ 64%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c\n'}
+[0.117754] (mpc_car_control) StdoutLine: {'line': b'[ 64%] Built target mpc_car_control\n'}
+[0.133917] (mpc_car_control) StdoutLine: {'line': b'[ 66%] Built target mpc_car_control__py\n'}
+[0.135278] (mpc_car_control) StdoutLine: {'line': b'[ 68%] Built target control_allocator_node\n'}
+[0.137387] (mpc_car_control) StdoutLine: {'line': b'[ 71%] Built target scenario_generator_node\n'}
+[0.137675] (mpc_car_control) StdoutLine: {'line': b'[ 74%] Built target pid_controller_node\n'}
+[0.137832] (mpc_car_control) StdoutLine: {'line': b'[ 76%] Built target vehicle_interface_node\n'}
+[0.138032] (mpc_car_control) StdoutLine: {'line': b'[ 79%] Built target visualization_node\n'}
+[0.138961] (mpc_car_control) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/vehicle_model_node.dir/src/vehicle_model_node.cpp.o\x1b[0m\n'}
+[0.146441] (mpc_car_control) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o\x1b[0m\n'}
+[0.146761] (mpc_car_control) StdoutLine: {'line': b'[ 89%] Built target mpc_car_control__python\n'}
+[0.159894] (mpc_car_control) StdoutLine: {'line': b'[ 94%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.160140] (mpc_car_control) StdoutLine: {'line': b'[ 94%] Built target mpc_car_control__rosidl_typesupport_introspection_c__pyext\n'}
+[0.161605] (mpc_car_control) StdoutLine: {'line': b'[ 97%] Built target mpc_car_control__rosidl_typesupport_c__pyext\n'}
+[0.199689] (-) TimerEvent: {}
+[0.299989] (-) TimerEvent: {}
+[0.400285] (-) TimerEvent: {}
+[0.500595] (-) TimerEvent: {}
+[0.600924] (-) TimerEvent: {}
+[0.701198] (-) TimerEvent: {}
+[0.801499] (-) TimerEvent: {}
+[0.901786] (-) TimerEvent: {}
+[1.002063] (-) TimerEvent: {}
+[1.102356] (-) TimerEvent: {}
+[1.202629] (-) TimerEvent: {}
+[1.302931] (-) TimerEvent: {}
+[1.403251] (-) TimerEvent: {}
+[1.503506] (-) TimerEvent: {}
+[1.603874] (-) TimerEvent: {}
+[1.704188] (-) TimerEvent: {}
+[1.767397] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:143:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kwhile\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.767638] (mpc_car_control) StderrLine: {'line': b'  143 |   \x1b[01;31m\x1b[Kwhile\x1b[m\x1b[K (x0(2) - ref_yaw_0 > M_PI)\n'}
+[1.767777] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.767901] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:145:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kwhile\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.768020] (mpc_car_control) StderrLine: {'line': b'  145 |   \x1b[01;31m\x1b[Kwhile\x1b[m\x1b[K (x0(2) - ref_yaw_0 < -M_PI)\n'}
+[1.768130] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.784716] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:153:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kfor\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.784959] (mpc_car_control) StderrLine: {'line': b'  153 |   \x1b[01;31m\x1b[Kfor\x1b[m\x1b[K (int k = 0; k < N; ++k) {\n'}
+[1.785085] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[1.785849] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:153:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kk\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[1.786001] (mpc_car_control) StderrLine: {'line': b'  153 |   for (int k = 0; \x1b[01;31m\x1b[Kk\x1b[m\x1b[K < N; ++k) {\n'}
+[1.786120] (mpc_car_control) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.786248] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:153:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[K++\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[1.786374] (mpc_car_control) StderrLine: {'line': b'  153 |   for (int k = 0; k < N; \x1b[01;31m\x1b[K++\x1b[m\x1b[Kk) {\n'}
+[1.786479] (mpc_car_control) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[1.786733] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:162:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KC\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[1.786871] (mpc_car_control) StderrLine: {'line': b'  162 |   \x1b[01;31m\x1b[KC\x1b[m\x1b[K.head(nu_) = u_prev_;\n'}
+[1.786983] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.787544] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:173:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KH\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[1.787700] (mpc_car_control) StderrLine: {'line': b'  173 |   \x1b[01;31m\x1b[KH\x1b[m\x1b[K += Eigen::MatrixXd::Identity(nu_ * N, nu_ *N) * 1e-3;\n'}
+[1.787833] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.789086] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:179:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ku_prev_\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[1.789265] (mpc_car_control) StderrLine: {'line': b'  179 |   \x1b[01;31m\x1b[Ku_prev_\x1b[m\x1b[K = u0;\n'}
+[1.789404] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.789527] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:182:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Knon-static data member declared with placeholder \xe2\x80\x98\x1b[01m\x1b[Kauto\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.789637] (mpc_car_control) StderrLine: {'line': b'  182 |   \x1b[01;31m\x1b[Kauto\x1b[m\x1b[K cmd_msg = mpc_car_control::msg::ControlCommandBody();\n'}
+[1.789746] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.790547] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:183:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcmd_msg\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[1.790702] (mpc_car_control) StderrLine: {'line': b'  183 |   \x1b[01;31m\x1b[Kcmd_msg\x1b[m\x1b[K.header.stamp = this->now();\n'}
+[1.790838] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.791937] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:184:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcmd_msg\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[1.792101] (mpc_car_control) StderrLine: {'line': b'  184 |   \x1b[01;31m\x1b[Kcmd_msg\x1b[m\x1b[K.fx = u0(0) * m_;     // Accel -> Force\n'}
+[1.792215] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.793379] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:185:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcmd_msg\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[1.793536] (mpc_car_control) StderrLine: {'line': b'  185 |   \x1b[01;31m\x1b[Kcmd_msg\x1b[m\x1b[K.fy = u0(1) * 1000.0; // kN -> N\n'}
+[1.793668] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.794730] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:186:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcmd_msg\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[1.794893] (mpc_car_control) StderrLine: {'line': b'  186 |   \x1b[01;31m\x1b[Kcmd_msg\x1b[m\x1b[K.fz =\n'}
+[1.795024] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.796088] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:193:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcmd_msg\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[1.796250] (mpc_car_control) StderrLine: {'line': b'  193 |   \x1b[01;31m\x1b[Kcmd_msg\x1b[m\x1b[K.fz = m_ * g_ + u0(2) * 1000.0;\n'}
+[1.796361] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.797431] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:195:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcmd_msg\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[1.797592] (mpc_car_control) StderrLine: {'line': b'  195 |   \x1b[01;31m\x1b[Kcmd_msg\x1b[m\x1b[K.mx = u0(3) * 1000.0; // kNm -> Nm\n'}
+[1.797706] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.798788] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:196:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcmd_msg\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[1.798939] (mpc_car_control) StderrLine: {'line': b'  196 |   \x1b[01;31m\x1b[Kcmd_msg\x1b[m\x1b[K.my = u0(4) * 1000.0; // kNm -> Nm\n'}
+[1.799070] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.800179] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:197:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcmd_msg\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[1.800349] (mpc_car_control) StderrLine: {'line': b'  197 |   \x1b[01;31m\x1b[Kcmd_msg\x1b[m\x1b[K.mz = 0.0;\n'}
+[1.800473] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.802628] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:199:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Krcl_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.802954] (mpc_car_control) StderrLine: {'line': b'  199 |   \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K->publish(cmd_msg);\n'}
+[1.803089] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.803212] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[32m\x1b[Krcl_publisher_t\x1b[m\x1b[K\n'}
+[1.803329] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:207:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kwhile\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.803454] (mpc_car_control) StderrLine: {'line': b'  207 |   \x1b[01;31m\x1b[Kwhile\x1b[m\x1b[K (yaw_err > M_PI)\n'}
+[1.803564] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.803679] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:209:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kwhile\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.803799] (mpc_car_control) StderrLine: {'line': b'  209 |   \x1b[01;31m\x1b[Kwhile\x1b[m\x1b[K (yaw_err < -M_PI)\n'}
+[1.803911] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.804018] (mpc_car_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/service.hpp:34\x1b[m\x1b[K,\n'}
+[1.804133] (mpc_car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:25\x1b[m\x1b[K,\n'}
+[1.804235] (-) TimerEvent: {}
+[1.804371] (mpc_car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.804484] (mpc_car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[1.804590] (mpc_car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.804696] (mpc_car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.804802] (mpc_car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[1.804910] (mpc_car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[1.805022] (mpc_car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.805189] (mpc_car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[1.805317] (mpc_car_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:11\x1b[m\x1b[K:\n'}
+[1.805432] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:212:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kdo\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.805564] (mpc_car_control) StderrLine: {'line': b'  212 |   \x1b[01;31m\x1b[KRCLCPP_INFO_THROTTLE\x1b[m\x1b[K(this->get_logger(), *this->get_clock(), 500,\n'}
+[1.805679] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.805784] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:212:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kwhile\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.805887] (mpc_car_control) StderrLine: {'line': b'  212 |   \x1b[01;31m\x1b[KRCLCPP_INFO_THROTTLE\x1b[m\x1b[K(this->get_logger(), *this->get_clock(), 500,\n'}
+[1.805998] (mpc_car_control) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.806107] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:142:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KR_ref\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.806220] (mpc_car_control) StderrLine: {'line': b'  142 |   double ref_yaw_0 = \x1b[01;31m\x1b[KR_ref\x1b[m\x1b[K(2);\n'}
+[1.806328] (mpc_car_control) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.806625] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:148:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KR_ref\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.806754] (mpc_car_control) StderrLine: {'line': b'  148 |   Eigen::VectorXd E = \x1b[01;31m\x1b[KR_ref\x1b[m\x1b[K - Phi * x0;\n'}
+[1.806869] (mpc_car_control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.807960] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:148:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KPhi\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.808108] (mpc_car_control) StderrLine: {'line': b'  148 |   Eigen::VectorXd E = R_ref - \x1b[01;31m\x1b[KPhi\x1b[m\x1b[K * x0;\n'}
+[1.808226] (mpc_car_control) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[1.809068] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:148:37:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kx0\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ku0\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.809229] (mpc_car_control) StderrLine: {'line': b'  148 |   Eigen::VectorXd E = R_ref - Phi * \x1b[01;31m\x1b[Kx0\x1b[m\x1b[K;\n'}
+[1.809355] (mpc_car_control) StderrLine: {'line': b'      |                                     \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[1.809468] (mpc_car_control) StderrLine: {'line': b'      |                                     \x1b[32m\x1b[Ku0\x1b[m\x1b[K\n'}
+[1.810189] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:151:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KN\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KN_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.810349] (mpc_car_control) StderrLine: {'line': b'  151 |   Eigen::MatrixXd P = Eigen::MatrixXd::Zero(nu_ * \x1b[01;31m\x1b[KN\x1b[m\x1b[K, nu_ *N);\n'}
+[1.810467] (mpc_car_control) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.810578] (mpc_car_control) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[KN_\x1b[m\x1b[K\n'}
+[1.811587] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:151:59:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KN\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KN_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.811758] (mpc_car_control) StderrLine: {'line': b'  151 |   Eigen::MatrixXd P = Eigen::MatrixXd::Zero(nu_ * N, nu_ *\x1b[01;31m\x1b[KN\x1b[m\x1b[K);\n'}
+[1.811890] (mpc_car_control) StderrLine: {'line': b'      |                                                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.812010] (mpc_car_control) StderrLine: {'line': b'      |                                                           \x1b[32m\x1b[KN_\x1b[m\x1b[K\n'}
+[1.820737] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:161:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KN\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KN_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.820976] (mpc_car_control) StderrLine: {'line': b'  161 |   Eigen::VectorXd C = Eigen::VectorXd::Zero(nu_ * \x1b[01;31m\x1b[KN\x1b[m\x1b[K);\n'}
+[1.821112] (mpc_car_control) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[1.821235] (mpc_car_control) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[KN_\x1b[m\x1b[K\n'}
+[1.822670] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:165:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGamma\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kgamma\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.823053] (mpc_car_control) StderrLine: {'line': b'  165 |   Eigen::MatrixXd H = \x1b[01;31m\x1b[KGamma\x1b[m\x1b[K.transpose() * Q_bar * Gamma + R_bar +\n'}
+[1.823194] (mpc_car_control) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.823307] (mpc_car_control) StderrLine: {'line': b'      |                       \x1b[32m\x1b[Kgamma\x1b[m\x1b[K\n'}
+[1.824934] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:165:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KQ_bar\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.825116] (mpc_car_control) StderrLine: {'line': b'  165 |   Eigen::MatrixXd H = Gamma.transpose() * \x1b[01;31m\x1b[KQ_bar\x1b[m\x1b[K * Gamma + R_bar +\n'}
+[1.825269] (mpc_car_control) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.826826] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:165:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGamma\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kgamma\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.827026] (mpc_car_control) StderrLine: {'line': b'  165 |   Eigen::MatrixXd H = Gamma.transpose() * Q_bar * \x1b[01;31m\x1b[KGamma\x1b[m\x1b[K + R_bar +\n'}
+[1.827158] (mpc_car_control) StderrLine: {'line': b'      |                                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.827265] (mpc_car_control) StderrLine: {'line': b'      |                                                   \x1b[32m\x1b[Kgamma\x1b[m\x1b[K\n'}
+[1.828381] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:165:59:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KR_bar\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.828539] (mpc_car_control) StderrLine: {'line': b'  165 |   Eigen::MatrixXd H = Gamma.transpose() * Q_bar * Gamma + \x1b[01;31m\x1b[KR_bar\x1b[m\x1b[K +\n'}
+[1.828660] (mpc_car_control) StderrLine: {'line': b'      |                                                           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.839552] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:166:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KR_rate_bar\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.839763] (mpc_car_control) StderrLine: {'line': b'  166 |                       P.transpose() * \x1b[01;31m\x1b[KR_rate_bar\x1b[m\x1b[K * P;\n'}
+[1.839911] (mpc_car_control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.841172] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:170:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KGamma\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kgamma\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.841351] (mpc_car_control) StderrLine: {'line': b'  170 |       \x1b[01;31m\x1b[KGamma\x1b[m\x1b[K.transpose() * Q_bar * E + P.transpose() * R_rate_bar * C;\n'}
+[1.841467] (mpc_car_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.841591] (mpc_car_control) StderrLine: {'line': b'      |       \x1b[32m\x1b[Kgamma\x1b[m\x1b[K\n'}
+[1.842707] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:170:27:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KQ_bar\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.842877] (mpc_car_control) StderrLine: {'line': b'  170 |       Gamma.transpose() * \x1b[01;31m\x1b[KQ_bar\x1b[m\x1b[K * E + P.transpose() * R_rate_bar * C;\n'}
+[1.843003] (mpc_car_control) StderrLine: {'line': b'      |                           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.845655] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:170:55:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KR_rate_bar\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.845845] (mpc_car_control) StderrLine: {'line': b'  170 |       Gamma.transpose() * Q_bar * E + P.transpose() * \x1b[01;31m\x1b[KR_rate_bar\x1b[m\x1b[K * C;\n'}
+[1.845980] (mpc_car_control) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.876776] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:202:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcurrent_trajectory_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.876997] (mpc_car_control) StderrLine: {'line': b'  202 |   double dx = \x1b[01;31m\x1b[Kcurrent_trajectory_\x1b[m\x1b[K.points[closest_idx].x - current_state_.x;\n'}
+[1.877120] (mpc_car_control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.879865] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:202:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclosest_idx\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.880047] (mpc_car_control) StderrLine: {'line': b'  202 |   double dx = current_trajectory_.points[\x1b[01;31m\x1b[Kclosest_idx\x1b[m\x1b[K].x - current_state_.x;\n'}
+[1.880196] (mpc_car_control) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.883479] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:202:59:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcurrent_state_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.883606] (mpc_car_control) StderrLine: {'line': b'  202 |   double dx = current_trajectory_.points[closest_idx].x - \x1b[01;31m\x1b[Kcurrent_state_\x1b[m\x1b[K.x;\n'}
+[1.883673] (mpc_car_control) StderrLine: {'line': b'      |                                                           \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.888192] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:203:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcurrent_trajectory_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.888327] (mpc_car_control) StderrLine: {'line': b'  203 |   double dy = \x1b[01;31m\x1b[Kcurrent_trajectory_\x1b[m\x1b[K.points[closest_idx].y - current_state_.y;\n'}
+[1.888395] (mpc_car_control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.891039] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:203:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclosest_idx\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.891175] (mpc_car_control) StderrLine: {'line': b'  203 |   double dy = current_trajectory_.points[\x1b[01;31m\x1b[Kclosest_idx\x1b[m\x1b[K].y - current_state_.y;\n'}
+[1.891242] (mpc_car_control) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.894409] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:203:59:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcurrent_state_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.894535] (mpc_car_control) StderrLine: {'line': b'  203 |   double dy = current_trajectory_.points[closest_idx].y - \x1b[01;31m\x1b[Kcurrent_state_\x1b[m\x1b[K.y;\n'}
+[1.894603] (mpc_car_control) StderrLine: {'line': b'      |                                                           \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.899234] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:206:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcurrent_trajectory_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.899376] (mpc_car_control) StderrLine: {'line': b'  206 |       \x1b[01;31m\x1b[Kcurrent_trajectory_\x1b[m\x1b[K.yaw_profile[closest_idx] - current_state_.yaw;\n'}
+[1.899444] (mpc_car_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.902107] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:206:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclosest_idx\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.902238] (mpc_car_control) StderrLine: {'line': b'  206 |       current_trajectory_.yaw_profile[\x1b[01;31m\x1b[Kclosest_idx\x1b[m\x1b[K] - current_state_.yaw;\n'}
+[1.902305] (mpc_car_control) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.904348] (-) TimerEvent: {}
+[1.905423] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:206:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcurrent_state_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.905548] (mpc_car_control) StderrLine: {'line': b'  206 |       current_trajectory_.yaw_profile[closest_idx] - \x1b[01;31m\x1b[Kcurrent_state_\x1b[m\x1b[K.yaw;\n'}
+[1.905616] (mpc_car_control) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.908300] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMPCControllerNode::MPCControllerNode()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.908452] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:19:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krcl_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.908564] (mpc_car_control) StderrLine: {'line': b'   19 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K =\n'}
+[1.908664] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.908760] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krcl_publisher_t\x1b[m\x1b[K\n'}
+[1.915767] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:23:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksubscription_traj_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.915926] (mpc_car_control) StderrLine: {'line': b'   23 |     \x1b[01;31m\x1b[Ksubscription_traj_\x1b[m\x1b[K =\n'}
+[1.915993] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.945307] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:28:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksubscription_state_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.945465] (mpc_car_control) StderrLine: {'line': b'   28 |     \x1b[01;31m\x1b[Ksubscription_state_\x1b[m\x1b[K =\n'}
+[1.945532] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.956273] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:34:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktimer_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktimer_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[1.956450] (mpc_car_control) StderrLine: {'line': b'   34 |     \x1b[01;31m\x1b[Ktimer_\x1b[m\x1b[K = this->create_wall_timer(\n'}
+[1.956520] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[1.956582] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[32m\x1b[Ktimer_t\x1b[m\x1b[K\n'}
+[1.956641] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:35:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcontrol_loop\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[KMPCControllerNode\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.956700] (mpc_car_control) StderrLine: {'line': b'   35 |         10ms, std::bind(&MPCControllerNode::\x1b[01;31m\x1b[Kcontrol_loop\x1b[m\x1b[K, this));\n'}
+[1.956758] (mpc_car_control) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.958311] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:37:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ku_prev_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.958443] (mpc_car_control) StderrLine: {'line': b'   37 |     \x1b[01;31m\x1b[Ku_prev_\x1b[m\x1b[K = Eigen::VectorXd::Zero(nu_);\n'}
+[1.958525] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[1.966338] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:40:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAd_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.966513] (mpc_car_control) StderrLine: {'line': b'   40 |     \x1b[01;31m\x1b[KAd_\x1b[m\x1b[K = Eigen::MatrixXd::Identity(nx_, nx_);\n'}
+[1.966582] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[1.967673] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:41:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KBd_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.967855] (mpc_car_control) StderrLine: {'line': b'   41 |     \x1b[01;31m\x1b[KBd_\x1b[m\x1b[K = Eigen::MatrixXd::Zero(nx_, nu_);\n'}
+[1.967973] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.004455] (-) TimerEvent: {}
+[2.104832] (-) TimerEvent: {}
+[2.149666] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MPCControllerNode::traj_callback(mpc_car_control::msg::ReferenceTrajectory_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.149829] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:68:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcurrent_trajectory_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.149898] (mpc_car_control) StderrLine: {'line': b'   68 |     \x1b[01;31m\x1b[Kcurrent_trajectory_\x1b[m\x1b[K = *msg;\n'}
+[2.149958] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.155885] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MPCControllerNode::state_callback(mpc_car_control::msg::VehicleState_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.156057] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:72:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcurrent_state_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.156129] (mpc_car_control) StderrLine: {'line': b'   72 |     \x1b[01;31m\x1b[Kcurrent_state_\x1b[m\x1b[K = *msg;\n'}
+[2.156203] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.160187] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:73:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstate_received_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.160338] (mpc_car_control) StderrLine: {'line': b'   73 |     \x1b[01;31m\x1b[Kstate_received_\x1b[m\x1b[K = true;\n'}
+[2.160404] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.163036] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MPCControllerNode::get_linearized_matrices(const VectorXd&, Eigen::MatrixXd&, Eigen::MatrixXd&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.163185] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:135:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KQ_bar\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.163254] (mpc_car_control) StderrLine: {'line': b'  135 |     \x1b[01;31m\x1b[KQ_bar\x1b[m\x1b[K.block(k * nx_, k * nx_, nx_, nx_) = Q_diag.asDiagonal();\n'}
+[2.163314] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.164548] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:135:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kk\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.164671] (mpc_car_control) StderrLine: {'line': b'  135 |     Q_bar.block(\x1b[01;31m\x1b[Kk\x1b[m\x1b[K * nx_, k * nx_, nx_, nx_) = Q_diag.asDiagonal();\n'}
+[2.164738] (mpc_car_control) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.166617] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:135:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KQ_diag\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.166763] (mpc_car_control) StderrLine: {'line': b'  135 |     Q_bar.block(k * nx_, k * nx_, nx_, nx_) = \x1b[01;31m\x1b[KQ_diag\x1b[m\x1b[K.asDiagonal();\n'}
+[2.166830] (mpc_car_control) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.168426] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:136:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KR_bar\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.168551] (mpc_car_control) StderrLine: {'line': b'  136 |     \x1b[01;31m\x1b[KR_bar\x1b[m\x1b[K.block(k * nu_, k * nu_, nu_, nu_) = R_diag.asDiagonal();\n'}
+[2.168616] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.170448] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:136:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KR_diag\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.170578] (mpc_car_control) StderrLine: {'line': b'  136 |     R_bar.block(k * nu_, k * nu_, nu_, nu_) = \x1b[01;31m\x1b[KR_diag\x1b[m\x1b[K.asDiagonal();\n'}
+[2.170646] (mpc_car_control) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.173520] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:137:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KR_rate_bar\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.173671] (mpc_car_control) StderrLine: {'line': b'  137 |     \x1b[01;31m\x1b[KR_rate_bar\x1b[m\x1b[K.block(k * nu_, k * nu_, nu_, nu_) = R_rate_diag.asDiagonal();\n'}
+[2.173739] (mpc_car_control) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.176838] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:137:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KR_rate_diag\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.176981] (mpc_car_control) StderrLine: {'line': b'  137 |     R_rate_bar.block(k * nu_, k * nu_, nu_, nu_) = \x1b[01;31m\x1b[KR_rate_diag\x1b[m\x1b[K.asDiagonal();\n'}
+[2.177048] (mpc_car_control) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.180066] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:\x1b[m\x1b[K At global scope:\n'}
+[2.180211] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:217:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kspecializing member \xe2\x80\x98\x1b[01m\x1b[Krclcpp::Publisher<mpc_car_control::msg::ControlCommandBody_<std::allocator<void> >, std::allocator<void> >::SharedPtr\x1b[m\x1b[K\xe2\x80\x99 requires \xe2\x80\x98\x1b[01m\x1b[Ktemplate<>\x1b[m\x1b[K\xe2\x80\x99 syntax\n'}
+[2.180282] (mpc_car_control) StderrLine: {'line': b'  217 | \x1b[01;31m\x1b[Krclcpp\x1b[m\x1b[K::Publisher<mpc_car_control::msg::ControlCommandBody>::SharedPtr\n'}
+[2.180351] (mpc_car_control) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.191043] (mpc_car_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:237:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected declaration before \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[2.191228] (mpc_car_control) StderrLine: {'line': b'  237 | \x1b[01;31m\x1b[K}\x1b[m\x1b[K\n'}
+[2.191300] (mpc_car_control) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.204973] (-) TimerEvent: {}
+[2.305287] (-) TimerEvent: {}
+[2.405545] (-) TimerEvent: {}
+[2.505815] (-) TimerEvent: {}
+[2.606091] (-) TimerEvent: {}
+[2.706384] (-) TimerEvent: {}
+[2.806694] (-) TimerEvent: {}
+[2.906999] (-) TimerEvent: {}
+[3.007309] (-) TimerEvent: {}
+[3.107636] (-) TimerEvent: {}
+[3.207873] (-) TimerEvent: {}
+[3.308195] (-) TimerEvent: {}
+[3.408499] (-) TimerEvent: {}
+[3.508777] (-) TimerEvent: {}
+[3.609085] (-) TimerEvent: {}
+[3.709325] (-) TimerEvent: {}
+[3.809567] (-) TimerEvent: {}
+[3.909877] (-) TimerEvent: {}
+[4.010187] (-) TimerEvent: {}
+[4.110504] (-) TimerEvent: {}
+[4.210939] (-) TimerEvent: {}
+[4.311247] (-) TimerEvent: {}
+[4.411489] (-) TimerEvent: {}
+[4.511764] (-) TimerEvent: {}
+[4.612049] (-) TimerEvent: {}
+[4.712348] (-) TimerEvent: {}
+[4.808903] (mpc_car_control) StderrLine: {'line': b'make[2]: *** [CMakeFiles/mpc_controller_node.dir/build.make:79\xef\xbc\x9aCMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[4.809177] (mpc_car_control) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:725\xef\xbc\x9aCMakeFiles/mpc_controller_node.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[4.809281] (mpc_car_control) StderrLine: {'line': b'make[1]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[4.812464] (-) TimerEvent: {}
+[4.912723] (-) TimerEvent: {}
+[5.012997] (-) TimerEvent: {}
+[5.113292] (-) TimerEvent: {}
+[5.213537] (-) TimerEvent: {}
+[5.313780] (-) TimerEvent: {}
+[5.414093] (-) TimerEvent: {}
+[5.514356] (-) TimerEvent: {}
+[5.614624] (-) TimerEvent: {}
+[5.714925] (-) TimerEvent: {}
+[5.815258] (-) TimerEvent: {}
+[5.915523] (-) TimerEvent: {}
+[6.015789] (-) TimerEvent: {}
+[6.116054] (-) TimerEvent: {}
+[6.216327] (-) TimerEvent: {}
+[6.316593] (-) TimerEvent: {}
+[6.416913] (-) TimerEvent: {}
+[6.517381] (-) TimerEvent: {}
+[6.617701] (-) TimerEvent: {}
+[6.718017] (-) TimerEvent: {}
+[6.818312] (-) TimerEvent: {}
+[6.918595] (-) TimerEvent: {}
+[7.018897] (-) TimerEvent: {}
+[7.119185] (-) TimerEvent: {}
+[7.219455] (-) TimerEvent: {}
+[7.319778] (-) TimerEvent: {}
+[7.420064] (-) TimerEvent: {}
+[7.506259] (mpc_car_control) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking CXX executable vehicle_model_node\x1b[0m\n'}
+[7.520167] (-) TimerEvent: {}
+[7.620497] (-) TimerEvent: {}
+[7.720735] (-) TimerEvent: {}
+[7.821009] (-) TimerEvent: {}
+[7.874593] (mpc_car_control) StdoutLine: {'line': b'[ 98%] Built target vehicle_model_node\n'}
+[7.875489] (mpc_car_control) StderrLine: {'line': b'make: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[7.877198] (mpc_car_control) CommandEnded: {'returncode': 2}
+[7.921175] (-) TimerEvent: {}
+[8.025957] (-) TimerEvent: {}
+[8.042191] (mpc_car_control) JobEnded: {'identifier': 'mpc_car_control', 'rc': 2}
+[8.052722] (-) EventReactorShutdown: {}

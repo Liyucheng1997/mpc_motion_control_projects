@@ -249,13 +249,19 @@ CMakeFiles/mpc_car_control__rosidl_generator_c.dir/rosidl_generator_c/mpc_car_co
   rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.h \
   rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__struct.h \
   rosidl_generator_c/mpc_car_control/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/foxy/include/rcutils/allocator.h \
   /opt/ros/foxy/include/rcutils/macros.h \
   /opt/ros/foxy/include/rcutils/testing/fault_injection.h \
   /opt/ros/foxy/include/rcutils/types/rcutils_ret.h \
   /opt/ros/foxy/include/rcutils/visibility_control.h \
   /opt/ros/foxy/include/rcutils/visibility_control_macros.h \
+  /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/foxy/include/rosidl_runtime_c/string.h \
   /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h \
+  /opt/ros/foxy/include/std_msgs/msg/detail/header__functions.h \
+  /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.h \
+  /opt/ros/foxy/include/std_msgs/msg/rosidl_generator_c__visibility_control.h \
   /usr/include/alloca.h \
   /usr/include/assert.h \
   /usr/include/endian.h \

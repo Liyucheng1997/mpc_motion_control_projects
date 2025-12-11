@@ -34,8 +34,22 @@ extern "C"
 {
 #endif
 
+#include "std_msgs/msg/detail/header__functions.h"  // header
 
 // forward declare type support functions
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_mpc_car_control
+size_t get_serialized_size_std_msgs__msg__Header(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_mpc_car_control
+size_t max_serialized_size_std_msgs__msg__Header(
+  bool & full_bounded,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_mpc_car_control
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, std_msgs, msg, Header)();
 
 
 using _VehicleState__ros_msg_type = mpc_car_control__msg__VehicleState;
@@ -49,6 +63,20 @@ static bool _VehicleState__cdr_serialize(
     return false;
   }
   const _VehicleState__ros_msg_type * ros_message = static_cast<const _VehicleState__ros_msg_type *>(untyped_ros_message);
+  // Field name: header
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, std_msgs, msg, Header
+      )()->data);
+    if (!callbacks->cdr_serialize(
+        &ros_message->header, cdr))
+    {
+      return false;
+    }
+  }
+
   // Field name: x
   {
     cdr << ros_message->x;
@@ -109,6 +137,11 @@ static bool _VehicleState__cdr_serialize(
     cdr << ros_message->yaw_rate;
   }
 
+  // Field name: az
+  {
+    cdr << ros_message->az;
+  }
+
   return true;
 }
 
@@ -121,6 +154,20 @@ static bool _VehicleState__cdr_deserialize(
     return false;
   }
   _VehicleState__ros_msg_type * ros_message = static_cast<_VehicleState__ros_msg_type *>(untyped_ros_message);
+  // Field name: header
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, std_msgs, msg, Header
+      )()->data);
+    if (!callbacks->cdr_deserialize(
+        cdr, &ros_message->header))
+    {
+      return false;
+    }
+  }
+
   // Field name: x
   {
     cdr >> ros_message->x;
@@ -181,6 +228,11 @@ static bool _VehicleState__cdr_deserialize(
     cdr >> ros_message->yaw_rate;
   }
 
+  // Field name: az
+  {
+    cdr >> ros_message->az;
+  }
+
   return true;
 }
 
@@ -198,6 +250,10 @@ size_t get_serialized_size_mpc_car_control__msg__VehicleState(
   (void)padding;
   (void)wchar_size;
 
+  // field.name header
+
+  current_alignment += get_serialized_size_std_msgs__msg__Header(
+    &(ros_message->header), current_alignment);
   // field.name x
   {
     size_t item_size = sizeof(ros_message->x);
@@ -270,6 +326,12 @@ size_t get_serialized_size_mpc_car_control__msg__VehicleState(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // field.name az
+  {
+    size_t item_size = sizeof(ros_message->az);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -294,6 +356,17 @@ size_t max_serialized_size_mpc_car_control__msg__VehicleState(
   (void)wchar_size;
   (void)full_bounded;
 
+  // member: header
+  {
+    size_t array_size = 1;
+
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        max_serialized_size_std_msgs__msg__Header(
+        full_bounded, current_alignment);
+    }
+  }
   // member: x
   {
     size_t array_size = 1;
@@ -372,6 +445,13 @@ size_t max_serialized_size_mpc_car_control__msg__VehicleState(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
   // member: yaw_rate
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: az
   {
     size_t array_size = 1;
 

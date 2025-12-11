@@ -406,6 +406,19 @@ control_allocator_node/fast:
 .PHONY : control_allocator_node/fast
 
 #=============================================================================
+# Target rules for targets named pid_controller_node
+
+# Build rule for target.
+pid_controller_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pid_controller_node
+.PHONY : pid_controller_node
+
+# fast build rule for target.
+pid_controller_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_controller_node.dir/build.make CMakeFiles/pid_controller_node.dir/build
+.PHONY : pid_controller_node/fast
+
+#=============================================================================
 # Target rules for targets named vehicle_interface_node
 
 # Build rule for target.
@@ -1537,6 +1550,30 @@ src/mpc_controller_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpc_controller_node.dir/build.make CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.s
 .PHONY : src/mpc_controller_node.cpp.s
 
+src/pid_controller_node.o: src/pid_controller_node.cpp.o
+.PHONY : src/pid_controller_node.o
+
+# target to build an object file
+src/pid_controller_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_controller_node.dir/build.make CMakeFiles/pid_controller_node.dir/src/pid_controller_node.cpp.o
+.PHONY : src/pid_controller_node.cpp.o
+
+src/pid_controller_node.i: src/pid_controller_node.cpp.i
+.PHONY : src/pid_controller_node.i
+
+# target to preprocess a source file
+src/pid_controller_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_controller_node.dir/build.make CMakeFiles/pid_controller_node.dir/src/pid_controller_node.cpp.i
+.PHONY : src/pid_controller_node.cpp.i
+
+src/pid_controller_node.s: src/pid_controller_node.cpp.s
+.PHONY : src/pid_controller_node.s
+
+# target to generate assembly for a file
+src/pid_controller_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pid_controller_node.dir/build.make CMakeFiles/pid_controller_node.dir/src/pid_controller_node.cpp.s
+.PHONY : src/pid_controller_node.cpp.s
+
 src/scenario_generator_node.o: src/scenario_generator_node.cpp.o
 .PHONY : src/scenario_generator_node.o
 
@@ -1664,6 +1701,7 @@ help:
 	@echo "... mpc_car_control__rosidl_typesupport_introspection_c__pyext"
 	@echo "... mpc_car_control__rosidl_typesupport_introspection_cpp"
 	@echo "... mpc_controller_node"
+	@echo "... pid_controller_node"
 	@echo "... scenario_generator_node"
 	@echo "... vehicle_interface_node"
 	@echo "... vehicle_model_node"
@@ -1803,6 +1841,9 @@ help:
 	@echo "... src/mpc_controller_node.o"
 	@echo "... src/mpc_controller_node.i"
 	@echo "... src/mpc_controller_node.s"
+	@echo "... src/pid_controller_node.o"
+	@echo "... src/pid_controller_node.i"
+	@echo "... src/pid_controller_node.s"
 	@echo "... src/scenario_generator_node.o"
 	@echo "... src/scenario_generator_node.i"
 	@echo "... src/scenario_generator_node.s"

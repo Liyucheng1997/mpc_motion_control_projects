@@ -1,0 +1,46 @@
+[0.026s] Invoking command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control -- -j12 -l12
+[0.055s] [  1%] Built target mpc_car_control__cpp
+[0.056s] [ 10%] Built target mpc_car_control__rosidl_generator_c
+[0.068s] [ 38%] Built target mpc_car_control__rosidl_typesupport_cpp
+[0.068s] [ 38%] Built target mpc_car_control__rosidl_typesupport_c
+[0.068s] [ 42%] Built target mpc_car_control__rosidl_typesupport_introspection_cpp
+[0.068s] [ 48%] Built target mpc_car_control__rosidl_typesupport_introspection_c
+[0.069s] [ 55%] Built target mpc_car_control__rosidl_typesupport_fastrtps_cpp
+[0.083s] [ 64%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c
+[0.093s] [ 64%] Built target mpc_car_control
+[0.109s] [ 66%] Built target mpc_car_control__py
+[0.113s] [ 68%] Built target pid_controller_node
+[0.114s] [ 74%] Built target vehicle_model_node
+[0.114s] [ 74%] Built target scenario_generator_node
+[0.114s] [ 76%] Built target vehicle_interface_node
+[0.115s] [ 79%] Built target visualization_node
+[0.119s] [ 81%] Built target control_allocator_node
+[0.122s] [ 83%] [32mBuilding CXX object CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o[0m
+[0.126s] [ 90%] Built target mpc_car_control__python
+[0.137s] [ 98%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c__pyext
+[0.137s] [ 98%] Built target mpc_car_control__rosidl_typesupport_introspection_c__pyext
+[0.137s] [ 98%] Built target mpc_car_control__rosidl_typesupport_c__pyext
+[2.080s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:40[m[K,
+[2.080s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[2.080s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[2.080s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[2.080s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[2.080s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[2.080s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[2.080s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[2.080s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[2.080s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[2.080s]                  from [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:11[m[K:
+[2.080s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:[m[K In member function ‘[01m[Kvoid MPCControllerNode::control_loop()[m[K’:
+[2.081s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:312:17:[m[K [01;31m[Kerror: [m[K‘[01m[KFx_b[m[K’ was not declared in this scope
+[2.081s]   312 |  [01;31m[KFx_b[m[K, Fy_b, u0(5));
+[2.081s]       |  [01;31m[K^~~~[m[K
+[2.081s] 
+[2.081s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:312:23:[m[K [01;31m[Kerror: [m[K‘[01m[KFy_b[m[K’ was not declared in this scope
+[2.081s]   312 | Fx_b, [01;31m[KFy_b[m[K, u0(5));
+[2.081s]       |       [01;31m[K^~~~[m[K
+[2.081s] 
+[5.093s] make[2]: *** [CMakeFiles/mpc_controller_node.dir/build.make:79：CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o] 错误 1
+[5.093s] make[1]: *** [CMakeFiles/Makefile2:725：CMakeFiles/mpc_controller_node.dir/all] 错误 2
+[5.093s] make: *** [Makefile:146：all] 错误 2
+[5.096s] Invoked command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control -- -j12 -l12

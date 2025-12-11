@@ -1,4 +1,1 @@
-std_msgs/Header header
-geometry_msgs/Point[] points
-float64[] velocity_profile
-float64[] yaw_profile
+/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/msg/ReferenceTrajectory.msg

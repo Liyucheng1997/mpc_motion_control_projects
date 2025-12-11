@@ -119,13 +119,17 @@ CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_ca
 CMakeFiles/mpc_car_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/mpc_car_control/msg/vehicle_state__type_support.cpp.o: rosidl_typesupport_c/mpc_car_control/msg/vehicle_state__type_support.cpp \
   rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__struct.h \
   rosidl_typesupport_c/mpc_car_control/msg/rosidl_typesupport_c__visibility_control.h \
+  /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h \
+  /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/foxy/include/rosidl_runtime_c/string.h \
   /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h \
   /opt/ros/foxy/include/rosidl_typesupport_c/identifier.h \
   /opt/ros/foxy/include/rosidl_typesupport_c/message_type_support_dispatch.h \
   /opt/ros/foxy/include/rosidl_typesupport_c/type_support_map.h \
   /opt/ros/foxy/include/rosidl_typesupport_c/visibility_control.h \
   /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h \
+  /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.h \
   /usr/include/c++/9/cstddef \
   /usr/include/features.h \
   /usr/include/stdc-predef.h \

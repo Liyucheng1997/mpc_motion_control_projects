@@ -44,6 +44,8 @@ public:
     state_.roll_rate = 0.0;
     state_.pitch_rate = 0.0;
     state_.yaw_rate = 0.0;
+
+    sim_time_ = this->now();
   }
 
 private:
@@ -51,6 +53,7 @@ private:
   mpc_car_control::msg::ActuatorCommand last_cmd_;
   mpc_car_control::msg::WheelGroundHeights last_wheels_;
   bool cmd_received_ = false;
+  rclcpp::Time sim_time_;
 
   rclcpp::Publisher<mpc_car_control::msg::VehicleState>::SharedPtr publisher_;
   rclcpp::Subscription<mpc_car_control::msg::ActuatorCommand>::SharedPtr
@@ -73,6 +76,7 @@ private:
   void sim_loop() {
     // Simple Kinematic Bicycle Model
     double dt = 0.01;
+    sim_time_ += rclcpp::Duration::from_seconds(dt);
     double L = 2.5; // Wheelbase
 
     if (cmd_received_) {
@@ -96,6 +100,8 @@ private:
       state_.vx -= 0.1 * state_.vx * dt;
     }
 
+    state_.header.stamp = sim_time_;
+    state_.header.frame_id = "map";
     publisher_->publish(state_);
   }
 };

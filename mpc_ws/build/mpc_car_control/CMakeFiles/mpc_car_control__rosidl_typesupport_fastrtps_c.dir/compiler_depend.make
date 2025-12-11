@@ -686,6 +686,7 @@ CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport
   rosidl_generator_c/mpc_car_control/msg/rosidl_generator_c__visibility_control.h \
   rosidl_typesupport_fastrtps_c/mpc_car_control/msg/detail/vehicle_state__rosidl_typesupport_fastrtps_c.h \
   rosidl_typesupport_fastrtps_c/mpc_car_control/msg/rosidl_typesupport_fastrtps_c__visibility_control.h \
+  /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.h \
   /opt/ros/foxy/include/fastcdr/Cdr.h \
   /opt/ros/foxy/include/fastcdr/FastBuffer.h \
   /opt/ros/foxy/include/fastcdr/config.h \
@@ -695,6 +696,7 @@ CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport
   /opt/ros/foxy/include/fastcdr/fastcdr_dll.h \
   /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h \
   /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/foxy/include/rosidl_runtime_c/string.h \
   /opt/ros/foxy/include/rosidl_runtime_c/u16string.h \
   /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h \
   /opt/ros/foxy/include/rosidl_typesupport_fastrtps_c/identifier.h \
@@ -702,6 +704,9 @@ CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport
   /opt/ros/foxy/include/rosidl_typesupport_fastrtps_c/wstring_conversion.hpp \
   /opt/ros/foxy/include/rosidl_typesupport_fastrtps_cpp/message_type_support.h \
   /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h \
+  /opt/ros/foxy/include/std_msgs/msg/detail/header__functions.h \
+  /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.h \
+  /opt/ros/foxy/include/std_msgs/msg/rosidl_generator_c__visibility_control.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

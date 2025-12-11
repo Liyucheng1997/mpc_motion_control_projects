@@ -10,6 +10,7 @@
 #include "mpc_car_control/msg/vehicle_state.hpp"
 #include "mpc_car_control/msg/wheel_ground_heights.hpp"
 #include "rclcpp/rclcpp.hpp"
+#include "std_msgs/msg/empty.hpp"
 
 using namespace std::chrono_literals;
 using std::placeholders::_1;
@@ -45,6 +46,7 @@ struct State14DOF {
   double phi = 0.0, theta = 0.0, psi = 0.0; // Euler angles (Roll, Pitch, Yaw)
   double u = 0.0, v = 0.0, w = 0.0;         // Linear velocities (Body frame)
   double p = 0.0, q = 0.0, r = 0.0;         // Angular velocities (Body frame)
+  double w_dot = 0.0; // Vertical acceleration (Body frame)
 
   // Wheels (4 wheels: FL, FR, RL, RR)
   // Vertical displacement of unsprung mass (relative to inertial ground 0)
@@ -70,6 +72,10 @@ public:
             "/wheel_ground_heights", 10,
             std::bind(&VehicleModelNode::wheels_callback, this, _1));
 
+    subscription_pause_ = this->create_subscription<std_msgs::msg::Empty>(
+        "/pause_toggle", 10,
+        std::bind(&VehicleModelNode::pause_callback, this, _1));
+
     // Simulation loop at 100Hz for better stability
     timer_ = this->create_wall_timer(
         10ms, std::bind(&VehicleModelNode::sim_loop, this));
@@ -80,6 +86,8 @@ public:
     state_.z = params_.h_cg + 0.3; // Start slightly above ground
     for (int i = 0; i < 4; ++i)
       state_.zu[i] = params_.Rw; // Wheels on ground
+
+    sim_time_ = this->now();
   }
 
 private:
@@ -89,6 +97,7 @@ private:
   mpc_car_control::msg::ActuatorCommand last_cmd_;
   mpc_car_control::msg::WheelGroundHeights last_wheels_;
   bool cmd_received_ = false;
+  rclcpp::Time sim_time_;
 
   // Smoothing variables
   double smooth_throttle_ = 0.0;
@@ -100,6 +109,8 @@ private:
       subscription_;
   rclcpp::Subscription<mpc_car_control::msg::WheelGroundHeights>::SharedPtr
       subscription_wheels_;
+  rclcpp::Subscription<std_msgs::msg::Empty>::SharedPtr subscription_pause_;
+  bool paused_ = false;
   rclcpp::TimerBase::SharedPtr timer_;
 
   void
@@ -113,6 +124,16 @@ private:
     last_wheels_ = *msg;
   }
 
+  void pause_callback(const std_msgs::msg::Empty::SharedPtr msg) {
+    (void)msg;
+    paused_ = !paused_;
+    if (paused_) {
+      RCLCPP_INFO(this->get_logger(), "PAUSE REQUESTED");
+    } else {
+      RCLCPP_INFO(this->get_logger(), "RESUME REQUESTED");
+    }
+  }
+
   // Helper to get ground z at wheel position
   double get_ground_z(int wheel_idx) {
     // wheel_idx: 0=FL, 1=FR, 2=RL, 3=RR
@@ -124,7 +145,18 @@ private:
 
   void sim_loop() {
     double dt_total = 0.01; // 10ms total step
-    int sub_steps = 20;     // 0.5ms sub-step for stability
+    sim_time_ += rclcpp::Duration::from_seconds(dt_total);
+
+    if (paused_) {
+      // Still publish state to keep visualization alive, but don't integrate
+      // physics
+      publish_state();
+      RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
+                           "Simulation Paused. x: %.4f", state_.x);
+      return;
+    }
+
+    int sub_steps = 20; // 0.5ms sub-step for stability
     double dt = dt_total / sub_steps;
 
     // Inputs with Smoothing (Low-Pass Filter)
@@ -208,7 +240,8 @@ private:
 
         // Tire Forces (Linear Model)
         double F_tx = params_.C_x * kappa;
-        double F_ty = params_.C_alpha * alpha;
+        double C_alpha = (i < 2) ? params_.C_af : params_.C_ar;
+        double F_ty = C_alpha * alpha;
 
         // Limit forces to friction circle (simplified)
         double mu_friction = 0.9;
@@ -262,8 +295,11 @@ private:
 
       // Chassis Dynamics (Newton-Euler)
       double g = -9.81; // Gravity acts DOWN in Z-up frame
-      double gx = -g * std::sin(state_.theta);
-      double gy = g * std::cos(state_.theta) * std::sin(state_.phi);
+      double gx = -g * std::sin(state_.theta); // Nose Down (theta > 0) ->
+                                               // Gravity pulls Forward (gx > 0)
+      double gy = g * std::cos(state_.theta) *
+                  std::sin(state_.phi); // Roll Right (phi > 0) -> Gravity pulls
+                                        // Right (gy < 0)
       double gz = g * std::cos(state_.theta) * std::cos(state_.phi);
 
       double u_dot = (Fx_total / params_.ms) + gx + state_.v * state_.r -
@@ -288,6 +324,7 @@ private:
       state_.u += u_dot * dt;
       state_.v += v_dot * dt;
       state_.w += w_dot * dt;
+      state_.w_dot = w_dot; // Store for publishing
       state_.p += p_dot * dt;
       state_.q += q_dot * dt;
       state_.r += r_dot * dt;
@@ -322,9 +359,11 @@ private:
     }
 
     // Safety check for NaNs
-    if (std::isnan(state_.x) || std::isnan(state_.z)) {
+    if (std::isnan(state_.x) || std::isnan(state_.z) || std::isnan(state_.u) ||
+        std::isnan(state_.w)) {
       RCLCPP_ERROR(this->get_logger(),
-                   "NaN detected in vehicle state! Resetting.");
+                   "NaN detected! Resetting. x: %f, z: %f, u: %f, w: %f",
+                   state_.x, state_.z, state_.u, state_.w);
       state_ = State14DOF();
       state_.z = params_.h_cg + 0.3;
       for (int i = 0; i < 4; ++i)
@@ -337,6 +376,8 @@ private:
 
   void publish_state() {
     auto msg = mpc_car_control::msg::VehicleState();
+    msg.header.stamp = sim_time_;
+    msg.header.frame_id = "map";
     msg.x = state_.x;
     msg.y = state_.y;
     msg.z = state_.z;
@@ -349,6 +390,7 @@ private:
     msg.yaw_rate = state_.r;
     msg.pitch_rate = state_.q;
     msg.roll_rate = state_.p;
+    msg.az = state_.w_dot; // Vertical acceleration (body frame)
 
     publisher_->publish(msg);
   }

@@ -2,10 +2,13 @@
 // with input from mpc_car_control/msg/VehicleState.msg
 // generated code does not contain a copyright notice
 
+#include "std_msgs/msg/Header.idl"
 
 module mpc_car_control {
   module msg {
     struct VehicleState {
+      std_msgs::msg::Header header;
+
       double x;
 
       double y;
@@ -29,6 +32,8 @@ module mpc_car_control {
       double pitch_rate;
 
       double yaw_rate;
+
+      double az;
     };
   };
 };

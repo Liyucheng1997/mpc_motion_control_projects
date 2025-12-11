@@ -16,6 +16,29 @@
 
 
 // forward declaration of message dependencies and their conversion functions
+namespace std_msgs
+{
+namespace msg
+{
+namespace typesupport_fastrtps_cpp
+{
+bool cdr_serialize(
+  const std_msgs::msg::Header &,
+  eprosima::fastcdr::Cdr &);
+bool cdr_deserialize(
+  eprosima::fastcdr::Cdr &,
+  std_msgs::msg::Header &);
+size_t get_serialized_size(
+  const std_msgs::msg::Header &,
+  size_t current_alignment);
+size_t
+max_serialized_size_Header(
+  bool & full_bounded,
+  size_t current_alignment);
+}  // namespace typesupport_fastrtps_cpp
+}  // namespace msg
+}  // namespace std_msgs
+
 
 namespace mpc_car_control
 {
@@ -32,6 +55,10 @@ cdr_serialize(
   const mpc_car_control::msg::VehicleState & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
+  // Member: header
+  std_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.header,
+    cdr);
   // Member: x
   cdr << ros_message.x;
   // Member: y
@@ -56,6 +83,8 @@ cdr_serialize(
   cdr << ros_message.pitch_rate;
   // Member: yaw_rate
   cdr << ros_message.yaw_rate;
+  // Member: az
+  cdr << ros_message.az;
   return true;
 }
 
@@ -65,6 +94,10 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   mpc_car_control::msg::VehicleState & ros_message)
 {
+  // Member: header
+  std_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.header);
+
   // Member: x
   cdr >> ros_message.x;
 
@@ -101,6 +134,9 @@ cdr_deserialize(
   // Member: yaw_rate
   cdr >> ros_message.yaw_rate;
 
+  // Member: az
+  cdr >> ros_message.az;
+
   return true;
 }
 
@@ -117,6 +153,11 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
+  // Member: header
+
+  current_alignment +=
+    std_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.header, current_alignment);
   // Member: x
   {
     size_t item_size = sizeof(ros_message.x);
@@ -189,6 +230,12 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // Member: az
+  {
+    size_t item_size = sizeof(ros_message.az);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -207,6 +254,18 @@ max_serialized_size_VehicleState(
   (void)wchar_size;
   (void)full_bounded;
 
+
+  // Member: header
+  {
+    size_t array_size = 1;
+
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        std_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_Header(
+        full_bounded, current_alignment);
+    }
+  }
 
   // Member: x
   {
@@ -297,6 +356,14 @@ max_serialized_size_VehicleState(
   }
 
   // Member: yaw_rate
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: az
   {
     size_t array_size = 1;
 

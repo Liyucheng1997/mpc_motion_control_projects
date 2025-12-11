@@ -10,6 +10,10 @@
 #include <stdint.h>
 #include <type_traits>
 
+// Include directives for member types
+// Member 'header'
+#include "std_msgs/msg/detail/header__traits.hpp"
+
 namespace rosidl_generator_traits
 {
 
@@ -27,11 +31,11 @@ inline const char * name<mpc_car_control::msg::VehicleState>()
 
 template<>
 struct has_fixed_size<mpc_car_control::msg::VehicleState>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, has_fixed_size<std_msgs::msg::Header>::value> {};
 
 template<>
 struct has_bounded_size<mpc_car_control::msg::VehicleState>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, has_bounded_size<std_msgs::msg::Header>::value> {};
 
 template<>
 struct is_message<mpc_car_control::msg::VehicleState>

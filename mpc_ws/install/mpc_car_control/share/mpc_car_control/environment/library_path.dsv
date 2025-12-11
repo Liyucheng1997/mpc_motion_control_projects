@@ -1,1 +1,1 @@
-prepend-non-duplicate;LD_LIBRARY_PATH;lib
+/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/ament_cmake_environment_hooks/library_path.dsv

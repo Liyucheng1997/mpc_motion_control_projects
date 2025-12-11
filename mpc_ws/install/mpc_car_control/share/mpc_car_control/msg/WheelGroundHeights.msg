@@ -1,2 +1,1 @@
-std_msgs/Header header
-float64[4] wheel_ground_heights
+/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/msg/WheelGroundHeights.msg

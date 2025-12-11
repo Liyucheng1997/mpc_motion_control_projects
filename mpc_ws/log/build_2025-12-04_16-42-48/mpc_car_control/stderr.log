@@ -1,0 +1,94 @@
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:331:46:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectory[m[K’ is not a member of ‘[01m[Kmpc_car_control::msg[m[K’
+  331 |   rclcpp::Subscription<mpc_car_control::msg::[01;31m[KTrajectory[m[K>::SharedPtr
+      |                                              [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:331:46:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectory[m[K’ is not a member of ‘[01m[Kmpc_car_control::msg[m[K’
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:331:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  331 |   rclcpp::Subscription<mpc_car_control::msg::Trajectory[01;31m[K>[m[K::SharedPtr
+      |                                                        [01;31m[K^[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:331:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:331:59:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  331 |   rclcpp::Subscription<mpc_car_control::msg::Trajectory>::[01;31m[KSharedPtr[m[K
+      |                                                           [01;31m[K^~~~~~~~~[m[K
+      |                                                                    [32m[K;[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:332:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_traj_[m[K’ does not name a type
+  332 |       [01;31m[Ksubscription_traj_[m[K;
+      |       [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:337:25:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectory[m[K’ in namespace ‘[01m[Kmpc_car_control::msg[m[K’ does not name a type
+  337 |   mpc_car_control::msg::[01;31m[KTrajectory[m[K current_trajectory_;
+      |                         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:342:16:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kdouble MPCControllerNode::dt_[m[K’
+  342 |   double dt_ = [01;31m[K0.01[m[K; // 100Hz
+      |                [01;31m[K^~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:60:16:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kconst double MPCControllerNode::dt_[m[K’
+   60 |   const double [01;36m[Kdt_[m[K = 0.01; // Time step (100Hz)
+      |                [01;36m[K^~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:343:12:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint MPCControllerNode::N_[m[K’
+  343 |   int N_ = [01;31m[K50[m[K;       // 0.5s Horizon
+      |            [01;31m[K^~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:59:13:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kconst int MPCControllerNode::N_[m[K’
+   59 |   const int [01;36m[KN_[m[K = 50;       // Prediction Horizon (0.5s at 100Hz)
+      |             [01;36m[K^~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:344:15:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kdouble MPCControllerNode::m_[m[K’
+  344 |   double m_ = [01;31m[K1412.0[m[K;
+      |               [01;31m[K^~~~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:50:16:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kconst double MPCControllerNode::m_[m[K’
+   50 |   const double [01;36m[Km_[m[K = 1412.0;
+      |                [01;36m[K^~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:345:16:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kdouble MPCControllerNode::Iz_[m[K’
+  345 |   double Iz_ = [01;31m[K1536.7[m[K;
+      |                [01;31m[K^~~~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:51:16:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kconst double MPCControllerNode::Iz_[m[K’
+   51 |   const double [01;36m[KIz_[m[K = 1536.7;
+      |                [01;36m[K^~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:346:16:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kdouble MPCControllerNode::lf_[m[K’
+  346 |   double lf_ = [01;31m[K1.015[m[K;
+      |                [01;31m[K^~~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:52:16:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kconst double MPCControllerNode::lf_[m[K’
+   52 |   const double [01;36m[Klf_[m[K = 1.015;
+      |                [01;36m[K^~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:347:16:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kdouble MPCControllerNode::lr_[m[K’
+  347 |   double lr_ = [01;31m[K1.895[m[K;
+      |                [01;31m[K^~~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:53:16:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kconst double MPCControllerNode::lr_[m[K’
+   53 |   const double [01;36m[Klr_[m[K = 1.9;
+      |                [01;36m[K^~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:348:17:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kdouble MPCControllerNode::Car_[m[K’
+  348 |   double Car_ = [01;31m[K60000.0[m[K; // N/rad
+      |                 [01;31m[K^~~~~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:55:16:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kconst double MPCControllerNode::Car_[m[K’
+   55 |   const double [01;36m[KCar_[m[K = 50000.0;
+      |                [01;36m[K^~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:360:13:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint MPCControllerNode::nx_[m[K’
+  360 |   int nx_ = [01;31m[K6[m[K;
+      |             [01;31m[K^[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:61:13:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kconst int MPCControllerNode::nx_[m[K’
+   61 |   const int [01;36m[Knx_[m[K = 6;       // [x, y, psi, vx, vy, wz]
+      |             [01;36m[K^~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:361:13:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint MPCControllerNode::nu_[m[K’
+  361 |   int nu_ = [01;31m[K2[m[K;
+      |             [01;31m[K^[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:62:13:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kconst int MPCControllerNode::nu_[m[K’
+   62 |   const int [01;36m[Knu_[m[K = 2;       // [accel, delta]
+      |             [01;36m[K^~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:[m[K In constructor ‘[01m[KMPCControllerNode::MPCControllerNode()[m[K’:
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:23:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_traj_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksubscription_state_[m[K’?
+   23 |     [01;31m[Ksubscription_traj_[m[K =
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+      |     [32m[Ksubscription_state_[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:[m[K In member function ‘[01m[Kvoid MPCControllerNode::traj_callback(mpc_car_control::msg::ReferenceTrajectory_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:66:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_trajectory_[m[K’ was not declared in this scope
+   66 |     [01;31m[Kcurrent_trajectory_[m[K = *msg;
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:[m[K In member function ‘[01m[Kvoid MPCControllerNode::control_loop()[m[K’:
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:125:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_trajectory_[m[K’ was not declared in this scope
+  125 |     if (!state_received_ || [01;31m[Kcurrent_trajectory_[m[K.points.empty()) {
+      |                             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:138:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_trajectory_[m[K’ was not declared in this scope
+  138 |     for (size_t i = 0; i < [01;31m[Kcurrent_trajectory_[m[K.points.size(); ++i) {
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:150:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_trajectory_[m[K’ was not declared in this scope
+  150 |         std::min(closest_idx + 5, [01;31m[Kcurrent_trajectory_[m[K.points.size() - 1);
+      |                                   [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/mpc_controller_node.dir/build.make:79：CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:725：CMakeFiles/mpc_controller_node.dir/all] 错误 2
+make: *** [Makefile:146：all] 错误 2

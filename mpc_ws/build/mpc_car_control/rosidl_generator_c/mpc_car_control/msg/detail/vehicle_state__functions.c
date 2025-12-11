@@ -11,10 +11,19 @@
 #include "rcutils/allocator.h"
 
 
+// Include directives for member types
+// Member `header`
+#include "std_msgs/msg/detail/header__functions.h"
+
 bool
 mpc_car_control__msg__VehicleState__init(mpc_car_control__msg__VehicleState * msg)
 {
   if (!msg) {
+    return false;
+  }
+  // header
+  if (!std_msgs__msg__Header__init(&msg->header)) {
+    mpc_car_control__msg__VehicleState__fini(msg);
     return false;
   }
   // x
@@ -29,6 +38,7 @@ mpc_car_control__msg__VehicleState__init(mpc_car_control__msg__VehicleState * ms
   // roll_rate
   // pitch_rate
   // yaw_rate
+  // az
   return true;
 }
 
@@ -38,6 +48,8 @@ mpc_car_control__msg__VehicleState__fini(mpc_car_control__msg__VehicleState * ms
   if (!msg) {
     return;
   }
+  // header
+  std_msgs__msg__Header__fini(&msg->header);
   // x
   // y
   // z
@@ -50,12 +62,19 @@ mpc_car_control__msg__VehicleState__fini(mpc_car_control__msg__VehicleState * ms
   // roll_rate
   // pitch_rate
   // yaw_rate
+  // az
 }
 
 bool
 mpc_car_control__msg__VehicleState__are_equal(const mpc_car_control__msg__VehicleState * lhs, const mpc_car_control__msg__VehicleState * rhs)
 {
   if (!lhs || !rhs) {
+    return false;
+  }
+  // header
+  if (!std_msgs__msg__Header__are_equal(
+      &(lhs->header), &(rhs->header)))
+  {
     return false;
   }
   // x
@@ -106,6 +125,10 @@ mpc_car_control__msg__VehicleState__are_equal(const mpc_car_control__msg__Vehicl
   if (lhs->yaw_rate != rhs->yaw_rate) {
     return false;
   }
+  // az
+  if (lhs->az != rhs->az) {
+    return false;
+  }
   return true;
 }
 
@@ -115,6 +138,12 @@ mpc_car_control__msg__VehicleState__copy(
   mpc_car_control__msg__VehicleState * output)
 {
   if (!input || !output) {
+    return false;
+  }
+  // header
+  if (!std_msgs__msg__Header__copy(
+      &(input->header), &(output->header)))
+  {
     return false;
   }
   // x
@@ -141,6 +170,8 @@ mpc_car_control__msg__VehicleState__copy(
   output->pitch_rate = input->pitch_rate;
   // yaw_rate
   output->yaw_rate = input->yaw_rate;
+  // az
+  output->az = input->az;
   return true;
 }
 

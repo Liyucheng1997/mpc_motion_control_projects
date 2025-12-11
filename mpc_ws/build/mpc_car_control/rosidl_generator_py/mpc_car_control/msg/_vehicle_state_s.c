@@ -16,6 +16,10 @@
 #include "mpc_car_control/msg/detail/vehicle_state__struct.h"
 #include "mpc_car_control/msg/detail/vehicle_state__functions.h"
 
+ROSIDL_GENERATOR_C_IMPORT
+bool std_msgs__msg__header__convert_from_py(PyObject * _pymsg, void * _ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * std_msgs__msg__header__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool mpc_car_control__msg__vehicle_state__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -50,6 +54,17 @@ bool mpc_car_control__msg__vehicle_state__convert_from_py(PyObject * _pymsg, voi
     assert(strncmp("mpc_car_control.msg._vehicle_state.VehicleState", full_classname_dest, 47) == 0);
   }
   mpc_car_control__msg__VehicleState * ros_message = _ros_message;
+  {  // header
+    PyObject * field = PyObject_GetAttrString(_pymsg, "header");
+    if (!field) {
+      return false;
+    }
+    if (!std_msgs__msg__header__convert_from_py(field, &ros_message->header)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
   {  // x
     PyObject * field = PyObject_GetAttrString(_pymsg, "x");
     if (!field) {
@@ -158,6 +173,15 @@ bool mpc_car_control__msg__vehicle_state__convert_from_py(PyObject * _pymsg, voi
     ros_message->yaw_rate = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // az
+    PyObject * field = PyObject_GetAttrString(_pymsg, "az");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->az = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -180,6 +204,20 @@ PyObject * mpc_car_control__msg__vehicle_state__convert_to_py(void * raw_ros_mes
     }
   }
   mpc_car_control__msg__VehicleState * ros_message = (mpc_car_control__msg__VehicleState *)raw_ros_message;
+  {  // header
+    PyObject * field = NULL;
+    field = std_msgs__msg__header__convert_to_py(&ros_message->header);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "header", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // x
     PyObject * field = NULL;
     field = PyFloat_FromDouble(ros_message->x);
@@ -306,6 +344,17 @@ PyObject * mpc_car_control__msg__vehicle_state__convert_to_py(void * raw_ros_mes
     field = PyFloat_FromDouble(ros_message->yaw_rate);
     {
       int rc = PyObject_SetAttrString(_pymessage, "yaw_rate", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // az
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->az);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "az", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

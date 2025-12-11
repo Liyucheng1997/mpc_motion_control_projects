@@ -175,6 +175,11 @@ CMakeFiles/mpc_car_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc /usr/include/malloc.h \
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__struct.h \
+ /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.h \
+ /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.h \
+ /opt/ros/foxy/include/rosidl_runtime_c/string.h \
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.h \
  /usr/include/c++/9/stdlib.h \
- /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/rosidl_generator_c__visibility_control.h
+ /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/rosidl_generator_c__visibility_control.h \
+ /opt/ros/foxy/include/std_msgs/msg/detail/header__functions.h \
+ /opt/ros/foxy/include/std_msgs/msg/rosidl_generator_c__visibility_control.h

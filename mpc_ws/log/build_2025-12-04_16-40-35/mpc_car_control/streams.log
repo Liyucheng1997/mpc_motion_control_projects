@@ -1,0 +1,161 @@
+[0.028s] Invoking command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control -- -j12 -l12
+[0.061s] [  1%] Built target mpc_car_control__cpp
+[0.062s] [ 10%] Built target mpc_car_control__rosidl_generator_c
+[0.074s] [ 19%] Built target mpc_car_control__rosidl_typesupport_c
+[0.074s] [ 36%] Built target mpc_car_control__rosidl_typesupport_cpp
+[0.074s] [ 37%] Built target mpc_car_control__rosidl_typesupport_introspection_cpp
+[0.075s] [ 48%] Built target mpc_car_control__rosidl_typesupport_introspection_c
+[0.075s] [ 55%] Built target mpc_car_control__rosidl_typesupport_fastrtps_cpp
+[0.089s] [ 64%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c
+[0.099s] [ 64%] Built target mpc_car_control
+[0.112s] [ 66%] Built target mpc_car_control__py
+[0.116s] [ 68%] Built target scenario_generator_node
+[0.119s] [ 74%] Built target control_allocator_node
+[0.119s] [ 74%] Built target vehicle_interface_node
+[0.119s] [ 77%] Built target vehicle_model_node
+[0.119s] [ 79%] Built target pid_controller_node
+[0.119s] [ 81%] Built target visualization_node
+[0.127s] [ 83%] [32mBuilding CXX object CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o[0m
+[0.127s] [ 90%] Built target mpc_car_control__python
+[0.139s] [ 98%] Built target mpc_car_control__rosidl_typesupport_c__pyext
+[0.139s] [ 98%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c__pyext
+[0.139s] [ 98%] Built target mpc_car_control__rosidl_typesupport_introspection_c__pyext
+[1.739s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:368:3:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[1.739s]   368 |   [01;31m[K}[m[K
+[1.739s]       |   [01;31m[K^[m[K
+[1.739s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:16:47:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[1.739s]    16 | class MPCControllerNode : public rclcpp::Node [01;36m[K{[m[K
+[1.740s]       |                                               [01;36m[K^[m[K
+[1.742s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:[m[K In constructor ‘[01m[KMPCControllerNode::MPCControllerNode()[m[K’:
+[1.743s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:19:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[1.743s]    19 |     [01;31m[Kpublisher_[m[K =
+[1.743s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.743s]       |     [32m[Krcl_publisher_t[m[K
+[1.750s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:23:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_traj_[m[K’ was not declared in this scope
+[1.750s]    23 |     [01;31m[Ksubscription_traj_[m[K =
+[1.750s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[1.769s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:28:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_state_[m[K’ was not declared in this scope
+[1.769s]    28 |     [01;31m[Ksubscription_state_[m[K =
+[1.769s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.780s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:34:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[1.780s]    34 |     [01;31m[Ktimer_[m[K = this->create_wall_timer(
+[1.780s]       |     [01;31m[K^~~~~~[m[K
+[1.780s]       |     [32m[Ktimer_t[m[K
+[1.790s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:37:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ku_prev_[m[K’ was not declared in this scope
+[1.790s]    37 |     [01;31m[Ku_prev_[m[K = Eigen::VectorXd::Zero(nu_);
+[1.790s]       |     [01;31m[K^~~~~~~[m[K
+[1.806s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:40:5:[m[K [01;31m[Kerror: [m[K‘[01m[KAd_[m[K’ was not declared in this scope
+[1.807s]    40 |     [01;31m[KAd_[m[K = Eigen::MatrixXd::Identity(nx_, nx_);
+[1.807s]       |     [01;31m[K^~~[m[K
+[1.823s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:41:5:[m[K [01;31m[Kerror: [m[K‘[01m[KBd_[m[K’ was not declared in this scope
+[1.823s]    41 |     [01;31m[KBd_[m[K = Eigen::MatrixXd::Zero(nx_, nu_);
+[1.823s]       |     [01;31m[K^~~[m[K
+[2.000s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:[m[K In member function ‘[01m[Kvoid MPCControllerNode::traj_callback(mpc_car_control::msg::ReferenceTrajectory_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.000s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:66:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_trajectory_[m[K’ was not declared in this scope
+[2.000s]    66 |     [01;31m[Kcurrent_trajectory_[m[K = *msg;
+[2.000s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.005s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:[m[K In member function ‘[01m[Kvoid MPCControllerNode::state_callback(mpc_car_control::msg::VehicleState_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.005s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:70:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_state_[m[K’ was not declared in this scope
+[2.005s]    70 |     [01;31m[Kcurrent_state_[m[K = *msg;
+[2.005s]       |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.009s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:71:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_received_[m[K’ was not declared in this scope
+[2.009s]    71 |     [01;31m[Kstate_received_[m[K = true;
+[2.009s]       |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.014s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:[m[K In member function ‘[01m[Kvoid MPCControllerNode::control_loop()[m[K’:
+[2.014s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:125:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_received_[m[K’ was not declared in this scope
+[2.014s]   125 |     if (![01;31m[Kstate_received_[m[K || current_trajectory_.points.empty()) {
+[2.014s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.018s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:125:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_trajectory_[m[K’ was not declared in this scope
+[2.018s]   125 |     if (!state_received_ || [01;31m[Kcurrent_trajectory_[m[K.points.empty()) {
+[2.018s]       |                             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.022s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:131:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_state_[m[K’ was not declared in this scope
+[2.022s]   131 |     x0 << [01;31m[Kcurrent_state_[m[K.x, current_state_.y, current_state_.yaw,
+[2.022s]       |           [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.026s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:138:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_trajectory_[m[K’ was not declared in this scope
+[2.027s]   138 |     for (size_t i = 0; i < [01;31m[Kcurrent_trajectory_[m[K.points.size(); ++i) {
+[2.027s]       |                            [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.031s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:150:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_trajectory_[m[K’ was not declared in this scope
+[2.031s]   150 |         std::min(closest_idx + 5, [01;31m[Kcurrent_trajectory_[m[K.points.size() - 1);
+[2.032s]       |                                   [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.034s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:161:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kfirst_run_[m[K’ was not declared in this scope
+[2.034s]   161 |     if ([01;31m[Kfirst_run_[m[K ||
+[2.035s]       |         [01;31m[K^~~~~~~~~~[m[K
+[2.039s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:162:25:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_linearization_time_[m[K’ was not declared in this scope
+[2.040s]   162 |         (current_time - [01;31m[Klast_linearization_time_[m[K).seconds() >= 0.5) {
+[2.040s]       |                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.041s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:177:7:[m[K [01;31m[Kerror: [m[K‘[01m[KAd_[m[K’ was not declared in this scope
+[2.042s]   177 |       [01;31m[KAd_[m[K = I + Ac * dt_ + 0.5 * Ac * Ac * dt_ * dt_;
+[2.042s]       |       [01;31m[K^~~[m[K
+[2.099s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:178:7:[m[K [01;31m[Kerror: [m[K‘[01m[KBd_[m[K’ was not declared in this scope
+[2.099s]   178 |       [01;31m[KBd_[m[K = (I + 0.5 * Ac * dt_) * Bc * dt_;
+[2.099s]       |       [01;31m[K^~~[m[K
+[2.128s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:182:26:[m[K [01;31m[Kerror: [m[K‘[01m[KAd_[m[K’ was not declared in this scope; did you mean ‘[01m[KAd[m[K’?
+[2.128s]   182 |     Eigen::MatrixXd Ad = [01;31m[KAd_[m[K;
+[2.128s]       |                          [01;31m[K^~~[m[K
+[2.128s]       |                          [32m[KAd[m[K
+[2.129s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:183:26:[m[K [01;31m[Kerror: [m[K‘[01m[KBd_[m[K’ was not declared in this scope; did you mean ‘[01m[KBd[m[K’?
+[2.129s]   183 |     Eigen::MatrixXd Bd = [01;31m[KBd_[m[K;
+[2.129s]       |                          [01;31m[K^~~[m[K
+[2.130s]       |                          [32m[KBd[m[K
+[2.181s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:280:21:[m[K [01;31m[Kerror: [m[K‘[01m[Ku_prev_[m[K’ was not declared in this scope
+[2.181s]   280 |       C.head(nu_) = [01;31m[Ku_prev_[m[K;
+[2.181s]       |                     [01;31m[K^~~~~~~[m[K
+[2.278s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:309:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[2.278s]   309 |       [01;31m[Kpublisher_[m[K->publish(cmd_msg);
+[2.278s]       |       [01;31m[K^~~~~~~~~~[m[K
+[2.278s]       |       [32m[Krcl_publisher_t[m[K
+[2.283s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:330:48:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectory[m[K’ is not a member of ‘[01m[Kmpc_car_control::msg[m[K’
+[2.283s]   330 |     rclcpp::Subscription<mpc_car_control::msg::[01;31m[KTrajectory[m[K>::SharedPtr
+[2.283s]       |                                                [01;31m[K^~~~~~~~~~[m[K
+[2.283s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:330:48:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectory[m[K’ is not a member of ‘[01m[Kmpc_car_control::msg[m[K’
+[2.283s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:330:58:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.283s]   330 |     rclcpp::Subscription<mpc_car_control::msg::Trajectory[01;31m[K>[m[K::SharedPtr
+[2.283s]       |                                                          [01;31m[K^[m[K
+[2.283s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:330:58:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[2.283s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:331:9:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Ksubscription_traj_[m[K’
+[2.283s]   331 |         [01;31m[Ksubscription_traj_[m[K;
+[2.283s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.290s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:336:27:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectory[m[K’ is not a member of ‘[01m[Kmpc_car_control::msg[m[K’
+[2.290s]   336 |     mpc_car_control::msg::[01;31m[KTrajectory[m[K current_trajectory_;
+[2.290s]       |                           [01;31m[K^~~~~~~~~~[m[K
+[2.290s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:338:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstate_received_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.290s]   338 |     bool [01;35m[Kstate_received_[m[K = false;
+[2.290s]       |          [01;35m[K^~~~~~~~~~~~~~~[m[K
+[2.290s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:341:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdt_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.290s]   341 |     double [01;35m[Kdt_[m[K = 0.01; // 100Hz
+[2.290s]       |            [01;35m[K^~~[m[K
+[2.290s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:342:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KN_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.290s]   342 |     int [01;35m[KN_[m[K = 50;       // 0.5s Horizon
+[2.290s]       |         [01;35m[K^~[m[K
+[2.290s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:343:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Km_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.290s]   343 |     double [01;35m[Km_[m[K = 1412.0;
+[2.290s]       |            [01;35m[K^~[m[K
+[2.291s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:344:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KIz_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.291s]   344 |     double [01;35m[KIz_[m[K = 1536.7;
+[2.291s]       |            [01;35m[K^~~[m[K
+[2.291s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:345:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klf_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.291s]   345 |     double [01;35m[Klf_[m[K = 1.015;
+[2.291s]       |            [01;35m[K^~~[m[K
+[2.291s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:346:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klr_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.291s]   346 |     double [01;35m[Klr_[m[K = 1.895;
+[2.291s]       |            [01;35m[K^~~[m[K
+[2.291s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:347:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KCar_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.291s]   347 |     double [01;35m[KCar_[m[K = 60000.0; // N/rad
+[2.291s]       |            [01;35m[K^~~~[m[K
+[2.291s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:351:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfirst_run_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.291s]   351 |     bool [01;35m[Kfirst_run_[m[K = true;
+[2.291s]       |          [01;35m[K^~~~~~~~~~[m[K
+[2.291s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:359:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Knx_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.292s]   359 |     int [01;35m[Knx_[m[K = 6;
+[2.292s]       |         [01;35m[K^~~[m[K
+[2.292s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:360:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Knu_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[2.292s]   360 |     int [01;35m[Knu_[m[K = 2;
+[2.292s]       |         [01;35m[K^~~[m[K
+[2.294s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:[m[K At global scope:
+[2.294s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:368:3:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+[2.294s]   368 |   [01;31m[K}[m[K
+[2.294s]       |   [01;31m[K^[m[K
+[5.004s] make[2]: *** [CMakeFiles/mpc_controller_node.dir/build.make:79：CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o] 错误 1
+[5.004s] make[1]: *** [CMakeFiles/Makefile2:725：CMakeFiles/mpc_controller_node.dir/all] 错误 2
+[5.004s] make: *** [Makefile:146：all] 错误 2
+[5.006s] Invoked command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control -- -j12 -l12

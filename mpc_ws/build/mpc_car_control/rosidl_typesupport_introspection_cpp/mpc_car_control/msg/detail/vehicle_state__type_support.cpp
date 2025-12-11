@@ -37,7 +37,22 @@ void VehicleState_fini_function(void * message_memory)
   typed_message->~VehicleState();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember VehicleState_message_member_array[12] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember VehicleState_message_member_array[14] = {
+  {
+    "header",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<std_msgs::msg::Header>(),  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(mpc_car_control::msg::VehicleState, header),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
   {
     "x",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
@@ -217,13 +232,28 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember VehicleState_
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "az",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(mpc_car_control::msg::VehicleState, az),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers VehicleState_message_members = {
   "mpc_car_control::msg",  // message namespace
   "VehicleState",  // message name
-  12,  // number of fields
+  14,  // number of fields
   sizeof(mpc_car_control::msg::VehicleState),
   VehicleState_message_member_array,  // message members
   VehicleState_init_function,  // function to initialize message memory (memory has to be allocated)

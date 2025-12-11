@@ -181,5 +181,9 @@ CMakeFiles/mpc_car_control__python.dir/rosidl_generator_py/mpc_car_control/msg/_
  /usr/include/python3.8/numpy/__multiarray_api.h \
  /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h \
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__struct.h \
+ /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.h \
+ /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.h \
+ /opt/ros/foxy/include/rosidl_runtime_c/string.h \
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h \
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/detail/vehicle_state__functions.h \
  /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c/mpc_car_control/msg/rosidl_generator_c__visibility_control.h

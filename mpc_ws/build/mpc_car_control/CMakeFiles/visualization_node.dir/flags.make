@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DDEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"mpc_car_control\" -DSPDLOG_COMPILED_LIB
 
-CXX_INCLUDES = -I/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp -isystem /opt/ros/foxy/include -isystem /usr/include/eigen3
+CXX_INCLUDES = -I/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_cpp -isystem /usr/include/eigen3 -isystem /opt/ros/foxy/include
 
 CXX_FLAGS = -std=gnu++14 -Wall -Wextra -Wpedantic
 

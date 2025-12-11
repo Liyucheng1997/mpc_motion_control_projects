@@ -1,7 +1,1 @@
-std_msgs/Header header
-float64 fx
-float64 fy
-float64 mz
-float64 fz
-float64 mx
-float64 my
+/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/msg/ControlCommandBody.msg

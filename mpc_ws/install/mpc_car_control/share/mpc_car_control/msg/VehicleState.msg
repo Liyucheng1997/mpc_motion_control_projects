@@ -1,12 +1,1 @@
-float64 x
-float64 y
-float64 z
-float64 roll
-float64 pitch
-float64 yaw
-float64 vx
-float64 vy
-float64 vz
-float64 roll_rate
-float64 pitch_rate
-float64 yaw_rate
+/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/msg/VehicleState.msg

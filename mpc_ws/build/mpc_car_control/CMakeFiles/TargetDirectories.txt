@@ -16,6 +16,7 @@
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/scenario_generator_node.dir
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/mpc_controller_node.dir
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/control_allocator_node.dir
+/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/pid_controller_node.dir
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/vehicle_interface_node.dir
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/visualization_node.dir
 /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/CMakeFiles/vehicle_model_node.dir

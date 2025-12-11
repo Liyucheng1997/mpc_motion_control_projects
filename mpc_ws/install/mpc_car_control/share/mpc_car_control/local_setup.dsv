@@ -1,4 +1,1 @@
-source;share/mpc_car_control/environment/ament_prefix_path.sh
-source;share/mpc_car_control/environment/library_path.sh
-source;share/mpc_car_control/environment/path.sh
-source;share/mpc_car_control/environment/pythonpath.sh
+/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/ament_cmake_environment_hooks/local_setup.dsv

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"mpc_car_control\" -Dmpc_car_control__rosidl_typesupport_c_EXPORTS
 
-CXX_INCLUDES = -I/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c -I/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_typesupport_c -isystem /opt/ros/foxy/include
+CXX_INCLUDES = -I/usr/include/eigen3 -I/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_generator_c -I/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_typesupport_c -isystem /opt/ros/foxy/include
 
 CXX_FLAGS = -std=gnu++14 -fPIC -Wall
 

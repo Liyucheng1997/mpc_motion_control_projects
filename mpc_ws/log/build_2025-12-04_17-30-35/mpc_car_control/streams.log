@@ -1,0 +1,33 @@
+[0.026s] Invoking command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control -- -j12 -l12
+[0.061s] [  1%] Built target mpc_car_control__cpp
+[0.061s] [ 10%] Built target mpc_car_control__rosidl_generator_c
+[0.074s] [ 19%] Built target mpc_car_control__rosidl_typesupport_c
+[0.074s] [ 33%] Built target mpc_car_control__rosidl_typesupport_introspection_c
+[0.075s] [ 46%] Built target mpc_car_control__rosidl_typesupport_introspection_cpp
+[0.075s] [ 46%] Built target mpc_car_control__rosidl_typesupport_cpp
+[0.075s] [ 55%] Built target mpc_car_control__rosidl_typesupport_fastrtps_cpp
+[0.089s] [ 64%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c
+[0.099s] [ 64%] Built target mpc_car_control
+[0.114s] [ 66%] Built target mpc_car_control__py
+[0.117s] [ 68%] Built target visualization_node
+[0.118s] [ 71%] Built target pid_controller_node
+[0.119s] [ 74%] Built target vehicle_interface_node
+[0.119s] [ 76%] Built target control_allocator_node
+[0.119s] [ 79%] Built target scenario_generator_node
+[0.119s] [ 81%] Built target vehicle_model_node
+[0.126s] [ 83%] [32mBuilding CXX object CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o[0m
+[0.128s] [ 90%] Built target mpc_car_control__python
+[0.140s] [ 98%] Built target mpc_car_control__rosidl_typesupport_introspection_c__pyext
+[0.140s] [ 98%] Built target mpc_car_control__rosidl_typesupport_c__pyext
+[0.140s] [ 98%] Built target mpc_car_control__rosidl_typesupport_fastrtps_c__pyext
+[2.016s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:[m[K In member function ‘[01m[Kvoid MPCControllerNode::get_linearized_matrices(const VectorXd&, Eigen::MatrixXd&, Eigen::MatrixXd&)[m[K’:
+[2.016s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:143:25:[m[K [01;31m[Kerror: [m[K‘[01m[KIxx_[m[K’ was not declared in this scope
+[2.017s]   143 |     B(10, 3) = 1000.0 / [01;31m[KIxx_[m[K;
+[2.017s]       |                         [01;31m[K^~~~[m[K
+[2.018s] [01m[K/home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control/src/mpc_controller_node.cpp:146:25:[m[K [01;31m[Kerror: [m[K‘[01m[KIyy_[m[K’ was not declared in this scope
+[2.018s]   146 |     B(11, 4) = 1000.0 / [01;31m[KIyy_[m[K;
+[2.018s]       |                         [01;31m[K^~~~[m[K
+[5.346s] make[2]: *** [CMakeFiles/mpc_controller_node.dir/build.make:79：CMakeFiles/mpc_controller_node.dir/src/mpc_controller_node.cpp.o] 错误 1
+[5.346s] make[1]: *** [CMakeFiles/Makefile2:725：CMakeFiles/mpc_controller_node.dir/all] 错误 2
+[5.346s] make: *** [Makefile:146：all] 错误 2
+[5.348s] Invoked command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control -- -j12 -l12

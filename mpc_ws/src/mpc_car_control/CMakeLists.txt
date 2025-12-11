@@ -24,6 +24,9 @@ find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(Eigen3 REQUIRED)
+
+include_directories(${EIGEN3_INCLUDE_DIRS})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -70,6 +73,11 @@ ament_target_dependencies(control_allocator_node rclcpp std_msgs geometry_msgs)
 rosidl_target_interfaces(control_allocator_node
   ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
+add_executable(pid_controller_node src/pid_controller_node.cpp)
+ament_target_dependencies(pid_controller_node rclcpp std_msgs geometry_msgs)
+rosidl_target_interfaces(pid_controller_node
+  ${PROJECT_NAME} "rosidl_typesupport_cpp")
+
 add_executable(vehicle_interface_node src/vehicle_interface_node.cpp)
 ament_target_dependencies(vehicle_interface_node rclcpp std_msgs geometry_msgs)
 rosidl_target_interfaces(vehicle_interface_node
@@ -94,6 +102,7 @@ rosidl_target_interfaces(vehicle_model_node
 
 install(TARGETS
   control_allocator_node
+  pid_controller_node
   vehicle_interface_node
   visualization_node
   vehicle_model_node

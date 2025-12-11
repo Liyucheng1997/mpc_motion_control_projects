@@ -1,10 +1,1 @@
-msg/ActuatorCommand.idl
-msg/ActuatorCommand.msg
-msg/ControlCommandBody.idl
-msg/ControlCommandBody.msg
-msg/ReferenceTrajectory.idl
-msg/ReferenceTrajectory.msg
-msg/VehicleState.idl
-msg/VehicleState.msg
-msg/WheelGroundHeights.idl
-msg/WheelGroundHeights.msg
+/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/mpc_car_control

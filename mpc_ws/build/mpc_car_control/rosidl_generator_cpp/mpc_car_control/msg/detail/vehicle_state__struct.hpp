@@ -14,6 +14,10 @@
 #include <vector>
 
 
+// Include directives for member types
+// Member 'header'
+#include "std_msgs/msg/detail/header__struct.hpp"
+
 #ifndef _WIN32
 # define DEPRECATED__mpc_car_control__msg__VehicleState __attribute__((deprecated))
 #else
@@ -33,6 +37,7 @@ struct VehicleState_
   using Type = VehicleState_<ContainerAllocator>;
 
   explicit VehicleState_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : header(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -49,12 +54,13 @@ struct VehicleState_
       this->roll_rate = 0.0;
       this->pitch_rate = 0.0;
       this->yaw_rate = 0.0;
+      this->az = 0.0;
     }
   }
 
   explicit VehicleState_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : header(_alloc, _init)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
@@ -70,10 +76,14 @@ struct VehicleState_
       this->roll_rate = 0.0;
       this->pitch_rate = 0.0;
       this->yaw_rate = 0.0;
+      this->az = 0.0;
     }
   }
 
   // field types and members
+  using _header_type =
+    std_msgs::msg::Header_<ContainerAllocator>;
+  _header_type header;
   using _x_type =
     double;
   _x_type x;
@@ -110,8 +120,17 @@ struct VehicleState_
   using _yaw_rate_type =
     double;
   _yaw_rate_type yaw_rate;
+  using _az_type =
+    double;
+  _az_type az;
 
   // setters for named parameter idiom
+  Type & set__header(
+    const std_msgs::msg::Header_<ContainerAllocator> & _arg)
+  {
+    this->header = _arg;
+    return *this;
+  }
   Type & set__x(
     const double & _arg)
   {
@@ -184,6 +203,12 @@ struct VehicleState_
     this->yaw_rate = _arg;
     return *this;
   }
+  Type & set__az(
+    const double & _arg)
+  {
+    this->az = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -227,6 +252,9 @@ struct VehicleState_
   // comparison operators
   bool operator==(const VehicleState_ & other) const
   {
+    if (this->header != other.header) {
+      return false;
+    }
     if (this->x != other.x) {
       return false;
     }
@@ -261,6 +289,9 @@ struct VehicleState_
       return false;
     }
     if (this->yaw_rate != other.yaw_rate) {
+      return false;
+    }
+    if (this->az != other.az) {
       return false;
     }
     return true;
