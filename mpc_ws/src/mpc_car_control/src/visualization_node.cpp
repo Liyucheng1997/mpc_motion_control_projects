@@ -40,6 +40,19 @@ public:
 
     tf_broadcaster_ = std::make_unique<tf2_ros::TransformBroadcaster>(*this);
 
+    // Initialize last_state_
+    last_state_.header.frame_id = "map";
+    last_state_.x = 0.0;
+    last_state_.y = 0.0;
+    last_state_.z = 0.0;
+    last_state_.roll = 0.0;
+    last_state_.pitch = 0.0;
+    last_state_.yaw = 0.0;
+
+    // Timer for TF (100Hz)
+    timer_ = this->create_wall_timer(
+        10ms, std::bind(&VisualizationNode::timer_callback, this));
+
     // Initialize actual path marker
     actual_path_marker_.header.frame_id = "map";
     actual_path_marker_.ns = "actual_path";
@@ -57,25 +70,31 @@ public:
   }
 
 private:
-  void state_callback(const mpc_car_control::msg::VehicleState::SharedPtr msg) {
-    // 1. Broadcast TF (map -> base_link)
+  void timer_callback() {
     geometry_msgs::msg::TransformStamped t;
-    t.header.stamp = msg->header.stamp;
+    t.header.stamp = this->now();
     t.header.frame_id = "map";
     t.child_frame_id = "base_link";
 
-    t.transform.translation.x = msg->x;
-    t.transform.translation.y = msg->y;
-    t.transform.translation.z = msg->z;
+    t.transform.translation.x = last_state_.x;
+    t.transform.translation.y = last_state_.y;
+    t.transform.translation.z = last_state_.z;
 
     tf2::Quaternion q;
-    q.setRPY(msg->roll, msg->pitch, msg->yaw);
+    q.setRPY(last_state_.roll, last_state_.pitch, last_state_.yaw);
     t.transform.rotation.x = q.x();
     t.transform.rotation.y = q.y();
     t.transform.rotation.z = q.z();
     t.transform.rotation.w = q.w();
 
     tf_broadcaster_->sendTransform(t);
+  }
+
+  void state_callback(const mpc_car_control::msg::VehicleState::SharedPtr msg) {
+    last_state_ = *msg; // Update state for TF timer
+
+    // 1. Broadcast TF (map -> base_link) - MOVED TO TIMER
+    // (Removed to avoid duplicate/stale TF)
 
     // 2. Update Actual Path (with Deadband)
     geometry_msgs::msg::Point p;
@@ -433,6 +452,8 @@ private:
   mpc_car_control::msg::ReferenceTrajectory ref_traj_;
   visualization_msgs::msg::Marker
       error_graph_marker_; // Visualizes error as Z-height
+  rclcpp::TimerBase::SharedPtr timer_;
+  mpc_car_control::msg::VehicleState last_state_;
 };
 
 int main(int argc, char *argv[]) {

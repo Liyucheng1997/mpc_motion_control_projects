@@ -1,0 +1,124 @@
+[0.048s] Invoking command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake /home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control -DCMAKE_INSTALL_PREFIX=/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control
+[0.052s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.052s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.052s]   CMake.
+[0.052s] 
+[0.052s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.053s]   to tell CMake that the project requires at least <min> but has been updated
+[0.053s]   to work with policies introduced by <max> or earlier.
+[0.053s] 
+[0.053s] [0m
+[0.255s] -- The C compiler identification is GNU 9.4.0
+[0.390s] -- The CXX compiler identification is GNU 9.4.0
+[0.401s] -- Detecting C compiler ABI info
+[0.522s] -- Detecting C compiler ABI info - done
+[0.543s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.543s] -- Detecting C compile features
+[0.544s] -- Detecting C compile features - done
+[0.559s] -- Detecting CXX compiler ABI info
+[0.638s] -- Detecting CXX compiler ABI info - done
+[0.655s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.656s] -- Detecting CXX compile features
+[0.656s] -- Detecting CXX compile features - done
+[0.668s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.674s] [33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.674s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.674s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.674s]   the cmake_policy command to set the policy and suppress this warning.
+[0.674s] 
+[0.674s] Call Stack (most recent call first):
+[0.674s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.674s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.674s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.675s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.675s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.675s]   CMakeLists.txt:19 (find_package)
+[0.675s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.675s] [0m
+[0.694s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")
+[0.695s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.946s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.003s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.014s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.127s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")
+[1.162s] -- Found FastRTPS: /opt/ros/foxy/include
+[1.279s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.350s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.352s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.354s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.449s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.449s] -- Looking for pthread_create in pthreads
+[1.499s] -- Looking for pthread_create in pthreads - not found
+[1.499s] -- Looking for pthread_create in pthread
+[1.563s] -- Looking for pthread_create in pthread - found
+[1.565s] -- Found Threads: TRUE
+[1.732s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[1.869s] -- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)
+[1.881s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[2.218s] -- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)
+[2.226s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[2.231s] -- Found Eigen3: TRUE (found version "3.3.7")
+[2.257s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.336s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[2.349s] [33mCMake Warning (dev) at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:40 (find_package):
+[2.349s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[2.349s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[2.349s]   the cmake_policy command to set the policy and suppress this warning.
+[2.349s] 
+[2.349s] Call Stack (most recent call first):
+[2.349s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[2.349s]   CMakeLists.txt:44 (rosidl_generate_interfaces)
+[2.349s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.349s] [0m
+[2.367s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10")
+[2.502s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[2.883s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.805s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.853s] [33mCMake Warning (dev) at /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+[3.853s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[3.854s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[3.854s]   the cmake_policy command to set the policy and suppress this warning.
+[3.854s] 
+[3.855s] Call Stack (most recent call first):
+[3.855s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[3.855s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[3.856s]   CMakeLists.txt:44 (rosidl_generate_interfaces)
+[3.856s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[3.856s] [0m
+[3.884s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5")
+[3.886s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[3.888s] [33mCMake Warning (dev) at /opt/ros/foxy/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:45 (find_package):
+[3.888s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[3.889s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[3.889s]   the cmake_policy command to set the policy and suppress this warning.
+[3.889s] 
+[3.889s] Call Stack (most recent call first):
+[3.889s]   /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[3.889s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[3.889s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[3.889s]   CMakeLists.txt:44 (rosidl_generate_interfaces)
+[3.889s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[3.889s] [0m
+[3.910s] [33mCMake Warning (dev) at /opt/ros/foxy/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:133 (find_package):
+[3.910s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[3.910s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[3.910s]   the cmake_policy command to set the policy and suppress this warning.
+[3.910s] 
+[3.910s] Call Stack (most recent call first):
+[3.910s]   /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[3.910s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[3.911s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[3.911s]   CMakeLists.txt:44 (rosidl_generate_interfaces)
+[3.911s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[3.911s] [0m
+[3.919s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5")
+[3.919s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.919s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[3.919s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[3.939s] -- Found PythonExtra: .so
+[4.018s] [31mCMake Error at CMakeLists.txt:55 (rosidl_get_typesupport_target):
+[4.018s]   Unknown CMake command "rosidl_get_typesupport_target".
+[4.018s] 
+[4.018s] [0m
+[4.018s] -- Configuring incomplete, errors occurred!
+[4.027s] Invoked command in '/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake /home/yucheng/mpc_motion_control_projects/mpc_ws/src/mpc_car_control -DCMAKE_INSTALL_PREFIX=/home/yucheng/mpc_motion_control_projects/mpc_ws/install/mpc_car_control

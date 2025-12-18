@@ -1,1 +1,0 @@
-/home/yucheng/mpc_motion_control_projects/mpc_ws/build/mpc_car_control/rosidl_typesupport_fastrtps_c/mpc_car_control/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
