@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <chrono>
 #include <cmath>
+#include <fstream>
 #include <memory>
 #include <vector>
 
@@ -42,6 +43,25 @@ public:
 
     RCLCPP_INFO(this->get_logger(),
                 "Hybrid Controller Started (Callback Driven for Sync).");
+  }
+
+  ~MPCControllerNode() {
+    // Save execution times to CSV
+    std::string log_path = "/home/yucheng/mpc_motion_control_projects/mpc_ws/"
+                           "plot/mpc_execution_times.csv";
+    std::ofstream csv_file(log_path);
+    if (csv_file.is_open()) {
+      csv_file << "Execution Time (ms)\n";
+      for (const auto &time : execution_times_) {
+        csv_file << time << "\n";
+      }
+      csv_file.close();
+      RCLCPP_INFO(this->get_logger(), "Saved execution times to %s",
+                  log_path.c_str());
+    } else {
+      RCLCPP_ERROR(this->get_logger(), "Failed to open log file: %s",
+                   log_path.c_str());
+    }
   }
 
 private:
@@ -186,6 +206,8 @@ private:
   }
 
   void control_loop() {
+    auto start_time = std::chrono::high_resolution_clock::now();
+
     if (!state_received_ || current_trajectory_.points.empty()) {
       return;
     }
@@ -439,6 +461,11 @@ private:
     RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 500,
                          "MPC[dFz:%.0f Mx:%.0f My:%.0f] Err[CTE:%.2f Yaw:%.2f]",
                          u0(2), u0(3), u0(4), cte, yaw_err);
+
+    auto end_time = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(
+        end_time - start_time);
+    execution_times_.push_back(duration.count() / 1000.0); // Convert to ms
   }
 
   rclcpp::Publisher<mpc_car_control::msg::ControlCommandBody>::SharedPtr
@@ -461,6 +488,9 @@ private:
 
   // Previous Input
   Eigen::VectorXd u_prev_;
+
+  // Profiling
+  std::vector<double> execution_times_;
 };
 
 int main(int argc, char *argv[]) {

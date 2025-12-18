@@ -35,4 +35,4 @@ Thumbs.db
 *.a
 *.la
 *.o
-*.obj
+*.objgit rm -r --cached .

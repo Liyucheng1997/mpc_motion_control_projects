@@ -1,7 +1,10 @@
 #include <algorithm>
+#include <chrono>
 #include <cmath>
+#include <fstream>
 #include <functional>
 #include <memory>
+#include <vector>
 
 #include "mpc_car_control/msg/actuator_command.hpp"
 #include "mpc_car_control/msg/control_command_body.hpp"
@@ -47,6 +50,25 @@ public:
         active_enabled ? "ON" : "OFF");
   }
 
+  ~ControlAllocatorNode() {
+    // Save execution times to CSV
+    std::string log_path = "/home/yucheng/mpc_motion_control_projects/mpc_ws/"
+                           "plot/allocator_execution_times.csv";
+    std::ofstream csv_file(log_path);
+    if (csv_file.is_open()) {
+      csv_file << "Execution Time (ms)\n";
+      for (const auto &time : execution_times_) {
+        csv_file << time << "\n";
+      }
+      csv_file.close();
+      RCLCPP_INFO(this->get_logger(), "Saved execution times to %s",
+                  log_path.c_str());
+    } else {
+      RCLCPP_ERROR(this->get_logger(), "Failed to open log file: %s",
+                   log_path.c_str());
+    }
+  }
+
 private:
   void state_callback(const mpc_car_control::msg::VehicleState::SharedPtr msg) {
     current_state_ = *msg;
@@ -82,6 +104,8 @@ private:
   // 2. PID Callback: Main Trigger. Merge and Publish.
   void
   pid_callback(const mpc_car_control::msg::ActuatorCommand::SharedPtr msg) {
+    auto start_time = std::chrono::high_resolution_clock::now();
+
     auto cmd = *msg; // Copy PID commands (Steer, Throttle, Brake)
     cmd.header.stamp =
         this->now(); // Update timestamp for the published command
@@ -112,6 +136,11 @@ private:
           cmd.active_suspension_force[0], cmd.active_suspension_force[1],
           cmd.active_suspension_force[2], cmd.active_suspension_force[3]);
     }
+
+    auto end_time = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(
+        end_time - start_time);
+    execution_times_.push_back(duration.count() / 1000.0); // Convert to ms
   }
 
   rclcpp::Publisher<mpc_car_control::msg::ActuatorCommand>::SharedPtr
@@ -125,6 +154,9 @@ private:
 
   mpc_car_control::msg::VehicleState current_state_;
   bool state_received_ = false;
+
+  // Profiling
+  std::vector<double> execution_times_;
 };
 
 int main(int argc, char *argv[]) {
