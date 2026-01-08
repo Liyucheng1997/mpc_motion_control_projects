@@ -98,6 +98,8 @@ private:
   mpc_car_control::msg::WheelGroundHeights last_wheels_;
   bool cmd_received_ = false;
   rclcpp::Time sim_time_;
+  rclcpp::Time initial_sim_time_;
+  bool initial_time_set_ = false;
 
   // Smoothing variables
   double smooth_throttle_ = 0.0;
@@ -146,6 +148,19 @@ private:
   void sim_loop() {
     double dt_total = 0.01; // 10ms total step
     sim_time_ += rclcpp::Duration::from_seconds(dt_total);
+
+    if (!initial_time_set_) {
+      initial_sim_time_ = sim_time_;
+      initial_time_set_ = true;
+    }
+
+    // 12s Automatic Shutdown
+    if ((sim_time_ - initial_sim_time_).seconds() >= 12.0) {
+      RCLCPP_INFO(this->get_logger(),
+                  "Simulation reached 12s. Shutting down node...");
+      rclcpp::shutdown();
+      return;
+    }
 
     if (paused_) {
       // Still publish state to keep visualization alive, but don't integrate
