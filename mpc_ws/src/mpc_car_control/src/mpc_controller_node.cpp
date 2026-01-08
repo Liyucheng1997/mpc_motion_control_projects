@@ -37,18 +37,31 @@ public:
 
     u_prev_ = Eigen::VectorXd::Zero(nu_);
 
-    // Initialize Cache
+    // 1. Declare and Get Parameters for Live Tuning
+    this->declare_parameter("q_pos", 1000.0);
+    this->declare_parameter("q_yaw", 2000.0);
+    this->declare_parameter("q_vx", 10.0);
+    this->declare_parameter("q_roll", 1500.0);
+    this->declare_parameter("q_pitch", 1500.0);
+    this->declare_parameter("q_z", 10.0);
+    this->declare_parameter("r_accel", 1.0);
+    this->declare_parameter("r_steer", 1.0);
+    this->declare_parameter("r_suspension", 0.5);
+    this->declare_parameter("r_yaw_moment", 10000.0);
+    this->declare_parameter("deadband_rad", 0.005); // ~0.3 deg
+
     Ad_ = Eigen::MatrixXd::Identity(nx_, nx_);
     Bd_ = Eigen::MatrixXd::Zero(nx_, nu_);
 
     RCLCPP_INFO(this->get_logger(),
-                "Hybrid Controller Started (Callback Driven for Sync).");
+                "MPC Controller Optimized & Parameterized Started.");
   }
 
   ~MPCControllerNode() {
     // Save execution times to CSV
-    std::string log_path = "/home/yucheng/mpc_motion_control_projects/mpc_ws/"
-                           "plot/mpc_execution_times.csv";
+    std::string log_path =
+        "/home/yucheng/MPC_Projects/mpc_motion_control_projects/mpc_ws/"
+        "plot/mpc_execution_times.csv";
     std::ofstream csv_file(log_path);
     if (csv_file.is_open()) {
       csv_file << "Execution Time (ms)\n";
@@ -79,7 +92,7 @@ private:
   // PID Parameters REMOVED (Parallel Architecture)
 
   // MPC Parameters
-  const int N_ = 50;       // Prediction Horizon (1.0s at dt=0.02)
+  const int N_ = 30;       // Prediction Horizon (0.6s at dt=0.02)
   const double dt_ = 0.02; // Time step (Stable discretization)
   const int nx_ = 12;      // [x, y, psi, vx, vy, wz, z, phi, theta, vz, p, q]
   const int nu_ = 6;       // [accel, Fyf_kN, dFz_kN, Mx_kNm, My_kNm, Mz_kNm]
@@ -267,24 +280,30 @@ private:
     Eigen::MatrixXd Ad = Ad_;
     Eigen::MatrixXd Bd = Bd_;
 
-    // 5. Prediction Matrices
-    int N = N_; // Horizon
+    // 5. Prediction Matrices (Optimized O(N) Construction)
+    int N = N_;
     Eigen::MatrixXd Phi(nx_ * N, nx_);
     Eigen::MatrixXd Gamma(nx_ * N, nu_ * N);
     Gamma.setZero();
 
-    Eigen::MatrixXd A_pow = Ad;
-    for (int k = 0; k < N; ++k) {
-      Phi.block(k * nx_, 0, nx_, nx_) = A_pow;
-      for (int j = 0; j <= k; ++j) {
-        Eigen::MatrixXd term = Eigen::MatrixXd::Identity(nx_, nx_);
-        if (k > j) {
-          for (int p = 0; p < (k - j); ++p)
-            term = term * Ad;
-        }
-        Gamma.block(k * nx_, j * nu_, nx_, nu_) = term * Bd;
+    // Precompute powders of Ad and Ad^k * Bd
+    std::vector<Eigen::MatrixXd> Ad_pow(N + 1);
+    Ad_pow[0] = Eigen::MatrixXd::Identity(nx_, nx_);
+    for (int i = 1; i <= N; ++i) {
+      Ad_pow[i] = Ad_pow[i - 1] * Ad;
+    }
+
+    std::vector<Eigen::MatrixXd> Ad_pow_Bd(N);
+    for (int i = 0; i < N; ++i) {
+      Ad_pow_Bd[i] = Ad_pow[i] * Bd;
+    }
+
+    // Fill Phi and Gamma
+    for (int i = 0; i < N; ++i) {
+      Phi.middleRows(i * nx_, nx_) = Ad_pow[i + 1];
+      for (int j = 0; j <= i; ++j) {
+        Gamma.block(i * nx_, j * nu_, nx_, nu_) = Ad_pow_Bd[i - j];
       }
-      A_pow = A_pow * Ad;
     }
 
     // 5. Reference Vector
@@ -333,26 +352,29 @@ private:
       R_ref(k * nx_ + 8) = 0.0;  // Target Pitch
     }
 
-    // 6. Weights
+    // 6. Dynamic Weights from Parameters
     Eigen::VectorXd Q_diag(nx_);
-    Eigen::VectorXd R_diag(nu_);
-    Eigen::VectorXd R_rate_diag(nu_);
+    double q_pos = this->get_parameter("q_pos").as_double();
+    double q_yaw = this->get_parameter("q_yaw").as_double();
+    double q_vx = this->get_parameter("q_vx").as_double();
+    double q_roll = this->get_parameter("q_roll").as_double();
+    double q_pitch = this->get_parameter("q_pitch").as_double();
+    double q_z = this->get_parameter("q_z").as_double();
 
-    // Weights (Optimized for Active Suspension)
     // [x, y, psi, vx, vy, wz, z, phi, theta, vz, p, q]
-    // High penalties for Position and Yaw error to force tracking
-    // Optimized for "Active Suspension" -> High penalty on Roll (phi) and Pitch
-    // (theta)
-    // COMPLIANT TUNING: Relaxed z (50->1), Reduced vz (200->50).
-    Q_diag << 1000.0, 1000.0, 2000.0, 10.0, 10.0, 10.0, 1.0, 500.0, 500.0, 50.0,
+    Q_diag << q_pos, q_pos, q_yaw, q_vx, 10.0, 10.0, q_z, q_roll, q_pitch, 50.0,
         50.0, 50.0;
 
-    // Weights (Optimized for Active Suspension)
-    // [accel, delta_rad, dFz_kN, Mx_kNm, My_kNm, Mz_kNm]
-    R_diag << 1.0, 1.0, 0.1, 0.1, 0.1, 10000.0;
+    Eigen::VectorXd R_diag(nu_);
+    double r_accel = this->get_parameter("r_accel").as_double();
+    double r_steer = this->get_parameter("r_steer").as_double();
+    double r_susp = this->get_parameter("r_suspension").as_double();
+    double r_mz = this->get_parameter("r_yaw_moment").as_double();
 
-    // Rate Costs (Damping & Smoothing)
-    // COMPLIANT TUNING: Faster reaction (100->10) to catch bump impact.
+    // [accel, delta_rad, dFz_kN, Mx_kNm, My_kNm, Mz_kNm]
+    R_diag << r_accel, r_steer, r_susp, r_susp, r_susp, r_mz;
+
+    Eigen::VectorXd R_rate_diag(nu_);
     R_rate_diag << 1.0, 1.0, 10.0, 10.0, 10.0, 1000.0;
 
     Eigen::MatrixXd Q_bar = Eigen::MatrixXd::Zero(nx_ * N, nx_ * N);
@@ -397,10 +419,11 @@ private:
     Eigen::VectorXd F =
         Gamma.transpose() * Q_bar * E + P.transpose() * R_rate_bar * C;
 
-    // Regularization
-    H += Eigen::MatrixXd::Identity(nu_ * N, nu_ * N) * 1e-3;
+    // Higher Regularization for Stability
+    H += Eigen::MatrixXd::Identity(nu_ * N, nu_ * N) * 1.0;
 
-    Eigen::VectorXd U = H.ldlt().solve(F);
+    // Robust Solver: Householder QR decomposition (More stable than LDLT)
+    Eigen::VectorXd U = H.colPivHouseholderQr().solve(F);
 
     // 8. Publish & Saturate
     auto cmd_msg = mpc_car_control::msg::ControlCommandBody();
@@ -439,10 +462,20 @@ private:
     double fz_val = m_ * g_ + u0(2) * 1000.0;
     cmd_msg.fz = std::max(0.0, fz_val); // No negative downforce (flying)
 
-    cmd_msg.mx = std::min(std::max(u0(3), -mx_lim), mx_lim) *
-                 1000.0; // kNm -> Limited kNm -> Nm
-    cmd_msg.my = std::min(std::max(u0(4), -my_lim), my_lim) *
-                 1000.0; // kNm -> Limited kNm -> Nm
+    // Deadband Logic: Avoid jitter on flat ground
+    double deadband = this->get_parameter("deadband_rad").as_double();
+    if (std::abs(current_state_.roll) < deadband &&
+        std::abs(current_state_.pitch) < deadband) {
+      // Reduced sensitivity if nearly flat
+      cmd_msg.mx =
+          std::min(std::max(u0(3), -mx_lim), mx_lim) * 100.0; // 10% force
+      cmd_msg.my = std::min(std::max(u0(4), -my_lim), my_lim) * 100.0;
+    } else {
+      cmd_msg.mx =
+          std::min(std::max(u0(3), -mx_lim), mx_lim) * 1000.0; // Normal force
+      cmd_msg.my = std::min(std::max(u0(4), -my_lim), my_lim) * 1000.0;
+    }
+
     cmd_msg.mz = std::min(std::max(u0(5) * 1000.0, -mz_lim), mz_lim);
 
     publisher_->publish(cmd_msg);

@@ -28,7 +28,7 @@ def read_execution_times(log_path):
     return execution_times
 
 def plot_performance():
-    log_dir = '/home/yucheng/mpc_motion_control_projects/mpc_ws/plot'
+    log_dir = '/home/yucheng/MPC_Projects/mpc_motion_control_projects/mpc_ws/plot'
     mpc_log_path = os.path.join(log_dir, 'mpc_execution_times.csv')
     allocator_log_path = os.path.join(log_dir, 'allocator_execution_times.csv')
     output_path = os.path.join(log_dir, 'mpc_performance.png')
