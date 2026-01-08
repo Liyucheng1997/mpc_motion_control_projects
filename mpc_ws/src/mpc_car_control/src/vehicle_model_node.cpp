@@ -88,6 +88,11 @@ public:
       state_.zu[i] = params_.Rw; // Wheels on ground
 
     sim_time_ = this->now();
+
+    this->declare_parameter("sim_duration", 15.0);
+    this->get_parameter("sim_duration", sim_duration_);
+    RCLCPP_INFO(this->get_logger(), "Simulation Duration set to: %.1fs",
+                sim_duration_);
   }
 
 private:
@@ -100,6 +105,7 @@ private:
   rclcpp::Time sim_time_;
   rclcpp::Time initial_sim_time_;
   bool initial_time_set_ = false;
+  double sim_duration_ = 15.0;
 
   // Smoothing variables
   double smooth_throttle_ = 0.0;
@@ -154,10 +160,11 @@ private:
       initial_time_set_ = true;
     }
 
-    // 12s Automatic Shutdown
-    if ((sim_time_ - initial_sim_time_).seconds() >= 12.0) {
+    // Automatic Shutdown
+    if ((sim_time_ - initial_sim_time_).seconds() >= sim_duration_) {
       RCLCPP_INFO(this->get_logger(),
-                  "Simulation reached 12s. Shutting down node...");
+                  "Simulation reached %.1fs. Shutting down node...",
+                  sim_duration_);
       rclcpp::shutdown();
       return;
     }

@@ -13,7 +13,14 @@ def generate_launch_description():
         'default.rviz'
     )
 
+    sim_duration_arg = DeclareLaunchArgument(
+        'sim_duration',
+        default_value='15.0',
+        description='Simulation Duration in seconds'
+    )
+
     return LaunchDescription([
+        sim_duration_arg,
         DeclareLaunchArgument(
             'scenario_id',
             default_value='1',
@@ -74,7 +81,8 @@ def generate_launch_description():
             package='mpc_car_control',
             executable='vehicle_model_node',
             name='vehicle_model_node',
-            output='screen'
+            output='screen',
+            parameters=[{'sim_duration': LaunchConfiguration('sim_duration')}]
         ),
         # 7. visualization
         Node(
@@ -90,9 +98,9 @@ def generate_launch_description():
             arguments=['-d', rviz_config_dir],
             output='screen'
         ),
-        # 12s Automatic Shutdown
+        # Automatic Shutdown
         TimerAction(
-            period=12.0,
-            actions=[Shutdown(reason='Simulation completed after 12s')]
+            period=LaunchConfiguration('sim_duration'),
+            actions=[Shutdown(reason='Simulation completed after specified duration')]
         )
     ])
