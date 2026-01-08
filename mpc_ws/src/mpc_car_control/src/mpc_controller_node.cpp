@@ -458,14 +458,16 @@ private:
     while (yaw_err < -M_PI)
       yaw_err += 2 * M_PI;
 
-    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 500,
-                         "MPC[dFz:%.0f Mx:%.0f My:%.0f] Err[CTE:%.2f Yaw:%.2f]",
-                         u0(2), u0(3), u0(4), cte, yaw_err);
-
     auto end_time = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(
         end_time - start_time);
-    execution_times_.push_back(duration.count() / 1000.0); // Convert to ms
+    double current_execution_time = duration.count() / 1000.0;
+    execution_times_.push_back(current_execution_time); // Convert to ms
+
+    RCLCPP_INFO_THROTTLE(
+        this->get_logger(), *this->get_clock(), 500,
+        "MPC[dFz:%.0f Mx:%.0f My:%.0f] Err[CTE:%.2f Yaw:%.2f] CompTime:%.2fms",
+        u0(2), u0(3), u0(4), cte, yaw_err, current_execution_time);
   }
 
   rclcpp::Publisher<mpc_car_control::msg::ControlCommandBody>::SharedPtr

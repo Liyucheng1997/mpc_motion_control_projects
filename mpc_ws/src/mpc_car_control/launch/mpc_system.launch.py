@@ -1,5 +1,5 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, TimerAction, Shutdown
 from launch.substitutions import LaunchConfiguration
 from launch.conditions import LaunchConfigurationEquals
 from launch_ros.actions import Node
@@ -90,9 +90,12 @@ def generate_launch_description():
         ),
         Node(
             package='rviz2',
-            executable='rviz2',
-            name='rviz2',
             arguments=['-d', rviz_config_dir],
             output='screen'
+        ),
+        # 15s Automatic Shutdown
+        TimerAction(
+            period=15.0,
+            actions=[Shutdown(reason='Simulation completed after 15s')]
         )
     ])
