@@ -43,10 +43,14 @@ public:
     this->declare_parameter("q_vx", 10.0);
     this->declare_parameter("q_roll", 1500.0);
     this->declare_parameter("q_pitch", 1500.0);
-    this->declare_parameter("q_z", 10.0);
+    this->declare_parameter(
+        "q_z", 1000.0); // Tuned: 500 -> 1000 (Better Height Tracking)
+    this->declare_parameter(
+        "q_vz", 200.0); // Tuned: 50 -> 200 (Suppresses Impact Spikes)
     this->declare_parameter("r_accel", 1.0);
     this->declare_parameter("r_steer", 1.0);
-    this->declare_parameter("r_suspension", 0.5);
+    this->declare_parameter("r_suspension",
+                            0.005); // Tuned: 0.01 -> 0.005 (Softer Constraint)
     this->declare_parameter("r_yaw_moment", 10000.0);
     this->declare_parameter("deadband_rad", 0.005); // ~0.3 deg
 
@@ -92,7 +96,8 @@ private:
   // PID Parameters REMOVED (Parallel Architecture)
 
   // MPC Parameters
-  const int N_ = 30;       // Prediction Horizon (0.6s at dt=0.02)
+  const int N_ = 20; // Prediction Horizon (0.4s at dt=0.02) - User Selected
+  const int Nc_ = 3; // Control Horizon - User Selected (Best Performance)
   const double dt_ = 0.02; // Time step (Stable discretization)
   const int nx_ = 12;      // [x, y, psi, vx, vy, wz, z, phi, theta, vz, p, q]
   const int nu_ = 6;       // [accel, Fyf_kN, dFz_kN, Mx_kNm, My_kNm, Mz_kNm]
@@ -354,15 +359,19 @@ private:
 
     // 6. Dynamic Weights from Parameters
     Eigen::VectorXd Q_diag(nx_);
+
+    // ... (existing params)
+
     double q_pos = this->get_parameter("q_pos").as_double();
     double q_yaw = this->get_parameter("q_yaw").as_double();
     double q_vx = this->get_parameter("q_vx").as_double();
     double q_roll = this->get_parameter("q_roll").as_double();
     double q_pitch = this->get_parameter("q_pitch").as_double();
     double q_z = this->get_parameter("q_z").as_double();
+    double q_vz = this->get_parameter("q_vz").as_double();
 
     // [x, y, psi, vx, vy, wz, z, phi, theta, vz, p, q]
-    Q_diag << q_pos, q_pos, q_yaw, q_vx, 10.0, 10.0, q_z, q_roll, q_pitch, 50.0,
+    Q_diag << q_pos, q_pos, q_yaw, q_vx, 10.0, 10.0, q_z, q_roll, q_pitch, q_vz,
         50.0, 50.0;
 
     Eigen::VectorXd R_diag(nu_);
@@ -375,7 +384,7 @@ private:
     R_diag << r_accel, r_steer, r_susp, r_susp, r_susp, r_mz;
 
     Eigen::VectorXd R_rate_diag(nu_);
-    R_rate_diag << 1.0, 1.0, 10.0, 10.0, 10.0, 1000.0;
+    R_rate_diag << 1.0, 1.0, 0.1, 0.1, 0.1, 1000.0; // 降低悬架变化率惩罚
 
     Eigen::MatrixXd Q_bar = Eigen::MatrixXd::Zero(nx_ * N, nx_ * N);
     Eigen::MatrixXd R_bar = Eigen::MatrixXd::Zero(nu_ * N, nu_ * N);

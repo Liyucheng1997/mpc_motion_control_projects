@@ -38,7 +38,8 @@ public:
             std::bind(&ScenarioGeneratorNode::state_callback, this, _1));
 
     timer_ = this->create_wall_timer(
-        100ms, std::bind(&ScenarioGeneratorNode::timer_callback, this));
+        10ms, std::bind(&ScenarioGeneratorNode::timer_callback,
+                        this)); // Synced with vehicle_model (was 100ms)
     RCLCPP_INFO(this->get_logger(),
                 "Scenario Generator Node has been started.");
   }
@@ -111,8 +112,7 @@ private:
       // Bump Logic
       double car_x = current_state_.x;
       if (car_x > bump_x - 1.0 && car_x < bump_x + 1.0) {
-        double h =
-            0.3 * std::cos((car_x - bump_x) * M_PI / 2.0); // Massive 0.5m Bump
+        double h = 0.3 * std::cos((car_x - bump_x) * M_PI / 2.0); // 0.3m Bump
         wheels_msg.wheel_ground_heights = {h, h, h, h};
       }
 

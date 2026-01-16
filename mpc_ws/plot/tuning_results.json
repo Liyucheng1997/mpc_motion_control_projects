@@ -1,0 +1,150 @@
+{
+  "timestamp": "2026-01-15T21:34:36.617559",
+  "scenario": 2,
+  "passive_rms": 5.969684376007026,
+  "best_config": {
+    "params": {
+      "q_z": 1000.0,
+      "q_vz": 1000.0,
+      "r_suspension": 0.005
+    },
+    "rms": 4.018628823061775,
+    "peak": 59.6365,
+    "improvement": 32.682725418228294,
+    "valid": false
+  },
+  "all_results": [
+    {
+      "params": {
+        "q_z": 1000.0,
+        "q_vz": 1000.0,
+        "r_suspension": 0.005
+      },
+      "rms": 4.018628823061775,
+      "peak": 59.6365,
+      "improvement": 32.682725418228294,
+      "valid": false
+    },
+    {
+      "params": {
+        "q_z": 1000.0,
+        "q_vz": 200.0,
+        "r_suspension": 0.005
+      },
+      "rms": 4.0199446203894,
+      "peak": 56.8595,
+      "improvement": 32.660684096698574,
+      "valid": false
+    },
+    {
+      "params": {
+        "q_z": 1000.0,
+        "q_vz": 50.0,
+        "r_suspension": 0.01
+      },
+      "rms": 4.9302237475909525,
+      "peak": 86.0361,
+      "improvement": 17.412321371525227,
+      "valid": false
+    },
+    {
+      "params": {
+        "q_z": 1000.0,
+        "q_vz": 200.0,
+        "r_suspension": 0.01
+      },
+      "rms": 5.271280949570192,
+      "peak": 98.2773,
+      "improvement": 11.699168372180823,
+      "valid": false
+    },
+    {
+      "params": {
+        "q_z": 1000.0,
+        "q_vz": 200.0,
+        "r_suspension": 0.008
+      },
+      "rms": 5.2804048744557495,
+      "peak": 98.3746,
+      "improvement": 11.546330729336127,
+      "valid": false
+    },
+    {
+      "params": {
+        "q_z": 1000.0,
+        "q_vz": 500.0,
+        "r_suspension": 0.008
+      },
+      "rms": 5.576948455288743,
+      "peak": 104.775,
+      "improvement": 6.57883894660733,
+      "valid": false
+    },
+    {
+      "params": {
+        "q_z": 1000.0,
+        "q_vz": 500.0,
+        "r_suspension": 0.01
+      },
+      "rms": 5.594319072517603,
+      "peak": 105.161,
+      "improvement": 6.287858450240143,
+      "valid": false
+    },
+    {
+      "params": {
+        "q_z": 1000.0,
+        "q_vz": 1000.0,
+        "r_suspension": 0.01
+      },
+      "rms": 5.6563455260208455,
+      "peak": 106.543,
+      "improvement": 5.248834448359319,
+      "valid": false
+    },
+    {
+      "params": {
+        "q_z": 1000.0,
+        "q_vz": 500.0,
+        "r_suspension": 0.005
+      },
+      "rms": 5.667604245903597,
+      "peak": 106.168,
+      "improvement": 5.060236204740248,
+      "valid": false
+    },
+    {
+      "params": {
+        "q_z": 1000.0,
+        "q_vz": 50.0,
+        "r_suspension": 0.005
+      },
+      "rms": 5.830194173669389,
+      "peak": 110.017,
+      "improvement": 2.3366428365671688,
+      "valid": false
+    },
+    {
+      "params": {
+        "q_z": 1000.0,
+        "q_vz": 50.0,
+        "r_suspension": 0.008
+      },
+      "rms": 5.947265327598036,
+      "peak": 112.81,
+      "improvement": 0.37554830367742703,
+      "valid": false
+    },
+    {
+      "params": {
+        "q_z": 1000.0,
+        "q_vz": 1000.0,
+        "r_suspension": 0.008
+      },
+      "rms": 5.971051506101527,
+      "peak": 113.341,
+      "improvement": -0.022901212332017175,
+      "valid": false
+    }
+  ]
+}
