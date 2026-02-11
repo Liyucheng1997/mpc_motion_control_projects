@@ -96,7 +96,7 @@ private:
   // PID Parameters REMOVED (Parallel Architecture)
 
   // MPC Parameters
-  const int N_ = 20; // Prediction Horizon (0.4s at dt=0.02) - User Selected
+  const int N_ = 40; // Prediction Horizon (0.8s at dt=0.02) - Doubled for test
   const int Nc_ = 3; // Control Horizon - User Selected (Best Performance)
   const double dt_ = 0.02; // Time step (Stable discretization)
   const int nx_ = 12;      // [x, y, psi, vx, vy, wz, z, phi, theta, vz, p, q]
